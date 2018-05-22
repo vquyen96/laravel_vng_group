@@ -100,3 +100,8 @@ Route::group(['namespace'=>'Admin'], function(){
 		});
 	});
 });
+
+Route::group(['namespace'=>'Frontend'], function(){
+	Route::get('/','HomeController@getHome');
+	
+});
