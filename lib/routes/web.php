@@ -102,6 +102,14 @@ Route::group(['namespace'=>'Admin'], function(){
 });
 
 Route::group(['namespace'=>'Frontend'], function(){
-	Route::get('/','HomeController@getHome');
-	
+	Route::get('/', 'HomeController@getHome');
+	Route::get('overview', 'HomeController@getOverView');
+	Route::get('project', 'HomeController@getProject');
+	Route::get('project/detail', 'HomeController@getProjectDetail');
+	Route::get('qhdt', 'HomeController@getQHDT');
+	Route::get('news', 'HomeController@getNews');
+	Route::get('news/detail/{slug}', 'HomeController@getNewsDetail');
+	Route::get('video/detail/{slug}', 'HomeController@getVideoDetail');
+	Route::get('recruit', 'HomeController@getRecruit');
+	Route::get('contact', 'HomeController@getContact');
 });

@@ -1,0 +1,83 @@
+
+
+.project{
+	margin-bottom: 60px;
+	margin-top: 55px;
+}
+.projectImg{
+	box-shadow: 8px 7px 20px #00000063;
+}
+.projectImg img{
+	width: 100%;
+}
+.projectContent .txt16{
+	text-align: justify;
+}
+
+.investment{
+
+}
+.investment .title{
+	padding-top: 175px;
+}
+.investmentItemHead{
+	position: relative;
+	height: 175px;
+}
+.investmentItemHead .txt145{
+	position: absolute;
+    top: -25px;
+    left: 0;
+    text-shadow: 2px 2px 10px #0005;
+}
+.investmentItemHead .txt20{
+	position: absolute;
+    left: 150px;
+    bottom: 25px;
+    font-weight: 600;
+
+}
+.investmentItemImg{
+	box-shadow: 5px 5px 20px #0006;
+}
+.investmentItemImg img{
+	width: 100%;
+}
+.distribution{
+	padding-top: 125px;
+	height: 500px;
+	
+}
+.distribution .txt48{
+	text-align: center;
+	margin-bottom: 60px;
+}
+.distributionItem{
+	width: 336px;
+	margin: auto;
+	position: relative;
+}
+.distributionItemImg img{
+	width: 100%;
+}
+.distributionItemContent{
+	height: 115px;
+	padding: 20px; 
+	background: #fff;
+}
+.distributionItemContent .txt18{
+	font-weight: bold;
+}
+.distributionItemButton{
+	height: 46px;
+    width: 46px;
+    position: absolute;
+    bottom: 92px;
+    right: 20px;
+    background: #ff9933;
+    padding: 12px 8px;
+    display: block;
+}
+.distributionItemButton img{
+	width: 100%;
+}

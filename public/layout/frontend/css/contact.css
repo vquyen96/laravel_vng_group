@@ -1,0 +1,92 @@
+
+
+.contact{
+	padding-top: 75px;
+}
+.contactLeftItem{
+	padding: 50px 0;
+}
+.contactLeftItem .txt30{
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+.contactRight{
+	position: relative;
+
+}
+.contactRightMess{
+	position: absolute;
+
+}
+.contactRightMess .txt24{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+}
+.contact01{
+	top: 55px;
+    left: 196px;
+}
+.contact02{
+	top: 380px;
+    left: 296px;
+}
+.contact03{
+	top: 660px;
+    left: 210px;
+}
+
+.contactForm{
+	margin-bottom: 100px;
+	margin-top: 125px;
+}
+.contactFormLeftImg img{
+	width: 100%;
+	
+}
+.contactFormLeft{
+	position: relative;
+	margin-top: 14px;
+}
+.contactFormLeftContent{
+	position: absolute;
+	bottom: -170px;
+	left: 20px;
+}
+.contactFormLeftContent img{
+	margin-bottom: 20px;
+}
+
+.contactFormRight .txt36{
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+.contactFormRight form input[type=text]{
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	margin-bottom: 25px;
+}
+.contactFormRight form textarea{
+	display: block;
+	width: 100%;
+	height: 200px;
+	padding: 10px;
+	margin-bottom: 25px;
+}
+.contactFormRight form input[type=submit]{
+	padding: 10px 60px;
+	background: #f58220;
+	color: #fff;
+	border: 0;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: 'roboto', sans-serif;
+}

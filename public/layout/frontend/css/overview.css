@@ -1,0 +1,164 @@
+.thu_ngo{
+	height: 625px;
+}
+.thu_ngo .title{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.thu_ngo_Img img{
+	width: 100%;
+}
+
+.history{
+	height: 1250px;
+}
+.historyContentImg{
+	margin: 30px 0;
+}
+.historyContent i{
+	font-family: 'Oswald', sans-serif;
+}
+.historyContent .txt48{
+	margin-bottom: 30px;
+}
+.vision{
+	height: 420px;
+	padding-top: 60px;
+}
+.vision .txt48{
+	text-align: center;
+}
+.vision .txt16{
+	padding: 20px;
+	text-align: center;
+}
+.visionImg img{
+	width: 100%;
+}
+
+.maxim{
+	height: 790px;
+	margin-top: 180px;
+}
+.maximContent{
+	
+	padding-left: 35px;
+	
+	
+}
+.maximContent .txt24{
+	font-weight: bold;
+	margin: 50px 0 20px;
+	
+}
+.maximContent .txt16{
+	text-align: justify;
+	text-align-last: right;
+	margin-bottom: 45px;
+}
+.maximImg img{
+	width: 100%;
+}
+
+
+.culture .txt48{
+	width: 260px;
+	padding: 10px;
+}
+.culture{
+	position: relative;
+	height: 825px;
+}
+.cultureItem{
+	position: relative;
+	height: 320px;
+}
+.cultureItem .cultureImg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 215px;
+	height: 320px;
+}
+.cultureItem .cultureContent{
+	padding-left: 230px;
+	text-align: justify;
+	
+}
+.cultureItem .cultureContent .txt18{
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.culture1{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 830px;
+}
+.culture2{
+	position: absolute;
+	top: 290px;
+	left: 0;
+	width: 445px;
+
+}
+.culture2 .cultureContent{
+	padding-top: 80px;
+}
+
+.culture3{
+	position: absolute;
+	top: 380px;
+	right: 0;
+	width: 705px;
+
+}
+
+.ceo{
+	height: 625px;
+}
+.ceo .txt48{
+	text-align: center;
+	padding: 50px 0;
+}
+.ceoItem{
+	position: relative;
+	width: 330px;
+	margin: auto;
+}
+.ceoItemTag{
+	position: absolute;
+	width: 280px;
+	height: 90px;
+	bottom: -50px;
+	left: 20px;
+	z-index: 2;
+}
+.ceoItemTag:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform: skewX(-20deg);
+	background: #fff;
+	box-shadow: 5px 5px 20px #0005;
+	z-index: 1
+	
+}
+.ceoItemTagContent{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding: 20px 0;
+	z-index: 2;
+}
+.ceoItemTagContent .txt18{
+	font-weight: 600;
+}
+.ceoItemTagContent .txt16{
+	font-style: italic;
+}

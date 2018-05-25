@@ -1,150 +1,111 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>@yield('title')</title>
 
-
-	<base href="{{asset('public/layout/frontend')}}/">
-	<link rel="shortcut icon" href="{{ asset('public/layout/frontend/img/iconHeader.png') }}">
-	<meta charset="utf-8">
-
-	<meta property="og:url" 		content="{{Request::url()}}" />
-
-	
-	<meta property="fb:app_id" 		content="1577563652342523" />
-	 
-	<meta property="og:title" 		content="@yield('fb_title')" />
-	<meta property="og:description" content="@yield('fb_description')" />
-    <meta property="og:image" 		content="@yield('fb_image')" />
-    <meta property="og:image:type" 	content="image/png">
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="300">
-
-
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:500|Roboto:400,500" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/home.css">
-</head>
-<body>
-	
-	<div class="backgroundBody">
-		<div class="backgroundBodyImg">
-			<img src="img/BG.png">
-		</div>
+@extends('frontend.master')
+@section('title', 'Home')
+@section('main')
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<div>
+	<div class="imageBig">
+		<img src="img/image.png">
 	</div>
-	<header>
-		<div class="imgLogo">
-			<img src="img/logo.png">
-		</div>
-		<div class="btnMenuVsLang">
-			<div class="lang">
-				<div class="lang_en">EN</div>
-				<span>|</span>
-				<div class="lang_vi">VI</div>
-			</div>
-			<div class="btnMenu">
-				<div class="btnMenuCỉcle">
-					<div class="btnMenuCỉcleHide"></div>
-				</div>
-				<div class="btnMenuItem"></div>
-				<div class="btnMenuItem"></div>
-				<div class="btnMenuItem"></div>
-				
-			</div>
-		</div>
-		
-	</header>
-	<div class="menuHide">
+	<div class="listPage">
 		<ul>
-			<li class="active">
-				<a href="">
-					<div class="menuLeft">
-						<div class="lang_en">EN</div>
-						<span>|</span>
-						<div class="lang_vi">VI</div>
+			<li >
+				<a href="{{ asset('overview') }}" class="active">
+					<span class="text">
+						Tổng quan về VNG
+					</span>
+					<div class="listPageItemHide">
+						<div class="content">
+							Là một tập đoàn đa ngành có hệ sinh thái khởi nghiệp khép kín tạo nên giá trị phát triển bền vững. Không chỉ mang lại cuộc sống ấm no hạnh phúc cho CBNV toàn hệ thống, VNGroup còn góp phần tạo ra những giá trị thịnh vượng nhân văn cho cộng đồng . 
+						</div>
+						<div class="link">
+							img/image.png
+						</div>
 					</div>
-					<div class="menuRight">
-						<img src="img/menu.png">
+				</a>
+			</li>
+			<li>
+				<a href="{{ asset('property') }}">
+					<span class="text">
+						Sàn giao dịch BĐS VNG
+					</span>
+					<div class="listPageItemHide">
+						<div class="content">
+							Thẩm định giá BĐS là sự ước tính về giá trị của các quyền sở hữu bất động sản bao gồm: Các loại đất đai, nhà và công trình xây dựng gắn liền với đất đai; Hoặc tài sản gắn liền với đất đai, tài sản khác do pháp luật quy định…
+						</div>
+						<div class="link">
+							img/1.png
+						</div>
 					</div>
 				</a>
 			</li>
-			<li class="active">
-				<a href="">
-					Trang chủ
-					<img src="img/home.png">
+			<li>
+				<a href="http://thamdinhgiavng.com/" target="blank">
+					<span class="text">
+						Thẩm định giá VNG
+					</span>
+					<div class="listPageItemHide">
+						<div class="content">
+							Thẩm định giá BĐS là sự ước tính về giá trị của các quyền sở hữu bất động sản bao gồm: Các loại đất đai, nhà và công trình xây dựng gắn liền với đất đai; Hoặc tài sản gắn liền với đất đai, tài sản khác do pháp luật quy định…
+						</div>
+						<div class="link">
+							img/2.png
+						</div>
+					</div>
 				</a>
 			</li>
 			<li>
-				<a>
-					Giới thiệu
-					<img src="img/GT.png">
-				</a>
-				<ul>
-					<li>
-						<a href="">Thư ngỏ</a>
-					</li>
-					<li>
-						<a href="">Lịch sử phát triển</a>
-					</li>
-					<li>
-						<a href="">Tầm nhìn -  sứ mệnh</a>
-					</li>
-					<li>
-						<a href="">Văn hóa VNG Group</a>
-					</li>
-					<li>
-						<a href="">Ban lãnh đạo</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a>
-					Dự án
-					<img src="img/project.png">
-				</a>
-				<ul>
-					<li>
-						<a href="">Dự án đầu tư</a>
-					</li>
-					<li>
-						<a href="">Dự án phân phối</a>
-					</li>
-				</ul>
-			</li>
-
-			<li>
-				<a href="">
-					Quan hệ đầu tư
-					<img src="img/QH.png">
+				<a href="http://vnglaw.com/" target="blank">
+					<span class="text">
+						Văn phong luật sư VNG
+					</span>
+					<div class="listPageItemHide">
+						<div class="content">
+							Văn phòng luật sư VNG Việt Nam (VNG Viet Nam Law Firm) được thành lập từ năm 2009 và ngày càng khẳng định vị trí vững mạnh trong lĩnh vực pháp lý. 
+						</div>
+						<div class="link">
+							img/3.png
+						</div>
+					</div>
 				</a>
 			</li>
 			<li>
-				<a href="">
-					Tin tức
-					<img src="img/new.png">
-				</a>
-			</li>
-			<li>
-				<a href="">
-					Tuyển dụng
-					<img src="img/TD.png">
-				</a>
-			</li>
-			<li>
-				<a href="">
-					Liên hệ
-					<img src="img/Contact.png">
+				<a href="http://vngmedia.vn/" target="blank">
+					<span class="text">
+						Truyền thông VNG
+					</span>
+					<div class="listPageItemHide">
+						<div class="content">
+							Chiến lược marketing tổng thể/
+							Lập kế hoạch marketing/
+							Chiến lược quảng cáo/
+							Kế hoạch truyền thông/
+							Lập kế hoạch bán hàng/
+							XD bộ nhận diện thương hiệu
+						</div>
+						<div class="link">
+							img/4.png
+						</div>
+					</div>
 				</a>
 			</li>
 		</ul>
 	</div>
-	<div class=""></div>
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<div class="lineLeft">
+	</div>
+	<div class="lineRight">
+	</div>
+	<div class="title">
+		<span class="titleMain">
+			Tổng quan về VNG Group
+		</span>
+		<p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+		</p>
+	</div>
+</div>
+@stop
+@section('script')
 	<script type="text/javascript" src="js/home.js"></script>
-	@yield('script')
-</body>
-</html>
+@stop
+

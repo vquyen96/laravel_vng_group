@@ -1,0 +1,29 @@
+
+
+.video_detail_video img{
+	width: 100%;
+}
+
+.video_detail_title{
+	max-width: 800px;
+	margin: 30px 0 10px;
+}
+.video_related{
+	margin-top: 50px;
+	margin-bottom: 100px;
+
+}
+.video_related .txt24{
+	margin-bottom: 30px;
+}
+.video_related_item{
+
+}
+.video_related_img img{
+	width: 100%
+}
+.video_related_title{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0 10px;
+}

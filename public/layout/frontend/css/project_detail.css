@@ -1,0 +1,188 @@
+
+
+.imageHeader{
+	margin-top: 50px;
+}
+.imageHeaderImg img{
+	width: 100%;
+}
+
+
+.contentHeader{
+	padding: 75px 20px;
+	position: relative;
+}
+.contentHeader .txt60{
+	position: absolute;
+	top: -42px;
+	left: 30px;
+}
+.contentHeaderLeft{
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 500;
+}
+.contentHeaderLeft ol{
+	padding-left: 15px;
+}
+.contentHeaderLeft ol li{
+	padding: 10px 0;
+}
+.contentHeaderRight.txt16{
+	padding: 10px 0;
+}
+
+.content01Right{
+	position: relative;
+	padding-top: 135px;
+}
+.content01Right .txt145{
+	position: absolute;
+    top: -60px;
+    left: -65px;
+}
+
+.content01Left img{
+	width: 100%;
+}
+.txt36{
+	font-size: 36px;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	color: #676767;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+.content02{
+	margin-top: 145px;
+}
+.content02Left{
+	position: relative;
+	padding-top: 100px;
+}
+.content02Left .txt145{
+	z-index: 1;
+    position: absolute;
+    top: -18px;
+    right: -58px;
+}
+.content02Left .txt36{
+	text-align: right;
+	padding-right: 105px;
+}
+
+
+
+.content03{
+	margin-top: 145px;
+
+}
+.content03Left img{
+	width: 100%;
+}
+
+.content03Right{
+	position: relative;
+	padding-top: 130px;
+
+}
+
+.content03Right .txt145{
+	position: absolute;
+    top: 10px;
+    left: -64px;
+}
+.content03Right .txt36{
+	padding-left: 90px;
+}
+
+
+.content04{
+	margin-top: 145px;
+	margin-bottom: 180px;
+}
+
+.album{
+	width: 930px;
+	height: 690px;
+}
+.albumItem{
+	position: absolute;
+	overflow:hidden;
+}
+.albumItemImg{
+	
+	height: 100%;
+}
+.albumItemImg img{
+	width: 100%;
+	height: 100%;
+}
+.albumItemContent{
+	position: absolute;
+	width: 100%;
+	height: 68px;
+	background: #0004;
+	bottom: -70px;
+	left: 0;
+	padding: 20px 0;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	transition: 0.5s;
+}
+.albumItem:hover .albumItemContent{
+	bottom: 0;
+}
+.album1{
+	width: 450px;
+	height: 210px;
+	top: 0;
+	left: 0;
+}
+.album2{
+	width: 210px;
+	height: 210px;
+	top: 0;
+	left: 480px;
+}
+.album3{
+	width: 210px;
+	height: 450px;
+	top: 0;
+	left: 720px;
+}
+.album4{
+	width: 210px;
+	height: 210px;
+	top: 240px;
+	left: 0;
+}
+.album5{
+	width: 450px;
+	height: 210px;
+	top: 240px;
+	left: 240px;
+}
+.album6{
+	width: 210px;
+	height: 210px;
+	top: 480px;
+	left: 0;
+}
+.album7{
+	width: 210px;
+	height: 210px;
+	top: 480px;
+	left: 240px;
+}
+.album8{
+	width: 450px;
+	height: 210px;
+	top: 480px;
+	left: 480px;
+}
+
