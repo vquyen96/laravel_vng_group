@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 22, 2018 at 09:05 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th5 26, 2018 lúc 07:06 AM
+-- Phiên bản máy phục vụ: 10.1.31-MariaDB
+-- Phiên bản PHP: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,39 +19,68 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `vng_group`
+-- Cơ sở dữ liệu: `vng_group`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `about`
+-- Cấu trúc bảng cho bảng `about`
 --
 
 CREATE TABLE `about` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `about`
+-- Đang đổ dữ liệu cho bảng `about`
 --
 
-INSERT INTO `about` (`id`, `name`, `content`, `created_at`, `updated_at`) VALUES
-(1, 'Thư Ngỏ', '<div class=\"span6 main-content\">\r\n                    <div class=\"breadcumb\">\r\n                        <p id=\"breadcrumbs\"><span xmlns:v=\"http://rdf.data-vocabulary.org/#\"><span typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/\" rel=\"v:url\" property=\"v:title\">Trang Chủ</a> » <span rel=\"v:child\" typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/gioi-thieu/\" rel=\"v:url\" property=\"v:title\">Giới Thiệu</a> » <span class=\"breadcrumb_last\">Thư ngỏ</span></span></span></span></p>                    </div>\r\n                                           <p style=\"text-align: justify;\"><strong>KÍNH GỬI QUÝ KHÁCH HÀNG!</strong></p>\r\n<p style=\"text-align: justify;\"><em><img class=\"size-full wp-image-3578 alignleft\" src=\"http://vnggroup.com.vn/wp-content/uploads/2015/02/2-02.png\" alt=\"\" width=\"146\" height=\"184\">Lời đầu tiên Hội đồng Quản trị, Ban giám đốc cùng toàn thể cán bộ nhân viên của VNG Group xin gửi tới Quý khách hàng lời chào trân trọng và lời cảm ơn sâu sắc nhất.</em></p>\r\n<p style=\"text-align: justify;\">Như Quý vị đã biết, thị trường bất động sản đóng một vai trò đặc biệt quan trọng trong nền kinh tế vì nó liên quan mật thiết đến số lượng tài sản và giá trị của nền kinh tế quốc dân.</p>\r\n<p style=\"text-align: justify;\">VNG Group có tiền thân là Công ty Cổ phần Bất động sản VNG Việt Nam đã có hơn 13 năm hoạt động trong lĩnh vực bất động sản. Qua một thời gian hoạt động và phát triển đến nay Công ty đã trở nên lớn mạnh hơn, có uy tín, được đông đảo khách hàng biết đến với chất lượng phục vụ tốt nhất, phong cách phục vụ chuyên nghiệp trong lĩnh vực môi giới, phân phối và đầu tư bất động sản.</p>\r\n<p style=\"text-align: justify;\">Cùng với việc phát triển của Việt Nam với nền kinh tế thế giới, VNG Group đã mở rộng quy mô và hoạt động ở nhiều lĩnh vực khác nhau như: Bất động sản, tư vấn pháp luật, truyền thông – marketing, thẩm định giá… VNG Group luôn tự hào là một trong những đơn vị cung cấp các dịch vụ chuyên nghiệp góp phần vào sự phát triển ổn định của thị trường cũng như mang lại lợi ích tối ưu cho Quý khách hàng.</p>\r\n<p style=\"text-align: justify;\">VNG Group có được những thành công như ngày hôm nay ngoài những sự nỗ lực và đoàn kết của đội ngũ cán bộ, nhân viên còn có cả sự tín nhiệm và ủng hộ vô cùng to lớn của toàn thể Quý vị.</p>\r\n<p style=\"text-align: justify;\">Với mong muốn đem đến cho Quý khách hàng những dịch vụ tốt nhất toàn thể Ban lãnh đạo và đội ngũ nhân viên luôn cố gắng hết mình, không ngừng phấn đấu tạo những sản phẩm và dịch vụ có ưu điểm vượt trội nhằm nâng cao chất lượng phục vụ để có thể nhận được sự tin tưởng cũng như sự hài lòng từ phía Quý khách hàng.</p>\r\n<p style=\"text-align: justify;\">VNG Group rất mong sẽ tiếp tục nhận được sự hợp tác và ủng hộ từ Quý vị!</p>\r\n<p style=\"text-align: justify;\"><em>Kính chúc toàn thể Quý khách hàng sức khỏe, thành công và hạnh phúc!</em></p>\r\n<p style=\"text-align: justify;\"><em>Trân trọng!</em></p>\r\n<p style=\"text-align: right;\"><strong><em>Tổng giám đốc</em></strong></p>\r\n<p style=\"text-align: right;\"><strong><em>Vũ Văn Thành</em></strong></p>\r\n                                    </div>', '2018-04-02 07:55:32', '2018-04-02 07:55:32'),
-(2, 'Giới thiệu VNG Group', '<p><a href=\"http://vnggroup.com.vn/\">Trang Chủ</a> &raquo; <a href=\"http://vnggroup.com.vn/gioi-thieu/\">Giới Thiệu</a> &raquo; Giới thiệu VNG Group</p>\r\n\r\n<h3>GIỚI THIỆU VNG GROUP</h3>\r\n\r\n<p>Hệ thống&nbsp;VNG Việt Nam (VNG Group) c&oacute; tiền th&acirc;n l&agrave; C&ocirc;ng ty Cổ phần Bất động sản VNG Việt Nam đ&atilde; c&oacute; hơn 15 năm kinh nghiệm hoạt động trong lĩnh vực bất động sản. Với bề d&agrave;y hoạt động, qua một thời gian ph&aacute;t triển đến nay C&ocirc;ng ty đ&atilde; trở th&agrave;nh một trong những C&ocirc;ng ty Bất động sản lớn mạnh, c&oacute; thương hiệu uy t&iacute;n v&agrave; được đ&ocirc;ng đảo&nbsp; kh&aacute;ch h&agrave;ng biết đến với chất lượng phục vụ tốt nhất, phong c&aacute;ch phục vụ chuy&ecirc;n nghiệp trong lĩnh vực m&ocirc;i giới, ph&acirc;n phối v&agrave; đầu tư bất động sản.</p>\r\n\r\n<p>Tr&ecirc;n đ&agrave; ph&aacute;t triển kh&ocirc;ng ngừng đ&oacute;, c&ugrave;ng với việc ph&aacute;t triển v&agrave; hội nhập của Việt Nam với nền kinh tế thế giới, C&ocirc;ng ty đ&atilde; mở rộng quy m&ocirc; , hoạt động ở nhiều lĩnh vực kh&aacute;c nhau như: Bất động sản, tư vấn ph&aacute;p luật , truyền th&ocirc;ng &ndash; marketing, thẩm định gi&aacute;&hellip;</p>\r\n\r\n<p>Mang phương ch&acirc;m &ldquo;Ph&aacute;t triển bền vững &ndash; Gia tăng gi&aacute; trị&rdquo; VNG Group với đội ngũ nh&acirc;n vi&ecirc;n v&agrave; chuy&ecirc;n gia nhiệt huyết, t&agrave;i năng, s&aacute;ng tạo sẽ lu&ocirc;n cung cấp những dịch vụ tốt nhất v&agrave; sẽ l&agrave;m h&agrave;i l&ograve;ng qu&yacute; kh&aacute;ch h&agrave;ng.</p>\r\n\r\n<p>Ngo&agrave;i ra, VNG Group c&ograve;n sở hữu trang th&ocirc;ng tin Bất Động Sản. Đ&acirc;y l&agrave; nơi trao đổi, cung cấp c&aacute;c th&ocirc;ng tin hữu &iacute;ch về giao dịch, cho thu&ecirc; v&agrave; mua b&aacute;n bất động sản:&nbsp;www.sieuthibatdongsan.com.vn</p>\r\n\r\n<p><em><strong>Hiện nay, VNG Group đ&atilde; c&oacute; 4 c&ocirc;ng ty th&agrave;nh vi&ecirc;n, trụ sở ch&iacute;nh đặt tại miền Bắc v&agrave; 2 văn ph&ograve;ng đại diện đặt tại miền Trung ( Đ&agrave; Nẵng) v&agrave; miền Nam ( Tp. HCM). &nbsp;Cụ thể như sau:</strong></em></p>\r\n\r\n<p><strong>Văn ph&ograve;ng H&agrave; Nội</strong></p>\r\n\r\n<p><strong>1/ C&ocirc;ng ty Cổ phần Bất động sản VNG Việt Nam</strong></p>\r\n\r\n<p>Tầng 5, T&ograve;a Diamond Flower Tower, Ho&agrave;ng Đạo Th&uacute;y, Nh&acirc;n Ch&iacute;nh, Thanh Xu&acirc;n, H&agrave; Nội</p>\r\n\r\n<p><strong>Tel:</strong> 04.62 73 74 75</p>\r\n\r\n<p><strong>Hotline:</strong> 0903 74 75 76</p>\r\n\r\n<p><strong>Fax:</strong> 04. 63 25 22 99</p>\r\n\r\n<p><strong>Email:</strong> info@vngvietnam.com.vn</p>\r\n\r\n<p><strong>Website:&nbsp;</strong><a href=\"http://vnggroup.com.vn\">http://vnggroup.com.vn</a></p>\r\n\r\n<p><strong>2/ C&ocirc;ng ty TNHH Thẩm định gi&aacute; VNG Việt Nam</strong></p>\r\n\r\n<p><strong>Văn ph&ograve;ng giao dịch:</strong>&nbsp;Tầng 5, T&ograve;a Diamond Flower Tower, Ho&agrave;ng Đạo Th&uacute;y, Nh&acirc;n Ch&iacute;nh, Thanh Xu&acirc;n, H&agrave; Nội</p>\r\n\r\n<p><strong>Tel:</strong> 04.62 73 74 75</p>\r\n\r\n<p><strong>Hotline:</strong> 0981 228 929</p>\r\n\r\n<p><strong>Fax:</strong> 04. 63 25 22 99</p>\r\n\r\n<p><strong>Website:</strong>&nbsp;<a href=\"http://thamdinhgiavng.com/\">http://thamdinhgiavng.com/</a></p>\r\n\r\n<p><strong>3/ Văn ph&ograve;ng luật sư VNG Việt Nam</strong></p>\r\n\r\n<p><strong>Văn ph&ograve;ng giao dịch:</strong>&nbsp;Tầng 5, T&ograve;a Diamond Flower Tower, Ho&agrave;ng Đạo Th&uacute;y, Nh&acirc;n Ch&iacute;nh, Thanh Xu&acirc;n, H&agrave; Nội</p>\r\n\r\n<p><strong>Tel:</strong> 04.62 73 74 75</p>\r\n\r\n<p><strong>Hotline:</strong> 0971 026 678</p>\r\n\r\n<p><strong>Fax:</strong> 04. 63 25 22 99</p>\r\n\r\n<p><strong>Website:</strong>&nbsp;<a href=\"http://vnglaw.com/\">http://vnglaw.com/</a></p>\r\n\r\n<p><strong>4/ C&ocirc;ng ty Cổ phần truyền th&ocirc;ng VNG Việt Nam</strong></p>\r\n\r\n<p><strong>Văn ph&ograve;ng giao dịch:</strong>&nbsp;Tầng 5, T&ograve;a Diamond Flower Tower, Ho&agrave;ng Đạo Th&uacute;y, Nh&acirc;n Ch&iacute;nh, Thanh Xu&acirc;n, H&agrave; Nội</p>\r\n\r\n<p><strong>Tel:</strong> 04.62 73 74 75</p>\r\n\r\n<p><strong>Hotline:</strong> 0902 12 06 07</p>\r\n\r\n<p><strong>Fax:</strong> 04. 63 25 22 99</p>\r\n\r\n<hr />\r\n<p><strong>Văn ph&ograve;ng Miền Trung</strong></p>\r\n\r\n<p><strong>Địa chỉ: </strong>Số 68, Đường 2 th&aacute;ng 9, P. B&igrave;nh Hi&ecirc;n, Q. Hải Ch&acirc;u, TP. Đ&agrave; Nẵng</p>\r\n\r\n<p><strong>Tel: </strong>0511 399 6886</p>\r\n\r\n<p><strong>Hotline:&nbsp;</strong>0971 021 868</p>\r\n\r\n<p><strong>Email:&nbsp;</strong><a href=\"mailto:infovngdn@vnggroup.com.vn\">infovngdn@vngvietnam.com.vn&nbsp;</a></p>\r\n\r\n<hr />\r\n<p><strong>Văn ph&ograve;ng Miền Nam</strong></p>\r\n\r\n<p><strong>Địa chỉ:&nbsp;</strong>Tầng 10, Số 40 Phạm Ngọc Thạch, Phường 6, Quận 3, Tp Hồ Ch&iacute; Minh</p>\r\n\r\n<p><strong>Hotline:&nbsp;</strong>0934 1080 28<strong>&nbsp;</strong></p>\r\n\r\n<p><strong>Email:</strong>&nbsp;<a href=\"mailto:%20infohcm@vnggroup.com.vn\">infohcm@vnggroup.com</a><a href=\"mailto:%20infohcm@vnggroup.com.vn\">.vn</a><strong><a href=\"mailto:%20infohcm@vnggroup.com.vn\">&nbsp;</a></strong></p>\r\n\r\n<p>&nbsp;</p>', '2018-04-02 07:59:29', '2018-04-02 08:06:52'),
-(3, 'Lịch sử', '<div class=\"span6 main-content\">\r\n                    <div class=\"breadcumb\">\r\n                        <p id=\"breadcrumbs\"><span xmlns:v=\"http://rdf.data-vocabulary.org/#\"><span typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/\" rel=\"v:url\" property=\"v:title\">Trang Chủ</a> » <span rel=\"v:child\" typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/gioi-thieu/\" rel=\"v:url\" property=\"v:title\">Giới Thiệu</a> » <span class=\"breadcrumb_last\">Lịch sử phát triển</span></span></span></span></p>                    </div>\r\n                                           <h3 style=\"text-align: justify;\"><strong>Lịch sử phát triển của VNG Group</strong></h3>\r\n<p><iframe src=\"http://www.youtube.com/embed/AeBlnF1Q4WI\" width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\r\n<p style=\"text-align: justify;\">Được thành lập từ năm 2003,ban đầu với tên gọi là Công ty Cổ phần Luật Việt trải qua 13 năm xây dựng và phát triển Công ty đã đạt được những thành tựu nhất định. Cùng với xu hướng hội nhập và phát triển của đất nước, tập thể ban lãnh đạo đã quyết định đổi tên thành Công ty Cổ phần&nbsp; Bất động sản VNG&nbsp; Việt Nam ( VNG Group). Từ khi đổi tên đến nay, VNG Group đã không ngừng lớn mạnh cả về quy mô lẫn các lĩnh vực hoạt động. VNG Group hiện nay có 4 đơn vị thành viên bao gồm:</p>\r\n<ol style=\"text-align: justify;\">\r\n<li>CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN VNG VIỆT NAM</li>\r\n<li>CÔNG TY TNHH THẨM ĐỊNH GIÁ VNG VIỆT NAM</li>\r\n<li>VĂN PHÒNG LUẬT SƯ VNG VIỆT NAM</li>\r\n<li>CÔNG TY CỔ PHẦN TRUYỀN THÔNG VNG VIỆT NAM</li>\r\n</ol>\r\n<p style=\"text-align: justify;\">1 – &nbsp;<strong>Công ty Cổ phần Bất động sản VNG Việt Nam</strong></p>\r\n<p style=\"text-align: justify;\">Lĩnh vực Bất động sản luôn được đánh giá cao, là nền tảng và thế mạnh của VNG Group nói chung. Trong những năm qua, Công ty đã triển khai nhiều dự án tại Hà Nội, Hội An, Hòa Bình, Hưng Yên, Hà Nam… Cùng với đó là các chiến lược phát triển hệ thống các sàn giao dịch Bất động sản nhằm hợp tác với các chủ đầu tư trong việc phân phối sản phẩm tại các dự án một cách chuyên nghiệp và hiệu quả nhất. Trong những năm qua, VNG Land đã thực hiện thành công nhiều dự án đô thị lớn tại các tỉnh thành phố khác trong phạm vi cả nước.</p>\r\n<p style=\"text-align: justify;\">2 –<span class=\"Apple-converted-space\">&nbsp;</span><strong>Văn phòng Luật sư VNG Việt Nam</strong></p>\r\n<p style=\"text-align: justify;\">Cùng với sự phát triển và lớn mạnh của Công ty Cổ phần Bất động sản VNG Việt Nam, nhận thấy sự cần thiết về yếu tố pháp lý đảm bảo hoạt động cho toàn hệ thống. Vì vậy Ban lãnh đạo Công ty đã bắt tay vào việc thành lập Văn phòng Luật sư VNG Việt Nam với mục đích tư vấn pháp lý cho toàn hệ thống . Ngoài ra văn phòng còn nhận tư vấn và bảo vệ quyền lợi và lợi ích hợp pháp cho mọi tổ chức và cá nhân trong và ngoài nước.</p>\r\n<p style=\"text-align: justify;\">3 –<span class=\"Apple-converted-space\">&nbsp;</span><strong>Công ty TNHH Thẩm định giá VNG Việt Nam</strong></p>\r\n<p style=\"text-align: justify;\">Được sự ủng hộ của toàn hệ thống VNG Group , đến năm 2009 Công ty TNHH Thẩm định giá VNG Việt Nam được thành lập. Đến nay đã trở thành một trong những Công ty có uy tín và thương hiệu trên thị trường Việt Nam. Các lĩnh vực hoạt động chính của Công ty là: Thẩm định giá trị Động sản, Bất động sản, máy móc thiết bị, giá trị thương hiệu, Doanh nghiệp…</p>\r\n<p style=\"text-align: justify;\">Thẩm định giá là một chuyên nghành đòi hỏi trình độ và kỹ năng nghề nghiệp cao. Dự kiến, sau khi thành lập, Công ty sẽ hỗ trợ cho toàn bộ hệ thống VNG Group tạo nên một quy trình khép kín.</p>\r\n<p style=\"text-align: justify;\">4 –<span class=\"Apple-converted-space\">&nbsp;</span><strong>Công ty Cổ phần truyền thông VNG Việt Nam</strong></p>\r\n<p style=\"text-align: justify;\">Công ty Cổ phần truyền thông VNG Việt Nam là đơn vị hoạt động trong lĩnh vực truyền thông, quảng cáo và đào tạo. Với mục đích cung cấp cho khách hàng cá nhân và khách hàng doanh nghiệp những giải pháp kinh doanh hiệu quả nhất dựa vào truyền thông quảng cáo từ việc xây dựng thương hiệu, thiết kế phát triển website cho đến việc lập kế hoạch truyền thông quảng cáo.</p>\r\n<p style=\"text-align: justify;\">Là một doanh nghiệp trẻ, năng động với những thành viên đam mê đầy sáng tạo, nhiệt huyết. Chúng tôi luôn mong muốn đưa ra những gói giải pháp phù hợp với tính chất sản phẩm, tối thiểu chi phí, đem lại hiệu quả, tăng lợi nhuận, tăng sức cạnh tranh.</p>\r\n<p style=\"text-align: justify;\">Trong quá trình phát triển của mình, VNG Group luôn nhận thức rõ được nguồn nhân lực là nhân tố quyết định đến thành công của doanh nghiệp. Trên tinh thần đó, VNG Group luôn có những chính sách bồi dưỡng và đào tạo những cán bộ tâm huyết&nbsp; nhằm xây dựng cán bộ nòng cốt phục vụ lâu dài cho Công ty.</p>\r\n<p style=\"text-align: justify;\">&nbsp;<strong>VNG Group còn tích cực tham gia Công tác phúc lợi xã hội</strong></p>\r\n<p style=\"text-align: justify;\">Với phương châm gắn xã hội trong kinh doanh song song là nhiệm vụ kinh doanh đảm bảo thu nhập cho người lao động, thực hiện đầy đủ nghĩa vụ thuế đối với nhà nước. VNG Group luôn tích cực tham gia các&nbsp; chương trình xã hội vì cộng đồng do các tổ chức phát động. Qua đó VNG Group vừa thể hiện được trách nhiệm của doanh nghiệp đối với xã hội vừa đào tạo được nhân viên hướng mình đến cộng đồng nhân văn.</p>\r\n                                    </div>', '2018-04-02 08:00:15', '2018-04-02 08:00:15'),
-(4, 'Tầm Nhìn', '<div class=\"span6 main-content\">\r\n                    <div class=\"breadcumb\">\r\n                        <p id=\"breadcrumbs\"><span xmlns:v=\"http://rdf.data-vocabulary.org/#\"><span typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/\" rel=\"v:url\" property=\"v:title\">Trang Chủ</a> » <span rel=\"v:child\" typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/gioi-thieu/\" rel=\"v:url\" property=\"v:title\">Giới Thiệu</a> » <span class=\"breadcrumb_last\">Tầm nhìn và sứ mệnh</span></span></span></span></p>                    </div>\r\n                                           <p style=\"text-align: justify;\"><em>“Chúng tôi là Công ty chuyên nghiên cứu, tư vấn, tiếp thị và phân phối các dự án bất động sản. Qua một thời gian xây dựng và phát triển đến nay VNG Việt Nam đã trở thành một đơn vị có uy tín trong lĩnh vực cung cấp dịch vụ Bất động sản”</em></p>\r\n<p style=\"text-align: justify;\">Bằng khát vọng tiên phong cùng với chiến lược đầu tư – “giá trị của sự bền vững”, VNG Group phấn đấu trở thành một tập đoàn kinh tế lớn mạnh không chỉ thành công trong lĩnh vực bất động sản mà còn phát triển cả về tư vấn pháp luật, thẩm định giá và truyền thông…</p>\r\n<p style=\"text-align: justify;\"><strong>Tầm nhìn và sứ mệnh</strong></p>\r\n<p style=\"text-align: justify;\">Chúng tôi luôn đề cao:</p>\r\n<ul>\r\n<li style=\"text-align: justify;\">Thiện chí trong hợp tác</li>\r\n<li style=\"text-align: justify;\">Chuyên nghiệp trong mọi hoạt động</li>\r\n<li style=\"text-align: justify;\">Tận tâm, trung thực</li>\r\n<li style=\"text-align: justify;\">Trách nhiệm xã hội</li>\r\n<li style=\"text-align: justify;\">Trung thành</li>\r\n</ul>\r\n                                    </div>', '2018-04-02 08:00:49', '2018-04-02 08:00:49'),
-(5, 'Văn Hóa', '<div class=\"span6 main-content\">\r\n                    <div class=\"breadcumb\">\r\n                        <p id=\"breadcrumbs\"><span xmlns:v=\"http://rdf.data-vocabulary.org/#\"><span typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/\" rel=\"v:url\" property=\"v:title\">Trang Chủ</a> » <span rel=\"v:child\" typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/gioi-thieu/\" rel=\"v:url\" property=\"v:title\">Giới Thiệu</a> » <span class=\"breadcrumb_last\">Văn hóa công ty</span></span></span></span></p>                    </div>\r\n                                           <h2 style=\"text-align: justify;\">Văn hóa công ty</h2>\r\n<p style=\"text-align: justify;\">Văn hóa ứng xử là một phần của văn hóa doanh nghiệp. Đây là một trong những nhân tố quan trọng góp phần xây dựng hình ảnh của doanh nghiệp, xây dựng văn hóa doanh nghiệp với bản sắc riêng.</p>\r\n<p style=\"text-align: justify;\">Qua một thời gian hoạt động đến nay VNG Group đã mở rộng quy mô hoạt động ở nhiều lĩnh vực khác nhau như: Bất động sản, Tư vấn pháp luật, truyền thông – maketing, thẩm định giá… VNG Group luôn tự hào là một trong những đơn vị có vị thế vững mạnh với những dịch vụ chuyên nghiệp và tạo dựng được uy tín trên thị trường.</p>\r\n<p style=\"text-align: justify;\">Với mục đích tạo dựng nên mối liên kết chặt chẽ trong toàn bộ hệ thống VNG Group nói chung, tạo nguồn động lực thúc đẩy doanh nghiệp đoàn kết và phát triển bền vững. Văn hóa doanh nghiệp được VNG Group xây dựng mong muốn thúc đẩy tinh thần làm việc, phát huy tính dân chủ, phát triển khả năng của mỗi cá nhân.</p>\r\n<p style=\"text-align: justify;\">&nbsp;<a href=\"http://vngvietnam.com.vn/wp-content/uploads/2015/02/tap-the-cong-ty.jpg\"><img class=\"aligncenter wp-image-689 size-full\" src=\"http://vngvietnam.com.vn/wp-content/uploads/2015/02/tap-the-cong-ty.jpg\" alt=\"tap-the-cong-ty\" width=\"650\" height=\"420\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2015/02/tap-the-cong-ty.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2015/02/tap-the-cong-ty-300x194.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p style=\"text-align: justify;\">Tập thể Ban lãnh đạo VNG Group luôn chú ý đến đời sống văn hóa tinh thần của tập thể cán bộ nhân viên của mình. Ở gia đình VNG &nbsp;bạn sẽ cảm nhận được một môi trường làm việc chuyên nghiệp, năng động, lao động thụ hưởng, thu nhập do chính bản thân mỗi người quyết định.</p>\r\n<p style=\"text-align: justify;\">Văn hóa chính là sức mạnh của VNG Group , là chất keo gắn kết các cán bộ nhân viên của Công ty với nhau, thúc đẩy mỗi người nỗ lực , sáng tạo đóng góp vào cho sự phát triển và lớn mạnh của Tập đoàn.</p>\r\n<p style=\"text-align: justify;\"><strong>Môi trường làm việc</strong></p>\r\n<p style=\"text-align: justify;\">Tại VNG Group chúng tôi luôn cố gắng tạo ra những môi trường làm việc có không gian thoải mái nhất, nơi các thành viên được làm việc , được công hiến hết sức với niềm đam mê của mình.Tại VNG Group luôn có sự tôn trọng, lắng nghe và tạo điều kiện đẻ mỗi thành viên được là chính mình, được cống hiến, sáng tạo và tự do thể hiện bản thân.</p>\r\n<p style=\"text-align: justify;\"><strong>Lao động và hưởng thụ</strong></p>\r\n<p style=\"text-align: justify;\">Bên cạnh môi trường làm việc có tính độc lập và sáng tạo, VNG Group còn tạo nên một môi trường lao động hưởng thụ cho nhân viên của mình. Tất cả các thành viên của đại gia đình VNG Group đều cố gắng nỗ lực vun đắp xây dựng để VNG Group có nền văn hóa riêng biệt và đặc sắc nhất.</p>\r\n<p style=\"text-align: justify;\">Trong những ngày lễ Tết VNG Group đều tổ chức những đều tổ chức những buổi liên hoan, sôi nổi, đầm ấm vui tươi cho cán bộ nhân viên. Bên cạnh đó Công ty còn thường xuyên tổ chức các hoạt động văn nghệ, thể thao hay những chuyến đi du lịch xa nhằm đem lại sự thoải mái cho nhân viên sau một thời gian dài làm việc căng thẳng và&nbsp; vất vả. Và sau mỗi buổi tổng kết của từng quý , từng năm, gia đình VNG luôn có những phần thưởng xứng đáng động viên và trao bằng khen cho những cá nhân xuất sắc….</p>\r\n<p style=\"text-align: justify;\">Tất cả những hoạt động trên giống như một món ăn tinh thần khích lệ động viên các thành viên của VNG được vui vẻ, yên tâm và tích cực làm việc tốt hơn, nâng cao hiệu quả công việc và sức sáng tạo của mỗi con người.</p>\r\n<p style=\"text-align: justify;\">\r\n                                    </p></div>', '2018-04-02 08:01:33', '2018-04-02 08:01:33'),
-(6, 'Tải về', '<div class=\"span6 main-content\">\r\n                    <div class=\"breadcumb\">\r\n                        <p id=\"breadcrumbs\"><span xmlns:v=\"http://rdf.data-vocabulary.org/#\"><span typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/\" rel=\"v:url\" property=\"v:title\">Trang Chủ</a> » <span rel=\"v:child\" typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/gioi-thieu/\" rel=\"v:url\" property=\"v:title\">Giới Thiệu</a> » <span class=\"breadcrumb_last\">Download Profile</span></span></span></span></p>                    </div>\r\n                                           <p style=\"text-align: left;\">Dowload Profile : <a href=\"http://vnggroup.com.vn/wp-content/uploads/2015/02/ho-so-luat1.pdf\">Văn phòng luật sư&nbsp;VNG Việt Nam</a></p>\r\n<p style=\"text-align: left;\">Dowload Profile: <a href=\"http://vnggroup.com.vn/wp-content/uploads/2015/02/Profile-TDG-2014-trang-roi15.11-Chuan1.pdf\">Công ty TNHH&nbsp;Thẩm định giá&nbsp;VNG Việt Nam</a></p>\r\n<p style=\"text-align: left;\">Dowload Profile: <a href=\"http://vnggroup.com.vn/wp-content/uploads/2015/02/profile_VNG070215s.pdf\">Công ty Cổ phần Bất động sản VNG Việt Nam</a></p>\r\n<p style=\"text-align: center;\">\r\n                                    </p></div>', '2018-04-02 08:02:17', '2018-04-02 08:02:17');
+INSERT INTO `about` (`id`, `name`, `title`, `content`, `img`, `created_at`, `updated_at`) VALUES
+(1, 'Thư Ngỏ', 'Kính gửi đối tác và quý khách hàng', '<p>Bất động sản, tư vấn ph&aacute;p luật, truyền th&ocirc;ng &ndash; marketing, thẩm định gi&aacute;&hellip; VNGROUP lu&ocirc;n tự h&agrave;o l&agrave; một trong những đơn vị cung cấp c&aacute;c dịch vụ chuy&ecirc;n nghiệp g&oacute;p phần v&agrave;o sự ph&aacute;t triển ổn định của thị trường cũng như mang lại lợi &iacute;ch tối ưu cho Qu&yacute; kh&aacute;ch h&agrave;ng.&nbsp;<br />\r\nVNGROUP c&oacute; được những th&agrave;nh c&ocirc;ng như ng&agrave;y h&ocirc;m nay ngo&agrave;i những sự nỗ lực v&agrave; đo&agrave;n kết của đội ngũ c&aacute;n bộ, nh&acirc;n vi&ecirc;n c&ograve;n c&oacute; cả sự t&iacute;n nhiệm v&agrave; ủng hộ v&ocirc; c&ugrave;ng to lớn của to&agrave;n thể Qu&yacute; vị.&nbsp;<br />\r\nVới mong muốn đem đến cho Qu&yacute; kh&aacute;ch h&agrave;ng những dịch vụ tốt nhất to&agrave;n thể Ban l&atilde;nh đạo v&agrave; đội ngũ nh&acirc;n vi&ecirc;n lu&ocirc;n cố gắng hết m&igrave;nh, kh&ocirc;ng ngừng phấn đấu tạo những sản phẩm v&agrave; dịch vụ c&oacute; ưu điểm vượt trội nhằm n&acirc;ng cao chất lượng phục vụ để c&oacute; thể nhận được sự tin tưởng cũng như sự h&agrave;i l&ograve;ng từ ph&iacute;a Qu&yacute; kh&aacute;ch h&agrave;ng.</p>', '1527310401.image_thu_ngo.png', '2018-04-02 07:55:32', '2018-05-25 21:53:22'),
+(2, 'Thư Ngỏ', NULL, 'Bất động sản, tư vấn pháp luật, truyền thông – marketing, thẩm định giá… VNGROUP luôn tự hào là một trong những đơn vị cung cấp các dịch vụ chuyên nghiệp góp phần vào sự phát triển ổn định của thị trường cũng như mang lại lợi ích tối ưu cho Quý khách hàng. \r\nVNGROUP có được những thành công như ngày hôm nay ngoài những sự nỗ lực và đoàn kết của đội ngũ cán bộ, nhân viên còn có cả sự tín nhiệm và ủng hộ vô cùng to lớn của toàn thể Quý vị. \r\nVới mong muốn đem đến cho Quý khách hàng những dịch vụ tốt nhất toàn thể Ban lãnh đạo và đội ngũ nhân viên luôn cố gắng hết mình, không ngừng phấn đấu tạo những sản phẩm và dịch vụ có ưu điểm vượt trội nhằm nâng cao chất lượng phục vụ để có thể nhận được sự tin tưởng cũng như sự hài lòng từ phía Quý khách hàng.\r\n<h3>GIỚI THIỆU VNG GROUP</h3>\r\n\r\n<p>Hệ thống&nbsp;VNG Việt Nam (VNG Group) c&oacute; tiền th&acirc;n l&agrave; C&ocirc;ng ty Cổ phần Bất động sản VNG Việt Nam đ&atilde; c&oacute; hơn 15 năm kinh nghiệm hoạt động trong lĩnh vực bất động sản. Với bề d&agrave;y hoạt động, qua một thời gian ph&aacute;t triển đến nay C&ocirc;ng ty đ&atilde; trở th&agrave;nh một trong những C&ocirc;ng ty Bất động sản lớn mạnh, c&oacute; thương hiệu uy t&iacute;n v&agrave; được đ&ocirc;ng đảo&nbsp; kh&aacute;ch h&agrave;ng biết đến với chất lượng phục vụ tốt nhất, phong c&aacute;ch phục vụ chuy&ecirc;n nghiệp trong lĩnh vực m&ocirc;i giới, ph&acirc;n phối v&agrave; đầu tư bất động sản.</p>\r\n\r\n<p>Tr&ecirc;n đ&agrave; ph&aacute;t triển kh&ocirc;ng ngừng đ&oacute;, c&ugrave;ng với việc ph&aacute;t triển v&agrave; hội nhập của Việt Nam với nền kinh tế thế giới, C&ocirc;ng ty đ&atilde; mở rộng quy m&ocirc; , hoạt động ở nhiều lĩnh vực kh&aacute;c nhau như: Bất động sản, tư vấn ph&aacute;p luật , truyền th&ocirc;ng &ndash; marketing, thẩm định gi&aacute;&hellip;</p>\r\n\r\n<p>Mang phương ch&acirc;m &ldquo;Ph&aacute;t triển bền vững &ndash; Gia tăng gi&aacute; trị&rdquo; VNG Group với đội ngũ nh&acirc;n vi&ecirc;n v&agrave; chuy&ecirc;n gia nhiệt huyết, t&agrave;i năng, s&aacute;ng tạo sẽ lu&ocirc;n cung cấp những dịch vụ tốt nhất v&agrave; sẽ l&agrave;m h&agrave;i l&ograve;ng qu&yacute; kh&aacute;ch h&agrave;ng.</p>\r\n\r\n<p>Ngo&agrave;i ra, VNG Group c&ograve;n sở hữu trang th&ocirc;ng tin Bất Động Sản. Đ&acirc;y l&agrave; nơi trao đổi, cung cấp c&aacute;c th&ocirc;ng tin hữu &iacute;ch về giao dịch, cho thu&ecirc; v&agrave; mua b&aacute;n bất động sản:&nbsp;www.sieuthibatdongsan.com.vn</p>\r\n\r\n<p><em><strong>Hiện nay, VNG Group đ&atilde; c&oacute; 4 c&ocirc;ng ty th&agrave;nh vi&ecirc;n, trụ sở ch&iacute;nh đặt tại miền Bắc v&agrave; 2 văn ph&ograve;ng đại diện đặt tại miền Trung ( Đ&agrave; Nẵng) v&agrave; miền Nam ( Tp. HCM). &nbsp;Cụ thể như sau:</strong></em></p>\r\n\r\n<p><strong>Văn ph&ograve;ng H&agrave; Nội</strong></p>\r\n\r\n<p><strong>1/ C&ocirc;ng ty Cổ phần Bất động sản VNG Việt Nam</strong></p>\r\n\r\n<p>Tầng 5, T&ograve;a Diamond Flower Tower, Ho&agrave;ng Đạo Th&uacute;y, Nh&acirc;n Ch&iacute;nh, Thanh Xu&acirc;n, H&agrave; Nội</p>\r\n\r\n<p><strong>Tel:</strong> 04.62 73 74 75</p>\r\n\r\n<p><strong>Hotline:</strong> 0903 74 75 76</p>\r\n\r\n<p><strong>Fax:</strong> 04. 63 25 22 99</p>\r\n\r\n<p><strong>Email:</strong> info@vngvietnam.com.vn</p>\r\n\r\n<p><strong>Website:&nbsp;</strong><a href=\"http://vnggroup.com.vn\">http://vnggroup.com.vn</a></p>\r\n\r\n<p><strong>2/ C&ocirc;ng ty TNHH Thẩm định gi&aacute; VNG Việt Nam</strong></p>\r\n\r\n<p><strong>Văn ph&ograve;ng giao dịch:</strong>&nbsp;Tầng 5, T&ograve;a Diamond Flower Tower, Ho&agrave;ng Đạo Th&uacute;y, Nh&acirc;n Ch&iacute;nh, Thanh Xu&acirc;n, H&agrave; Nội</p>\r\n\r\n<p><strong>Tel:</strong> 04.62 73 74 75</p>\r\n\r\n<p><strong>Hotline:</strong> 0981 228 929</p>\r\n\r\n<p><strong>Fax:</strong> 04. 63 25 22 99</p>\r\n\r\n<p><strong>Website:</strong>&nbsp;<a href=\"http://thamdinhgiavng.com/\">http://thamdinhgiavng.com/</a></p>\r\n\r\n<p><strong>3/ Văn ph&ograve;ng luật sư VNG Việt Nam</strong></p>\r\n\r\n<p><strong>Văn ph&ograve;ng giao dịch:</strong>&nbsp;Tầng 5, T&ograve;a Diamond Flower Tower, Ho&agrave;ng Đạo Th&uacute;y, Nh&acirc;n Ch&iacute;nh, Thanh Xu&acirc;n, H&agrave; Nội</p>\r\n\r\n<p><strong>Tel:</strong> 04.62 73 74 75</p>\r\n\r\n<p><strong>Hotline:</strong> 0971 026 678</p>\r\n\r\n<p><strong>Fax:</strong> 04. 63 25 22 99</p>\r\n\r\n<p><strong>Website:</strong>&nbsp;<a href=\"http://vnglaw.com/\">http://vnglaw.com/</a></p>\r\n\r\n<p><strong>4/ C&ocirc;ng ty Cổ phần truyền th&ocirc;ng VNG Việt Nam</strong></p>\r\n\r\n<p><strong>Văn ph&ograve;ng giao dịch:</strong>&nbsp;Tầng 5, T&ograve;a Diamond Flower Tower, Ho&agrave;ng Đạo Th&uacute;y, Nh&acirc;n Ch&iacute;nh, Thanh Xu&acirc;n, H&agrave; Nội</p>\r\n\r\n<p><strong>Tel:</strong> 04.62 73 74 75</p>\r\n\r\n<p><strong>Hotline:</strong> 0902 12 06 07</p>\r\n\r\n<p><strong>Fax:</strong> 04. 63 25 22 99</p>\r\n\r\n<hr />\r\n<p><strong>Văn ph&ograve;ng Miền Trung</strong></p>\r\n\r\n<p><strong>Địa chỉ: </strong>Số 68, Đường 2 th&aacute;ng 9, P. B&igrave;nh Hi&ecirc;n, Q. Hải Ch&acirc;u, TP. Đ&agrave; Nẵng</p>\r\n\r\n<p><strong>Tel: </strong>0511 399 6886</p>\r\n\r\n<p><strong>Hotline:&nbsp;</strong>0971 021 868</p>\r\n\r\n<p><strong>Email:&nbsp;</strong><a href=\"mailto:infovngdn@vnggroup.com.vn\">infovngdn@vngvietnam.com.vn&nbsp;</a></p>\r\n\r\n<hr />\r\n<p><strong>Văn ph&ograve;ng Miền Nam</strong></p>\r\n\r\n<p><strong>Địa chỉ:&nbsp;</strong>Tầng 10, Số 40 Phạm Ngọc Thạch, Phường 6, Quận 3, Tp Hồ Ch&iacute; Minh</p>\r\n\r\n<p><strong>Hotline:&nbsp;</strong>0934 1080 28<strong>&nbsp;</strong></p>\r\n\r\n<p><strong>Email:</strong>&nbsp;<a href=\"mailto:%20infohcm@vnggroup.com.vn\">infohcm@vnggroup.com</a><a href=\"mailto:%20infohcm@vnggroup.com.vn\">.vn</a><strong><a href=\"mailto:%20infohcm@vnggroup.com.vn\">&nbsp;</a></strong></p>\r\n\r\n<p>&nbsp;</p>', NULL, '2018-04-02 07:59:29', '2018-04-02 08:06:52'),
+(3, 'Lịch sử', '2003', '<p><strong>C&ocirc;ng ty CP Luật Việt </strong></p>\r\n\r\n<p>(Luat Viet Group) hoạt động chủ yếu trong lĩnh vực tư vấn Luật v&agrave; Bất động sản</p>', '1527310543.history_img.png', '2018-04-02 08:00:15', '2018-05-25 21:56:07'),
+(4, 'Lịch sử', '2009', 'Thành lập 2 đươn vị\r\nVăn phòng luật sư Luật Việt\r\nCông ty TNHH Thẩm định Luật Việt', NULL, '2018-04-02 08:00:49', '2018-04-02 08:00:49'),
+(5, 'Lịch sử', '2014', 'Văn mình & chuyển đổi\r\nCông ty CP Luật Việt đổi tên thành Công ty CP BĐS VNG VN\r\nĐơn vị thành viên đổi thành: Văn phòng Luật sư VNG, Công ty TNHH Thẩm đinh giá VNG VN\r\nThành lập văn phòng đại diện tại Sơn La, Hải Phòng, Hưng Yên, Thanh Hóa', NULL, '2018-04-02 08:01:33', '2018-04-02 08:01:33'),
+(6, 'Lịch sử', '2015', 'Phát triển và mở rộng\r\nRa đời Công ty CP truyền thông VNG Việt Nam từ việc sáp nhập công ty TNHH JOS vào hệ thống\r\nThành lập chi nhánh Đà Nẵng & VPĐD TP. Hồ Chí Minh', NULL, '2018-04-02 08:02:17', '2018-05-22 18:27:57'),
+(7, 'Lịch sử', '2018', 'Gắn kết & bền vững\r\nToàn hệ thống có 5 Công ty, 1 chi nhánh Đà Nẵng & 1 VPĐD TP. Hồ Chí Minh với hơn 200 CBNV', 'img', NULL, NULL),
+(8, 'Lịch sử', 'title', 'text', 'img', NULL, NULL),
+(9, 'Tầm nhìn', 'Tầm nhìn', 'Là một tập đoàn đa ngành có hệ sinh thái khởi nghiệp khép kín tạo nên giá trị phát triển bền vững. Không chỉ mang lại cuộc sống ấm no hạnh phúc cho CBNV toàn hệ thống, VNGroup còn góp phần tạo ra những giá trị thịnh vượng nhân văn cho cộng đồng . \r\nMục tiêu của VNGroup: Luôn nỗ lực ĐỔI MỚI - không ngừng SÁNG TẠO, áp dụng công nghệ, đón đầu cơ hội để trở thành một Tập đoàn vững mạnh, sẵn sàng cho tiến trình hội nhập Quốc tế.', '', NULL, NULL),
+(10, 'Tầm nhìn', 'Sứ mệnh', '<p>Mang trong m&igrave;nh sứ mệnh chung của to&agrave;n doanh nghiệp, chung tay x&acirc;y dựng đất nước Việt Nam thịnh vượng, h&ograve;a nhập c&ugrave;ng thế giới. Ch&uacute;ng t&ocirc;i - VNGroup kh&ocirc;ng ngừng nỗ lực s&aacute;ng tạo, ph&aacute;t triển nhằm mang đến những sản phẩm/ dịch vụ chất lượng, g&oacute;p phần tạo ra của cải vật chất, gi&aacute; trị gia tăng cho doanh nghiệp/ x&atilde; hội. Sự tin tưởng v&agrave; h&agrave;i l&ograve;ng của kh&aacute;ch h&agrave;ng l&agrave; kim chỉ nam cho sự nghiệp ph&aacute;t triển chung của Tập đo&agrave;n.</p>', '1527310943.GTCL.png', NULL, '2018-05-25 22:02:23'),
+(11, 'Tầm nhìn', 'Triết lý kinh doanh', '\"Giá trị của sự bền vững\"\r\nSlogan thể hiện triết lý kinh doanh, tôn chỉ hoạt động của VNGroup trong suốt 15 năm qua. Thông điệp này còn thể hiện đầy đủ các khía cạnh của tập đoàn, từ lịch sử, văn hóa, giá trị cốt lõi đến tầm nhìn sứ mệnh phát triển VNGroup.\r\nNhấn mạnh đến yếu tố “bền vững”, VNGroup hiểu rằng, yếu tố con người, giá trị nguồn nhân lực đóng vai trò thiết yếu trong việc phát triển doanh nghiệp và lợi ích cộng đồng.\r\nĐể hoàn thành sứ mệnh “Bền Vững” trên, VNGroup đã đưa ra những chiến lược phát triển toàn diện, lâu dài. Theo đó, sự phát triển bền vững ở đây bao gồm nhiều khía cạnh, cụ thể: bền vững về mặt tài chính, bền vững về yếu tố con người và bền vững về ngành nghề hoạt động , Danh mục sản phẩm đầu tư đảm bảo không bị lỗi thời so với xu hướng của thời đại . \r\nNhững yếu tố này góp phần xây dựng niềm tin nơi khách hàng, đẩy mạnh uy tín cũng như giá trị cho thương hiệu VNGROUP. Tại VNGroup, chúng tôi hiểu rằng Bền Vững là sứ mệnh duy nhất trong hoạt động định hướng của Doanh nghiệp .', 'bernard-hermant-589370-unsplash.png', NULL, NULL),
+(12, 'VĂN HÓA VNG GROUP', 'Quy mô VNG Group', 'Qua một thời gian hoạt động đến nay VNGroup đã mở rộng quy mô hoạt động ở nhiều lĩnh vực khác nhau như: Bất động sản, Tư vấn pháp luật, truyền thông – maketing, thẩm định giá… VNGroup luôn tự hào là một trong những đơn vị có vị thế vững mạnh với những dịch vụ chuyên nghiệp và tạo dựng được uy tín trên thị trường.Với mục đích tạo dựng nên mối liên kết chặt chẽ trong toàn bộ Tập đoàn VNGroup nói chung, tạo nguồn động lực thúc đẩy doanh nghiệp đoàn kết và phát triển bền vững. Văn hóa doanh nghiệp được VNGroup xây dựng mong muốn thúc đẩy tinh thần làm việc, phát huy tính dân chủ, phát triển khả năng của mỗi cá nhân.Tập thể Ban lãnh đạo VNGroup luôn chú ý đến đời sống văn hóa tinh thần của tập thể cán bộ nhân viên của mình. Là thành viên của VNGroup bạn sẽ cảm nhận được một môi trường làm việc chuyên nghiệp, năng động, lao động thụ hưởng, thu nhập do chính bản thân mỗi người quyết định.', 'chuttersnap-387758-unsplash.png', NULL, NULL),
+(13, 'VĂN HÓA VNG GROUP', 'Môi trường làm việc', 'Qua một thời gian hoạt động đến nay VNGroup đã mở rộng quy mô hoạt động ở nhiều lĩnh vực khác nhau như: Bất động sản, Tư vấn pháp luật, truyền thông – maketing, thẩm định giá… VNGroup luôn tự hào là một trong những đơn vị có vị thế vững mạnh với những dịch vụ chuyên nghiệp và tạo dựng được uy tín trên thị trường.Với mục đích tạo dựng nên mối liên kết chặt chẽ trong toàn bộ Tập đoàn VNGroup nói chung, tạo nguồn động lực thúc đẩy doanh nghiệp đoàn kết và phát triển bền vững. Văn hóa doanh nghiệp được VNGroup xây dựng mong muốn thúc đẩy tinh thần làm việc, phát huy tính dân chủ, phát triển khả năng của mỗi cá nhân.Tập thể Ban lãnh đạo VNGroup luôn chú ý đến đời sống văn hóa tinh thần của tập thể cán bộ nhân viên của mình. Là thành viên của VNGroup bạn sẽ cảm nhận được một môi trường làm việc chuyên nghiệp, năng động, lao động thụ hưởng, thu nhập do chính bản thân mỗi người quyết định.', 'chuttersnap-387758-unsplash.png', NULL, NULL),
+(14, 'VĂN HÓA VNG GROUP', 'Lao động và hưởng thụ\r\n\\', 'Qua một thời gian hoạt động đến nay VNGroup đã mở rộng quy mô hoạt động ở nhiều lĩnh vực khác nhau như: Bất động sản, Tư vấn pháp luật, truyền thông – maketing, thẩm định giá… VNGroup luôn tự hào là một trong những đơn vị có vị thế vững mạnh với những dịch vụ chuyên nghiệp và tạo dựng được uy tín trên thị trường.Với mục đích tạo dựng nên mối liên kết chặt chẽ trong toàn bộ Tập đoàn VNGroup nói chung, tạo nguồn động lực thúc đẩy doanh nghiệp đoàn kết và phát triển bền vững. Văn hóa doanh nghiệp được VNGroup xây dựng mong muốn thúc đẩy tinh thần làm việc, phát huy tính dân chủ, phát triển khả năng của mỗi cá nhân.Tập thể Ban lãnh đạo VNGroup luôn chú ý đến đời sống văn hóa tinh thần của tập thể cán bộ nhân viên của mình. Là thành viên của VNGroup bạn sẽ cảm nhận được một môi trường làm việc chuyên nghiệp, năng động, lao động thụ hưởng, thu nhập do chính bản thân mỗi người quyết định.', 'chuttersnap-387758-unsplash.png', NULL, NULL),
+(15, 'ceo', 'Nguyễn Văn A', 'Ceo and Founder', 'img', NULL, NULL),
+(16, 'ceo', 'Nguyễn Văn A', 'Ceo and Founder', 'img', NULL, NULL),
+(17, 'ceo', 'Nguyễn Văn A', 'Ceo and Founder', 'img', NULL, NULL),
+(18, 'name', 'title', 'text', 'img', NULL, NULL),
+(19, 'name', 'title', 'text', 'img', NULL, NULL),
+(20, 'name', 'title', 'text', 'img', NULL, NULL),
+(21, 'name', 'title', 'text', 'img', NULL, NULL),
+(22, 'name', 'title', 'text', 'img', NULL, NULL),
+(23, 'name', 'title', 'text', 'img', NULL, NULL),
+(24, 'name', 'title', 'text', 'img', NULL, NULL),
+(25, 'name', 'title', 'text', 'img', NULL, NULL),
+(26, 'name', 'title', 'text', 'img', NULL, NULL),
+(27, 'name', 'title', 'text', 'img', NULL, NULL),
+(28, 'name', 'title', 'text', 'img', NULL, NULL),
+(29, 'name', 'title', 'text', 'img', NULL, NULL),
+(30, 'name', 'title', 'text', 'img', NULL, NULL),
+(31, 'name', 'title', 'text', 'img', NULL, NULL),
+(32, 'name', 'title', 'text', 'img', NULL, NULL),
+(33, 'name', 'title', 'text', 'img', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Cấu trúc bảng cho bảng `contact`
 --
 
 CREATE TABLE `contact` (
@@ -63,7 +92,7 @@ CREATE TABLE `contact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `contact`
+-- Đang đổ dữ liệu cho bảng `contact`
 --
 
 INSERT INTO `contact` (`id`, `name`, `content`, `created_at`, `updated_at`) VALUES
@@ -74,7 +103,7 @@ INSERT INTO `contact` (`id`, `name`, `content`, `created_at`, `updated_at`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `image`
+-- Cấu trúc bảng cho bảng `image`
 --
 
 CREATE TABLE `image` (
@@ -86,7 +115,7 @@ CREATE TABLE `image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `image`
+-- Đang đổ dữ liệu cho bảng `image`
 --
 
 INSERT INTO `image` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
@@ -104,7 +133,7 @@ INSERT INTO `image` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member`
+-- Cấu trúc bảng cho bảng `member`
 --
 
 CREATE TABLE `member` (
@@ -117,7 +146,7 @@ CREATE TABLE `member` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `member`
+-- Đang đổ dữ liệu cho bảng `member`
 --
 
 INSERT INTO `member` (`id`, `name`, `img`, `content`, `created_at`, `updated_at`) VALUES
@@ -128,7 +157,7 @@ INSERT INTO `member` (`id`, `name`, `img`, `content`, `created_at`, `updated_at`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Cấu trúc bảng cho bảng `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -138,7 +167,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Đang đổ dữ liệu cho bảng `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -153,7 +182,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news`
+-- Cấu trúc bảng cho bảng `news`
 --
 
 CREATE TABLE `news` (
@@ -167,7 +196,7 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `news`
+-- Đang đổ dữ liệu cho bảng `news`
 --
 
 INSERT INTO `news` (`id`, `title`, `img`, `content`, `type`, `created_at`, `updated_at`) VALUES
@@ -180,7 +209,7 @@ INSERT INTO `news` (`id`, `title`, `img`, `content`, `type`, `created_at`, `upda
 -- --------------------------------------------------------
 
 --
--- Table structure for table `project`
+-- Cấu trúc bảng cho bảng `project`
 --
 
 CREATE TABLE `project` (
@@ -193,7 +222,7 @@ CREATE TABLE `project` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `project`
+-- Đang đổ dữ liệu cho bảng `project`
 --
 
 INSERT INTO `project` (`id`, `name`, `img`, `content`, `created_at`, `updated_at`) VALUES
@@ -204,7 +233,7 @@ INSERT INTO `project` (`id`, `name`, `img`, `content`, `created_at`, `updated_at
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -218,7 +247,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -227,105 +256,105 @@ INSERT INTO `users` (`id`, `email`, `password`, `level`, `remember_token`, `crea
 (5, 'q.uyen96@gmail.com', '$2y$10$v2FSLjzvDjxA8xuSfN9V9OB8cUvvsYoxh8nojG7C22yD95pZXzwBa', 1, NULL, '2018-04-02 23:43:46', '2018-04-02 23:43:46');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `about`
+-- Chỉ mục cho bảng `about`
 --
 ALTER TABLE `about`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `contact`
+-- Chỉ mục cho bảng `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `image`
+-- Chỉ mục cho bảng `image`
 --
 ALTER TABLE `image`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `member`
+-- Chỉ mục cho bảng `member`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Chỉ mục cho bảng `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `news`
+-- Chỉ mục cho bảng `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `project`
+-- Chỉ mục cho bảng `project`
 --
 ALTER TABLE `project`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `about`
+-- AUTO_INCREMENT cho bảng `about`
 --
 ALTER TABLE `about`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT cho bảng `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `image`
+-- AUTO_INCREMENT cho bảng `image`
 --
 ALTER TABLE `image`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `member`
+-- AUTO_INCREMENT cho bảng `member`
 --
 ALTER TABLE `member`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `news`
+-- AUTO_INCREMENT cho bảng `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `project`
+-- AUTO_INCREMENT cho bảng `project`
 --
 ALTER TABLE `project`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
