@@ -15,9 +15,10 @@
 		</div>
 		<div class="col-md-7 col-sm-9 col-xs-12 headerMenu resp800Hide">
 			<ul class="">
+				<li @if(Request::segment(2) == 'account') class="headerActive" @endif><a href="{{asset('admin/account')}}">Tài khoản</a></li>
+				<li @if(Request::segment(2) == 'home') class="headerActive" @endif><a href="{{asset('admin/home')}}">Trang chủ</a></li>
 			  	<li @if(Request::segment(2) == 'about') class="headerActive" @endif><a href="{{asset('admin/about/letter')}}">Giới thiệu</a></li>
 			  	<li @if(Request::segment(2) == 'project') class="headerActive" @endif><a href="{{asset('admin/project')}}">Dự án</a></li>
-			  	<li @if(Request::segment(2) == 'member') class="headerActive" @endif><a href="{{asset('admin/member')}}">Cty thành viên</a></li>
 			  	<li @if(Request::segment(2) == 'image') class="headerActive" @endif><a href="{{asset('admin/image')}}">Hình ảnh</a></li>
 			  	<li @if(Request::segment(2) == 'news') class="headerActive" @endif><a href="{{asset('admin/news')}}">Tin tức</a></li>
 			  	<li @if(Request::segment(2) == 'contact') class="headerActive" @endif><a href="{{asset('admin/contact')}}">Liên hệ</a></li>

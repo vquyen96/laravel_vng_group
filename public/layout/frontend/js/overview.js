@@ -1,3 +1,12 @@
+var master = document.getElementById('master');
+var historyImg = document.getElementById('historyImg');
+console.log(master);
+master.onscroll = function(){
+	var x = master.scrollTop;
+	if (x > 600 && x<1100) {
+		historyImg.style.marginTop = x-600+"px";
+	}
+}
 
 $(document).ready(function(){
 	var url_string = window.location.href;
@@ -27,19 +36,4 @@ $(document).ready(function(){
 		default:
 			break;
 	}
-
-	// $('.master').animate({
-	// 	scrollTop: $(".project").offset().top-80
-	// }, 800);
-
-
-	$('.master').scroll = function(){
-		alert("ok");
-		if (true){
-			$('.history .historyImg').css('margin-top', document.body.scrollTop - 700)
-		}
-	}
-	$('.master').scroll(function(){
-		console.log($('.master').scrollTop);
-	});
 });

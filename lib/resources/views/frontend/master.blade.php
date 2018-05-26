@@ -27,7 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="css/master.css">
 </head>
 <body>
-	<div class="master">
+	<div class="master" id="master">
 		@if(Request::segment(1) != "news" && Request::segment(1) != "video" )
 		<div class="backgroundBody">
 			<div class="backgroundBodyImg">
@@ -132,6 +132,7 @@
 						Tin tức
 						<img src="img/new.png">
 					</a>
+					
 				</li>
 				<li>
 					<a href="{{ asset('recruit') }}">
@@ -168,5 +169,13 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/master.js"></script>
 	@yield('script')
+	{{-- <script>
+	function myFunction() {
+	    var elmnt = document.getElementById("myDIV");
+	    var x = elmnt.scrollLeft;
+	    var y = elmnt.scrollTop;
+	    document.getElementById ("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y + "px";
+	}
+	</script> --}}
 </body>
 </html>

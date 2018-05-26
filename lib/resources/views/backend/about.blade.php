@@ -8,29 +8,31 @@
 	<div class="mainHead col-md-12">
 		<ul class="nav nav-tabs">
 		  	<li role="presentation" @if(Request::segment(3) == 'letter') class="active" @endif><a href="{{asset('admin/about/letter')}}">Thư ngỏ</a></li>
-		  	<li role="presentation" @if(Request::segment(3) == 'detail') class="active" @endif><a href="{{asset('admin/about/detail')}}">Giới thiệu</a></li>
 		  	<li role="presentation" @if(Request::segment(3) == 'history') class="active" @endif><a href="{{asset('admin/about/history')}}">Lịch Sử</a></li>
 		  	<li role="presentation" @if(Request::segment(3) == 'vision') class="active" @endif><a href="{{asset('admin/about/vision')}}">Tầm nhìn</a></li>
 		  	<li role="presentation" @if(Request::segment(3) == 'cultural') class="active" @endif><a href="{{asset('admin/about/cultural')}}">Văn hóa</a></li>
-		  	<li role="presentation" @if(Request::segment(3) == 'download') class="active" @endif><a href="{{asset('admin/about/download')}}">Tải về</a></li>
+		  	<li role="presentation" @if(Request::segment(3) == 'ceo') class="active" @endif><a href="{{asset('admin/about/ceo')}}">ceo</a></li>
 		</ul>
 			
 	</div>
 	<div class="col-md-12">
 		@include('errors.note')
-		<form method="post">
+		@foreach($items as $item)
+		<form method="post" action="{{ asset('admin/about/'.Request::segment(3).'/'.$item->id) }} "  enctype="multipart/form-data">
+			@if($item->title != null)
 			<div class="" >
 				<div class="form-group">
-					<label>Tên Mục</label>
-					<input type="text" name="name" value="{{$item->name}}" class="form-control">
+					<label>Tiêu đề</label>
+					<input type="text" name="title" value="{{$item->title}}" class="form-control">
 				</div>
 			</div>
+			@endif
 			<div class="" >
 				<div class="form-group">
 					<label>Nội Dung</label>
-					<textarea class="form-control ckeditor" rows="10" name="content">{{$item->content}}</textarea>
+					<textarea class="form-control ckeditor" rows="10" name="content{{$item->id}}">{{$item->content}}</textarea>
 					<script type="text/javascript">
-						CKEDITOR.replace('content',{
+						CKEDITOR.replace('content{{$item->id}}',{
 							language:'vi',
 							filebrowserImageBrowseUrl: '../../editor/ckfinder/ckfinder.html?Type=Images',
 							filebrowserFlashBrowseUrl: '../../editor/ckfinder/ckfinder.html?Type=Flash',
@@ -41,12 +43,21 @@
 
 				</div>
 			</div>
+			@if($item->img != null)
+			<div class="" >
+				<div class="form-group">
+					<input id="img" type="file" name="file" class="cssInput" onchange="changeImg(this)" style="display: none!important;">
+                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" width="50%" src="{{asset('lib/storage/app/about/'.$item->img)}}">
+				</div>
+			</div>
+			@endif
 			<div class="form-group">
 				<input type="submit" name="" class="btn btn-primary" value="Thay đổi">
 				
 			</div>
 			{{csrf_field()}}
 		</form>
+		@endforeach
 	</div>
 </div>
 @stop

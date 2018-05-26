@@ -37,17 +37,15 @@ Route::group(['namespace'=>'Admin'], function(){
 		});
 		Route::group(['prefix'=>'about'],function(){
 			Route::get('letter','AboutController@getLetter');
-			Route::post('letter','AboutController@postLetter');
-			Route::get('detail','AboutController@getDetail');
-			Route::post('detail','AboutController@postDetail');
+			Route::post('letter/{id}','AboutController@postAbout');
 			Route::get('history','AboutController@getHistory');
-			Route::post('history','AboutController@postHistory');
+			Route::post('history/{id}','AboutController@postAbout');
 			Route::get('vision','AboutController@getVision');
-			Route::post('vision','AboutController@postVision');
+			Route::post('vision/{id}','AboutController@postAbout');
 			Route::get('cultural','AboutController@getCultural');
-			Route::post('cultural','AboutController@postCultural');
-			Route::get('download','AboutController@getDownload');
-			Route::post('download','AboutController@postDownload');
+			Route::post('cultural/{id}','AboutController@postAbout');
+			Route::get('ceo','AboutController@getCEO');
+			Route::post('ceo/{id}','AboutController@postAbout');
 		});
 		Route::group(['prefix'=>'project'],function(){
 			Route::get('/','ProjectController@getList');

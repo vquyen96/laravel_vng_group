@@ -55,7 +55,7 @@
 		</div>
 		<div class="row history">
 			<div class="col-md-6 col-sm-6 col-xs-12">
-				<div class="historyImg">
+				<div class="historyImg" id="historyImg">
 					<img src="img/history_img.png">
 				</div>
 			</div>
