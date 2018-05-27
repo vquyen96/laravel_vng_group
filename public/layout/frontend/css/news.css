@@ -10,6 +10,7 @@
 	margin-top: 50px;
 }
 .slideHeadRightItem{
+	display: block;
 	position: relative;
 }
 .slideHeadRightItem:first-child{
@@ -32,8 +33,11 @@
 	color: #fff;
 	font-weight: 500;
 	font-size: 16px;
+} 
+#carousel-news-header .item{
+	height: 456px;
+    overflow: hidden;
 }
-
 .newsMain{
 	margin-top: 75px;
 }
@@ -61,34 +65,52 @@
 }
 
 .newsItemBig{
+	display: block;
 	margin-bottom: 30px;
 }
-.newsItemBigImg img{
+.newsItemBig .newsItemImg img{
 	width: 100%;
 }
-.newsItemBig .newsItemBigContent .txt18{
+.newsItemBig .newsItemContent .newsItemTitle{
+	color: #000;
 	font-weight: 600;
 	margin: 15px 0;
+	font-size: 18px;
 }
-.newsItemBigTime{
+.newsItemBig .newsItemContent .newsItemText{
+	color: #999;
+	font-weight: 400;
+	font-size: 16px;
+}
+.newsItemBig .newsItemTime{
 	margin-top: 10px;
 }
 
 
 
 .newsItemSmall{
+	display: block;
 	margin-bottom: 30px;
+	height: 80px;
+
 }
-.newsItemSmallImg{
+.newsItemSmall .newsItemImg{
 	width: 125px;
+	height: 80px;
+	overflow: hidden;
 	float: left;
 	margin-right: 10px;	
 }
-.newsItemSmallImg img{
+.newsItemSmall .newsItemImg img{
 	width: 100%;
 }
-.newsItemSmallContent .txt16{
+.newsItemSmall .newsItemContent .newsItemTitle{
 	font-weight: bold;
+	color: #000;
+	font-size: 16px;
+}
+.newsItemSmall .newsItemContent .newsItemText{
+	display: none;
 }
 
 
@@ -98,7 +120,9 @@
 }
 
 .news_press_item{
+	display: block;
 	margin-bottom: 20px;
+
 }
 .news_press_item_img img{
 	width: 100%;
@@ -106,10 +130,11 @@
 
 .newsItemPressContent .txt18{
 	font-weight: bold;
-
+	color: #000;
 }
 .newsItemPressContent .txt16{
 	margin: 10px 0;
+	color: #999;
 	
 }
 
@@ -126,6 +151,7 @@
 	margin-bottom: 20px;
 }
 .news_new_item_content .txt16{
+	color: #000;
 	font-weight: bold;
 }
 .news_new_item{
@@ -159,9 +185,19 @@
 	margin-bottom: 20px;
 }
 .news_social_item{
+	display: block;
 	margin: 15px 0;
 
 }
+.news_social_item_img img{
+	width: 100%;
+}
+
+.news_social_item_content .txt16{
+	color: #000;
+	font-weight: bold;
+}
+
 .newsDetailMain{
 	margin-top: 30px;
 }
@@ -178,6 +214,9 @@
 
 .news_detail_time{
 	margin-bottom: 40px;
+}
+.news_detail_content{
+	overflow: hidden;
 }
 .news_detail_content img{
 	width: 100%;

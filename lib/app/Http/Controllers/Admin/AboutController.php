@@ -51,6 +51,18 @@ class AboutController extends Controller
     	$data['items'] = About::where('name','CEO')->get();
     	return view('backend.about', $data);
     }
-    
+    public function postHistoryAdd(Request $request){
+        $his = new About;
+        $his->name = 'Lịch sử';
+        $his->title = $request->title;
+        $his->content = $request->contentAdd;
+        $his->save();
+        return back();
+    }
+    public function getHistoryDelete($id){
+
+        About::destroy($id);
+        return back();
+    }
 
 }

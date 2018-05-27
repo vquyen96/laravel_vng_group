@@ -53,11 +53,48 @@
 			@endif
 			<div class="form-group">
 				<input type="submit" name="" class="btn btn-primary" value="Thay đổi">
-				
+				@if(Request::segment(3) == 'history' && $item->img == null) 
+				<a href="{{ asset('admin/about/delete/history/'.$item->id) }}" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa!!')">Xóa</a>
+				@endif
 			</div>
 			{{csrf_field()}}
 		</form>
 		@endforeach
+		@if(Request::segment(3) == 'history') 
+		<div class="btnAddHis btn btn-success">
+			Thêm mới
+		</div>
+		<form method="post" class="formAddHis" action="{{ asset('admin/about/add/history') }} "  enctype="multipart/form-data">
+			
+			<div class="" >
+				<div class="form-group">
+					<label>Tiêu đề</label>
+					<input type="text" name="title" class="form-control">
+				</div>
+			</div>
+			<div class="" >
+				<div class="form-group">
+					<label>Nội Dung</label>
+					<textarea class="form-control ckeditor" rows="10" name="contentAdd"></textarea>
+					<script type="text/javascript">
+						CKEDITOR.replace('contentAdd',{
+							language:'vi',
+							filebrowserImageBrowseUrl: '../../editor/ckfinder/ckfinder.html?Type=Images',
+							filebrowserFlashBrowseUrl: '../../editor/ckfinder/ckfinder.html?Type=Flash',
+							filebrowserImageUploadUrl: '../../editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+							filebrowserFlashUploadUrl: '../../public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
+						});
+					</script>
+
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="submit" name="" class="btn btn-success" value="Thêm mới">
+				
+			</div>
+			{{csrf_field()}}
+		</form>
+		@endif
 	</div>
 </div>
 @stop

@@ -85,9 +85,9 @@
 	        }
 	    }
 	    $(document).ready(function() {
-	        $('#avatar').click(function(){
-	            $(this).prev().click();
-	        });
+	        // $('#avatar').click(function(){
+	        //     $(this).prev().click();
+	        // });
 	        $('.cssInput.thumbnail').click(function(){
 	        	$(this).prev().click();
 	        })

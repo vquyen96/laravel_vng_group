@@ -157,6 +157,20 @@ textarea {
 .resp800Show{
 	display: none;
 }
+.btnAddNew{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+.btnAddHis{
+	margin-bottom: 20px;
+}
+.formAddHis{
+	display: none;
+}
+
+
+
 @media screen and (max-width: 1175px) {
   	.headerMenu ul li a{
 		padding:10px 10px;

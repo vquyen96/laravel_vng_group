@@ -1,6 +1,6 @@
 
 @extends('frontend.master')
-@section('title', 'Dự án')
+@section('title', 'Tin tức')
 @section('main')
 <link rel="stylesheet" type="text/css" href="css/news.css">
 <div>
@@ -9,13 +9,13 @@
 			<div class="col-md-8 col-sm-8 col-xs-12">
 				<div id="carousel-news-header" class="carousel slide" data-ride="carousel">
 				  <div class="carousel-inner" role="listbox">
-				    <div class="item active">
-				      <img src="img/chuttersnap-366594-unsplash - Copy.png" alt="VNG chính thức phân phối dự án Hinode">
-				    </div>
+				  	@foreach($featured_slide as $item)
 				    <div class="item">
-				      <img src="img/chuttersnap-366594-unsplash - Copy.png" alt="VNG chính thức phân phối dự án Hinode">
-				      
+				    	<a href="{{ asset('news/detail/'.$item->slug) }}">
+				    		<img src="{{ asset('lib/storage/app/news/'.$item->img) }}" alt="VNG chính thức phân phối dự án Hinode">
+				    	</a>
 				    </div>
+				    @endforeach
 				  </div>
 
 				  <!-- Controls -->
@@ -31,22 +31,17 @@
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-12">
 				<div class="slideHeadRight">
-					<div class="slideHeadRightItem">
+					@foreach($featured_right as $item)
+					<a href="{{ asset('news/detail/'.$item->slug) }}" class="slideHeadRightItem">
 						<div class="slideHeadRightImg">
-							<img src="img/martino-pietropoli-600764-unsplash.png">
+							<img src="{{ asset('lib/storage/app/news/'.$item->img) }}">
 						</div>
 						<div class="slideHeadRightContent">
-							Sự bắt tay mang tính chiến lược giữa tập đoàn CGroup và VNGroup
+							{{ $item->title }}
 						</div>
-					</div>
-					<div class="slideHeadRightItem">
-						<div class="slideHeadRightImg">
-							<img src="img/martino-pietropoli-600764-unsplash.png">
-						</div>
-						<div class="slideHeadRightContent">
-							Sự bắt tay mang tính chiến lược giữa tập đoàn CGroup và VNGroup
-						</div>
-					</div>
+					</a>
+					@endforeach
+					
 				</div>
 			</div>
 		</div>
@@ -59,99 +54,48 @@
 							<div class="titleContent txt28">tin nội bộ</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="newsItemBig">
-							<div class="newsItemBigImg">
-								<img src="img/MG_6852-768x569.png">
+					<div class="col-md-6 col-sm-6 col-xs-12 left">
+						@foreach($internal as $item)
+						<a href="{{ asset('news/detail/'.$item->slug) }}" class="newsItemSmall">
+							<div class="newsItemImg">
+								<img src="{{ asset('lib/storage/app/news/'.$item->img) }}">
 							</div>
-							<div class="newsItemBigContent">
-								<div class="txt18">
-									Dương Thị Huệ – PGĐ VNG Media (VNG Group) vinh dự nhận giải nhất cuộc thi thiết kế logo Hội Kiến trúc sư Việt Nam
+							<div class="newsItemContent">
+								<div class="newsItemTitle">
+									{{ $item->title }}
 								</div>
-								<div class="txt16">
-									Tối ngày 20/4 vừa qua, tại Quảng trường Lý Thái Tổ – Hà Nội, trong khuôn khổ lễ khai mạc triển lãm “70 năm Kiến Trúc Việt Nam”, Lễ trao giải thiết kế logo Hội Kiến trúc sư Việt Nam…
+								<div class="newsItemText">
+									{!! substr($item->content,0 , 400).'...' !!}
 								</div>
 							</div>
-							<div class="newsItemBigTime orange">
+							<div class="newsItemTime orange">
 								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
+								Post {{ date('d/m/Y', strtotime($item->created_at)) }}
 							</div>
-						</div>
-						<div class="newsItemSmall">
-							<div class="newsItemSmallImg">
-								<img src="img/MG_6852-768x569.png">
-							</div>
-							<div class="newsItemSmallContent">
-								<div class="txt16">
-									Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-								</div>
-							</div>
-							<div class="newsItemSmallTime orange">
-								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
-							</div>
-						</div>
-						<div class="newsItemSmall">
-							<div class="newsItemSmallImg">
-								<img src="img/MG_6852-768x569.png">
-							</div>
-							<div class="newsItemSmallContent">
-								<div class="txt16">
-									Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-								</div>
-							</div>
-							<div class="newsItemSmallTime orange">
-								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
-							</div>
-						</div>
+						</a>
+						@endforeach
+						
 					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="newsItemBig">
-							<div class="newsItemBigImg">
-								<img src="img/MG_6852-768x569.png">
+					<div class="col-md-6 col-sm-6 col-xs-12 right">
+						@foreach($internal as $item)
+						<a href="{{ asset('news/detail/'.$item->slug) }}" class="newsItemSmall">
+							<div class="newsItemImg">
+								<img src="{{ asset('lib/storage/app/news/'.$item->img) }}">
 							</div>
-							<div class="newsItemBigContent">
-								<div class="txt18">
-									Dương Thị Huệ – PGĐ VNG Media (VNG Group) vinh dự nhận giải nhất cuộc thi thiết kế logo Hội Kiến trúc sư Việt Nam
+							<div class="newsItemContent">
+								<div class="newsItemTitle">
+									{{ $item->title }}
 								</div>
-								<div class="txt16">
-									Tối ngày 20/4 vừa qua, tại Quảng trường Lý Thái Tổ – Hà Nội, trong khuôn khổ lễ khai mạc triển lãm “70 năm Kiến Trúc Việt Nam”, Lễ trao giải thiết kế logo Hội Kiến trúc sư Việt Nam…
+								<div class="newsItemText">
+									{!! substr($item->content,0 , 400).'...' !!}
 								</div>
 							</div>
-							<div class="newsItemBigTime orange">
+							<div class="newsItemTime orange">
 								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
+								Post {{ date('d/m/Y', strtotime($item->created_at)) }}
 							</div>
-						</div>
-						<div class="newsItemSmall">
-							<div class="newsItemSmallImg">
-								<img src="img/MG_6852-768x569.png">
-							</div>
-							<div class="newsItemSmallContent">
-								<div class="txt16">
-									Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-								</div>
-							</div>
-							<div class="newsItemSmallTime orange">
-								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
-							</div>
-						</div>
-						<div class="newsItemSmall">
-							<div class="newsItemSmallImg">
-								<img src="img/MG_6852-768x569.png">
-							</div>
-							<div class="newsItemSmallContent">
-								<div class="txt16">
-									Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-								</div>
-							</div>
-							<div class="newsItemSmallTime orange">
-								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
-							</div>
-						</div>
+						</a>
+						@endforeach
 					</div>
 				</div>
 				<div class="row news_project">
@@ -160,85 +104,29 @@
 							<div class="line"></div>
 							<div class="titleContent txt28">tin dự án</div>
 						</div>
+
+
 					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="newsItemBig">
-							<div class="newsItemBigImg">
-								<img src="img/MG_6852-768x569.png">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						@foreach($project as $item)
+						<a href="{{ asset('news/detail/'.$item->slug) }}" class="newsItemSmall">
+							<div class="newsItemImg">
+								<img src="{{ asset('lib/storage/app/news/'.$item->img) }}">
 							</div>
-							<div class="newsItemBigContent">
-								<div class="txt18">
-									Dương Thị Huệ – PGĐ VNG Media (VNG Group) vinh dự nhận giải nhất cuộc thi thiết kế logo Hội Kiến trúc sư Việt Nam
+							<div class="newsItemContent">
+								<div class="newsItemTitle">
+									{{ $item->title }}
 								</div>
-								<div class="txt16">
-									Tối ngày 20/4 vừa qua, tại Quảng trường Lý Thái Tổ – Hà Nội, trong khuôn khổ lễ khai mạc triển lãm “70 năm Kiến Trúc Việt Nam”, Lễ trao giải thiết kế logo Hội Kiến trúc sư Việt Nam…
+								<div class="newsItemText">
+									{!! substr($item->content,0 , 400).'...' !!}
 								</div>
 							</div>
-							<div class="newsItemBigTime orange">
+							<div class="newsItemTime orange">
 								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
+								Post {{ date('d/m/Y', strtotime($item->created_at)) }}
 							</div>
-						</div>
-						
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						
-						<div class="newsItemSmall">
-							<div class="newsItemSmallImg">
-								<img src="img/MG_6852-768x569.png">
-							</div>
-							<div class="newsItemSmallContent">
-								<div class="txt16">
-									Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-								</div>
-							</div>
-							<div class="newsItemSmallTime orange">
-								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
-							</div>
-						</div>
-						<div class="newsItemSmall">
-							<div class="newsItemSmallImg">
-								<img src="img/MG_6852-768x569.png">
-							</div>
-							<div class="newsItemSmallContent">
-								<div class="txt16">
-									Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-								</div>
-							</div>
-							<div class="newsItemSmallTime orange">
-								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
-							</div>
-						</div>
-						<div class="newsItemSmall">
-							<div class="newsItemSmallImg">
-								<img src="img/MG_6852-768x569.png">
-							</div>
-							<div class="newsItemSmallContent">
-								<div class="txt16">
-									Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-								</div>
-							</div>
-							<div class="newsItemSmallTime orange">
-								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
-							</div>
-						</div>
-						<div class="newsItemSmall">
-							<div class="newsItemSmallImg">
-								<img src="img/MG_6852-768x569.png">
-							</div>
-							<div class="newsItemSmallContent">
-								<div class="txt16">
-									Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-								</div>
-							</div>
-							<div class="newsItemSmallTime orange">
-								<span class="glyphicon glyphicon-time"></span>
-								Post 28/05/2018
-							</div>
-						</div>
+						</a>
+						@endforeach
 					</div>
 				</div>
 				<div class="row news_press">
@@ -250,70 +138,30 @@
 					</div>
 					
 					<div class="col-md-12 col-sm-12 col-xs-12">
-						<div class="row news_press_item">
+						@foreach($press as $item)
+						<a href="{{ asset('news/detail/'.$item->slug) }}" class="row news_press_item">
 							<div class="col-md-5 col-sm-5 col-xs-5">
 								<div class="news_press_item_img">
-									<img src="img/MG_6852-768x569.png">
+									<img src="{{ asset('lib/storage/app/news/'.$item->img) }}">
 								</div>
 							</div>
 							<div class="col-md-7 col-sm-7 col-xs-7">
 								<div class="newsItemPressContent">
 									<div class="txt18">
-										Dương Thị Huệ – PGĐ VNG Media (VNG Group) vinh dự nhận giải nhất cuộc thi thiết kế logo Hội Kiến trúc sư Việt Nam
+										{{ $item->title }}
 									</div>
 									<div class="txt16">
-										Tối ngày 20/4 vừa qua, tại Quảng trường Lý Thái Tổ – Hà Nội, trong khuôn khổ lễ khai mạc triển lãm “70 năm Kiến Trúc Việt Nam”, Lễ trao giải thiết kế logo Hội Kiến trúc sư Việt Nam…
+										{!! substr($item->content,0 , 400).'...' !!}
 									</div>
 								</div>
 								<div class="newsItemPressTime orange">
 									<span class="glyphicon glyphicon-time"></span>
-									Post 28/05/2018
+									Post {{ date('d/m/Y', strtotime($item->created_at)) }}
 								</div>
 							</div>
-						</div>
-						<div class="row news_press_item">
-							<div class="col-md-5 col-sm-5 col-xs-5">
-								<div class="news_press_item_img">
-									<img src="img/MG_6852-768x569.png">
-								</div>
-							</div>
-							<div class="col-md-7 col-sm-7 col-xs-7">
-								<div class="newsItemPressContent">
-									<div class="txt18">
-										Dương Thị Huệ – PGĐ VNG Media (VNG Group) vinh dự nhận giải nhất cuộc thi thiết kế logo Hội Kiến trúc sư Việt Nam
-									</div>
-									<div class="txt16">
-										Tối ngày 20/4 vừa qua, tại Quảng trường Lý Thái Tổ – Hà Nội, trong khuôn khổ lễ khai mạc triển lãm “70 năm Kiến Trúc Việt Nam”, Lễ trao giải thiết kế logo Hội Kiến trúc sư Việt Nam…
-									</div>
-								</div>
-								<div class="newsItemPressTime orange">
-									<span class="glyphicon glyphicon-time"></span>
-									Post 28/05/2018
-								</div>
-							</div>
-						</div>
-						<div class="row news_press_item">
-							<div class="col-md-5 col-sm-5 col-xs-5">
-								<div class="news_press_item_img">
-									<img src="img/MG_6852-768x569.png">
-								</div>
-							</div>
-							<div class="col-md-7 col-sm-7 col-xs-7">
-								<div class="newsItemPressContent">
-									<div class="txt18">
-										Dương Thị Huệ – PGĐ VNG Media (VNG Group) vinh dự nhận giải nhất cuộc thi thiết kế logo Hội Kiến trúc sư Việt Nam
-									</div>
-									<div class="txt16">
-										Tối ngày 20/4 vừa qua, tại Quảng trường Lý Thái Tổ – Hà Nội, trong khuôn khổ lễ khai mạc triển lãm “70 năm Kiến Trúc Việt Nam”, Lễ trao giải thiết kế logo Hội Kiến trúc sư Việt Nam…
-									</div>
-								</div>
-								<div class="newsItemPressTime orange">
-									<span class="glyphicon glyphicon-time"></span>
-									Post 28/05/2018
-								</div>
-							</div>
-						</div>
-
+						</a>
+						@endforeach
+						
 					</div>
 				</div>
 				
@@ -326,78 +174,27 @@
 							<div class="titleContent txt28">tin báo chí</div>
 						</div>
 						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="row news_new_item">
+							@foreach($internal as $item)
+							<a href="{{ asset('news/detail/'.$item->slug) }}" class="row news_new_item">
 								<div class="col-md-5 col-sm-5 col-xs-5">
 									<div class="news_press_item_img">
-										<img src="img/vng-13-768x576.png">
+										<img src="{{ asset('lib/storage/app/news/'.$item->img) }}">
 									</div>
 								</div>
 								<div class="col-md-7 col-sm-7 col-xs-7">
 									<div class="news_new_item_content">
 										<div class="txt16">
-											Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
+											{{ $item->title }}
 										</div>
 									</div>
 									<div class="orange">
 										<span class="glyphicon glyphicon-time"></span>
-										Post 28/05/2018
+										Post {{ date('d/m/Y', strtotime($item->created_at)) }}
 									</div>
 								</div>
-							</div>
-							<div class="row news_new_item">
-								<div class="col-md-5 col-sm-5 col-xs-5">
-									<div class="news_press_item_img">
-										<img src="img/vng-13-768x576.png">
-									</div>
-								</div>
-								<div class="col-md-7 col-sm-7 col-xs-7">
-									<div class="news_new_item_content">
-										<div class="txt16">
-											Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-										</div>
-									</div>
-									<div class="orange">
-										<span class="glyphicon glyphicon-time"></span>
-										Post 28/05/2018
-									</div>
-								</div>
-							</div>
-							<div class="row news_new_item">
-								<div class="col-md-5 col-sm-5 col-xs-5">
-									<div class="news_press_item_img">
-										<img src="img/vng-13-768x576.png">
-									</div>
-								</div>
-								<div class="col-md-7 col-sm-7 col-xs-7">
-									<div class="news_new_item_content">
-										<div class="txt16">
-											Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-										</div>
-									</div>
-									<div class="orange">
-										<span class="glyphicon glyphicon-time"></span>
-										Post 28/05/2018
-									</div>
-								</div>
-							</div>
-							<div class="row news_new_item">
-								<div class="col-md-5 col-sm-5 col-xs-5">
-									<div class="news_press_item_img">
-										<img src="img/vng-13-768x576.png">
-									</div>
-								</div>
-								<div class="col-md-7 col-sm-7 col-xs-7">
-									<div class="news_new_item_content">
-										<div class="txt16">
-											Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-										</div>
-									</div>
-									<div class="orange">
-										<span class="glyphicon glyphicon-time"></span>
-										Post 28/05/2018
-									</div>
-								</div>
-							</div>
+							</a>
+							@endforeach
+							
 						</div>
 					</div>
 				</div>
@@ -427,9 +224,10 @@
 							<div class="titleContent txt28">tin xã hội</div>
 						</div>
 						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="news_social_item">
+							@foreach($internal as $item)
+							<a href="{{ asset('news/detail/'.$item->slug) }}" class="news_social_item">
 								<div class="news_social_item_img">
-									<img src="img/vng-13-768x576.png">
+									<img src="{{ asset('lib/storage/app/news/'.$item->img) }}">
 								</div>
 								<div class="news_social_item_content">
 									<div class="txt16">
@@ -438,38 +236,11 @@
 								</div>
 								<div class="orange">
 									<span class="glyphicon glyphicon-time"></span>
-									Post 28/05/2018
+									Post {{ date('d/m/Y', strtotime($item->created_at)) }}
 								</div>
-							</div>
-							<div class="news_social_item">
-								<div class="news_social_item_img">
-									<img src="img/vng-13-768x576.png">
-								</div>
-								<div class="news_social_item_content">
-									<div class="txt16">
-										Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-									</div>
-								</div>
-								<div class="orange">
-									<span class="glyphicon glyphicon-time"></span>
-									Post 28/05/2018
-								</div>
-							</div>
-							<div class="news_social_item">
-								<div class="news_social_item_img">
-									<img src="img/vng-13-768x576.png">
-								</div>
-								<div class="news_social_item_content">
-									<div class="txt16">
-										Sự bắt tay mang tính chiến lược của Cphonevn và VNGroup
-									</div>
-								</div>
-								<div class="orange">
-									<span class="glyphicon glyphicon-time"></span>
-									Post 28/05/2018
-								</div>
-							</div>
-
+							</a>
+							@endforeach
+							
 						</div>
 						
 					</div>

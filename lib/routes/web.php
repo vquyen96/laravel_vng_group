@@ -40,6 +40,9 @@ Route::group(['namespace'=>'Admin'], function(){
 			Route::post('letter/{id}','AboutController@postAbout');
 			Route::get('history','AboutController@getHistory');
 			Route::post('history/{id}','AboutController@postAbout');
+			Route::post('add/history','AboutController@postHistoryAdd');
+			Route::get('delete/history/{id}','AboutController@getHistoryDelete');
+
 			Route::get('vision','AboutController@getVision');
 			Route::post('vision/{id}','AboutController@postAbout');
 			Route::get('cultural','AboutController@getCultural');
@@ -66,22 +69,18 @@ Route::group(['namespace'=>'Admin'], function(){
 			Route::get('edit/{id}','ImageController@getEdit');
 			Route::post('edit/{id}','ImageController@postEdit');
 		});
-		Route::group(['prefix'=>'news'],function(){
-			Route::get('/','NewsController@getList');
-			Route::post('/','NewsController@postAdd');
-			Route::get('edit/{id}','NewsController@getEdit');
-			Route::post('edit/{id}','NewsController@postEdit');
-			Route::get('delete/{id}','NewsController@getDelete');
-		});
+		// Route::group(['prefix'=>'news'],function(){
+		// 	Route::get('/','NewsController@getList');
+		// 	Route::post('/','NewsController@postAdd');
+		// 	Route::get('edit/{id}','NewsController@getEdit');
+		// 	Route::post('edit/{id}','NewsController@postEdit');
+		// 	Route::get('delete/{id}','NewsController@getDelete');
+		// });
 		Route::group(['prefix'=>'news'],function(){
 			Route::get('/','NewsController@getHome');
-			Route::get('vng','NewsController@getVNG');
-			Route::post('vng','NewsController@postAdd');
-			Route::get('project','NewsController@getProject');
-			Route::post('project','NewsController@postAdd');
-			Route::get('recruit','NewsController@getRecruit');
-			Route::post('recruit','NewsController@postAdd');
-			
+			Route::get('detail/{name}','NewsController@getList');
+			Route::get('add','NewsController@getAdd');
+			Route::post('add','NewsController@postAdd');
 			Route::get('edit/{id}','NewsController@getEdit');
 			Route::post('edit/{id}','NewsController@postEdit');
 			Route::get('delete','NewsController@getDelete');
