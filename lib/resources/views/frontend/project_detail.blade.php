@@ -106,17 +106,26 @@
 			</div>
 			<div class="col-md-2 col-sm-2 col-xs-2">
 				<div class="album">
+					<?php $count = 0;?>
 					@for($i = 1; $i < 9; $i++)
 					<?php $albumImg = "albumImg".$i; ?>
-					<div class="albumItem album{{$i}}">
-						<div class="albumItemImg">
-							<img src="{{ asset('lib/storage/app/project/'.$item->$albumImg) }}">
+						@if($item->$albumImg != null)
+						<div class="albumItem album{{$i}}">
+							<div class="albumItemImg">
+								<img src="{{ asset('lib/storage/app/project/'.$item->$albumImg) }}">
+							</div>
+							<div class="albumItemContent txt16">
+								{{$item->name}}
+							</div>
 						</div>
-						<div class="albumItemContent txt16">
-							{{$item->name}}
-						</div>
-					</div>
+						<?php $count++?>
+						@endif
+						
 					@endfor
+					@if($count == 0)
+						<img src="img/ha.png" class="albumImg">
+					@endif
+
 					{{-- <div class="albumItem album2">
 						<div class="albumItemImg">
 							<img src="img/brett-campbell-61762-unsplash - Copy copy 6.png">

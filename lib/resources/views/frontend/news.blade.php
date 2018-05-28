@@ -247,6 +247,29 @@
 				</div>
 			</div>
 		</div>
+		<div class="row video">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="titleContent txt28">Video</div>
+			</div>
+			<div class="col-md-12 col-ms-12 col-xs-12">
+				@foreach($video as $item)
+				<a href="{{ asset('video/detail/'.$item->slug) }}" class="videoItem">
+					<div class="videoItemImg">
+						<img src="{{ asset('lib/storage/app/video/'.$item->img) }}">
+					</div>
+					<div class="videoItemContent">
+						<div class="videoItemContentTitle">
+							{{cut_string($item->name, 50)}}
+						</div>
+						<div class="videoItemContentTime orange">
+							<span class="glyphicon glyphicon-time"></span>
+								Post {{ date('d/m/Y', strtotime($item->created_at)) }}
+						</div>
+					</div>
+				</a>
+				@endforeach
+			</div>
+		</div>
 	</div>
 </div>
 @stop

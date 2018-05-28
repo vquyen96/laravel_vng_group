@@ -11,7 +11,7 @@
 		<ul>
 			@foreach($data as $item)
 			<li >
-				<a href="{{ $item->link }}" class="active">
+				<a href="{{ $item->link }}" class="active" target="blank">
 					<span class="text">
 						{{ $item->title}}
 					</span>

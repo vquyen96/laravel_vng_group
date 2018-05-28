@@ -73,7 +73,9 @@
 	text-align: right;
 	padding-right: 105px;
 }
-
+.content02Right img{
+	width: 100%;
+}
 
 
 .content03{
@@ -186,3 +188,6 @@
 	left: 480px;
 }
 
+.album .albumImg{
+	width: 100%;
+}

@@ -277,3 +277,17 @@
 .recruitDetailContent .txt16{
 	color: #666;
 }
+
+.videoItem{
+	display: inline-block;
+	
+	width: 210px;
+}
+.videoItemImg{
+	width: 100%;
+	height: 130px;
+
+}
+.videoItemImg img{
+	width: 100%;
+}

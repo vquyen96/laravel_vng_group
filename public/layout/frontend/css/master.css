@@ -91,6 +91,7 @@ header .imgLogo img{
 	height: 100%;
 	top: 0;
 	left: 0;
+	padding-top: 75px;
 
 }
 .master::-webkit-scrollbar {
@@ -325,8 +326,8 @@ header .imgLogo img{
 }
 
 main{
-	margin-top: 75px;
+	/*margin-top: 75px;*/
 	position: relative;
-	min-height: 600px;
+	min-height: 100%;
 
 }

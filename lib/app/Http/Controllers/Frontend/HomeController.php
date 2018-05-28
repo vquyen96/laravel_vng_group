@@ -9,6 +9,7 @@ use App\Models\News;
 use App\Models\Home;
 use App\Models\Contact;
 use App\Models\Project;
+use App\Models\Video;
 
 class HomeController extends Controller
 {
@@ -43,7 +44,7 @@ class HomeController extends Controller
         $data['internal'] = News::where('type',2)->orderBy('created_at', 'desc')->paginate(3);
         $data['project'] = News::where('type',3)->orderBy('created_at', 'desc')->paginate(5);
         $data['press'] = News::where('type',4)->orderBy('created_at', 'desc')->paginate(3);
-
+        $data['video'] = Video::paginate(10);
         return view('frontend.news',$data);
     }
     public function getNewsDetail($slug){
@@ -56,7 +57,9 @@ class HomeController extends Controller
         return view('frontend.news_detail', $data);
     }
     public function getVideoDetail($slug){
-        return view('frontend.video_detail');
+        $data['video'] = Video::where('slug', $slug)->first();
+        $data['video_related'] = Video::paginate(5);
+        return view('frontend.video_detail', $data);
     }
     public function getRecruit(){
         $data['recruit'] = News::where('type',6)->orderBy('created_at', 'desc')->paginate(3);

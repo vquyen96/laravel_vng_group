@@ -1,5 +1,5 @@
 .thu_ngo{
-	height: 625px;
+	margin-bottom: 100px;
 }
 .thu_ngo .title{
 	font-family: 'Oswald', sans-serif;
@@ -14,6 +14,9 @@
 .history{
 	
 }
+.historyImg img{
+	width: 100%;
+}
 .historyContentImg{
 	margin: 30px 0;
 }
@@ -27,7 +30,7 @@
 	display: none;
 }
 .vision{
-	height: 420px;
+	min-height: 420px;
 	padding-top: 60px;
 }
 .vision .txt48{
@@ -46,9 +49,6 @@
 	margin-top: 180px;
 }
 .maximContent{
-	
-	padding-left: 35px;
-	
 	
 }
 .maximContent .txt24{
@@ -86,6 +86,9 @@
 	left: 0;
 	width: 215px;
 	height: 320px;
+}
+.cultureItem .cultureImg img{
+	width: 100%;
 }
 .cultureItem .cultureContent{
 	padding-left: 230px;
@@ -133,14 +136,15 @@
 	position: relative;
 	width: 330px;
 	margin: auto;
+    margin-bottom: 100px;
 }
 .ceoItemTag{
 	position: absolute;
-	width: 280px;
-	height: 90px;
-	bottom: -50px;
-	left: 20px;
-	z-index: 2;
+    width: 80%;
+    height: 90px;
+    bottom: -50px;
+    left: 8%;
+    z-index: 2;
 }
 .ceoItemTag:before{
 	content: "";
@@ -166,4 +170,70 @@
 }
 .ceoItemTagContent .txt16{
 	font-style: italic;
+}
+
+@media screen and (max-width: 1200px) {
+	.cultureItem {
+		position: relative;
+		margin-bottom: 20px;
+	}
+	.culture1{
+		width: auto;
+	}
+	.culture2{
+		top: 0;
+		width: auto;
+	}
+	.culture2 .cultureContent{
+		padding-top: 0;
+	}
+	.culture3{
+		top: 0;
+		width: auto;	
+	}
+	.ceoItem{
+		width: 260px;
+	}
+	.ceoItem img{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	/*.historyImg{
+		display: none;
+	}*/
+	.ceoItem{
+		width: 60%;
+	}
+	.cultureItem{
+		
+	}
+	.cultureContent{
+		height: 100%;
+		overflow: auto;
+	}
+
+}
+@media screen and (max-width: 768px) {
+	.historyImg{
+		display: none;
+	}
+	.thu_ngo_Img{
+		display: none;
+	}
+	.cultureItem {
+		height: 220px;
+	}
+	.cultureItem .cultureImg{
+		width: 150px;
+		height: 220px;
+	}
+	.cultureItem .cultureContent{
+		padding-left: 160px;
+	}
+	.ceoItem{
+		width: 80%;
+	}
+
 }

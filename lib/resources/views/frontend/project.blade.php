@@ -32,7 +32,7 @@
 					<?php $count = 1 ?>
 					@foreach($investment as $item)
 					<div class="col-md-6">
-						<div class="investmentItem">
+						<a href="{{ asset('project/detail/'.$item->slug) }}" class="investmentItem">
 							<div class="investmentItemHead">
 								<div class="txt145">0{{$count++}}</div>
 								<div class="txt20">{{$item->name}}</div>
@@ -40,7 +40,7 @@
 							<div class="investmentItemImg">
 								<img src="{{asset('lib/storage/app/project/'.$item->img)}}">
 							</div>
-						</div>
+						</a>
 					</div>
 					@endforeach
 					{{-- <div class="col-md-6">

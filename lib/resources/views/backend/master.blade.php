@@ -16,16 +16,19 @@
 		<div class="col-md-7 col-sm-9 col-xs-12 headerMenu resp800Hide">
 			<ul class="">
 				<li @if(Request::segment(2) == 'account') class="headerActive" @endif><a href="{{asset('admin/account')}}">Tài khoản</a></li>
-				<li @if(Request::segment(2) == 'home') class="headerActive" @endif><a href="{{asset('admin/home')}}">Trang chủ</a></li>
+				<li @if(Request::segment(2) == 'home') class="headerActive" @endif><a href="{{asset('admin/home/detail/overview')}}">Trang chủ</a></li>
 			  	<li @if(Request::segment(2) == 'about') class="headerActive" @endif><a href="{{asset('admin/about/letter')}}">Giới thiệu</a></li>
 			  	<li @if(Request::segment(2) == 'project') class="headerActive" @endif><a href="{{asset('admin/project')}}">Dự án</a></li>
-			  	<li @if(Request::segment(2) == 'image') class="headerActive" @endif><a href="{{asset('admin/image')}}">Hình ảnh</a></li>
+			  	
 			  	<li @if(Request::segment(2) == 'news') class="headerActive" @endif><a href="{{asset('admin/news')}}">Tin tức</a></li>
+			  	<li @if(Request::segment(2) == 'video') class="headerActive" @endif><a href="{{asset('admin/video')}}">video</a></li>
 			  	<li @if(Request::segment(2) == 'contact') class="headerActive" @endif><a href="{{asset('admin/contact')}}">Liên hệ</a></li>
+
+			  	<li><a href="{{asset('logout')}}">Đăng xuất</a></li>
 			</ul>
 		</div>
 	</header>
-	<div class="btnLogOut resp800Hide">
+	{{-- <div class="btnLogOut resp800Hide">
 		<a href="{{asset('logout')}}">
 			<span class="glyphicon glyphicon-log-out"></span>
 			Đăng xuất
@@ -38,7 +41,7 @@
 			Tài khoản
 		</a>
 	</div>
-	@endif
+	@endif --}}
 	<div class="btnToggle resp800Show">
 		<a  class="">
 			<span class="glyphicon glyphicon-option-horizontal"></span>

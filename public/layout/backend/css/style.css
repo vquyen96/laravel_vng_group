@@ -10,6 +10,9 @@ header{
 	margin:0 30px;
 	height: 80px;
 }
+.headerMenu ul{
+	float: right;
+}
 .headerMenu ul li{
 	
 	height: 80px;

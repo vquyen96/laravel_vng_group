@@ -36,6 +36,7 @@ Route::group(['namespace'=>'Admin'], function(){
 			Route::get('delete/{id}','AccountController@getDelete');
 		});
 		Route::group(['prefix'=>'home'],function(){
+			Route::get('/', 'HomeController@getHome');
 			Route::get('detail/{name}','HomeController@getList');
 			Route::post('detail/{name}','HomeController@postEdit');
 			Route::get('delete/{id}','HomeController@getDelete');
@@ -65,18 +66,18 @@ Route::group(['namespace'=>'Admin'], function(){
 			Route::post('edit/{id}','ProjectController@postEdit');
 			Route::get('delete/{id}','ProjectController@getDelete');
 		});
-		Route::group(['prefix'=>'member'],function(){
-			Route::get('/','MemberController@getList');
-			Route::post('/','MemberController@postAdd');
-			Route::get('edit/{id}','MemberController@getEdit');
-			Route::post('edit/{id}','MemberController@postEdit');
-			Route::get('delete/{id}','MemberController@getDelete');
-		});
-		Route::group(['prefix'=>'image'],function(){
-			Route::get('/','ImageController@getHome');
-			Route::get('edit/{id}','ImageController@getEdit');
-			Route::post('edit/{id}','ImageController@postEdit');
-		});
+		// Route::group(['prefix'=>'member'],function(){
+		// 	Route::get('/','MemberController@getList');
+		// 	Route::post('/','MemberController@postAdd');
+		// 	Route::get('edit/{id}','MemberController@getEdit');
+		// 	Route::post('edit/{id}','MemberController@postEdit');
+		// 	Route::get('delete/{id}','MemberController@getDelete');
+		// });
+		// Route::group(['prefix'=>'image'],function(){
+		// 	Route::get('/','ImageController@getHome');
+		// 	Route::get('edit/{id}','ImageController@getEdit');
+		// 	Route::post('edit/{id}','ImageController@postEdit');
+		// });
 		
 		Route::group(['prefix'=>'news'],function(){
 			Route::get('/','NewsController@getHome');
@@ -87,7 +88,14 @@ Route::group(['namespace'=>'Admin'], function(){
 			Route::post('edit/{id}','NewsController@postEdit');
 			Route::get('delete','NewsController@getDelete');
 		});
-
+		Route::group(['prefix'=>'video'],function(){
+			Route::get('/','VideoController@getList');
+			Route::post('/','VideoController@postAdd');
+			Route::get('edit/{id}','VideoController@getEdit');
+			Route::post('edit/{id}','VideoController@postEdit');
+			Route::get('delete','VideoController@getDelete');
+		});
+		
 		Route::group(['prefix'=>'contact'],function(){
 			Route::get('/','ContactController@getHome');
 			Route::get('top','ContactController@getTop');

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 28, 2018 lúc 07:25 AM
+-- Thời gian đã tạo: Th5 28, 2018 lúc 12:32 PM
 -- Phiên bản máy phục vụ: 10.1.31-MariaDB
 -- Phiên bản PHP: 7.2.4
 
@@ -205,7 +205,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2018_04_02_140925_image', 2),
 (6, '2018_04_02_141035_news', 2),
 (7, '2018_04_02_141303_contact', 2),
-(9, '2018_05_28_020745_home', 3);
+(9, '2018_05_28_020745_home', 3),
+(10, '2018_05_28_090433_video', 4);
 
 -- --------------------------------------------------------
 
@@ -285,9 +286,9 @@ CREATE TABLE `project` (
 INSERT INTO `project` (`id`, `name`, `slug`, `img`, `investor`, `type`, `overviewContent`, `locationContent`, `utilityContent`, `overviewImg`, `locationImg`, `utilityImg`, `albumImg1`, `albumImg2`, `albumImg3`, `albumImg4`, `albumImg5`, `albumImg6`, `albumImg7`, `albumImg8`, `created_at`, `updated_at`) VALUES
 (1, 'Dự án The Arena Cam Ranh', NULL, 'cam-ranh-5.jpg', '<div class=\"span6 main-content\">\r\n                    <div class=\"breadcumb\">\r\n                        <p id=\"breadcrumbs\"><span xmlns:v=\"http://rdf.data-vocabulary.org/#\"><span typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/\" rel=\"v:url\" property=\"v:title\">Trang Chủ</a> » <span rel=\"v:child\" typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/du-an/\" rel=\"v:url\" property=\"v:title\">Dự Án</a> » <span class=\"breadcrumb_last\">Dự án The Arena Cam Ranh</span></span></span></span></p>                    </div>\r\n                                           <p><strong>Dự án The Arena Cam Ranh</strong></p>\r\n<p>The Arena Nha Trang tọa lạc tại ven biển Bãi Dài, Cam Ranh – Đây là dự án đầu tiên và duy nhất tại Bãi Dài có mô hình khu nghỉ dưỡng kết hợp vui chơi giải trí đẳng cấp. Dự án hứa hẹn sẽ là “thiên đường nghỉ dưỡng” trong mơ của du khách nội địa và quốc tế. The Arena Cam Ranh, được kỳ vọng trở thành “cơn sốt” bất động sản nghỉ dưỡng 2017, đón đầu xu hướng đầu tư 2018, hứa hẹn mang đến cơ hội sinh lời hấp dẫn cho các nhà đầu tư thông thái.</p>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2.jpg\"><img class=\"alignnone size-full wp-image-3695\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><strong>1/ Vị trí dự án</strong></p>\r\n<p>Vị trí “ĐỘC NHẤT – VÔ NHỊ” đầy tiềm năng khi nằm ngay cạnh bờ biển Bãi Dài – Cam Ranh nổi tiếng với vẻ đẹp biển xanh, cát trắng, nắng vàng. The Arena Cam Ranh được xây dựng ngay mặt đường Nguyễn Tất Thành – Vịnh Cam Ranh – Bãi Dài, giúp dự án kết nối dễ dàng<span class=\"text_exposed_show\">&nbsp;đến các tiện ích, địa danh nổi tiếng tại khu vực:</span></p>\r\n<ul>\r\n<li>&nbsp;Kết nối dễ dàng với các địa danh du lịch nổi tiếng: đảo Bình Ba, bán đảo Bình Lập, khu bảo tồn thiên nhiên Hòn Bà, khu vui chơi Sealife, chùa Ốc Từ Vân…</li>\r\n<li>&nbsp;Gần ngay cầu Mới</li>\r\n<li>&nbsp;Cách Vinpearl Bãi Dài chỉ 2 phút</li>\r\n<li>&nbsp;Cạnh khu Anam Resort và Spa Vinpearl Bãi Dài</li>\r\n<li>&nbsp;Cách sân bay Quốc tế Cam Ranh chỉ 3km</li>\r\n<li>&nbsp;Cách trung tâm thành phố Cam Ranh 20 phút</li>\r\n<li>&nbsp;Cách thành phố Nha Trang 35 phút</li>\r\n</ul>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4.jpg\"><img class=\"alignnone size-full wp-image-3698\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><strong>2/Tổng quan dự án</strong></p>\r\n<p><strong>– Tên thương mại:</strong>&nbsp;The Arena Cam Ranh.</p>\r\n<p><strong>– Chủ đầu tư:</strong>&nbsp;Công ty Cổ phần Đầu Tư Xây dựng Vịnh Nha Trang.</p>\r\n<p><strong>– Vị trí:</strong>&nbsp;Lô D14D Bãi Dài, Cam Ranh, Nha Trang</p>\r\n<p><strong>– Tổng diện tích:</strong>&nbsp;29ha</p>\r\n<p><strong>– Loại hình:</strong>&nbsp;Condotel 90% view biển</p>\r\n<p><strong>– Quy mô dự án:</strong>&nbsp;4 tòa (cao 21-25 tầng nổi), 5.248 căn hộ khách sạn.</p>\r\n<p><strong>– Đơn vị thiết kế:</strong>&nbsp;Finko</p>\r\n<p><strong>– Tư vấn giám sát:</strong>&nbsp;Artelia</p>\r\n<p><strong>– Dự kiến bàn giao:</strong>&nbsp;12/2019</p>\r\n<p><strong>– Hình thức sở hữu:</strong>&nbsp;Đất 50 năm cho Condotel và lâu dài (không hình thành đơn vị ở) cho biệt thự.</p>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3.jpg\"><img class=\"alignnone size-full wp-image-3697\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><strong>3/Tiện ích của dự án</strong></p>\r\n<p>The arena – với kiến trúc và mô hình nghỉ dưỡng kết hợp giải trí độc đáo, khác biệt và duy nhất tại Vịnh Cam Ranh sẽ như một làn gió mới, tươi trẻ, hiện đại, sôi động đem lại những trải nghiệm nghỉ dưỡng khác biệt chưa từng có.</p>\r\n<p>Slogan: <strong><em>“Sống chất từng giây – trải nghiệm hoàn mỹ”</em></strong></p>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1.jpg\"><img class=\"alignnone size-full wp-image-3696\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><em>Hệ thống tiện ích 5* chuyên nghiệp, độc đáo với hơn 25 hạng mục:</em><br>\r\n– Bể bơi nước mặn lớn nhất Việt Nam<br>\r\n– Hệ thống Gym &amp; Spa (Spa ngoài trời trên từng tầng của căn hộ, hồ bơi nước khoáng nóng…)<br>\r\n– Phố đi bộ, quảng trường, thủy cung và nhà hàng view hồ<br>\r\n– Zipline Cáp Treo Giữa Tòa Nhà, Sân Khấu Nhạc Nước Và Công Viên Giải Trí Quy Mô Lớn<br>\r\n– Cùng hệ thống ẩm thực phong phú đa dạng với chuỗi nhà hàng hải sản cao cấp, BBQ, Buffet, ẩm thực Á – Âu…</p>\r\n<p style=\"text-align: justify;\"><strong>4/Video giới thiệu dự án:</strong></p>\r\n<p><iframe src=\"https://www.youtube.com/embed/6kg3UXZetDA\" width=\"650\" height=\"423\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\r\n<p><strong>VNG Group – Đối tác chiến lược dự án</strong></p>\r\n<p>CHI TIẾT XEM TẠI WEBSITE DỰ ÁN: <a href=\"http://arenanhatrang.com/\">http://arenanhatrang.com/</a></p>\r\n                                    </div>', 0, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-02 09:09:14', '2018-04-02 09:09:14'),
 (2, 'Dự án Vinhome Metropolis', NULL, '3-1.jpg', '<p>Đang xậy dựng</p>', 0, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-02 09:10:08', '2018-04-02 09:10:08'),
-(3, 'Dự án Panorama Nha Trang', NULL, '2-3.jpg', '<p>Nothing</p>', 1, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-02 09:10:57', '2018-05-26 19:34:26'),
+(3, 'Dự án Panorama Nha Trang', 'du-an-panorama-nha-trang', '2-3.jpg', '<p>Nothing</p>', 1, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-02 09:10:57', '2018-05-28 01:34:32'),
 (4, 'Dự án D’.Le Roi SoLeil Quảng An – Tây Hồ', 'du-an-dle-roi-soleil-quang-an-tay-ho', '1-1.jpg', '<p>OKe oke</p>', 1, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-05-27 20:41:56', '2018-05-27 22:11:14'),
-(5, 'CocoBay Đà Nẵng', 'cocobay-da-nang', '1527481773.derek-torsani-227207-unsplash (1) - Copy.png', '<p><strong>Chủ đầu tư</strong></p>\r\n\r\n<p>Tập đo&agrave;n Empire Group c&oacute; tiền th&acirc;n l&agrave; CTCP Ph&aacute;t triển X&acirc;y dựng Th&agrave;nh Đ&ocirc; với 25 năm kinh nghiệm hoạt động trong lĩnh vực bất động sản, t&agrave;i ch&iacute;nh v&agrave; du lịch &ndash; giải tr&iacute;. Đ&acirc;y ch&iacute;nh l&agrave; c&ocirc;ng ty đ&atilde; th&agrave;nh c&ocirc;ng với dự &aacute;n lớn như C&ocirc;ng vi&ecirc;n nước Hồ T&acirc;y v&agrave; khu nghỉ dưỡng 5 sao Naman Retreat Đ&agrave; Nẵng. Empire Group thể hiện thực lực với tầm nh&igrave;n chiến lược đ&uacute;ng đắn v&agrave; ti&ecirc;n phong, kh&ocirc;ng những tăng chiến lược kinh doanh m&agrave; c&ograve;n gi&uacute;p thay đổi diện mạo du lịch Việt Nam</p>\r\n\r\n<p><strong>Chi tiết dự &aacute;n xem tại website: http://cocobays.vn</strong></p>', 1, '<p>Cocobay l&agrave; Tổ hợp giải tr&iacute; v&agrave; du lịch tại Đ&agrave; Nẵng &ndash; Hội An phục vụ 10.000 ph&ograve;ng kh&aacute;ch sạn từ 3 &ndash; 5 sao được t&iacute;ch hợp c&aacute;c hoạt động dịch vụ giải tr&iacute; v&agrave; c&aacute;c tiện &iacute;ch h&agrave;ng đầu cho những k&igrave; nghỉ thời thượng. Cocobay tạo n&ecirc;n một kh&ocirc;ng gian hiện đại v&agrave; năng động, sang trọng v&agrave; đẳng cấp, mang đến những trải nghiệm thăng hoa nhất tại th&agrave;nh phố đ&aacute;ng sống nhất Việt Nam.</p>', '<p>Cocobay Đ&agrave; Nẵng sở hữu vị tr&iacute; đắc địa khi nằm ở trung t&acirc;m của con đường nối liền Đ&agrave; Nẵng &ndash; Hội An, phần mặt tiền l&agrave; một trong s&aacute;u b&atilde;i biển quyến rũ nhất h&agrave;nh tinh, sau lưng l&agrave; d&ograve;ng s&ocirc;ng Cổ C&ograve; thơ mộng v&agrave; hai b&ecirc;n cạnh l&agrave; hai s&acirc;n gofl h&agrave;ng đầu Việt Nam</p>', '<p>L&agrave; một điểm đến giải tr&iacute; mới của thế giới, Cocobay Đ&agrave; Nẵng được t&iacute;ch hợp v&ocirc; v&agrave;n c&aacute;c tiện &iacute;ch v&agrave; hoạt động giải tr&iacute; h&agrave;ng đầu đ&aacute;p ứng trọn vẹn c&aacute;c nhu cầu của du kh&aacute;ch. C&aacute;c nh&agrave; h&agrave;ng từ 3 &ndash; 5 sao, hệ thống c&aacute;c qu&aacute;n coffee, lounge, bar; s&acirc;n khấu ngo&agrave;i trời quy m&ocirc; cực lớn, c&aacute;c buổi tr&igrave;nh diễn đặc sắc đa sắc m&agrave;u v&agrave; c&aacute;c dịch vụ vui chơi đẳng cấp,&hellip; tất cả sẽ tạo n&ecirc;n một Cocobay s&ocirc;i động v&agrave; n&aacute;o nhiệt in đậm dấu ấn trong l&ograve;ng du kh&aacute;ch.</p>', '1527481773.tong-quan-du-an-cocobay-da-nang.png', '1527481773.vi-tri-du-an-cocobay-da-nang-viet-nam.png', '1527481773.tien-ich-du-an-cocobay-da-nang.png', '1527484152.Rectangle 11.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 6.png', '1527484208.brett-campbell-61762-unsplash - Copy.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 3.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 5.png', '1527484208.brett-campbell-61762-unsplash - Copy copy.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 2.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 4.png', '2018-05-27 21:29:33', '2018-05-27 22:23:23');
+(5, 'CocoBay Đà Nẵng', 'cocobay-da-nang', '1527503306.cocobay.jpg', '<p><strong>Chủ đầu tư</strong></p>\r\n\r\n<p>Tập đo&agrave;n Empire Group c&oacute; tiền th&acirc;n l&agrave; CTCP Ph&aacute;t triển X&acirc;y dựng Th&agrave;nh Đ&ocirc; với 25 năm kinh nghiệm hoạt động trong lĩnh vực bất động sản, t&agrave;i ch&iacute;nh v&agrave; du lịch &ndash; giải tr&iacute;. Đ&acirc;y ch&iacute;nh l&agrave; c&ocirc;ng ty đ&atilde; th&agrave;nh c&ocirc;ng với dự &aacute;n lớn như C&ocirc;ng vi&ecirc;n nước Hồ T&acirc;y v&agrave; khu nghỉ dưỡng 5 sao Naman Retreat Đ&agrave; Nẵng. Empire Group thể hiện thực lực với tầm nh&igrave;n chiến lược đ&uacute;ng đắn v&agrave; ti&ecirc;n phong, kh&ocirc;ng những tăng chiến lược kinh doanh m&agrave; c&ograve;n gi&uacute;p thay đổi diện mạo du lịch Việt Nam</p>\r\n\r\n<p><strong>Chi tiết dự &aacute;n xem tại website: http://cocobays.vn</strong></p>', 1, '<p>Cocobay l&agrave; Tổ hợp giải tr&iacute; v&agrave; du lịch tại Đ&agrave; Nẵng &ndash; Hội An phục vụ 10.000 ph&ograve;ng kh&aacute;ch sạn từ 3 &ndash; 5 sao được t&iacute;ch hợp c&aacute;c hoạt động dịch vụ giải tr&iacute; v&agrave; c&aacute;c tiện &iacute;ch h&agrave;ng đầu cho những k&igrave; nghỉ thời thượng. Cocobay tạo n&ecirc;n một kh&ocirc;ng gian hiện đại v&agrave; năng động, sang trọng v&agrave; đẳng cấp, mang đến những trải nghiệm thăng hoa nhất tại th&agrave;nh phố đ&aacute;ng sống nhất Việt Nam.</p>', '<p>Cocobay Đ&agrave; Nẵng sở hữu vị tr&iacute; đắc địa khi nằm ở trung t&acirc;m của con đường nối liền Đ&agrave; Nẵng &ndash; Hội An, phần mặt tiền l&agrave; một trong s&aacute;u b&atilde;i biển quyến rũ nhất h&agrave;nh tinh, sau lưng l&agrave; d&ograve;ng s&ocirc;ng Cổ C&ograve; thơ mộng v&agrave; hai b&ecirc;n cạnh l&agrave; hai s&acirc;n gofl h&agrave;ng đầu Việt Nam</p>', '<p>L&agrave; một điểm đến giải tr&iacute; mới của thế giới, Cocobay Đ&agrave; Nẵng được t&iacute;ch hợp v&ocirc; v&agrave;n c&aacute;c tiện &iacute;ch v&agrave; hoạt động giải tr&iacute; h&agrave;ng đầu đ&aacute;p ứng trọn vẹn c&aacute;c nhu cầu của du kh&aacute;ch. C&aacute;c nh&agrave; h&agrave;ng từ 3 &ndash; 5 sao, hệ thống c&aacute;c qu&aacute;n coffee, lounge, bar; s&acirc;n khấu ngo&agrave;i trời quy m&ocirc; cực lớn, c&aacute;c buổi tr&igrave;nh diễn đặc sắc đa sắc m&agrave;u v&agrave; c&aacute;c dịch vụ vui chơi đẳng cấp,&hellip; tất cả sẽ tạo n&ecirc;n một Cocobay s&ocirc;i động v&agrave; n&aacute;o nhiệt in đậm dấu ấn trong l&ograve;ng du kh&aacute;ch.</p>', '1527481773.tong-quan-du-an-cocobay-da-nang.png', '1527481773.vi-tri-du-an-cocobay-da-nang-viet-nam.png', '1527481773.tien-ich-du-an-cocobay-da-nang.png', '1527484152.Rectangle 11.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 6.png', '1527484208.brett-campbell-61762-unsplash - Copy.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 3.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 5.png', '1527484208.brett-campbell-61762-unsplash - Copy copy.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 2.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 4.png', '2018-05-27 21:29:33', '2018-05-28 03:28:26');
 
 -- --------------------------------------------------------
 
@@ -311,8 +312,32 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `email`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
 (3, 'quyendo.site3@cphonevn.com', '$2y$10$RA0derqG7z.XbAQi.1pg2OaSFF9sW.nd8e8LtuzQp/hgm6Kq3IsfW', 2, 'SQiO7Zd7RXZZbqqPIQRvhylAQfJ6ZlvJ24wyIxIF3ug0V2nNxeQH94I8qGee', '2018-04-02 21:26:45', '2018-04-02 21:26:45'),
-(4, 'admin@cphonevn.com', '$2y$10$.P/uz3etT20J9ptalQkrgOpuC4WtN7eQJ2I0jtTb/ArRBNROcqZB6', 1, 'eUwjzM41f4BtY1JMaRywLYCEOPH22VJCurZBYx1mYpc2TzwowjvCl9AAMYbG', '2018-04-02 23:42:43', '2018-04-02 23:42:43'),
+(4, 'admin@cphonevn.com', '$2y$10$.P/uz3etT20J9ptalQkrgOpuC4WtN7eQJ2I0jtTb/ArRBNROcqZB6', 1, 'YOXVZynwNCHYM71u586svGu6h8XAPG3JviOkanccyRTF6BXf7BjSbhoZCWhn', '2018-04-02 23:42:43', '2018-04-02 23:42:43'),
 (5, 'q.uyen96@gmail.com', '$2y$10$v2FSLjzvDjxA8xuSfN9V9OB8cUvvsYoxh8nojG7C22yD95pZXzwBa', 1, NULL, '2018-04-02 23:43:46', '2018-04-02 23:43:46');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `video`
+--
+
+CREATE TABLE `video` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `video` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `video`
+--
+
+INSERT INTO `video` (`id`, `name`, `slug`, `img`, `video`, `content`, `created_at`, `updated_at`) VALUES
+(2, 'Okeok', 'okeok', '1527500364.anh-khoa-hoc-mba.png', '1527500364.mp4', '<p>Okeok</p>', '2018-05-28 02:39:24', '2018-05-28 02:39:24');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -373,6 +398,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `video`
+--
+ALTER TABLE `video`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
@@ -410,7 +441,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `news`
@@ -429,6 +460,12 @@ ALTER TABLE `project`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT cho bảng `video`
+--
+ALTER TABLE `video`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -5,8 +5,8 @@
 <link rel="stylesheet" type="text/css" href="css/overview.css">
 <div>
 	<div class="container">
-		<div class="row thu_ngo">
-			<div class="col-md-8 col-sm-8 col-xs-12">
+		<div class="row thu_ngo" id="letter">
+			<div class="col-md-8 col-sm-6 col-xs-12">
 				<div class="row title">
 					<div class="col-md-12">
 						<div class="txt48 orange">
@@ -45,8 +45,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 col-sm-4 col-xs-12">
-				<div class="thu_ngo_Img">
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="thu_ngo_Img" id="letterImg">
 					<img src="{{ asset('lib/storage/app/about/'.$letter->first()->img) }}">
 				</div>
 			</div>
@@ -95,7 +95,10 @@
 			</div>
 		</div>
 		<div class="row visionImg">
-			<img src="img/GTCL.png">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<img src="img/GTCL.png">
+			</div>
+			
 		</div>
 		<div class="row maxim">
 			<div class="col-md-6 col-sm-6 col-xs-12">
@@ -112,9 +115,7 @@
 					<div class="txt48 orange">
 						{{ $vision->get(2)->title }}
 					</div>
-					{{-- <div class="txt48 orange">
-						Kinh doanh
-					</div> --}}
+					
 				</div>
 			</div>
 		</div>
@@ -138,29 +139,7 @@
 				</div>
 				<?php $culture_count++ ?>
 				@endforeach
-				{{-- <div class="cultureItem culture2">
-					<div class="cultureImg">
-						<img src="img/chuttersnap-387758-unsplash.png">
-					</div>
-					<div class="cultureContent">
-						<div class="txt18">Môi trường làm việc</div>
-						<div class="txt14">
-							Tại VNGroup chúng tôi luôn cố gắng tạo ra những môi trường làm việc có không gian thoải mái nhất, nơi các thành viên được làm việc , được công hiến hết sức với niềm đam mê của mình.Tại VNGroup luôn có sự tôn trọng, lắng nghe và tạo điều kiện đẻ mỗi thành viên được là chính mình, được cống hiến, sáng tạo và tự do thể hiện bản thân.
-						</div>
-					</div>
-				</div>
-				<div class="cultureItem culture3">
-					<div class="cultureImg">
-						<img src="img/chuttersnap-387758-unsplash.png">
-					</div>
-					<div class="cultureContent">
-						<div class="txt18">Lao động và hưởng thụ</div>
-						<div class="txt14">
-							Bên cạnh môi trường làm việc có tính độc lập và sáng tạo, VNGroup còn tạo nên một môi trường lao động hưởng thụ cho nhân viên của mình. Tất cả các thành viên của VNGroup đều cố gắng nỗ lực vun đắp xây dựng để VNGroup có nền văn hóa riêng biệt và đặc sắc nhất.Trong những ngày lễ Tết VNGroup đều tổ chức những đều tổ chức những buổi liên hoan, sôi nổi, đầm ấm vui tươi cho cán bộ nhân viên. Bên cạnh đó VNGroup còn thường xuyên tổ chức các hoạt động văn nghệ, thể thao hay những chuyến đi du lịch xa nhằm đem lại sự thoải mái cho nhân viên sau một thời gian dài làm việc căng thẳng và  vất vả. Và sau mỗi buổi tổng kết của từng quý , từng năm, VNGroup luôn có những phần thưởng xứng đáng động viên và trao bằng khen cho những cá nhân xuất sắc….Tất cả những hoạt động trên giống như một món ăn tinh thần khích lệ động viên các thành viên của VNGroup được vui vẻ, yên tâm và tích cực làm việc tốt hơn, nâng cao hiệu quả công việc và sức sáng tạo của mỗi con người.
-
-						</div>
-					</div>
-				</div> --}}
+				
 			</div>
 		</div>
 		<div class="row ceo">
@@ -187,97 +166,7 @@
 				</div>
 			</div>
 			@endforeach
-			{{-- <div class="col-md-4 col-md-4 col-xs-12">
-				<div class="ceoItem">
-					<img src="img/rawpixel-648558-unsplash.png">
-					<div class="ceoItemTag">
-						<div class="ceoItemTagContent">
-							<div class="txt18">
-								Nguyễn văn A
-							</div>
-							<div class="txt16 orange">
-								Ceo and Founder
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 col-md-4 col-xs-12">
-				<div class="ceoItem">
-					<img src="img/rawpixel-648558-unsplash.png">
-					<div class="ceoItemTag">
-						<div class="ceoItemTagContent">
-							<div class="txt18">
-								Nguyễn văn A
-							</div>
-							<div class="txt16 orange">
-								Ceo and Founder
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div> --}}
-			
 		</div>
-		{{-- <div class="row project">
-			<div class="col-md-9 col-sm-9 col-xs-12">
-				<div class="projectImg">
-					<img src="img/derek-torsani-227207-unsplash (1) - Copy.png">
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3 col-xs-12">
-				<div class="projectContent">
-					<div class="txt48 orange">Dự án</div>
-					<div class="txt16 ">
-						orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row investment">
-			<div class="col-md-3 title">
-				<div class="txt48 orange">
-					Dự án đầu tư
-				</div>
-			</div>
-			<div class="col-md-9">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="investmentItem">
-							<div class="investmentItemHead">
-								<div class="txt145">01</div>
-								<div class="txt20">Dự án Cẩm An - Hội An</div>
-							</div>
-							<div class="investmentItemImg">
-								<img src="img/nha-co-cam-an-hoi-an1.png">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="investmentItem">
-							<div class="investmentItemHead">
-								<div class="txt145">02</div>
-								<div class="txt20">Dự án Khu dân cư bên bở sông Đà - TP. Hòa Bình</div>
-							</div>
-							<div class="investmentItemImg">
-								<img src="img/chuttersnap-366594-unsplash - Copy.png">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row distribution">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="txt48 orange">
-						dự án phân phối
-					</div>
-				</div>
-			</div>
-		</div> --}}
 	</div>
 </div>
 @stop

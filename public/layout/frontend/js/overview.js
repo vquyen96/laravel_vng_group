@@ -1,14 +1,31 @@
 var master = document.getElementById('master');
 var historyImg = document.getElementById('historyImg');
 var his = document.getElementById('history');
-console.log(his.offsetHeight);
+var letter = document.getElementById('letter');
+var letterImg = document.getElementById('letterImg');
+
+console.log(master.offsetWidth);
+
 master.onscroll = function(){
-	var x = master.scrollTop;
-	console.log(x);
-	if (x > 600 && x < his.offsetHeight) {
-		historyImg.style.marginTop = x-600+"px";
+	if (master.offsetWidth >  768 ) {
+		var x = master.scrollTop;
+		if (x > letter.offsetHeight && x < his.offsetHeight+letter.offsetHeight-historyImg.offsetHeight) {
+			historyImg.style.marginTop = x-letter.offsetHeight+"px";
+		}
+	}
+	if (master.offsetWidth >  768 && master.offsetWidth <  992 ) {
+		var x = master.scrollTop;
+		if (x > 0 && x < letter.offsetHeight-letterImg.offsetHeight) {
+			letterImg.style.marginTop = x+"px";
+		}
 	}
 }
+// if (master.offsetWidth >  768 && master.offsetWidth <  992 ) {
+// 	master.onscroll = function(){
+		
+// 	}
+// }
+	
 
 $(document).ready(function(){
 	var url_string = window.location.href;

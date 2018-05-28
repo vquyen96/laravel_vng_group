@@ -8,6 +8,9 @@ use App\Models\Home;
 
 class HomeController extends Controller
 {
+    public function getHome(){
+        return redirect('admin/home/detail/overview');
+    }
     public function getList($name){
     	switch ($name) {
     		case 'overview':
