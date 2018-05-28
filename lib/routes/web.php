@@ -35,6 +35,11 @@ Route::group(['namespace'=>'Admin'], function(){
 			Route::post('edit/{id}','AccountController@postEdit');
 			Route::get('delete/{id}','AccountController@getDelete');
 		});
+		Route::group(['prefix'=>'home'],function(){
+			Route::get('detail/{name}','HomeController@getList');
+			Route::post('detail/{name}','HomeController@postEdit');
+			Route::get('delete/{id}','HomeController@getDelete');
+		});
 		Route::group(['prefix'=>'about'],function(){
 			Route::get('letter','AboutController@getLetter');
 			Route::post('letter/{id}','AboutController@postAbout');
@@ -52,7 +57,10 @@ Route::group(['namespace'=>'Admin'], function(){
 		});
 		Route::group(['prefix'=>'project'],function(){
 			Route::get('/','ProjectController@getList');
-			Route::post('/','ProjectController@postAdd');
+			
+			Route::get('add','ProjectController@getAdd');
+			Route::post('add','ProjectController@postAdd');
+
 			Route::get('edit/{id}','ProjectController@getEdit');
 			Route::post('edit/{id}','ProjectController@postEdit');
 			Route::get('delete/{id}','ProjectController@getDelete');
@@ -69,13 +77,7 @@ Route::group(['namespace'=>'Admin'], function(){
 			Route::get('edit/{id}','ImageController@getEdit');
 			Route::post('edit/{id}','ImageController@postEdit');
 		});
-		// Route::group(['prefix'=>'news'],function(){
-		// 	Route::get('/','NewsController@getList');
-		// 	Route::post('/','NewsController@postAdd');
-		// 	Route::get('edit/{id}','NewsController@getEdit');
-		// 	Route::post('edit/{id}','NewsController@postEdit');
-		// 	Route::get('delete/{id}','NewsController@getDelete');
-		// });
+		
 		Route::group(['prefix'=>'news'],function(){
 			Route::get('/','NewsController@getHome');
 			Route::get('detail/{name}','NewsController@getList');
@@ -102,7 +104,7 @@ Route::group(['namespace'=>'Frontend'], function(){
 	Route::get('/', 'HomeController@getHome');
 	Route::get('overview', 'HomeController@getOverView');
 	Route::get('project', 'HomeController@getProject');
-	Route::get('project/detail', 'HomeController@getProjectDetail');
+	Route::get('project/detail/{slug}', 'HomeController@getProjectDetail');
 	Route::get('qhdt', 'HomeController@getQHDT');
 	Route::get('news', 'HomeController@getNews');
 	Route::get('news/detail/{slug}', 'HomeController@getNewsDetail');

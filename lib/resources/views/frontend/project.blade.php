@@ -29,18 +29,21 @@
 			</div>
 			<div class="col-md-9">
 				<div class="row">
+					<?php $count = 1 ?>
+					@foreach($investment as $item)
 					<div class="col-md-6">
 						<div class="investmentItem">
 							<div class="investmentItemHead">
-								<div class="txt145">01</div>
-								<div class="txt20">Dự án Cẩm An - Hội An</div>
+								<div class="txt145">0{{$count++}}</div>
+								<div class="txt20">{{$item->name}}</div>
 							</div>
 							<div class="investmentItemImg">
-								<img src="img/nha-co-cam-an-hoi-an1.png">
+								<img src="{{asset('lib/storage/app/project/'.$item->img)}}">
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6">
+					@endforeach
+					{{-- <div class="col-md-6">
 						<div class="investmentItem">
 							<div class="investmentItemHead">
 								<div class="txt145">02</div>
@@ -50,7 +53,7 @@
 								<img src="img/chuttersnap-366594-unsplash - Copy.png">
 							</div>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</div>
@@ -60,24 +63,26 @@
 					dự án phân phối
 				</div>
 			</div>
+			@foreach($distribution as $item)
 			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="distributionItem">
 					<div class="distributionItemImg">
-						<img src="img/david-paschke-100138-unsplash (1) copy 3.png">
+						<img src="{{ asset('lib/storage/app/project/'.$item->img) }}">
 					</div>
 					<div class="distributionItemContent">
 						<div class="txt18">
-							Cocobay đà nẵng
+							{{cut_string($item->name, 50)}}
 						</div>
 						<div class="txt16">
-							Cocobay là Tổ hợp giải trí và du lịch tại Đà Nẵng – Hội An phục vụ 10.000 phòng khách sạn từ 3 – 5 sao 
+							{!!cut_string($item->overviewContent, 100)!!}
 						</div>
 					</div>
-					<a href="{{ asset('project/detail') }}" class="distributionItemButton">
+					<a href="{{ asset('project/detail/'.$item->slug) }}" class="distributionItemButton">
 						<img src="img/arrow_right.png">
 					</a>
 				</div>
 			</div>
+			@endforeach
 		</div>
 	</div>
 </div>

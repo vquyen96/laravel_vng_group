@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 27, 2018 at 11:24 PM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th5 28, 2018 lúc 07:25 AM
+-- Phiên bản máy phục vụ: 10.1.31-MariaDB
+-- Phiên bản PHP: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `vng_group`
+-- Cơ sở dữ liệu: `vng_group`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `about`
+-- Cấu trúc bảng cho bảng `about`
 --
 
 CREATE TABLE `about` (
@@ -39,7 +39,7 @@ CREATE TABLE `about` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `about`
+-- Đang đổ dữ liệu cho bảng `about`
 --
 
 INSERT INTO `about` (`id`, `name`, `title`, `content`, `img`, `created_at`, `updated_at`) VALUES
@@ -80,7 +80,7 @@ INSERT INTO `about` (`id`, `name`, `title`, `content`, `img`, `created_at`, `upd
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Cấu trúc bảng cho bảng `contact`
 --
 
 CREATE TABLE `contact` (
@@ -92,7 +92,7 @@ CREATE TABLE `contact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `contact`
+-- Đang đổ dữ liệu cho bảng `contact`
 --
 
 INSERT INTO `contact` (`id`, `name`, `content`, `created_at`, `updated_at`) VALUES
@@ -103,7 +103,34 @@ INSERT INTO `contact` (`id`, `name`, `content`, `created_at`, `updated_at`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `image`
+-- Cấu trúc bảng cho bảng `home`
+--
+
+CREATE TABLE `home` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `home`
+--
+
+INSERT INTO `home` (`id`, `title`, `content`, `img`, `link`, `created_at`, `updated_at`) VALUES
+(1, 'Tổng quan về VN Group', '<p>L&agrave; một tập đo&agrave;n đa ng&agrave;nh c&oacute; hệ sinh th&aacute;i khởi nghiệp kh&eacute;p k&iacute;n tạo n&ecirc;n gi&aacute; trị ph&aacute;t triển bền vững. Kh&ocirc;ng chỉ mang lại cuộc sống ấm no hạnh ph&uacute;c cho CBNV to&agrave;n hệ thống, VNGroup c&ograve;n g&oacute;p phần tạo ra những gi&aacute; trị thịnh vượng nh&acirc;n văn cho cộng đồng .</p>', '1527476932.image.png', 'http://localhost/laravel_vng_group/overview', NULL, '2018-05-27 20:22:55'),
+(2, 'Sàn giao dịch BĐS VNG', '<p>S&agrave;n giao dịch&nbsp;BĐS l&agrave; sự ước t&iacute;nh về gi&aacute; trị của c&aacute;c quyền sở hữu bất động sản bao gồm: C&aacute;c loại đất đai, nh&agrave; v&agrave; c&ocirc;ng tr&igrave;nh x&acirc;y dựng gắn liền với đất đai; Hoặc t&agrave;i sản gắn liền với đất đai, t&agrave;i sản kh&aacute;c do ph&aacute;p luật quy định&hellip;</p>', '1527476941.1.png', 'http://vnggroup.com.vn/', NULL, '2018-05-27 20:21:35'),
+(3, 'Thẩm định giá VNG', '<p>Thẩm định gi&aacute; BĐS l&agrave; sự ước t&iacute;nh về gi&aacute; trị của c&aacute;c quyền sở hữu bất động sản bao gồm: C&aacute;c loại đất đai, nh&agrave; v&agrave; c&ocirc;ng tr&igrave;nh x&acirc;y dựng gắn liền với đất đai; Hoặc t&agrave;i sản gắn liền với đất đai, t&agrave;i sản kh&aacute;c do ph&aacute;p luật quy định&hellip;</p>', '1527476950.2.png', 'http://thamdinhgiavng.com/', NULL, '2018-05-27 20:20:10'),
+(4, 'Văn phong luật sư VNG', '<p>Văn ph&ograve;ng luật sư VNG Việt Nam (VNG Viet Nam Law Firm) được th&agrave;nh lập từ năm 2009 v&agrave; ng&agrave;y c&agrave;ng khẳng định vị tr&iacute; vững mạnh trong lĩnh vực ph&aacute;p l&yacute;.&nbsp;</p>', '1527476958.3.png', 'http://vnglaw.com/', NULL, '2018-05-27 20:20:36'),
+(5, 'Truyền thông VNG', '<p>Chiến lược marketing tổng thể/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Lập kế hoạch marketing/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Chiến lược quảng c&aacute;o/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Kế hoạch truyền th&ocirc;ng/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Lập kế hoạch b&aacute;n h&agrave;ng/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;XD bộ nhận diện thương hiệu</p>', '1527476964.4.png', 'http://vngmedia.vn/', NULL, '2018-05-27 20:21:23');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `image`
 --
 
 CREATE TABLE `image` (
@@ -115,7 +142,7 @@ CREATE TABLE `image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `image`
+-- Đang đổ dữ liệu cho bảng `image`
 --
 
 INSERT INTO `image` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
@@ -133,7 +160,7 @@ INSERT INTO `image` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member`
+-- Cấu trúc bảng cho bảng `member`
 --
 
 CREATE TABLE `member` (
@@ -146,7 +173,7 @@ CREATE TABLE `member` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `member`
+-- Đang đổ dữ liệu cho bảng `member`
 --
 
 INSERT INTO `member` (`id`, `name`, `img`, `content`, `created_at`, `updated_at`) VALUES
@@ -157,7 +184,7 @@ INSERT INTO `member` (`id`, `name`, `img`, `content`, `created_at`, `updated_at`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Cấu trúc bảng cho bảng `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -167,7 +194,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Đang đổ dữ liệu cho bảng `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -177,12 +204,13 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2018_04_02_140824_member', 2),
 (5, '2018_04_02_140925_image', 2),
 (6, '2018_04_02_141035_news', 2),
-(7, '2018_04_02_141303_contact', 2);
+(7, '2018_04_02_141303_contact', 2),
+(9, '2018_05_28_020745_home', 3);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news`
+-- Cấu trúc bảng cho bảng `news`
 --
 
 CREATE TABLE `news` (
@@ -197,7 +225,7 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `news`
+-- Đang đổ dữ liệu cho bảng `news`
 --
 
 INSERT INTO `news` (`id`, `title`, `slug`, `img`, `content`, `type`, `created_at`, `updated_at`) VALUES
@@ -207,7 +235,7 @@ INSERT INTO `news` (`id`, `title`, `slug`, `img`, `content`, `type`, `created_at
 (5, 'Tuyển dụng nhân viên kinh doanh Văn phòng công chứng', 'tuyen-dung-nhan-vien-kinh-doanh-van-phong-cong-chung', 'tuyen-dung-1.jpg', '<p><strong>Vị tr&iacute; tuyển dụng</strong></p>\r\n\r\n<p>Nh&acirc;n vi&ecirc;n kinh doanh văn ph&ograve;ng c&ocirc;ng chứng</p>\r\n\r\n<p><strong>M&ocirc; tả c&ocirc;ng việc</strong></p>\r\n\r\n<p>&ndash; Giới thiệu c&aacute;c sản phẩm, dịch vụ của c&ocirc;ng ty v&agrave; tư vấn giải ph&aacute;p ph&ugrave; hợp với c&aacute;c y&ecirc;u cầu của kh&aacute;ch h&agrave;ng.<br />\r\n&ndash; T&igrave;m kiếm kh&aacute;ch h&agrave;ng tiềm năng, tư vấn, chăm s&oacute;c kh&aacute;ch h&agrave;ng v&agrave; ph&aacute;t triển thị trường.<br />\r\n&ndash; Thực hiện c&aacute;c c&ocirc;ng việc dưới sự hướng dẫn của c&aacute;n bộ quản l&yacute; trực tiếp v&agrave; ho&agrave;n th&agrave;nh doanh số được giao.</p>\r\n\r\n<p>&ndash; Địa điểm l&agrave;m việc : Quận Nam Từ Li&ecirc;m</p>\r\n\r\n<p><strong>Y&ecirc;u cầu&nbsp;</strong></p>\r\n\r\n<p>&ndash; &nbsp;Ưu ti&ecirc;n ứng vi&ecirc;n đ&atilde; l&agrave;m việc hoặc c&oacute; mối quan hệ trong lĩnh vực bất động sản, ng&acirc;n h&agrave;ng&hellip;.</p>\r\n\r\n<p>&ndash; Khả năng giao tiếp v&agrave; đ&agrave;m ph&aacute;n tốt (bắt buộc)</p>\r\n\r\n<p>&ndash; Nhanh nhẹn, xử l&yacute; tốt t&igrave;nh huống trong c&ocirc;ng việc<br />\r\n&ndash; Năng động, s&aacute;ng tạo, khả năng l&agrave;m việc độc lập;</p>\r\n\r\n<p>&ndash; Trung thực, c&oacute; tr&aacute;ch nhiệm cao với c&ocirc;ng việc;</p>\r\n\r\n<p>&ndash; Sử dụng th&agrave;nh thạo tin học văn ph&ograve;ng;</p>\r\n\r\n<p><strong>*** QUYỀN LỢI ĐƯỢC HƯỞNG</strong></p>\r\n\r\n<p>&ndash; Mức lương: thỏa thuận (xứng đ&aacute;ng với năng lực)</p>\r\n\r\n<p>&ndash; Được hưởng đầy đủ c&aacute;c quyền lợi theo luật lao động.<br />\r\n&ndash; BHXH, BHYT, BHTN theo quy định của luật lao động.<br />\r\n&ndash; Được l&agrave;m việc trong m&ocirc;i trường chuy&ecirc;n nghiệp v&agrave; năng động, c&oacute; nhiều cơ hội thăng tiến, ph&aacute;t triển sự nghiệp</p>\r\n\r\n<p>&ndash; Thưởng cuối năm theo quy định của C&ocirc;ng ty</p>\r\n\r\n<p>&ndash; Đi du lịch, nghỉ m&aacute;t h&agrave;ng năm</p>\r\n\r\n<p><strong><em>Hồ sơ:</em></strong></p>\r\n\r\n<ul>\r\n	<li>Thư dự tuyển, CV</li>\r\n	<li>Sơ yếu l&iacute; lịch c&oacute; d&aacute;n ảnh 4&times;6 (kh&ocirc;ng qu&aacute; 06 th&aacute;ng)</li>\r\n	<li>Bản sao giấy khai sinh, c&aacute;c văn bằng, chứng chỉ.</li>\r\n	<li>Giấy kh&aacute;m sức khỏe .</li>\r\n	<li>Chứng minh thư, hộ khẩu photo c&ocirc;ng chứng.</li>\r\n	<li>Đơn xin việc.</li>\r\n</ul>\r\n\r\n<p>Hồ sơ ghi r&otilde; vị tr&iacute; dự tuyển gửi trực tuyến qua địa chỉ email: tuyendung@vngvietnam.com.vn hoặc nộp trực tiếp tại Ph&ograve;ng HCNS hệ thống&nbsp; VNG Group</p>\r\n\r\n<p><strong>Địa chỉ:</strong>&nbsp;<em>Tầng 5, t&ograve;a nh&agrave; Diamond Flower Tower, phường Nh&acirc;n Ch&iacute;nh, quận Thanh Xu&acirc;n, HN</em></p>\r\n\r\n<p><strong>Hotline : 0983088023</strong> <em>(Mrs H&agrave;)</em></p>\r\n\r\n<p><strong>Hạn nộp hồ sơ:</strong>&nbsp;31/03/2018</p>', 6, '2018-04-02 20:45:56', '2018-05-27 04:29:15'),
 (6, 'VNG Group chính thức phân phối dự án Hinode City', NULL, 'phoi-canh-cua-chung-cu-hinode-city-768x427.png', '<p>&ldquo;Hinode City l&agrave; sự kết tinh ho&agrave;n hảo của phong c&aacute;ch sống v&agrave; bản sắc văn h&oacute;a Nhật Bản &ndash; Một h&igrave;nh mẫu khiến cả thế giới lu&ocirc;n ngưỡng mộ. Ti&ecirc;n phong trong lối đi, đ&aacute;nh tr&uacute;ng v&agrave;o nhu cầu v&agrave; thị hiếu của đa số người Việt, Hinode City mang lại những gi&aacute; trị đảm bảo về chất lượng sống, chất lượng c&ocirc;ng tr&igrave;nh, cam kết đ&uacute;ng tiến độ&rdquo; &ndash; Đại diện đơn vị ph&acirc;n phối dự &aacute;n VNG Group nhận định.</p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2018/01/phoi-canh-cua-chung-cu-hinode-city-1024x569.png\" style=\"height:356px; width:640px\" /></p>\r\n\r\n<p><em>Phối cảnh tổng thể dự &aacute;n Hinode City</em></p>\r\n\r\n<p><strong>Hinode City &ndash; Tinh hoa Nhật Bản</strong></p>\r\n\r\n<p>Phong c&aacute;ch sống kiểu Nhật đề cao sự tối giản v&agrave; tinh tế, cũng bởi vậy m&agrave; kiến tr&uacute;c nh&agrave; ở người Nhật vốn nổi tiếng với thiết kế tối ưu c&ocirc;ng năng, tiện dụng v&agrave; tr&agrave;n đầy hơi hướng thiền định, nghĩa l&agrave; hướng đến sự thư th&aacute;i của con người. Cũng ch&iacute;nh bởi vậy m&agrave; tại Việt Nam, xu hướng sống theo phong c&aacute;ch Nhật đang ng&agrave;y c&agrave;ng trở th&agrave;nh tr&agrave;o lưu v&agrave; được c&aacute;c kh&aacute;ch h&agrave;ng quan t&acirc;m.</p>\r\n\r\n<p>Dự &aacute;n Hinode City (Minh Khai &ndash; H&agrave; Nội) ch&iacute;nh l&agrave; dự &aacute;n ti&ecirc;n phong trong tr&agrave;o lưu n&agrave;y đang g&acirc;y sốt thị trường bất động sản cao cấp tại H&agrave; Nội. Đ&aacute;ng ch&uacute; &yacute;, Hinode City l&agrave; dự &aacute;n thể hiện sự hợp t&aacute;c th&acirc;n thiết hơn 20 năm của Chủ đầu tư Vietracimex với c&aacute;c đối t&aacute;c Nhật Bản.</p>\r\n\r\n<p>Mang &acirc;m hưởng kiến tr&uacute;c v&agrave; tiện &iacute;ch th&ocirc;ng minh của Nhật Bản, Hinode City hướng đến sự h&agrave;i h&ograve;a trong phong thủy, h&ograve;a hợp giữa thi&ecirc;n nhi&ecirc;n v&agrave; con người. Đặc biệt, dự &aacute;n cũng thể hiện &ldquo;t&aacute;c phong người Nhật&rdquo; ở sự cam kết về chất lượng c&ocirc;ng tr&igrave;nh v&agrave; tiến độ b&agrave;n giao. Đ&oacute; ch&iacute;nh l&agrave; những yếu tố khẳng định gi&aacute; trị chiều s&acirc;u m&agrave; Chủ đầu tư muốn mang lại cho kh&aacute;ch h&agrave;ng.</p>\r\n\r\n<p><img alt=\"Hinode City mang âm hưởng tinh hoa văn hóa Nhật Bản vào từng thiết kế căn hộ, tiện ích và cảnh quan nội khu.\" src=\"http://channel.mediacdn.vn/thumb_w/640/prupload/270/2018/01/img20180105150330602.jpg\" /></p>\r\n\r\n<p><em>Hinode City mang &acirc;m hưởng tinh hoa văn h&oacute;a Nhật Bản v&agrave;o từng thiết kế căn hộ, tiện &iacute;ch v&agrave; cảnh quan nội khu.</em></p>\r\n\r\n<p>Giới chuy&ecirc;n gia bất động sản tin rằng, với việc chủ đầu tư hợp t&aacute;c c&ugrave;ng c&aacute;c đối t&aacute;c Nhật để mang tinh hoa Nhật Bản v&agrave;o dự &aacute;n, Hinode City sau khi ch&iacute;nh thức mở b&aacute;n sẽ trở th&agrave;nh hiện tượng &ldquo;l&agrave;m mưa l&agrave;m gi&oacute;&rdquo; tr&ecirc;n thị trường bất động sản cao cấp thời gian tới.</p>\r\n\r\n<p><strong>Phong c&aacute;ch Nhật giữa l&ograve;ng H&agrave; Nội.</strong></p>\r\n\r\n<p>Ti&ecirc;u ch&iacute; sống người Nhật vốn rất khắt khe, bởi vậy những căn hộ mang đậm phong c&aacute;ch Nhật Bản của Hinode City sẽ đ&aacute;p ứng mọi nhu cầu, v&agrave; l&agrave;m h&agrave;i l&ograve;ng bất kỳ ai y&ecirc;u th&iacute;ch cuộc sống hiện đại, đầy đủ tiện &iacute;ch nhưng vẫn h&agrave;i h&ograve;a với thi&ecirc;n nhi&ecirc;n.</p>\r\n\r\n<p>D&agrave;nh đến hơn 60% diện t&iacute;ch cho c&acirc;y xanh, cảnh quan, với những khu vườn đặc biệt được thiết kế đậm m&agrave;u sắc văn h&oacute;a ngũ h&agrave;nh &Aacute; Đ&ocirc;ng như vườn Sao Kim, vườn Sao Mộc, khu phố đ&egrave;n lồng (tượng trưng cho h&agrave;nh hỏa), vườn Sao Thổ v&agrave; L&acirc;u đ&agrave;i Thủy k&iacute;nh (h&agrave;nh thủy). Mỗi điểm nhấn trong kiến tr&uacute;c cảnh quan hay thiết kế căn hộ đều được Chủ đầu tư t&iacute;nh to&aacute;n kỹ lưỡng để kh&ocirc;ng chỉ đưa thi&ecirc;n nhi&ecirc;n h&ograve;a nh&acirc;p với cuộc sống mỗi gia đ&igrave;nh m&agrave; c&ograve;n đ&aacute;p ứng tối đa yếu tố phong thủy, tăng vượng kh&iacute;, th&uacute;c đầy sự hưng thịnh cho chủ nh&acirc;n căn nh&agrave;.</p>\r\n\r\n<p><img alt=\"Bể bơi tràn bờ vô cực là một trong những điểm nhấn tiện ích cao cấp của dự án Hinode City.\" src=\"http://channel.mediacdn.vn/thumb_w/640/prupload/270/2018/01/img20180105150334491.jpg\" /></p>\r\n\r\n<p><em>Bể bơi tr&agrave;n bờ v&ocirc; cực l&agrave; một trong những điểm nhấn tiện &iacute;ch cao cấp của dự &aacute;n Hinode City.</em></p>\r\n\r\n<p>Ngo&agrave;i concept thiết kế mang đậm bản sắc văn h&oacute;a Nhật Bản với những chi tiết ngũ h&agrave;nh độc đ&aacute;o, dự &aacute;n Hinode City c&ograve;n được đầu tư x&acirc;y dựng hơn 50 tiện &iacute;ch v&agrave; dịch vụ nội khu cao cấp như bể bơi tr&agrave;n bờ, ph&ograve;ng sinh hoạt cộng đồng, thư viện, trường mầm non, s&acirc;n tập golf, vườn Nhật tr&ecirc;n m&aacute;i, khu phố đi bộ, cầu treo tr&ecirc;n cao, s&acirc;n khấu ngo&agrave;i trời, sảnh lounge, gym &amp; spa thư gi&atilde;n, v&agrave; c&oacute; đến 4 tầng trung t&acirc;m thương mại, chuỗi ẩm thực sang trọng, rạp chiếu phim cao cấp&hellip;</p>\r\n\r\n<p>Đặc biệt, với sự kết hợp ho&agrave;n hảo giữa truyền thống văn h&oacute;a Việt v&agrave; tinh hoa văn h&oacute;a Nhật Bản, mỗi thiết kế căn hộ v&agrave; c&aacute;ch bố tr&iacute; cảnh quan sẽ ph&ugrave; hợp với t&acirc;m l&yacute; v&agrave; th&oacute;i quen của người Việt Nam.</p>\r\n\r\n<p>Với Concept độc đ&aacute;o, Hinode City ch&iacute;nh l&agrave; &ldquo;l&agrave;n gi&oacute; lạ&rdquo; dẫn dắt thị trường bất động sản cao cấp thời điểm n&agrave;y. Ng&agrave;y 13/01/2018 tới đ&acirc;y, Chủ đầu tư Vietracimex c&ugrave;ng đối t&aacute;c ph&acirc;n phối dự &aacute;n VNG Group sẽ mang phong c&aacute;ch sống kiểu Nhật n&agrave;y đến với c&aacute;c kh&aacute;ch h&agrave;ng tại Thủ đ&ocirc; H&agrave; Nội.</p>\r\n\r\n<p><strong>Theo CafeF</strong></p>', 3, '2018-05-26 22:15:26', '2018-05-26 22:18:38'),
 (7, 'Vui Noel – hưởng ưu đãi hấp dẫn với Tiktak Coworking Space', 'vui-noel-huong-uu-dai-hap-dan-voi-tiktak-coworking-space', 'Vui-Noel-huong-uu-dai-hap-dan-voi-Tiktak-Coworking-Space-vui-noel-1-1513734420-119-width660height262.jpg', '<p>[Theo&nbsp;24h.com.vn] &ndash; Trong th&aacute;ng 12 n&agrave;y, Tiktak Co-working space sẽ ra mắt m&ocirc; h&igrave;nh văn ph&ograve;ng mở v&agrave; ch&iacute;nh thức đi v&agrave;o hoạt động. Với mục đ&iacute;ch tạo ra một kh&ocirc;ng gian l&agrave;m việc chung hiện đại, Tiktak Coworking Space kỳ vọng khi đi v&agrave;o hoạt động sẽ l&agrave; nơi khơi nguồn cảm hứng s&aacute;ng tạo, tăng tương t&aacute;c cho mọi đối tượng từ c&aacute; nh&acirc;n, doanh nghiệp v&agrave; đặc biệt l&agrave; cộng đồng Startup.</p>\r\n\r\n<p>Đặc biệt, nhằm ch&agrave;o đ&oacute;n m&ugrave;a lễ hội Noel 2017 v&agrave; nh&acirc;n dịp khai trương, Tiktak Co-working space mang đến h&agrave;ng loạt ưu đ&atilde;i &ldquo;si&ecirc;u&rdquo; hấp dẫn cho kh&aacute;ch h&agrave;ng khi đăng k&yacute; trở th&agrave;nh th&agrave;nh vi&ecirc;n của Tiktak Co-working space từ ng&agrave;y 1/12/2017 đến hết ng&agrave;y 31/12/2017.</p>\r\n\r\n<p>Nằm tại Tầng 5 T&ograve;a Diamond Flower, ng&atilde; tư trục đường L&ecirc; Văn Lương &ndash; Ho&agrave;ng Đạo Th&uacute;y, vị tr&iacute; được đ&aacute;nh gi&aacute; l&agrave; đắc địa ngay trung t&acirc;m khu đ&ocirc; thị Trung H&ograve;a Nh&acirc;n Ch&iacute;nh, khu vực được coi l&agrave; &ldquo;đất l&agrave;nh&rdquo; khi rất nhiều doanh nghiệp chọn đặt trụ sở. Với vị tr&iacute; độc t&ocirc;n c&ugrave;ng nhu cầu thu&ecirc; văn ph&ograve;ng, thu&ecirc; chỗ ngồi l&agrave;m việc của cộng đồng Startup ng&agrave;y c&agrave;ng gia tăng, chắc chắn khi ch&iacute;nh thức đi v&agrave;o hoạt động Tiktak Co-working space sẽ trở th&agrave;nh địa điểm l&agrave;m việc chung l&yacute; tưởng cho c&aacute; nh&acirc;n, doanh nghiệp, v&agrave; cộng đồng Startup. Với lợi thế kh&ocirc;ng chỉ l&agrave; vị tr&iacute; kết nối thuận tiện với trung t&acirc;m th&agrave;nh phố, cơ quan h&agrave;nh ch&iacute;nh đầu n&atilde;o, m&agrave; đ&acirc;y c&ograve;n l&agrave; địa điểm giao dịch, kinh doanh thuận tiện cho qu&yacute; kh&aacute;ch h&agrave;ng khi đặt văn ph&ograve;ng, nơi l&agrave;m việc tại đ&acirc;y.</p>\r\n\r\n<p>Với c&aacute;c g&oacute;i dịch vụ linh hoạt c&ugrave;ng mức gi&aacute; ph&ugrave; hợp cho mọi đối tượng c&oacute; nhu cầu thu&ecirc; từ kh&ocirc;ng gian l&agrave;m việc chia sẻ đến g&oacute;i dịch vụ theo từng tuần, từng th&aacute;ng hay thu&ecirc; văn ph&ograve;ng cố định theo năm, Tiktak Co-working space sẽ l&agrave; kh&ocirc;ng gian l&agrave;m việc Đa-zi-năng đ&aacute;p ứng mọi nhu cầu, ph&ugrave; hơp với nguồn t&agrave;i ch&iacute;nh sẵn c&oacute; của kh&aacute;ch h&agrave;ng.</p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/12/Vui-Noel-huong-uu-dai-hap-dan-voi-Tiktak-Coworking-Space-vui-noel-1-1513734420-119-width660height262.jpg\" style=\"height:262px; width:660px\" /></p>\r\n\r\n<p>Trong th&aacute;ng khai trương n&agrave;y c&ograve;n rất nhiều ưu đ&atilde;i v&agrave; phần qu&agrave; may mắn đang chờ đợi kh&aacute;ch h&agrave;ng khi đăng k&yacute;&nbsp; trải nghiệm v&agrave; sử dụng dịch vụ tại đ&acirc;y. Nếu bạn đang t&igrave;m một kh&ocirc;ng gian l&agrave;m việc hiện đại, trẻ trung v&agrave; s&aacute;ng tạo th&igrave; Tiktak Co-working space ch&iacute;nh l&agrave; nơi m&agrave; bạn cần.</p>\r\n\r\n<p><strong>Kh&aacute;ch h&agrave;ng đăng k&yacute; g&oacute;i 6 th&aacute;ng v&agrave; 1 năm với &nbsp;nhiều &nbsp;chương tr&igrave;nh ưu đ&atilde;i:</strong></p>\r\n\r\n<p>Kh&aacute;ch h&agrave;ng k&yacute; hợp đồng 1 năm v&agrave; thanh to&aacute;n 1 lần sẽ được chiết khấu 20% gi&aacute; trị hợp đồng, được khấu khấu trừ ngay sau khi thanh to&aacute;n.</p>\r\n\r\n<p>Kh&aacute;ch h&agrave;ng k&yacute; hợp đồng 1 năm v&agrave; thanh to&aacute;n 6 th&aacute;ng 1 lần sẽ được chiết khấu 10% gi&aacute; trị hợp đồng, được khấu trừ ngay khi thanh to&aacute;n lần 2</p>\r\n\r\n<p>Kh&aacute;ch h&agrave;ng k&yacute; hợp đồng 6 th&aacute;ng v&agrave; thanh to&aacute;n 1 lần sẽ được chiết khấu 5% gi&aacute; trị hợp đồng, được khấu trừ ngay sau khi thanh to&aacute;n.</p>\r\n\r\n<p>B&ecirc;n cạnh đ&oacute;, kh&ocirc;ng gian l&agrave;m việc chung Tiktak Co-working space cũng được những kh&aacute;ch h&agrave;ng doanh nghiệp, tổ chức uy t&iacute;n tin tưởng để trở th&agrave;nh địa điểm tổ chức c&aacute;c sự kiện v&agrave; hội thảo chuy&ecirc;n nghiệp như Uber, Azibai, IMM Group&hellip;</p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/12/imm.png\" style=\"height:324px; width:600px\" /></p>\r\n\r\n<p>V&agrave;o ng&agrave;y 28/12 tới đ&acirc;y VNG Group &amp; IMM Group sẽ hợp t&aacute;c tổ chức đ&ecirc;m VIP Gala Dinner &ldquo;Cơ hội lấy th&ecirc;m quốc tịch Ch&acirc;u &Acirc;u &ndash; &Uacute;c &ndash; Mỹ &ndash; Canada&rdquo; tại Tiktak Co-working space. Đ&acirc;y được coi l&agrave; sự kiện &ldquo;kết nối&rdquo; giữa doanh nghiệp v&agrave; kh&aacute;ch h&agrave;ng dịp cuối năm m&agrave; VNG &amp; IMM Group phối hợp tổ chức.</p>\r\n\r\n<p>Với mục đ&iacute;ch kết nối v&agrave; cung cấp c&aacute;c th&ocirc;ng tin cập nhật về di tr&uacute;, định cư cũng như cơ hội đầu tư bất động sản ra nước ngo&agrave;i cho qu&yacute; kh&aacute;ch h&agrave;ng đang c&oacute; người th&acirc;n, con c&aacute;i du học cũng như muốn nhập tịch tại c&aacute;c quốc gia sở tại. Tại sự kiện qu&yacute; kh&aacute;ch h&agrave;ng sẽ được cung cấp cũng như như giải đ&aacute;p, trao đổi th&ocirc;ng tin cập nhật nhất về t&igrave;nh h&igrave;nh di tr&uacute;, định cư cũng như c&aacute;c cơ hội đầu tư, sinh lời từ bất động sản tại c&aacute;c quốc gia được đ&aacute;nh gi&aacute; cao về chất lượng cuộc sống bao gồm Ch&acirc;u &Acirc;u, &Uacute;c, Mỹ, Canada.</p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/12/imm2.png\" style=\"height:253px; width:600px\" /></p>\r\n\r\n<p>Qu&yacute; kh&aacute;ch h&agrave;ng quan t&acirc;m sự kiện c&oacute; thể đăng k&yacute; online tại link:&nbsp;&nbsp;<a href=\"http://click.vn/24h_redirectout.php?to=aHR0cHM6Ly9nb28uZ2wvc01IclF1&amp;tk=b3161008da5426ec72d1ccacb98d9c5a15137610045cf9c89feb905c26b59d734c7a0786a1\" target=\"_blank\">https://goo.gl/sMHrQu</a></p>\r\n\r\n<p><strong>Mọi th&ocirc;ng tin chi tiết về ch&iacute;nh s&aacute;ch ưu đ&atilde;i xin li&ecirc;n hệ:</strong></p>\r\n\r\n<p><em>Tiktak Co-working space, Tầng 5, T&ograve;a nh&agrave; Diamond Flower, Số 1 Ho&agrave;ng Đạo Th&uacute;y, Thanh Xu&acirc;n, H&agrave; Nội,</em></p>\r\n\r\n<p><em>Website:&nbsp;<a href=\"http://click.vn/24h_redirectout.php?to=aHR0cDovL3Rpa3Rhay5jb20udm4v&amp;tk=e33e99d8670deb537cd529254347044715137610045cf9c89feb905c26b59d734c7a0786a1\" target=\"_blank\">http://tiktak.com.vn/</a>&nbsp;</em></p>\r\n\r\n<p><em>Hotline: 0898 580 666 rất h&acirc;n hạnh được phục vụ !</em></p>\r\n\r\n<p><strong>Theo&nbsp;24h.com.vn</strong></p>', 4, '2018-05-27 01:35:37', '2018-05-27 04:45:58'),
-(8, 'Tuyển dụng: Nhân viên Marketing', NULL, 'Tuyen-nhan-vien-IT-marketing-online.png', '<p>Số lượng: 01 người<br>\r\nMô tả công việc:<br>\r\n• Phát triển quy mô hệ thống Marketing Online<br>\r\n• Xây dựng các chiến dịch marketing theo chiến lược của công ty<br>\r\n• Cùng phòng Marketing thực hiện các hoạt động Marketing online như: Chạy quảng cáo Google Adwords, Quảng cáo Facebook Ads, các hoạt động SEO<br>\r\n• Tổ chức, lên ý tưởng các event, Talk show và thực hiện những Event, Talk show đó.<br>\r\nYêu cầu:<br>\r\n• Nữ/Nam tốt nghiệp các khoa Kinh tế, Marketing, Thương mại điện tử, Quản trị Kinh doanh, Báo chí, PR, ưu tiên người có kinh nghiệm<br>\r\n• Khả năng sử dụng các công cụ Marketing Online: Các tools hỗ trợ Marketing, các công cụ Graphic Design, các công cụ thiết kế Video, thành thạo các công cụ quảng cáo Online<br>\r\n• Khả năng xây dựng và định hướng phát triển content<br>\r\n• Tư duy tổng hợp,phân tích và đánh giá thông tin chính xác.<br>\r\n• Ưu tiên ứng viên có kinh nghiệm phát triển thành công các kênh phân phối nội dung Online: Facebook, Youtube, Website, Blog, Forum<br>\r\nQuyền lợi:<br>\r\n• Lương tháng thứ 13 và thưởng năm, thưởng nóng, nghỉ lễ 30/4, 1/5, 2/9, Tết dương lịch, Tết nguyên đán<br>\r\n• Được tham gia BHXH, đi du lịch các chế độ khác theo quy định Luật Lao Động<br>\r\n• Môi trường làm việc trẻ trung, hiện đại, năng động và chuyên nghiệp<br>\r\n• Có chế độ đào tạo thường xuyên và hỗ trợ nhân viên tốt nhất<br>\r\nThời gian làm việc: full-time<br>\r\nĐịa điểm làm việc: Tầng 5, tòa nhà Diamond Flower Tower, phường Nhân Chính, quận Thanh Xuân, HN<br>\r\nThu nhập:<br>\r\n– Lương cứng: Từ 6 – 8 triệu đồng/tháng.<br>\r\n– Hoa hồng kinh doanh theo doanh số thực tế.<br>\r\nHồ sơ:<br>\r\n– Thư dự tuyển, CV<br>\r\n– Sơ yếu lí lịch có dán ảnh 4×6 (không quá 06 tháng)<br>\r\n– Bản sao giấy khai sinh, các văn bằng, chứng chỉ.<br>\r\n– Giấy khám sức khỏe không quá 06 tháng.<br>\r\n– Chứng minh thư, hộ khẩu photo công chứng.<br>\r\n– Đơn xin việc.<br>\r\nHồ sơ ghi rõ vị trí dự tuyển gửi trực tuyến qua địa chỉ email: tuyendung@vngvietnam.com.vn hoặc nộp trực tiếp tại phòng HCNS công ty cổ phần bất động sản VNG Việt Nam<br>\r\nĐịa chỉ: Tầng 5, tòa nhà Diamond Flower Tower, phường Nhân Chính, quận Thanh Xuân, HN<br>\r\nHotline tuyển dụng: 0898580666<br>\r\nHạn nộp hồ sơ: 25/08/2017</p>', 6, '2018-05-27 01:39:40', '2018-05-27 01:39:40'),
+(8, 'Tuyển dụng: Nhân viên Marketing', 'tuyen-dung-nhan-vien-marketing', 'Tuyen-nhan-vien-IT-marketing-online.png', '<p>Số lượng: 01 người<br />\r\nM&ocirc; tả c&ocirc;ng việc:<br />\r\n&bull; Ph&aacute;t triển quy m&ocirc; hệ thống Marketing Online<br />\r\n&bull; X&acirc;y dựng c&aacute;c chiến dịch marketing theo chiến lược của c&ocirc;ng ty<br />\r\n&bull; C&ugrave;ng ph&ograve;ng Marketing thực hiện c&aacute;c hoạt động Marketing online như: Chạy quảng c&aacute;o Google Adwords, Quảng c&aacute;o Facebook Ads, c&aacute;c hoạt động SEO<br />\r\n&bull; Tổ chức, l&ecirc;n &yacute; tưởng c&aacute;c event, Talk show v&agrave; thực hiện những Event, Talk show đ&oacute;.<br />\r\nY&ecirc;u cầu:<br />\r\n&bull; Nữ/Nam tốt nghiệp c&aacute;c khoa Kinh tế, Marketing, Thương mại điện tử, Quản trị Kinh doanh, B&aacute;o ch&iacute;, PR, ưu ti&ecirc;n người c&oacute; kinh nghiệm<br />\r\n&bull; Khả năng sử dụng c&aacute;c c&ocirc;ng cụ Marketing Online: C&aacute;c tools hỗ trợ Marketing, c&aacute;c c&ocirc;ng cụ Graphic Design, c&aacute;c c&ocirc;ng cụ thiết kế Video, th&agrave;nh thạo c&aacute;c c&ocirc;ng cụ quảng c&aacute;o Online<br />\r\n&bull; Khả năng x&acirc;y dựng v&agrave; định hướng ph&aacute;t triển content<br />\r\n&bull; Tư duy tổng hợp,ph&acirc;n t&iacute;ch v&agrave; đ&aacute;nh gi&aacute; th&ocirc;ng tin ch&iacute;nh x&aacute;c.<br />\r\n&bull; Ưu ti&ecirc;n ứng vi&ecirc;n c&oacute; kinh nghiệm ph&aacute;t triển th&agrave;nh c&ocirc;ng c&aacute;c k&ecirc;nh ph&acirc;n phối nội dung Online: Facebook, Youtube, Website, Blog, Forum<br />\r\nQuyền lợi:<br />\r\n&bull; Lương th&aacute;ng thứ 13 v&agrave; thưởng năm, thưởng n&oacute;ng, nghỉ lễ 30/4, 1/5, 2/9, Tết dương lịch, Tết nguy&ecirc;n đ&aacute;n<br />\r\n&bull; Được tham gia BHXH, đi du lịch c&aacute;c chế độ kh&aacute;c theo quy định Luật Lao Động<br />\r\n&bull; M&ocirc;i trường l&agrave;m việc trẻ trung, hiện đại, năng động v&agrave; chuy&ecirc;n nghiệp<br />\r\n&bull; C&oacute; chế độ đ&agrave;o tạo thường xuy&ecirc;n v&agrave; hỗ trợ nh&acirc;n vi&ecirc;n tốt nhất<br />\r\nThời gian l&agrave;m việc: full-time<br />\r\nĐịa điểm l&agrave;m việc: Tầng 5, t&ograve;a nh&agrave; Diamond Flower Tower, phường Nh&acirc;n Ch&iacute;nh, quận Thanh Xu&acirc;n, HN<br />\r\nThu nhập:<br />\r\n&ndash; Lương cứng: Từ 6 &ndash; 8 triệu đồng/th&aacute;ng.<br />\r\n&ndash; Hoa hồng kinh doanh theo doanh số thực tế.<br />\r\nHồ sơ:<br />\r\n&ndash; Thư dự tuyển, CV<br />\r\n&ndash; Sơ yếu l&iacute; lịch c&oacute; d&aacute;n ảnh 4&times;6 (kh&ocirc;ng qu&aacute; 06 th&aacute;ng)<br />\r\n&ndash; Bản sao giấy khai sinh, c&aacute;c văn bằng, chứng chỉ.<br />\r\n&ndash; Giấy kh&aacute;m sức khỏe kh&ocirc;ng qu&aacute; 06 th&aacute;ng.<br />\r\n&ndash; Chứng minh thư, hộ khẩu photo c&ocirc;ng chứng.<br />\r\n&ndash; Đơn xin việc.<br />\r\nHồ sơ ghi r&otilde; vị tr&iacute; dự tuyển gửi trực tuyến qua địa chỉ email: tuyendung@vngvietnam.com.vn hoặc nộp trực tiếp tại ph&ograve;ng HCNS c&ocirc;ng ty cổ phần bất động sản VNG Việt Nam<br />\r\nĐịa chỉ: Tầng 5, t&ograve;a nh&agrave; Diamond Flower Tower, phường Nh&acirc;n Ch&iacute;nh, quận Thanh Xu&acirc;n, HN<br />\r\nHotline tuyển dụng: 0898580666<br />\r\nHạn nộp hồ sơ: 25/08/2017</p>', 6, '2018-05-27 01:39:40', '2018-05-27 18:56:16'),
 (9, 'Chính thức ra mắt mạng xã hội kinh doanh Azibai', 'chinh-thuc-ra-mat-mang-xa-hoi-kinh-doanh-azibai', 'azibai_GXME.jpg', '<p>[Theo theleader.vn] &ndash; Azibai vừa bắt tay với VNG Group ra mắt ban điều h&agrave;nh v&agrave; chi nh&aacute;nh Azibai miền bắc. Đ&acirc;y l&agrave; bước đi chiến lược trong việc tạo dựng thị trường của Azibai v&agrave; VNG nhằm tiếp cận nhanh với khối lượng kh&aacute;ch h&agrave;ng lớn nhờ nền tảng c&ocirc;ng nghệ.&nbsp;</p>\r\n\r\n<p>Azibai l&agrave; mạng x&atilde; hội kinh doanh online có đầy đủ c&aacute;c t&iacute;nh năng ưu việt nh&acirc;́t gi&uacute;p doanh nghi&ecirc;̣p tối ưu h&oacute;a chuỗi c&aacute;c hoạt động kinh doanh của m&igrave;nh.</p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/12/azibai_GXME.jpg\" style=\"height:366px; width:650px\" /></p>\r\n\r\n<p><em>Azibai tạo ra cơ hội kinh doanh online cho mọi đối tượng</em></p>\r\n\r\n<p>C&ocirc;ng ty CP C&ocirc;ng nghệ Mọi Người C&ugrave;ng Vui vừa ch&iacute;nh thức ra mắt mạng x&atilde; hội kinh doanh Azibai với ứng dụng sử dụng tr&ecirc;n hệ điều h&agrave;nh Android v&agrave; IOS.</p>\r\n\r\n<p>Đ&acirc;y l&agrave; c&ocirc;ng cụ nhằm mang đến cơ hội x&acirc;y dựng hệ thống&nbsp;<em>kinh doanh trực tuyến</em>&nbsp;th&ocirc;ng minh đến tất cả c&aacute;c c&aacute; nh&acirc;n, doanh nghiệp quan t&acirc;m đến thương mại điện tử.</p>\r\n\r\n<p><strong>Mạng x&atilde; hội&nbsp;</strong><strong>kinh doanh online</strong>&nbsp;<strong>Azibai</strong>&nbsp;(Azibai.com) được sử dụng dưới hình thức m&ocirc;̣t ứng dụng chạy tr&ecirc;n n&ecirc;̀n tảng Android và IOS, có đầy đủ c&aacute;c t&iacute;nh năng ưu việt nh&acirc;́t gi&uacute;p doanh nghi&ecirc;̣p tối ưu h&oacute;a chuỗi c&aacute;c hoạt động kinh doanh của mình bao gồm: Hoạt đ&ocirc;̣ng x&acirc;y dựng th&ocirc;ng tin doanh nghi&ecirc;̣p, th&ocirc;ng tin hàng hóa, dịch vụ; truy&ecirc;̀n th&ocirc;ng, ti&ecirc;́p thị hàng hóa, dịch vụ tới người ti&ecirc;u dùng; dựng h&ecirc;̣ th&ocirc;́ng bán hàng sỉ và lẻ online; thanh toán trực tuy&ecirc;́n và giao nh&acirc;̣n hàng hóa.</p>\r\n\r\n<p>Đối với nh&agrave; sản xuất, nh&agrave; ph&acirc;n phối h&agrave;ng h&oacute;a tham gia sử dụng&nbsp;<strong>ứng dụng</strong>&nbsp;<strong>Azibai</strong>&nbsp;sẽ c&oacute; thể x&acirc;y dựng kh&ocirc;ng giới hạn h&ecirc;̣ th&ocirc;́ng đại lý bán hàng trực tuy&ecirc;́n tr&ecirc;n toàn qu&ocirc;́c bằng ứng dụng ti&ecirc;́p thị li&ecirc;n k&ecirc;́t của Azibai, truy&ecirc;̀n th&ocirc;ng nhanh chóng v&ecirc;̀ mặt th&ocirc;ng tin, hình ảnh của hàng hóa, dịch vụ, ti&ecirc;́t ki&ecirc;̣m t&ocirc;́i đa các chi phí trong c&ocirc;ng tác bán hàng, h&ecirc;̣ th&ocirc;́ng quản trị th&ocirc;ng minh v&ecirc;̀ doanh thu, t&ocirc;̀n kho, quản trị dữ li&ecirc;̣u khách hàng, đại l&yacute;.</p>\r\n\r\n<p>Với c&aacute;c c&ocirc;̣ng tác vi&ecirc;n bán hàng, sẽ được sở hữu m&ocirc;̣t cơ sở kinh doanh ri&ecirc;ng tr&ecirc;n Azibai g&ocirc;̀m nhi&ecirc;̀u chủng loại hàng hóa dịch vụ với chi phí là 0 đ&ocirc;̀ng. Hoa h&ocirc;̀ng bán hàng được ni&ecirc;m y&ecirc;́t rõ ràng cho từng sản ph&acirc;̉m khi có người mua hàng thành c&ocirc;ng. Hành đ&ocirc;̣ng bán hàng đơn giản chỉ là sự chia sẻ th&ocirc;ng tin sản ph&acirc;̉m tới người có nhu c&acirc;̀u, toàn b&ocirc;̣ hoạt đ&ocirc;̣ng thanh toán, v&acirc;̣n chuy&ecirc;̉n đã có Azibai và nhà cung ứng hàng hóa xử lý to&agrave;n bộ.</p>\r\n\r\n<p>Với người ti&ecirc;u dùng,&nbsp;<em>ứng dụng th&ocirc;ng minh Azibai</em>&nbsp;sẽ giúp người dùng lựa chọn được hàng hóa dịch vụ t&ocirc;́t nh&acirc;́t từ sự chia sẻ, đánh giá của người quen, hoạt đ&ocirc;̣ng đặt hàng, thanh toán đơn giản và d&ecirc;̃ thực hi&ecirc;̣n, cơ h&ocirc;̣i có th&ecirc;m thu nh&acirc;̣p. B&ecirc;n cạnh đ&oacute;, họ cũng sẽ c&oacute; cơ hội mua được hàng hóa với giá rẻ hơn nhờ có chi&ecirc;́t kh&acirc;́u dành cho c&ocirc;̣ng tác vi&ecirc;n mà doanh nghi&ecirc;̣p đã ni&ecirc;m y&ecirc;́t sẵn.</p>\r\n\r\n<p>Theo &ocirc;ng Phạm Hoài Trung, Chủ tịch đơn vị sở hữu và sáng l&acirc;̣p Azibai, c&aacute;c doanh nghi&ecirc;̣p hiện nay c&acirc;̀n phải chủ đ&ocirc;̣ng và tích cực tri&ecirc;̉n khai mạnh mẽ h&ecirc;̣ th&ocirc;́ng kinh doanh trực tuy&ecirc;́n của mình nhằm kịp thời đáp ứng nhu c&acirc;̀u của người ti&ecirc;u dùng cũng như sự thay đ&ocirc;̉i v&ecirc;̀ phương thức tìm ki&ecirc;́m th&ocirc;ng tin và mua sắm hàng hóa của người dùng tr&ecirc;n các mạng xã h&ocirc;̣i.</p>\r\n\r\n<p>Azibai cũng vừa bắt tay với VNG Group ra mắt ban điều h&agrave;nh v&agrave; chi nh&aacute;nh Azibai miền bắc. Đ&acirc;y l&agrave; bước đi chiến lược trong việc tạo dựng thị trường của Azibai v&agrave; VNG nhằm tiếp cận nhanh với khối lượng kh&aacute;ch h&agrave;ng lớn nhờ nền tảng c&ocirc;ng nghệ.</p>\r\n\r\n<blockquote>\r\n<p>Azibai l&agrave; mạng x&atilde; hội kinh doanh đầu ti&ecirc;n của Việt Nam ra đời với c&aacute;c đặc điểm nổi trội l&agrave; t&iacute;ch hợp đầy đủ c&aacute;c chứng năng ưu việt của 3 yếu tố: Mạng x&atilde; hội, S&agrave;n thương mại điện tử v&agrave; ứng dụng tiếp thị li&ecirc;n kết (affiliate). Mạng Azibai c&oacute; t&iacute;nh thực tiễn cao cho việc kinh doanh online bằng c&aacute;ch tối ưng h&oacute;a qu&aacute; tr&igrave;nh: Tiếp thị &ndash; B&aacute;n h&agrave;ng &ndash; Quản trị &ndash; Chăm s&oacute;c kh&aacute;ch h&agrave;ng.</p>\r\n\r\n<p>Azibai hướng đến đa dạng đối tượng người d&ugrave;ng, từ c&aacute; nh&acirc;n cho đến doanh nghiệp đều c&oacute; thể tự x&acirc;y dựng hệ thống kinh doanh trực tuyến th&ocirc;ng minh v&agrave; gi&uacute;p cho doanh nghiệp dễ d&agrave;ng ph&aacute;t triển hệ thống của ri&ecirc;ng m&igrave;nh.</p>\r\n</blockquote>\r\n\r\n<p><em><strong>Theo theleader.vn</strong></em></p>', 4, '2018-05-27 01:44:38', '2018-05-27 04:45:33'),
 (10, 'tesstttttttttttttttttttttttttttttt', NULL, '1527410899.BLACKPINK - \'마지막처럼 (AS IF IT\'S YOUR LAST)\' M-V.mp4', '<p>oke oke oke oke oke oke</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"http://localhost:83/vng_group/lib/public/upload/files/Vui-Noel-huong-uu-dai-hap-dan-voi-Tiktak-Coworking-Space-vui-noel-1-1513734420-119-width660height262.jpg\" style=\"height:262px; width:660px\" /></p>', 7, '2018-05-27 01:48:21', '2018-05-27 02:24:13'),
 (11, 'Đêm hội Halloween 2017 đáng nhớ của dân văn phòng', 'dem-hoi-halloween-2017-dang-nho-cua-dan-van-phong', '1527415557.mg0304-768x512.jpg', '<p>H&ograve;a chung kh&ocirc;ng kh&iacute; lễ hội Halloween tr&ecirc;n to&agrave;n thế giới, một số anh chị em d&acirc;n văn ph&ograve;ng cũng đ&atilde; tổ chức đ&ecirc;m hội Halloween đ&aacute;ng nhớ.</p>\r\n\r\n<p>Halloween kh&ocirc;ng chỉ l&agrave; dịp để c&aacute;c bạn trẻ được h&oacute;a trang th&agrave;nh những nh&acirc;n vật ma quỷ m&agrave; m&igrave;nh y&ecirc;u th&iacute;ch, đ&acirc;y c&ograve;n l&agrave; dịp để c&aacute;c th&agrave;nh vi&ecirc;n trong một cơ quan x&iacute;ch lại gần nhau hơn.</p>\r\n\r\n<p>V&agrave; mới đ&acirc;y, một c&ocirc;ng ty tại H&agrave; Nội cũng đ&atilde; c&oacute; c&aacute;ch ch&agrave;o đ&oacute;n Halloween bằng một đ&ecirc;m hội cực kỳ đ&aacute;ng nhớ.</p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/mg0152.jpg\" style=\"height:600px; width:900px\" /><br />\r\n<em>Kh&ocirc;ng kh&iacute; Halloween tại một c&ocirc;ng ty ở H&agrave; Nội.</em></p>\r\n\r\n<p>Theo đ&oacute;, những nh&acirc;n vi&ecirc;n của c&ocirc;ng ty n&agrave;y đ&atilde; h&oacute;a trang th&agrave;nh những nh&acirc;n vật ma quỷ đ&uacute;ng chất Halloween. Ai nấy đều h&aacute;o hức h&oacute;a trang, trang tr&iacute; văn ph&ograve;ng th&agrave;nh một kh&ocirc;ng gian &ldquo;ma mị&rdquo;.</p>\r\n\r\n<p>Chia sẻ với PV b&aacute;o Người Đưa Tin, một nh&acirc;n vi&ecirc;n tại c&ocirc;ng ty cho biết: &ldquo;Để c&oacute; một đ&ecirc;m hội n&agrave;y, ch&uacute;ng t&ocirc;i đ&atilde; c&ugrave;ng nhau trang tr&iacute; văn ph&ograve;ng, mỗi người một việc v&agrave; cuối c&ugrave;ng l&agrave; những ph&uacute;t gi&acirc;y đo&agrave;n kết b&ecirc;n nhau. Được h&ograve;a m&igrave;nh v&agrave;o lễ hội Halloween, ch&uacute;ng t&ocirc;i cảm thấy rất vui v&agrave; th&iacute;ch th&uacute;, đ&acirc;y sẽ l&agrave; kỷ niệm m&agrave; ch&uacute;ng t&ocirc;i kh&ocirc;ng thể n&agrave;o qu&ecirc;n được trong m&ugrave;a Halloween năm nay&rdquo;.</p>\r\n\r\n<p>Một số khoảnh khắc ấn tượng trong đ&ecirc;m hội Halloween:</p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/mg0222-683x1024.jpg\" style=\"height:960px; width:640px\" /></p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/mg0304.jpg\" style=\"height:427px; width:640px\" /></p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/mg0430.jpg\" style=\"height:427px; width:640px\" /></p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/mg0468.jpg\" style=\"height:427px; width:640px\" /><br />\r\n<img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/mg0493.jpg\" style=\"height:427px; width:640px\" /></p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/mg0627-683x1024.jpg\" style=\"height:960px; width:640px\" /></p>\r\n\r\n<p><img alt=\"\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/mg0663-683x1024.jpg\" style=\"height:960px; width:640px\" /></p>\r\n\r\n<p>&nbsp;</p>', 1, '2018-05-27 03:05:58', '2018-05-27 03:21:17');
@@ -222,32 +250,49 @@ INSERT INTO `news` (`id`, `title`, `slug`, `img`, `content`, `type`, `created_at
 -- --------------------------------------------------------
 
 --
--- Table structure for table `project`
+-- Cấu trúc bảng cho bảng `project`
 --
 
 CREATE TABLE `project` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `investor` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` int(1) DEFAULT '0',
+  `overviewContent` text COLLATE utf8mb4_unicode_ci,
+  `locationContent` text COLLATE utf8mb4_unicode_ci,
+  `utilityContent` text COLLATE utf8mb4_unicode_ci,
+  `overviewImg` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `locationImg` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `utilityImg` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `albumImg1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `albumImg2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `albumImg3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `albumImg4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `albumImg5` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `albumImg6` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `albumImg7` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `albumImg8` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `project`
+-- Đang đổ dữ liệu cho bảng `project`
 --
 
-INSERT INTO `project` (`id`, `name`, `img`, `content`, `type`, `created_at`, `updated_at`) VALUES
-(1, 'Dự án The Arena Cam Ranh', 'cam-ranh-5.jpg', '<div class=\"span6 main-content\">\r\n                    <div class=\"breadcumb\">\r\n                        <p id=\"breadcrumbs\"><span xmlns:v=\"http://rdf.data-vocabulary.org/#\"><span typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/\" rel=\"v:url\" property=\"v:title\">Trang Chủ</a> » <span rel=\"v:child\" typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/du-an/\" rel=\"v:url\" property=\"v:title\">Dự Án</a> » <span class=\"breadcrumb_last\">Dự án The Arena Cam Ranh</span></span></span></span></p>                    </div>\r\n                                           <p><strong>Dự án The Arena Cam Ranh</strong></p>\r\n<p>The Arena Nha Trang tọa lạc tại ven biển Bãi Dài, Cam Ranh – Đây là dự án đầu tiên và duy nhất tại Bãi Dài có mô hình khu nghỉ dưỡng kết hợp vui chơi giải trí đẳng cấp. Dự án hứa hẹn sẽ là “thiên đường nghỉ dưỡng” trong mơ của du khách nội địa và quốc tế. The Arena Cam Ranh, được kỳ vọng trở thành “cơn sốt” bất động sản nghỉ dưỡng 2017, đón đầu xu hướng đầu tư 2018, hứa hẹn mang đến cơ hội sinh lời hấp dẫn cho các nhà đầu tư thông thái.</p>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2.jpg\"><img class=\"alignnone size-full wp-image-3695\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><strong>1/ Vị trí dự án</strong></p>\r\n<p>Vị trí “ĐỘC NHẤT – VÔ NHỊ” đầy tiềm năng khi nằm ngay cạnh bờ biển Bãi Dài – Cam Ranh nổi tiếng với vẻ đẹp biển xanh, cát trắng, nắng vàng. The Arena Cam Ranh được xây dựng ngay mặt đường Nguyễn Tất Thành – Vịnh Cam Ranh – Bãi Dài, giúp dự án kết nối dễ dàng<span class=\"text_exposed_show\">&nbsp;đến các tiện ích, địa danh nổi tiếng tại khu vực:</span></p>\r\n<ul>\r\n<li>&nbsp;Kết nối dễ dàng với các địa danh du lịch nổi tiếng: đảo Bình Ba, bán đảo Bình Lập, khu bảo tồn thiên nhiên Hòn Bà, khu vui chơi Sealife, chùa Ốc Từ Vân…</li>\r\n<li>&nbsp;Gần ngay cầu Mới</li>\r\n<li>&nbsp;Cách Vinpearl Bãi Dài chỉ 2 phút</li>\r\n<li>&nbsp;Cạnh khu Anam Resort và Spa Vinpearl Bãi Dài</li>\r\n<li>&nbsp;Cách sân bay Quốc tế Cam Ranh chỉ 3km</li>\r\n<li>&nbsp;Cách trung tâm thành phố Cam Ranh 20 phút</li>\r\n<li>&nbsp;Cách thành phố Nha Trang 35 phút</li>\r\n</ul>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4.jpg\"><img class=\"alignnone size-full wp-image-3698\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><strong>2/Tổng quan dự án</strong></p>\r\n<p><strong>– Tên thương mại:</strong>&nbsp;The Arena Cam Ranh.</p>\r\n<p><strong>– Chủ đầu tư:</strong>&nbsp;Công ty Cổ phần Đầu Tư Xây dựng Vịnh Nha Trang.</p>\r\n<p><strong>– Vị trí:</strong>&nbsp;Lô D14D Bãi Dài, Cam Ranh, Nha Trang</p>\r\n<p><strong>– Tổng diện tích:</strong>&nbsp;29ha</p>\r\n<p><strong>– Loại hình:</strong>&nbsp;Condotel 90% view biển</p>\r\n<p><strong>– Quy mô dự án:</strong>&nbsp;4 tòa (cao 21-25 tầng nổi), 5.248 căn hộ khách sạn.</p>\r\n<p><strong>– Đơn vị thiết kế:</strong>&nbsp;Finko</p>\r\n<p><strong>– Tư vấn giám sát:</strong>&nbsp;Artelia</p>\r\n<p><strong>– Dự kiến bàn giao:</strong>&nbsp;12/2019</p>\r\n<p><strong>– Hình thức sở hữu:</strong>&nbsp;Đất 50 năm cho Condotel và lâu dài (không hình thành đơn vị ở) cho biệt thự.</p>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3.jpg\"><img class=\"alignnone size-full wp-image-3697\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><strong>3/Tiện ích của dự án</strong></p>\r\n<p>The arena – với kiến trúc và mô hình nghỉ dưỡng kết hợp giải trí độc đáo, khác biệt và duy nhất tại Vịnh Cam Ranh sẽ như một làn gió mới, tươi trẻ, hiện đại, sôi động đem lại những trải nghiệm nghỉ dưỡng khác biệt chưa từng có.</p>\r\n<p>Slogan: <strong><em>“Sống chất từng giây – trải nghiệm hoàn mỹ”</em></strong></p>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1.jpg\"><img class=\"alignnone size-full wp-image-3696\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><em>Hệ thống tiện ích 5* chuyên nghiệp, độc đáo với hơn 25 hạng mục:</em><br>\r\n– Bể bơi nước mặn lớn nhất Việt Nam<br>\r\n– Hệ thống Gym &amp; Spa (Spa ngoài trời trên từng tầng của căn hộ, hồ bơi nước khoáng nóng…)<br>\r\n– Phố đi bộ, quảng trường, thủy cung và nhà hàng view hồ<br>\r\n– Zipline Cáp Treo Giữa Tòa Nhà, Sân Khấu Nhạc Nước Và Công Viên Giải Trí Quy Mô Lớn<br>\r\n– Cùng hệ thống ẩm thực phong phú đa dạng với chuỗi nhà hàng hải sản cao cấp, BBQ, Buffet, ẩm thực Á – Âu…</p>\r\n<p style=\"text-align: justify;\"><strong>4/Video giới thiệu dự án:</strong></p>\r\n<p><iframe src=\"https://www.youtube.com/embed/6kg3UXZetDA\" width=\"650\" height=\"423\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\r\n<p><strong>VNG Group – Đối tác chiến lược dự án</strong></p>\r\n<p>CHI TIẾT XEM TẠI WEBSITE DỰ ÁN: <a href=\"http://arenanhatrang.com/\">http://arenanhatrang.com/</a></p>\r\n                                    </div>', 0, '2018-04-02 09:09:14', '2018-04-02 09:09:14'),
-(2, 'Dự án Vinhome Metropolis', '3-1.jpg', '<p>Đang xậy dựng</p>', 0, '2018-04-02 09:10:08', '2018-04-02 09:10:08'),
-(3, 'Dự án Panorama Nha Trang', '2-3.jpg', '<p>Nothing</p>', 1, '2018-04-02 09:10:57', '2018-05-26 19:34:26');
+INSERT INTO `project` (`id`, `name`, `slug`, `img`, `investor`, `type`, `overviewContent`, `locationContent`, `utilityContent`, `overviewImg`, `locationImg`, `utilityImg`, `albumImg1`, `albumImg2`, `albumImg3`, `albumImg4`, `albumImg5`, `albumImg6`, `albumImg7`, `albumImg8`, `created_at`, `updated_at`) VALUES
+(1, 'Dự án The Arena Cam Ranh', NULL, 'cam-ranh-5.jpg', '<div class=\"span6 main-content\">\r\n                    <div class=\"breadcumb\">\r\n                        <p id=\"breadcrumbs\"><span xmlns:v=\"http://rdf.data-vocabulary.org/#\"><span typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/\" rel=\"v:url\" property=\"v:title\">Trang Chủ</a> » <span rel=\"v:child\" typeof=\"v:Breadcrumb\"><a href=\"http://vnggroup.com.vn/du-an/\" rel=\"v:url\" property=\"v:title\">Dự Án</a> » <span class=\"breadcrumb_last\">Dự án The Arena Cam Ranh</span></span></span></span></p>                    </div>\r\n                                           <p><strong>Dự án The Arena Cam Ranh</strong></p>\r\n<p>The Arena Nha Trang tọa lạc tại ven biển Bãi Dài, Cam Ranh – Đây là dự án đầu tiên và duy nhất tại Bãi Dài có mô hình khu nghỉ dưỡng kết hợp vui chơi giải trí đẳng cấp. Dự án hứa hẹn sẽ là “thiên đường nghỉ dưỡng” trong mơ của du khách nội địa và quốc tế. The Arena Cam Ranh, được kỳ vọng trở thành “cơn sốt” bất động sản nghỉ dưỡng 2017, đón đầu xu hướng đầu tư 2018, hứa hẹn mang đến cơ hội sinh lời hấp dẫn cho các nhà đầu tư thông thái.</p>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2.jpg\"><img class=\"alignnone size-full wp-image-3695\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh2-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><strong>1/ Vị trí dự án</strong></p>\r\n<p>Vị trí “ĐỘC NHẤT – VÔ NHỊ” đầy tiềm năng khi nằm ngay cạnh bờ biển Bãi Dài – Cam Ranh nổi tiếng với vẻ đẹp biển xanh, cát trắng, nắng vàng. The Arena Cam Ranh được xây dựng ngay mặt đường Nguyễn Tất Thành – Vịnh Cam Ranh – Bãi Dài, giúp dự án kết nối dễ dàng<span class=\"text_exposed_show\">&nbsp;đến các tiện ích, địa danh nổi tiếng tại khu vực:</span></p>\r\n<ul>\r\n<li>&nbsp;Kết nối dễ dàng với các địa danh du lịch nổi tiếng: đảo Bình Ba, bán đảo Bình Lập, khu bảo tồn thiên nhiên Hòn Bà, khu vui chơi Sealife, chùa Ốc Từ Vân…</li>\r\n<li>&nbsp;Gần ngay cầu Mới</li>\r\n<li>&nbsp;Cách Vinpearl Bãi Dài chỉ 2 phút</li>\r\n<li>&nbsp;Cạnh khu Anam Resort và Spa Vinpearl Bãi Dài</li>\r\n<li>&nbsp;Cách sân bay Quốc tế Cam Ranh chỉ 3km</li>\r\n<li>&nbsp;Cách trung tâm thành phố Cam Ranh 20 phút</li>\r\n<li>&nbsp;Cách thành phố Nha Trang 35 phút</li>\r\n</ul>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4.jpg\"><img class=\"alignnone size-full wp-image-3698\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh4-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><strong>2/Tổng quan dự án</strong></p>\r\n<p><strong>– Tên thương mại:</strong>&nbsp;The Arena Cam Ranh.</p>\r\n<p><strong>– Chủ đầu tư:</strong>&nbsp;Công ty Cổ phần Đầu Tư Xây dựng Vịnh Nha Trang.</p>\r\n<p><strong>– Vị trí:</strong>&nbsp;Lô D14D Bãi Dài, Cam Ranh, Nha Trang</p>\r\n<p><strong>– Tổng diện tích:</strong>&nbsp;29ha</p>\r\n<p><strong>– Loại hình:</strong>&nbsp;Condotel 90% view biển</p>\r\n<p><strong>– Quy mô dự án:</strong>&nbsp;4 tòa (cao 21-25 tầng nổi), 5.248 căn hộ khách sạn.</p>\r\n<p><strong>– Đơn vị thiết kế:</strong>&nbsp;Finko</p>\r\n<p><strong>– Tư vấn giám sát:</strong>&nbsp;Artelia</p>\r\n<p><strong>– Dự kiến bàn giao:</strong>&nbsp;12/2019</p>\r\n<p><strong>– Hình thức sở hữu:</strong>&nbsp;Đất 50 năm cho Condotel và lâu dài (không hình thành đơn vị ở) cho biệt thự.</p>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3.jpg\"><img class=\"alignnone size-full wp-image-3697\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh3-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><strong>3/Tiện ích của dự án</strong></p>\r\n<p>The arena – với kiến trúc và mô hình nghỉ dưỡng kết hợp giải trí độc đáo, khác biệt và duy nhất tại Vịnh Cam Ranh sẽ như một làn gió mới, tươi trẻ, hiện đại, sôi động đem lại những trải nghiệm nghỉ dưỡng khác biệt chưa từng có.</p>\r\n<p>Slogan: <strong><em>“Sống chất từng giây – trải nghiệm hoàn mỹ”</em></strong></p>\r\n<p style=\"text-align: center;\"><a href=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1.jpg\"><img class=\"alignnone size-full wp-image-3696\" src=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1.jpg\" alt=\"\" width=\"650\" height=\"387\" srcset=\"http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1.jpg 650w, http://vnggroup.com.vn/wp-content/uploads/2017/10/cam-ranh1-300x179.jpg 300w\" sizes=\"(max-width: 650px) 100vw, 650px\"></a></p>\r\n<p><em>Hệ thống tiện ích 5* chuyên nghiệp, độc đáo với hơn 25 hạng mục:</em><br>\r\n– Bể bơi nước mặn lớn nhất Việt Nam<br>\r\n– Hệ thống Gym &amp; Spa (Spa ngoài trời trên từng tầng của căn hộ, hồ bơi nước khoáng nóng…)<br>\r\n– Phố đi bộ, quảng trường, thủy cung và nhà hàng view hồ<br>\r\n– Zipline Cáp Treo Giữa Tòa Nhà, Sân Khấu Nhạc Nước Và Công Viên Giải Trí Quy Mô Lớn<br>\r\n– Cùng hệ thống ẩm thực phong phú đa dạng với chuỗi nhà hàng hải sản cao cấp, BBQ, Buffet, ẩm thực Á – Âu…</p>\r\n<p style=\"text-align: justify;\"><strong>4/Video giới thiệu dự án:</strong></p>\r\n<p><iframe src=\"https://www.youtube.com/embed/6kg3UXZetDA\" width=\"650\" height=\"423\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\r\n<p><strong>VNG Group – Đối tác chiến lược dự án</strong></p>\r\n<p>CHI TIẾT XEM TẠI WEBSITE DỰ ÁN: <a href=\"http://arenanhatrang.com/\">http://arenanhatrang.com/</a></p>\r\n                                    </div>', 0, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-02 09:09:14', '2018-04-02 09:09:14'),
+(2, 'Dự án Vinhome Metropolis', NULL, '3-1.jpg', '<p>Đang xậy dựng</p>', 0, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-02 09:10:08', '2018-04-02 09:10:08'),
+(3, 'Dự án Panorama Nha Trang', NULL, '2-3.jpg', '<p>Nothing</p>', 1, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-02 09:10:57', '2018-05-26 19:34:26'),
+(4, 'Dự án D’.Le Roi SoLeil Quảng An – Tây Hồ', 'du-an-dle-roi-soleil-quang-an-tay-ho', '1-1.jpg', '<p>OKe oke</p>', 1, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-05-27 20:41:56', '2018-05-27 22:11:14'),
+(5, 'CocoBay Đà Nẵng', 'cocobay-da-nang', '1527481773.derek-torsani-227207-unsplash (1) - Copy.png', '<p><strong>Chủ đầu tư</strong></p>\r\n\r\n<p>Tập đo&agrave;n Empire Group c&oacute; tiền th&acirc;n l&agrave; CTCP Ph&aacute;t triển X&acirc;y dựng Th&agrave;nh Đ&ocirc; với 25 năm kinh nghiệm hoạt động trong lĩnh vực bất động sản, t&agrave;i ch&iacute;nh v&agrave; du lịch &ndash; giải tr&iacute;. Đ&acirc;y ch&iacute;nh l&agrave; c&ocirc;ng ty đ&atilde; th&agrave;nh c&ocirc;ng với dự &aacute;n lớn như C&ocirc;ng vi&ecirc;n nước Hồ T&acirc;y v&agrave; khu nghỉ dưỡng 5 sao Naman Retreat Đ&agrave; Nẵng. Empire Group thể hiện thực lực với tầm nh&igrave;n chiến lược đ&uacute;ng đắn v&agrave; ti&ecirc;n phong, kh&ocirc;ng những tăng chiến lược kinh doanh m&agrave; c&ograve;n gi&uacute;p thay đổi diện mạo du lịch Việt Nam</p>\r\n\r\n<p><strong>Chi tiết dự &aacute;n xem tại website: http://cocobays.vn</strong></p>', 1, '<p>Cocobay l&agrave; Tổ hợp giải tr&iacute; v&agrave; du lịch tại Đ&agrave; Nẵng &ndash; Hội An phục vụ 10.000 ph&ograve;ng kh&aacute;ch sạn từ 3 &ndash; 5 sao được t&iacute;ch hợp c&aacute;c hoạt động dịch vụ giải tr&iacute; v&agrave; c&aacute;c tiện &iacute;ch h&agrave;ng đầu cho những k&igrave; nghỉ thời thượng. Cocobay tạo n&ecirc;n một kh&ocirc;ng gian hiện đại v&agrave; năng động, sang trọng v&agrave; đẳng cấp, mang đến những trải nghiệm thăng hoa nhất tại th&agrave;nh phố đ&aacute;ng sống nhất Việt Nam.</p>', '<p>Cocobay Đ&agrave; Nẵng sở hữu vị tr&iacute; đắc địa khi nằm ở trung t&acirc;m của con đường nối liền Đ&agrave; Nẵng &ndash; Hội An, phần mặt tiền l&agrave; một trong s&aacute;u b&atilde;i biển quyến rũ nhất h&agrave;nh tinh, sau lưng l&agrave; d&ograve;ng s&ocirc;ng Cổ C&ograve; thơ mộng v&agrave; hai b&ecirc;n cạnh l&agrave; hai s&acirc;n gofl h&agrave;ng đầu Việt Nam</p>', '<p>L&agrave; một điểm đến giải tr&iacute; mới của thế giới, Cocobay Đ&agrave; Nẵng được t&iacute;ch hợp v&ocirc; v&agrave;n c&aacute;c tiện &iacute;ch v&agrave; hoạt động giải tr&iacute; h&agrave;ng đầu đ&aacute;p ứng trọn vẹn c&aacute;c nhu cầu của du kh&aacute;ch. C&aacute;c nh&agrave; h&agrave;ng từ 3 &ndash; 5 sao, hệ thống c&aacute;c qu&aacute;n coffee, lounge, bar; s&acirc;n khấu ngo&agrave;i trời quy m&ocirc; cực lớn, c&aacute;c buổi tr&igrave;nh diễn đặc sắc đa sắc m&agrave;u v&agrave; c&aacute;c dịch vụ vui chơi đẳng cấp,&hellip; tất cả sẽ tạo n&ecirc;n một Cocobay s&ocirc;i động v&agrave; n&aacute;o nhiệt in đậm dấu ấn trong l&ograve;ng du kh&aacute;ch.</p>', '1527481773.tong-quan-du-an-cocobay-da-nang.png', '1527481773.vi-tri-du-an-cocobay-da-nang-viet-nam.png', '1527481773.tien-ich-du-an-cocobay-da-nang.png', '1527484152.Rectangle 11.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 6.png', '1527484208.brett-campbell-61762-unsplash - Copy.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 3.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 5.png', '1527484208.brett-campbell-61762-unsplash - Copy copy.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 2.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 4.png', '2018-05-27 21:29:33', '2018-05-27 22:23:23');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -261,7 +306,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -270,105 +315,117 @@ INSERT INTO `users` (`id`, `email`, `password`, `level`, `remember_token`, `crea
 (5, 'q.uyen96@gmail.com', '$2y$10$v2FSLjzvDjxA8xuSfN9V9OB8cUvvsYoxh8nojG7C22yD95pZXzwBa', 1, NULL, '2018-04-02 23:43:46', '2018-04-02 23:43:46');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `about`
+-- Chỉ mục cho bảng `about`
 --
 ALTER TABLE `about`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `contact`
+-- Chỉ mục cho bảng `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `image`
+-- Chỉ mục cho bảng `home`
+--
+ALTER TABLE `home`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `image`
 --
 ALTER TABLE `image`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `member`
+-- Chỉ mục cho bảng `member`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Chỉ mục cho bảng `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `news`
+-- Chỉ mục cho bảng `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `project`
+-- Chỉ mục cho bảng `project`
 --
 ALTER TABLE `project`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `about`
+-- AUTO_INCREMENT cho bảng `about`
 --
 ALTER TABLE `about`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT cho bảng `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `image`
+-- AUTO_INCREMENT cho bảng `home`
+--
+ALTER TABLE `home`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT cho bảng `image`
 --
 ALTER TABLE `image`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `member`
+-- AUTO_INCREMENT cho bảng `member`
 --
 ALTER TABLE `member`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `news`
+-- AUTO_INCREMENT cho bảng `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `project`
+-- AUTO_INCREMENT cho bảng `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;

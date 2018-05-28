@@ -33,14 +33,14 @@
 					
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						@foreach($related as $item)
-						<a href="{{ asset('news/detail/'.$item->slug) }}" class="row news_press_item">
+						<a href="{{ asset('news/detail/'.$item->slug) }}" class="row news_related_item">
 							<div class="col-md-4 col-sm-4 col-xs-4">
-								<div class="news_press_item_img">
+								<div class="newsItemRelatedImg">
 									<img src="{{ asset('lib/storage/app/news/'.$item->img) }}">
 								</div>
 							</div>
 							<div class="col-md-8 col-sm-8 col-xs-8">
-								<div class="newsItemPressContent">
+								<div class="newsItemRelatedContent">
 									<div class="txt18">
 										{{ $item->title }}
 									</div>
@@ -48,7 +48,7 @@
 										{!! substr($item->content, 0, 300).'...' !!}
 									</div>
 								</div>
-								<div class="newsItemPressTime orange">
+								<div class="newsItemRelatedTime orange">
 									<span class="glyphicon glyphicon-time"></span>
 									Post {{ date('d/m/Y', strtotime($item->created_at)) }}
 								</div>

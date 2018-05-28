@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\News;
+use App\Models\Home;
+use App\Models\Contact;
+use App\Models\Project;
+
 class HomeController extends Controller
 {
     public function getHome(){
-        
-    	return view('frontend.home');
+        $data['data'] = Home::all();
+    	return view('frontend.home', $data);
     }
     public function getOverView(){
         $data['letter'] = About::where('name','Thư ngỏ')->get();
@@ -21,11 +25,14 @@ class HomeController extends Controller
     	return view('frontend.overview', $data);
     } 
     public function getProject(){
-    	return view('frontend.project');
-    } 
-    public function getProjectDetail(){
+        $data['investment'] = Project::where('type', 0)->get();
+        $data['distribution'] = Project::where('type', 1)->get();
 
-        return view('frontend.project_detail');
+    	return view('frontend.project', $data);
+    } 
+    public function getProjectDetail($slug){
+        $data['item'] = Project::where('slug', $slug)->first();
+        return view('frontend.project_detail',$data);
     }
     public function getQHDT(){
         return view('frontend.qhdt');
@@ -52,11 +59,13 @@ class HomeController extends Controller
         return view('frontend.video_detail');
     }
     public function getRecruit(){
-        return view('frontend.recruit');
-
+        $data['recruit'] = News::where('type',6)->orderBy('created_at', 'desc')->paginate(3);
+        $data['new'] = News::orderBy('created_at', 'desc')->paginate(5);
+        return view('frontend.recruit',$data);
     }
     public function getContact(){
-        return view('frontend.contact');
+        $data['data'] = Contact::all();
+        return view('frontend.contact', $data);
 
     }
 }

@@ -8,13 +8,13 @@
 		<div class="row imageHeader">
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="imageHeaderImg">
-					<img src="img/derek-torsani-227207-unsplash (1) - Copy.png">
+					<img src="{{ asset('lib/storage/app/project/'.$item->img) }}">
 				</div>
 			</div>
 		</div>
 		<div class="row contentHeader">
 			<div class="txt60 orange">
-				cocobay đà nẵng
+				{{$item->name}}
 			</div>
 			<div class="col-md-4">
 				<div class="contentHeaderLeft">
@@ -28,9 +28,7 @@
 			</div>
 			<div class="col-md-8">
 				<div class="contentHeaderRight txt16">
-					<b>Chủ đầu tư</b>
-					<p>Tập đoàn Empire Group có tiền thân là CTCP Phát triển Xây dựng Thành Đô với 25 năm kinh nghiệm hoạt động trong lĩnh vực bất động sản, tài chính và du lịch – giải trí. Đây chính là công ty đã thành công với dự án lớn như Công viên nước Hồ Tây và khu nghỉ dưỡng 5 sao Naman Retreat Đà Nẵng. Empire Group thể hiện thực lực với tầm nhìn chiến lược đúng đắn và tiên phong, không những tăng chiến lược kinh doanh mà còn giúp thay đổi diện mạo du lịch Việt Nam</p>
-					<b>Chi tiết dự án xem tại website: http://cocobays.vn</b>
+					{!!$item->investor!!}
 				</div>
 			</div>
 		</div>
@@ -38,7 +36,7 @@
 			
 			<div class="col-md-8 col-sm-8 col-xs-12">
 				<div class="content01Left">
-					<img src="img/tong-quan-du-an-cocobay-da-nang.png">
+					<img src="{{ asset('lib/storage/app/project/'.$item->overviewImg) }}">
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-12">
@@ -50,7 +48,7 @@
 						tổng quan dự án
 					</div>
 					<div class="txt16">
-						Cocobay là Tổ hợp giải trí và du lịch tại Đà Nẵng – Hội An phục vụ 10.000 phòng khách sạn từ 3 – 5 sao được tích hợp các hoạt động dịch vụ giải trí và các tiện ích hàng đầu cho những kì nghỉ thời thượng. Cocobay tạo nên một không gian hiện đại và năng động, sang trọng và đẳng cấp, mang đến những trải nghiệm thăng hoa nhất tại thành phố đáng sống nhất Việt Nam.
+						{!!$item->overviewContent!!}
 					</div>
 				</div>
 			</div>
@@ -65,20 +63,20 @@
 						vị trí dự án
 					</div>
 					<div class="txt16">
-						Cocobay Đà Nẵng sở hữu vị trí đắc địa khi nằm ở trung tâm của con đường nối liền Đà Nẵng – Hội An, phần mặt tiền là một trong sáu bãi biển quyến rũ nhất hành tinh, sau lưng là dòng sông Cổ Cò thơ mộng và hai bên cạnh là hai sân gofl hàng đầu Việt Nam
+						{!!$item->locationContent!!}
 					</div>
 				</div>
 			</div>
 			<div class="col-md-8 col-sm-8 col-xs-12">
 				<div class="content02Right">
-					<img src="img/vi-tri-du-an-cocobay-da-nang-viet-nam.png">
+					<img src="{{ asset('lib/storage/app/project/'.$item->locationImg) }}">
 				</div>
 			</div>
 		</div>
 		<div class="row content03">
 			<div class="col-md-8 col-sm-8 col-xs-12">
 				<div class="content03Left">
-					<img src="img/tien-ich-du-an-cocobay-da-nang.png">
+					<img src="{{ asset('lib/storage/app/project/'.$item->utilityImg	) }}">
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-12">
@@ -90,7 +88,7 @@
 						Tiện ích
 					</div>
 					<div class="txt16">
-						Là một điểm đến giải trí mới của thế giới, Cocobay Đà Nẵng được tích hợp vô vàn các tiện ích và hoạt động giải trí hàng đầu đáp ứng trọn vẹn các nhu cầu của du khách. Các nhà hàng từ 3 – 5 sao, hệ thống các quán coffee, lounge, bar;  sân khấu ngoài trời quy mô cực lớn, các buổi trình diễn đặc sắc đa sắc màu và các dịch vụ vui chơi đẳng cấp,… tất cả sẽ tạo nên một Cocobay sôi động và náo nhiệt in đậm dấu ấn trong lòng du khách.  
+						{!!$item->utilityContent!!}
 					</div>
 				</div>
 			</div>
@@ -108,15 +106,18 @@
 			</div>
 			<div class="col-md-2 col-sm-2 col-xs-2">
 				<div class="album">
-					<div class="albumItem album1">
+					@for($i = 1; $i < 9; $i++)
+					<?php $albumImg = "albumImg".$i; ?>
+					<div class="albumItem album{{$i}}">
 						<div class="albumItemImg">
-							<img src="img/Rectangle 11.png">
+							<img src="{{ asset('lib/storage/app/project/'.$item->$albumImg) }}">
 						</div>
 						<div class="albumItemContent txt16">
-							CoCo Wonderland Resort
+							{{$item->name}}
 						</div>
 					</div>
-					<div class="albumItem album2">
+					@endfor
+					{{-- <div class="albumItem album2">
 						<div class="albumItemImg">
 							<img src="img/brett-campbell-61762-unsplash - Copy copy 6.png">
 						</div>
@@ -171,7 +172,7 @@
 						<div class="albumItemContent txt16">
 							CoCo Wonderland Resort
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</div>

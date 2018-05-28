@@ -8,40 +8,16 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="contactLeft">
+					@foreach($data as $item)
 					<div class="contactLeftItem">
 						<div class="txt30 orange">
-							trụ sở chính hà nội
+							{{$item->name}}
 						</div>
 						<div class="txt16">
-							Địa chỉ: Tầng 5, Tòa Diamond Flower Tower, Hoàng Đạo Thúy, Nhân <br>Chính, Thanh Xuân, Hà Nội<br>
-							Tel: 024 66666 989 Hotline: 096 310 6969<br>
-							Email: info@vngvietnam.com.vn<br>
-							Website: www.vnggroup.com.vn<br>
+							{!! $item->content!!}
 						</div>
 					</div>
-					<div class="contactLeftItem">
-						<div class="txt30 orange">
-							chi nhánh miền trung
-						</div>
-						<div class="txt16">
-							Địa chỉ: Tầng 5, Tòa Diamond Flower Tower, Hoàng Đạo Thúy, Nhân <br>Chính, Thanh Xuân, Hà Nội<br>
-							Tel: 024 66666 989 Hotline: 096 310 6969<br>
-							Email: info@vngvietnam.com.vn<br>
-							Website: www.vnggroup.com.vn<br>
-						</div>
-					</div>
-					<div class="contactLeftItem">
-						<div class="txt30 orange">
-							chi nhánh miền nam
-						</div>
-						<div class="txt16">
-							Địa chỉ: Tầng 5, Tòa Diamond Flower Tower, Hoàng Đạo Thúy, Nhân <br>Chính, Thanh Xuân, Hà Nội<br>
-							Tel: 024 66666 989 Hotline: 096 310 6969<br>
-							Email: info@vngvietnam.com.vn<br>
-							Website: www.vnggroup.com.vn<br>
-						</div>
-					</div>
-
+					@endforeach
 				</div>
 			</div>
 			<div class="col-md-6">

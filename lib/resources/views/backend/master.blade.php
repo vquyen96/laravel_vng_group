@@ -88,7 +88,7 @@
 	        // $('#avatar').click(function(){
 	        //     $(this).prev().click();
 	        // });
-	        $('.cssInput.thumbnail').click(function(){
+	        $('.cssInput').click(function(){
 	        	$(this).prev().click();
 	        })
 	    });
