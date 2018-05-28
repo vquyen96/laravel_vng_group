@@ -39,6 +39,15 @@
 
 				</div>
 			</div>
+			<div class="" >
+				<div class="form-group">
+					<label>Loại dự án</label>
+					<select name="type" class="form-control">
+						<option value="0">Dự án đầu tư</option>
+						<option value="1">Dự án phân phối</option>
+					</select>
+				</div>
+			</div>
 			<div class="form-group">
 				<input type="submit" name="" class="btn btn-primary" value="Thêm mới">
 			</div>

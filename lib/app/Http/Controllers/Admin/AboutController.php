@@ -36,53 +36,33 @@ class AboutController extends Controller
     	$data['items'] = About::where('name','Lịch sử')->get();
     	return view('backend.about', $data);
     }
-    // public function postHistory(Request $request, $id){
-    // 	$content = "content".$id;
-    //     $data = About::find($id);
-    //     $data->title = $request->title;
-    //     $data->content = $request->$content;
-    //     $fileimage = $request->file('file');
-        
-    //     if ($request->file('file') != null) {
-    //         $filename = time() . '.' .$fileimage->getClientOriginalName();
-    //         $data->img = $filename;
-    //         $request->file->storeAs('about',$filename);
-    //     }
-    //     $data->save();
-    //     return back()->with('success','Sửa Thành Công');
-    // }
+    
     public function getVision(){
     	$data['items'] = About::where('name','Tầm nhìn')->get();
     	return view('backend.about', $data);
     }
-    // public function postVision(Request $request){
-    // 	$data = About::find(4);
-    // 	$data->name = $request->name;
-    // 	$data->content = $request->content;
-    // 	$data->save();
-    // 	return back()->with('success','Sửa Thành Công');
-    // }
+
     public function getCultural(){
-    	$data['items'] =About::where('name','Lịch sử')->get();
+    	$data['items'] =About::where('name','Văn hóa')->get();
     	return view('backend.about', $data);
     }
-    public function postCultural(Request $request){
-    	$data = About::find(5);
-    	$data->name = $request->name;
-    	$data->content = $request->content;
-    	$data->save();
-    	return back()->with('success','Sửa Thành Công');
-    }
+    
     public function getCEO(){
-    	$data['items'] = About::where('name','Lịch sử')->get();
+    	$data['items'] = About::where('name','CEO')->get();
     	return view('backend.about', $data);
     }
-    public function postCEO(Request $request){
-    	$data = About::find(6);
-    	$data->name = $request->name;
-    	$data->content = $request->content;
-    	$data->save();
-    	return back()->with('success','Sửa Thành Công');
+    public function postHistoryAdd(Request $request){
+        $his = new About;
+        $his->name = 'Lịch sử';
+        $his->title = $request->title;
+        $his->content = $request->contentAdd;
+        $his->save();
+        return back();
+    }
+    public function getHistoryDelete($id){
+
+        About::destroy($id);
+        return back();
     }
 
 }

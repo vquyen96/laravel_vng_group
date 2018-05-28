@@ -6,7 +6,7 @@
 
 <div class="">
 	
-	<div class=" col-md-6 mainContent">
+	<div class="col-md-12 mainContent">
 		<h3>Sửa dự án</h3>
 
 		<form method="post" enctype="multipart/form-data">
@@ -40,13 +40,22 @@
 
 				</div>
 			</div>
+			<div class="" >
+				<div class="form-group">
+					<label>Loại dự án</label>
+					<select name="type" class="form-control">
+						<option @if($edit->type == 0) selected @endif value="0">Dự án đầu tư</option>
+						<option @if($edit->type == 1) selected @endif value="1">Dự án phân phối</option>
+					</select>
+				</div>
+			</div>
 			<div class="form-group">
 				<input type="submit" name="" class="btn btn-primary" value="Thay đổi">
 			</div>
 			{{csrf_field()}}
 		</form>
 	</div>
-	<div class=" col-md-6 mainContent">
+	{{-- <div class=" col-md-6 mainContent">
 		<h3>Danh sách dự án</h3>
 		<table class="table table-hover">
 			<tr>
@@ -70,7 +79,7 @@
 			@endforeach
 		</table>
 		{{$items->links()}}
-	</div>
+	</div> --}}
 </div>
 
 @stop

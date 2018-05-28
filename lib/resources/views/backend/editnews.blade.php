@@ -37,6 +37,20 @@
 	                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" width="100%" src="{{asset('lib/storage/app/news/'.$edit->img)}}">
 					</div>
 				</div>
+				<div class="" >
+					<div class="form-group">
+						<label>Loại tin</label>
+						<select name="type" class="form-control" >
+							<option @if($edit->type == 1) selected @endif @if($edit->type == 1) selected @endif value="1">Tin nổi bật</option>
+							<option @if($edit->type == 2) selected @endif value="2">Tin nội bộ</option>
+							<option @if($edit->type == 3) selected @endif value="3">Tin dự án</option>
+							<option @if($edit->type == 4) selected @endif value="4">Tin báo chí</option>
+							<option @if($edit->type == 5) selected @endif value="5">Tin xã hội</option>
+							<option @if($edit->type == 6) selected @endif value="6">Tin tuyển dụng</option>
+							<option @if($edit->type == 7) selected @endif value="7">Video</option>
+						</select>
+					</div>
+				</div>
 			</div>
 			
 			<div class="col-md-8" >
@@ -46,9 +60,9 @@
 					<script type="text/javascript">
 						var editor = CKEDITOR.replace('content',{
 							language:'vi',
-							filebrowserImageBrowseUrl: '../../ckfinder/ckfinder.html?Type=Images',
-							filebrowserFlashBrowseUrl: '../../ckfinder/ckfinder.html?Type=Flash',
-							filebrowserImageUploadUrl: '../../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+							filebrowserImageBrowseUrl: '../../editor/ckfinder/ckfinder.html?Type=Images',
+							filebrowserFlashBrowseUrl: '../../editor/ckfinder/ckfinder.html?Type=Flash',
+							filebrowserImageUploadUrl: '../../editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
 							filebrowserFlashUploadUrl: '../../public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
 						});
 					</script>

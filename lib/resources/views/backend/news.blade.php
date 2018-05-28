@@ -6,15 +6,27 @@
 
 <div class="">
 	
-	<div class=" col-md-6 mainContent">
+	{{-- <div class=" col-md-5 mainContent">
 		<h3>
 			Thêm tin tức - 
 			@switch(Request::segment(3))
-				@case('vng')
-					VNG Group
+				@case('featured')
+					Nổi bật
+					@break
+				@case('internal')
+					Nội bộ
 					@break
 				@case('project')
 					Dự Án
+					@break
+				@case('press')
+					Báo chí
+					@break
+				@case('socially')
+					Xã hội
+					@break
+				@case('video')
+					Video
 					@break
 				@case('recruit')
 					Tuyển Dụng
@@ -58,14 +70,23 @@
 			</div>
 			{{csrf_field()}}
 		</form>
-	</div>
-	<div class=" col-md-6 mainContent">
-		
+	</div> --}}
+	<div class=" col-md-12 mainContent">
+		<a href="{{ asset('admin/news/add') }}" class="btnAddNew btn btn-success" >
+			Thêm mới
+		</a>
 		<div class="mainHead">
 			<ul class="nav nav-tabs">
-			  	<li role="presentation" @if(Request::segment(3) == 'vng') class="active" @endif><a href="{{asset('admin/news/vng')}}">VNG Group</a></li>
-			  	<li role="presentation" @if(Request::segment(3) == 'project') class="active" @endif><a href="{{asset('admin/news/project')}}">Dự án</a></li>
-			  	<li role="presentation" @if(Request::segment(3) == 'recruit') class="active" @endif><a href="{{asset('admin/news/recruit')}}">Tuyển dụng</a></li>
+				
+			  	<li role="presentation" @if(Request::segment(4) == 'featured') class="active" @endif><a href="{{asset('admin/news/detail/featured')}}">Nổi bật</a></li>
+			  	<li role="presentation" @if(Request::segment(4) == 'internal') class="active" @endif><a href="{{asset('admin/news/detail/internal')}}">Nội bộ</a></li>
+			  	
+			  	<li role="presentation" @if(Request::segment(4) == 'project') class="active" @endif><a href="{{asset('admin/news/detail/project')}}">Dự án</a></li>
+			  	<li role="presentation" @if(Request::segment(4) == 'press') class="active" @endif><a href="{{asset('admin/news/detail/press')}}">Báo chí</a></li>
+			  	<li role="presentation" @if(Request::segment(4) == 'sociallyc') class="active" @endif><a href="{{asset('admin/news/detail/socially')}}">Xã hội</a></li>
+			  	
+			  	<li role="presentation" @if(Request::segment(4) == 'recruit') class="active" @endif><a href="{{asset('admin/news/detail/recruit')}}">Tuyển dụng</a></li>
+			  	<li role="presentation" @if(Request::segment(4) == 'video') class="active" @endif><a href="{{asset('admin/news/detail/video')}}">Video</a></li>
 			  	
 			</ul>
 				
@@ -74,6 +95,7 @@
 			<tr>
 				<th>Hình Ảnh</th>
 				<th>Tiêu đề</th>
+				<th>Thời gian</th>
 				<th>Tùy chọn</th>
 			</tr>
 			@foreach($items as $item)
@@ -84,10 +106,14 @@
 				<td>
 					{{$item->title}}
 				</td>
+				<td>
+					{{ $item->created_at }}
+				</td>
 				<td class="tableOption">
 					<a class="btn btn-primary" href="{{asset('admin/news/edit/'.$item->id)}}">Sửa</a>
 					<a class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa!!')" href="{{asset('admin/news/delete/'.$item->id)}}">Xóa</a>
 				</td>
+
 			</tr>
 			@endforeach
 		</table>

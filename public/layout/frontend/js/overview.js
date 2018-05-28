@@ -1,9 +1,11 @@
 var master = document.getElementById('master');
 var historyImg = document.getElementById('historyImg');
-console.log(master);
+var his = document.getElementById('history');
+console.log(his.offsetHeight);
 master.onscroll = function(){
 	var x = master.scrollTop;
-	if (x > 600 && x<1100) {
+	console.log(x);
+	if (x > 600 && x < his.offsetHeight) {
 		historyImg.style.marginTop = x-600+"px";
 	}
 }

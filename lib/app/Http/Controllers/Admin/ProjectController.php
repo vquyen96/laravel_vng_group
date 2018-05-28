@@ -20,15 +20,15 @@ class ProjectController extends Controller
 	    	$project = new Project;
 	    	$project->name = $request->name;
 	    	$project->content = $request->content;
-    		
-    	
+            $project->type = $request->type;
+
 	    	$filename = $image->getClientOriginalName();
 	    	$project->img = $filename;
-	        $project->save();
 	        $request->img->storeAs('project',$filename);
-	        
+            $project->save();
+	        return back()->with('success','Dự án đã thêm thành công');
 		}
-    	return back();
+    	return back()->with('error','Dự án phải có hình ảnh');
     }
 
     public function getEdit($id){
@@ -41,12 +41,13 @@ class ProjectController extends Controller
         $project = Project::find($id);
         $project->name = $request->name;
         $project->content = $request->content;
+        $project->type = $request->type;
     	if ($request->hasFile('img')) {
 	    	$filename = $image->getClientOriginalName();
 	    	$project->img = $filename;
-	        $project->save();
 	        $request->img->storeAs('project',$filename);
 		}
+        $project->save();
     	return back()->with('success','Thay đổi thành công');
     }
     public function getDelete($id){
