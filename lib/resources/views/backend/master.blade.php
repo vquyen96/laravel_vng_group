@@ -3,6 +3,7 @@
 <head>
 	<title>@yield('title') || VNG Admin</title>
 	<meta charset="utf-8">
+	<link rel="shortcut icon" href="{{ asset('public/layout/frontend/img/Layer 2.png') }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<base href="{{asset('public/layout/backend')}}/">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
