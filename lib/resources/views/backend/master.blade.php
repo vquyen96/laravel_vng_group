@@ -3,6 +3,7 @@
 <head>
 	<title>@yield('title') || VNG Admin</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<base href="{{asset('public/layout/backend')}}/">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -10,10 +11,10 @@
 </head>
 <body>
 	<header>
-		<div class="col-md-5 col-sm-3 col-xs-12 headerLogo">
-			<img src="http://vnggroup.com.vn/wp-content/uploads/2015/02/VNG-GROUP-logo.png">
+		<div class="col-md-3 col-sm-1 col-xs-12 headerLogo">
+			<img src="img/logo.png">
 		</div>
-		<div class="col-md-7 col-sm-9 col-xs-12 headerMenu resp800Hide">
+		<div class="col-md-9 col-sm-11 col-xs-12 headerMenu resp800Hide">
 			<ul class="">
 				<li @if(Request::segment(2) == 'account') class="headerActive" @endif><a href="{{asset('admin/account')}}">Tài khoản</a></li>
 				<li @if(Request::segment(2) == 'home') class="headerActive" @endif><a href="{{asset('admin/home/detail/overview')}}">Trang chủ</a></li>
@@ -21,27 +22,14 @@
 			  	<li @if(Request::segment(2) == 'project') class="headerActive" @endif><a href="{{asset('admin/project')}}">Dự án</a></li>
 			  	
 			  	<li @if(Request::segment(2) == 'news') class="headerActive" @endif><a href="{{asset('admin/news')}}">Tin tức</a></li>
-			  	<li @if(Request::segment(2) == 'video') class="headerActive" @endif><a href="{{asset('admin/video')}}">video</a></li>
+			  	<li @if(Request::segment(2) == 'video') class="headerActive" @endif><a href="{{asset('admin/video')}}">Video</a></li>
 			  	<li @if(Request::segment(2) == 'contact') class="headerActive" @endif><a href="{{asset('admin/contact')}}">Liên hệ</a></li>
 
 			  	<li><a href="{{asset('logout')}}">Đăng xuất</a></li>
 			</ul>
 		</div>
 	</header>
-	{{-- <div class="btnLogOut resp800Hide">
-		<a href="{{asset('logout')}}">
-			<span class="glyphicon glyphicon-log-out"></span>
-			Đăng xuất
-		</a>
-	</div>
-	@if(Auth::user()->level == 1)
-	<div class="btnAccount resp800Hide">
-		<a href="{{asset('admin/account')}}">
-			<span class="glyphicon glyphicon-user"></span>
-			Tài khoản
-		</a>
-	</div>
-	@endif --}}
+	
 	<div class="btnToggle resp800Show">
 		<a  class="">
 			<span class="glyphicon glyphicon-option-horizontal"></span>
@@ -52,11 +40,11 @@
 			@if(Auth::user()->level == 1)
 			<li><a href="{{asset('admin/account')}}">Tài khoản</a></li>
 			@endif
-			<li><a href="{{asset('admin/about/letter')}}">Giới thiệu</a></li>
+			<li><a href="{{asset('admin/about/letter')}}">Trang chủ</a></li>
+			<li><a href="{{asset('admin/home')}}">Giới thiệu</a></li>
 			<li><a href="{{asset('admin/project')}}">Dự án</a></li>
-			<li><a href="{{asset('admin/member')}}">Thành viên</a></li>
-			<li><a href="{{asset('admin/image')}}">Hình ảnh</a></li>
 			<li><a href="{{asset('admin/news')}}">Tin tức</a></li>
+			<li><a href="{{asset('admin/video')}}">Video</a></li>
 			<li><a href="{{asset('admin/contact')}}">Liên hệ</a></li>
 			<li><a href="{{asset('logout')}}">Đăng xuất</a></li>
 		</ul>

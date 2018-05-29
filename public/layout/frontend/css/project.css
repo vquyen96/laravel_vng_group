@@ -83,3 +83,16 @@
 .distributionItemButton img{
 	width: 100%;
 }
+
+
+@media screen and (max-width: 1200px) {
+	.distributionItem{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.investment .title {
+	    padding-top: 30px;
+	}
+}

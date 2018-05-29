@@ -7,13 +7,13 @@ var letterImg = document.getElementById('letterImg');
 console.log(master.offsetWidth);
 
 master.onscroll = function(){
-	if (master.offsetWidth >  768 ) {
+	if (master.offsetWidth >  767 ) {
 		var x = master.scrollTop;
 		if (x > letter.offsetHeight && x < his.offsetHeight+letter.offsetHeight-historyImg.offsetHeight) {
 			historyImg.style.marginTop = x-letter.offsetHeight+"px";
 		}
 	}
-	if (master.offsetWidth >  768 && master.offsetWidth <  992 ) {
+	if (master.offsetWidth >  767 && master.offsetWidth <  992 ) {
 		var x = master.scrollTop;
 		if (x > 0 && x < letter.offsetHeight-letterImg.offsetHeight) {
 			letterImg.style.marginTop = x+"px";

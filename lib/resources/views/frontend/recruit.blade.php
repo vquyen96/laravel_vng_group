@@ -13,15 +13,15 @@
 			</div>
 		</div>
 		<div class="row recruitDetailMain">
-			<div class="col-md-8 col-sm-8 col-xs-12">
+			<div class="col-md-8 col-sm-12 col-xs-12">
 				@foreach($recruit as $item)
 				<a href="{{ asset('news/detail/'.$item->slug) }}" class="row recruitDetailLeft">
-					<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="recruitDetailImg">
 							<img src="{{ asset('lib/storage/app/news/'.$item->img) }}">
 						</div>
 					</div>
-					<div class="col-md-8 col-sm-8 col-xs-8">
+					<div class="col-md-8 col-sm-8 col-xs-12">
 						<div class="recruitDetailContent">
 							<div class="txt18">
 								{{$item->title}}
@@ -38,7 +38,7 @@
 				</a>
 				@endforeach
 			</div>
-			<div class="col-md-4 col-sm-4 col-xs-12">
+			<div class="col-md-4 col-sm-12 col-xs-12">
 				<div class="news_new">
 					<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12">

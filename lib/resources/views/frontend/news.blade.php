@@ -6,7 +6,7 @@
 <div>
 	<div class="container">
 		<div class="row slideHeader">
-			<div class="col-md-8 col-sm-8 col-xs-12">
+			<div class="col-md-8 col-sm-12 col-xs-12">
 				<div id="carousel-news-header" class="carousel slide" data-ride="carousel">
 				  <div class="carousel-inner" role="listbox">
 				  	@foreach($featured_slide as $item)
@@ -29,7 +29,7 @@
 				  </a>
 				</div>
 			</div>
-			<div class="col-md-4 col-sm-4 col-xs-12">
+			<div class="col-md-4 col-sm-12 col-xs-12">
 				<div class="slideHeadRight">
 					@foreach($featured_right as $item)
 					<a href="{{ asset('news/detail/'.$item->slug) }}" class="slideHeadRightItem">

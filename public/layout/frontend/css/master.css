@@ -69,7 +69,7 @@ header{
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 1;
+	z-index: 5;
 	background: #fff;
 }
 header .imgLogo{
@@ -255,11 +255,14 @@ header .imgLogo img{
 	position: fixed;
 	bottom: 40px;
 	right: 20px;
+	z-index: 9;
 
 }
 .link_fb_ins a{
 	display: inline-block;
 	margin: 8px;
+	background: #fff;
+    border-radius: 50%;
 }
 .backgroundBody{
 	position: fixed;
