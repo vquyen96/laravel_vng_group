@@ -70,7 +70,7 @@ header{
 	width: 100%;
 	top: 0;
 	z-index: 5;
-	background: #fff;
+	/*background: #fff;*/
 }
 header .imgLogo{
 	height: 100%;
@@ -85,7 +85,6 @@ header .imgLogo img{
 .master{
 	position: relative;
 	overflow-x: hidden;
-	overflow: scroll;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -253,7 +252,7 @@ header .imgLogo img{
 
 .link_fb_ins{
 	position: fixed;
-	bottom: 40px;
+	bottom: 10px;
 	right: 20px;
 	z-index: 9;
 

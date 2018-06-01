@@ -15,6 +15,8 @@ class HomeController extends Controller
 {
     public function getHome(){
         $data['data'] = Home::all();
+        $data['project'] = Project::all();
+        $data['contact'] = Contact::all();
     	return view('frontend.home', $data);
     }
     public function getOverView(){
