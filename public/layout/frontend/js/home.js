@@ -1,13 +1,37 @@
 function showMessHome5(){
-	setTimeout(function(){
-		$('.home501 ').css('transform','scale(1) translate(0% ,0)');
-	}, 1000);
-	setTimeout(function(){
-		$('.home502 ').css('transform','scale(1) translate(0% ,0)');
-	}, 1500);
-	setTimeout(function(){
-		$('.home503 ').css('transform','scale(1) translate(0% ,0)');
-	}, 2000);
+	if (master.offsetWidth > 768 && master.offsetWidth <=  1024) {
+		setTimeout(function(){
+			$('.home501 ').css('transform','scale(0.8) translate(-40px, -10px)');
+		}, 1000);
+		setTimeout(function(){
+			$('.home502 ').css('transform','scale(0.8) translate(-35px, 0px)');
+		}, 1500);
+		setTimeout(function(){
+			$('.home503 ').css('transform','scale(0.8) translate(-50px, 0px)');
+		}, 2000);
+	}
+	else if (master.offsetWidth <=  768 ) {
+		setTimeout(function(){
+			$('.home501 ').css('transform','scale(0.6) translate(-75px, 25px)');
+		}, 1000);
+		setTimeout(function(){
+			$('.home502 ').css('transform','scale(0.6) translate(-100px, 25px)');
+		}, 1500);
+		setTimeout(function(){
+			$('.home503 ').css('transform','scale(0.6) translate(-100px, 50px)');
+		}, 2000);
+	}else{
+		setTimeout(function(){
+			$('.home501 ').css('transform','scale(1) translate(0% ,0)');
+		}, 1000);
+		setTimeout(function(){
+			$('.home502 ').css('transform','scale(1) translate(0% ,0)');
+		}, 1500);
+		setTimeout(function(){
+			$('.home503 ').css('transform','scale(1) translate(0% ,0)');
+		}, 2000);
+	}
+		
 
 }
 
@@ -93,7 +117,7 @@ function scrollUp(){
 }
 function setBgDot(){
 	var x = master.scrollTop;
-	console.log(x);
+	
 	if (x < windowHeight) {
 		$('.dotScrollItem').css('background','none');
     	$('.dotScroll_1').css('background','#000');
@@ -138,12 +162,13 @@ $(document).ready(function(){
 	
 
 
-	console.log($(window).height());
 	$('.home').height(windowHeight);
 	$('.home').width($(window).width());
 
 	$('.home3Item').height(windowHeight);
-
+	if(master.offsetWidth < 768){
+		$('.home3Item').height(windowHeight/2);
+	}
 	$('.backgroundBody').height(windowHeight);
 	$('.backgroundBody').width($(window).width());
 	var home4MainLineLeft = 0;
@@ -151,8 +176,6 @@ $(document).ready(function(){
   	$(".owl-carousel").owlCarousel();
 
 	
-	console.log($('.home3Item').length);
-	console.log(windowHeight);
 	master.onscroll = function(){
 		var x = master.scrollTop;
 		setBgDot();
@@ -206,6 +229,7 @@ $(document).ready(function(){
 		$('.master').animate({
 	      	scrollTop: windowHeight*2
 	    }, 800);
+	    showImgHome3();
 	    
 	});
 	$('.dotScroll_4').click(function(){
@@ -218,7 +242,7 @@ $(document).ready(function(){
 		$('.master').animate({
 	      	scrollTop: windowHeight*4
 	    }, 800);
-	    
+	    showMessHome5();
 	});
 	
 				

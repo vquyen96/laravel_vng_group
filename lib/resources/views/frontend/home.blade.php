@@ -104,7 +104,7 @@
 	<div class="home home3">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-3 home3Item">
+				<div class="col-md-3 col-sm-3 col-xs-6 home3Item">
 					<div class="home3ItemImg">
 						<img src="img/jeff-hendricks-17025-unsplash.png">
 					</div>
@@ -116,7 +116,7 @@
 						<div class="home3ItemContentText">Sàn giao dịch bất động sản Việt Nam</div>
 					</a>
 				</div>
-				<div class="col-md-3 home3Item">
+				<div class="col-md-3 col-sm-3 col-xs-6 home3Item">
 					<div class="home3ItemImg">
 						<img src="img/jeff-hendricks-17025-unsplash.png">
 					</div>
@@ -128,7 +128,7 @@
 						<div class="home3ItemContentText">Sàn giao dịch bất động sản Việt Nam</div>
 					</a>
 				</div>
-				<div class="col-md-3 home3Item">
+				<div class="col-md-3 col-sm-3 col-xs-6 home3Item">
 					<div class="home3ItemImg">
 						<img src="img/jeff-hendricks-17025-unsplash.png">
 					</div>
@@ -140,7 +140,7 @@
 						<div class="home3ItemContentText">Sàn giao dịch bất động sản Việt Nam</div>
 					</a>
 				</div>
-				<div class="col-md-3 home3Item">
+				<div class="col-md-3 col-sm-3 col-xs-6 home3Item">
 					<div class="home3ItemImg">
 						<img src="img/jeff-hendricks-17025-unsplash.png">
 					</div>
@@ -178,6 +178,30 @@
 				@endforeach
 			  
 			</div>
+			<div class="home4MainContent">
+				<div class="home4MainContentTitle">dự án</div>
+				<div class="home4MainContentText">Đây là 1 đoạn nói về dự án , chỉ có dự án thôi .. các phần khác sẽ không nằm ở phần này!</div>
+			</div>
+			
+		</div>
+		<div class="home4Main02ContentTitle">dự án</div>
+		<div class="home4Main02">
+			<div class="home4Main02Main">
+			@foreach($project as $item)
+				<div class="home4Main02Item">
+					<a href="{{ asset('project/detail/'.$item->slug) }}" class="home4MainLineItem">
+
+						<div class="home4MainLineItemImg">
+							<img src="{{ asset('lib/storage/app/project/'.$item->img) }}">
+						</div>
+						<div class="home4MainLineItemContent">
+							{{$item->name}}
+						</div>
+					</a>
+				</div>
+			@endforeach	
+			</div>
+			
 			
 		</div>
 	</div>

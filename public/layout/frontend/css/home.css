@@ -24,7 +24,8 @@
 	position: absolute;
 	width: 40%;
 	left: 20%;
-	top: 20%;
+	top: 50%;
+	transform: translate(0, -50%);
 	padding: 5%;
 }
 .home1 .home1Content .txt60{
@@ -56,9 +57,11 @@
 .home2Main{
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
 	left: 0;
-	top: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+	padding: 8% 0;
 	/*transition: 0.8s;*/
 }
 .home2Name{
@@ -67,7 +70,7 @@
 	font-size: 48px;
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
-	padding: 100px 0 30px;
+	padding: 0 0 30px;
 }
 .home2Item{
 	position: relative;
@@ -123,11 +126,12 @@
 }
 a.home3ItemContent{
 	position: absolute;
-	top: 0;
+	top: 50%;
     left: 0;
     padding: 65% 60px;
 	width: 100%;
-	height: 100%;
+	transform: translate(0, -50%);
+	/*height: 100%;*/
 	color: #494949;
 	font-weight: bold;
 	font-family: 'Oswald', sans-serif;
@@ -147,7 +151,7 @@ a.home3ItemContent{
 	font-size: 16px;
 }
 .home3Item:hover .home3ItemImg{
-	top: 0;
+	/*top: 0;*/
 	opacity: 1 !important;
 }
 .home3Item:hover a.home3ItemContent{
@@ -158,7 +162,8 @@ a.home3ItemContent{
 .home4Content{
 	position: absolute;
 	width: 25%;
-	top: 30%;
+	top: 50%;
+	transform: translate(0 , -50%);
 	padding-left: 100px;
 	padding-right: 20px;
 }
@@ -173,13 +178,32 @@ a.home3ItemContent{
 	font-size: 16px;
 }
 
+.home4MainContent{
+	position: absolute;
+    width: 100%;
+    top: -160px;
+    left: 0px;
+    transform: translate(0 , 50%);
+    padding-right: 75px;
+    display: none;
+}
+.home4MainContentTitle{
+	font-weight: bold;
+	font-size: 36px;
+	color: #f58320;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+.home4MainContentText{
+	font-size: 16px;
+}
+
 .home4Main{
 	position: absolute;
 	width: 75%;
-	height: 450px;
 	right: 0;
-	top: 15%;
-	overflow: hidden;
+	top: 50%;
+	transform: translate(0 ,-50%);
 	padding-top: 30px;
 	transition: 0.3s;
 }
@@ -190,7 +214,6 @@ a.home3ItemContent{
 	position: absolute;
 	top: 0;
 	left: 0;
-	
 	display: flex;
 	transition: 1s;
 }
@@ -224,7 +247,9 @@ a.home3ItemContent{
 	cursor: pointer;
 }
 
-
+.home4Main02{
+	display: none;
+}
 
 
 
@@ -234,10 +259,12 @@ a.home3ItemContent{
 }*/
 .home5Left{
 	position: absolute;
-	top: 10%;
-	left: 15%;
-	height: 80%;
-	width: 40%;
+    top: 50%;
+    left: 15%;
+    
+    width: 40%;
+    transform: translate(0px , -50%);
+
 
 }
 .home5LeftItem{
@@ -255,7 +282,7 @@ a.home3ItemContent{
 	position: absolute;
 	height: 80%;
 	top: 10%;
-	right: 24% ;
+	right: 20%;
 }
 /*.home5Hide{
 	position: absolute;
@@ -365,3 +392,136 @@ a.home3ItemContent{
 	cursor: pointer;
 
 }
+
+
+@media screen and (max-width: 1024px) {
+	/*.home2Main{
+		padding-top: 20%;
+	}*/
+}
+
+@media screen and (max-width: 768px) {
+	.home1 .home1Content{
+		width: 55%;
+		left: 5%;
+	}
+	.home2Item{
+		position: relative;
+	    display: block;
+	    height: 150px;
+	    overflow: hidden;
+	}
+	.home4Main{
+		width: 90%;
+	}
+	.home4MainContent{
+		display: block;
+	}
+	.home4Content{
+		display: none;
+	}
+	.home5Left{
+		left: 5%;
+		width: 55%;
+		z-index: 1;
+	}
+	.home5Right{
+		position: absolute;
+		height: 80%;
+		top: 10%;
+		right: 15% ;
+		opacity: 0.6;
+	}
+	.home5LeftItem .txt30 {
+	    text-transform: uppercase;
+	    margin-bottom: 0;
+	    font-size: 20px;
+	}
+}
+@media screen and (max-width: 468px) {
+	.home1 .home1Content{
+		width: 96%;
+		z-index: 1;
+	}
+	.home1 .home1Img{
+		right: 50%;
+		transform: translate(50%, 0);
+		width: auto;
+	}
+
+	a.home3ItemContent{
+		padding: 40% 30px;
+	}
+	.home5Left{
+		left: 10%;
+    	width: 85%;
+	
+	}
+	.home5LeftItem{
+		padding: 0;
+	}
+	.home5Right{
+		opacity: 0.5;
+		left: 10%;
+	}
+	.home5LeftItem .txt30 {
+	    text-transform: uppercase;
+	    margin-bottom: 0;
+	    font-size: 20px;
+	}
+	.home5LeftItem .txt16{
+		font-size: 14px;
+	}
+	.home4MainItem {
+	    padding: 2px;
+	}
+	/*.home4MainLineItemContent{
+		height: 58px;
+		overflow: hidden;
+		padding: 10px 5px;
+		text-align: center;
+	}*/
+
+	.home4Main{
+		display: none;
+	}
+
+	.home4Main02{
+		display: block;
+	    width: 100%;
+	    height: 335px;
+	    position: absolute;
+	    overflow-x: scroll;
+	    top: 170px;
+	    /*transform: translate(0px, -50%);*/
+	}
+	.home4Main02Main{
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: auto;
+	    display: flex;
+	}
+	.home4Main02Item{
+		flex: 1;
+		width: 320px;
+		margin-right: 20px;
+	}
+	.home4Main02ContentTitle{
+		position: absolute;
+	    top: 100px;
+	    right: 0;
+	    height: auto;
+	    width: 100%;
+	    text-align: center;
+
+	    font-weight: bold;
+		font-size: 36px;
+		color: #f58320;
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+	}
+}
+
+
+	 
