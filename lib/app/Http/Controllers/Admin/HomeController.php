@@ -28,6 +28,15 @@ class HomeController extends Controller
     		case 'media':
     			$data['data'] = Home::find(5);
     			break;
+            case 'history':
+                $data['data'] = Home::find(6);
+                break;
+            case 'vision':
+                $data['data'] = Home::find(7);
+                break;
+            case 'cultural':
+                $data['data'] = Home::find(8);
+                break;
     		default:
     			$data['data'] = null;
     			break;
@@ -51,6 +60,15 @@ class HomeController extends Controller
     		case 'media':
     			$data = Home::find(5);
     			break;
+             case 'history':
+                $data = Home::find(6);
+                break;
+            case 'vision':
+                $data = Home::find(7);
+                break;
+            case 'cultural':
+                $data = Home::find(8);
+                break;
     		default:
     			dd("error");
     			break;

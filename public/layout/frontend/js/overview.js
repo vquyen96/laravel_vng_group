@@ -10,7 +10,7 @@ master.onscroll = function(){
 	if (master.offsetWidth >  767 ) {
 		var x = master.scrollTop;
 		if (x > letter.offsetHeight && x < his.offsetHeight+letter.offsetHeight-historyImg.offsetHeight) {
-			historyImg.style.marginTop = x-letter.offsetHeight+"px";
+			historyImg.style.marginTop = x-letter.offsetHeight - 50+"px";
 		}
 	}
 	if (master.offsetWidth >  767 && master.offsetWidth <  992 ) {
@@ -34,22 +34,22 @@ $(document).ready(function(){
 	switch(scroll){
 		case "history":
 			$('.master').animate({
-				scrollTop: $(".history").offset().top-80
+				scrollTop: $(".history").offset().top-20
 			}, 800);
 			break;
 		case "vision":
 			$('.master').animate({
-				scrollTop: $(".vision").offset().top-80
+				scrollTop: $(".vision").offset().top-20
 			}, 800);
 			break;
 		case "culture":
 			$('.master').animate({
-				scrollTop: $(".culture").offset().top-80
+				scrollTop: $(".culture").offset().top-20
 			}, 800);
 			break;
 		case "ceo":
 			$('.master').animate({
-				scrollTop: $(".ceo").offset().top-80
+				scrollTop: $(".ceo").offset().top-20
 			}, 800);
 			break;
 		default:

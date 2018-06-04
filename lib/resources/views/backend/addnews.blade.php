@@ -21,9 +21,9 @@
 				
 				<div class="" >
 					<div class="form-group">
-						<label>Hình Ảnh</label>
+						<label>Hình Ảnh (650x450)</label>
 						<input id="img" type="file" name="img" class="cssInput" onchange="changeImg(this)" style="display: none!important;">
-	                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" width="100%" src="img/new_seo-10-512.png">
+	                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" height="300px" src="img/new_seo-10-512.png">
 					</div>
 				</div>
 				<div class="" >

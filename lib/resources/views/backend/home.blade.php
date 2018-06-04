@@ -8,6 +8,9 @@
 	<div class="mainHead col-md-12">
 		<ul class="nav nav-tabs">
 		  	<li role="presentation" @if(Request::segment(4) == 'overview') class="active" @endif><a href="{{asset('admin/home/detail/overview')}}">Tổng quan</a></li>
+		  	<li role="presentation" @if(Request::segment(4) == 'history') class="active" @endif><a href="{{asset('admin/home/detail/history')}}">Lịch sử</a></li>
+		  	<li role="presentation" @if(Request::segment(4) == 'vision') class="active" @endif><a href="{{asset('admin/home/detail/vision')}}">Tầm nhìn</a></li>
+		  	<li role="presentation" @if(Request::segment(4) == 'cultural') class="active" @endif><a href="{{asset('admin/home/detail/cultural')}}">Văn hóa</a></li>
 		  	<li role="presentation" @if(Request::segment(4) == 'bds') class="active" @endif><a href="{{asset('admin/home/detail/bds')}}">Sàn BDS</a></li>
 		  	<li role="presentation" @if(Request::segment(4) == 'appraisal') class="active" @endif><a href="{{asset('admin/home/detail/appraisal')}}">Thẩm định giá</a></li>
 		  	<li role="presentation" @if(Request::segment(4) == 'law') class="active" @endif><a href="{{asset('admin/home/detail/law')}}">Văn phòng luật sư</a></li>
@@ -49,7 +52,7 @@
 			<div class="" >
 				<div class="form-group">
 					<input id="img" type="file" name="file" class="cssInput" onchange="changeImg(this)" style="display: none!important;">
-                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" width="50%" src="{{asset('lib/storage/app/home/'.$data->img)}}">
+                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" height="300px" src="{{asset('lib/storage/app/home/'.$data->img)}}">
 				</div>
 			</div>
 			<div class="form-group">

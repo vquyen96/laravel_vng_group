@@ -156,7 +156,7 @@ main{
     width: 3px;
 }
 .mainHead .nav{
-	width: 700px;
+	width: 1110px;
 }
 
 
@@ -275,7 +275,7 @@ textarea {
 	left: 480px;
 }
 .cssInput {
-	width: 80%;
+	/*width: 80%;*/
 }
 input[type=submit]{
 	margin-top: 20px;

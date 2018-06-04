@@ -47,7 +47,7 @@
 			<div class="" >
 				<div class="form-group">
 					<input id="img" type="file" name="file" class="cssInput" onchange="changeImg(this)" style="display: none!important;">
-                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" width="50%" src="{{asset('lib/storage/app/about/'.$item->img)}}">
+                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" height="300px" src="{{asset('lib/storage/app/about/'.$item->img)}}">
 				</div>
 			</div>
 			@endif

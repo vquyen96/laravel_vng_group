@@ -23,12 +23,17 @@
 					<input type="text" class="form-control" name="name" value="{{$edit->name}}" required>
 				</div>
 			</div>
-			
 			<div class="" >
 				<div class="form-group">
-					<label>Ảnh</label>
+					<label>Nổi bật</label>
+					<input type="number" class="form-control" name="featured" placeholder="1-9" value="{{$edit->featured}}" required>
+				</div>
+			</div>
+			<div class="" >
+				<div class="form-group">
+					<label>Ảnh(370x245)</label>
 					<input id="img" type="file" name="img" class="cssInput" onchange="changeImg(this)" style="display: none!important;">
-                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" width="100%" src="{{ asset('lib/storage/app/project/'.$edit->img) }}">
+                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" height="300px" src="{{ asset('lib/storage/app/project/'.$edit->img) }}">
 				</div>
 			</div>
 			<div class="" >
@@ -48,9 +53,9 @@
 			</div>
 			<div class="" >
 				<div class="form-group">
-					<label>Ảnh tổng quan</label>
+					<label>Ảnh tổng quan(826x482)</label>
 					<input id="img" type="file" name="overviewImg" class="cssInput" onchange="changeImg(this)" style="display: none!important;">
-                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" width="100%" src="{{ asset('lib/storage/app/project/'.$edit->overviewImg) }}">
+                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" height="300px" src="{{ asset('lib/storage/app/project/'.$edit->overviewImg) }}">
 				</div>
 			</div>
 			<div class="" >
@@ -70,9 +75,9 @@
 			</div>
 			<div class="" >
 				<div class="form-group">
-					<label>Ảnh vị trí</label>
+					<label>Ảnh vị trí(706x402)</label>
 					<input id="img" type="file" name="locationImg" class="cssInput" onchange="changeImg(this)" style="display: none!important;">
-                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" width="100%" src="{{ asset('lib/storage/app/project/'.$edit->locationImg) }}">
+                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" height="300px" src="{{ asset('lib/storage/app/project/'.$edit->locationImg) }}">
 				</div>
 			</div>
 			<div class="" >
@@ -92,9 +97,9 @@
 			</div>
 			<div class="" >
 				<div class="form-group">
-					<label>Ảnh tiện ích</label>
+					<label>Ảnh tiện ích(705x412)</label>
 					<input id="img" type="file" name="utilityImg" class="cssInput" onchange="changeImg(this)" style="display: none!important;">
-                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" width="100%" src="{{ asset('lib/storage/app/project/'.$edit->utilityImg) }}">
+                    <img style="cursor: pointer;" id="avatar" class="cssInput thumbnail" height="300px" src="{{ asset('lib/storage/app/project/'.$edit->utilityImg) }}">
 				</div>
 			</div>
 			<div class="" >
@@ -176,7 +181,7 @@
 				
 
 			<div class="form-group">
-				<input type="submit" name="" class="btn btn-primary" value="Thêm mới">
+				<input type="submit" name="" class="btn btn-primary" value="Sửa lại">
 			</div>
 			{{csrf_field()}}
 		</form>

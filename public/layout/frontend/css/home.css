@@ -4,6 +4,9 @@
 	padding-top: 0;
 	overflow: hidden;
 }
+.homeBig{
+	position: absolute;
+}
 .home{
 	position: relative;
 	width: 100%;
@@ -26,7 +29,6 @@
 	left: 20%;
 	top: 50%;
 	transform: translate(0, -50%);
-	padding: 5%;
 }
 .home1 .home1Content .txt60{
 	font-weight: bold;
@@ -57,10 +59,10 @@
 .home2Main{
 	position: absolute;
 	width: 100%;
-	/*height: 100%;*/
+	height: 100%;
 	left: 0;
-	top: 50%;
-	transform: translate(0, -50%);
+	/*top: 50%;*/
+	/*transform: translate(0, -50%);*/
 	padding: 8% 0;
 	/*transition: 0.8s;*/
 }
@@ -106,6 +108,11 @@
 }
 .home2Item:hover .home2ItemHide{
 	display: block;
+}
+
+.home3Main{
+	width: 100%;
+	height: 100%;
 }
 .home3Item{
 	position: relative;
@@ -158,7 +165,10 @@ a.home3ItemContent{
 	color: #f58320;
 }
 
-
+.home4Main{
+	width: 100%;
+    height: 100%;
+}
 .home4Content{
 	position: absolute;
 	width: 25%;
@@ -197,8 +207,10 @@ a.home3ItemContent{
 .home4MainContentText{
 	font-size: 16px;
 }
-
-.home4Main{
+.home4Main02ContentTitle{
+	display: block;
+}
+.home4MainSmaill{
 	position: absolute;
 	width: 75%;
 	right: 0;
@@ -223,7 +235,11 @@ a.home3ItemContent{
 	box-shadow: 5px 5px 20px #0005;
 
 }
+/*.home4MainLineItemImg{
+	height: 211px;
+}*/
 .home4MainLineItemImg img{
+	/*height: 100%;*/
 	width: 100%;
 }
 .home4MainLineItemContent{
@@ -250,13 +266,19 @@ a.home3ItemContent{
 .home4Main02{
 	display: none;
 }
-
+.home4Main02ContentTitle{
+	display: none;
+}
 
 
 /*.home5{
 	padding-top: 75px;
 	overflow-x: hidden;
 }*/
+.home5Main{
+	width: 100%;
+	height: 100%;
+}
 .home5Left{
 	position: absolute;
     top: 50%;
@@ -401,9 +423,12 @@ a.home3ItemContent{
 }
 
 @media screen and (max-width: 768px) {
+	.btnMenu {
+	    margin: 20px;
+	}
 	.home1 .home1Content{
 		width: 55%;
-		left: 5%;
+		left: 10%;
 	}
 	.home2Item{
 		position: relative;
@@ -417,6 +442,7 @@ a.home3ItemContent{
 	.home4MainContent{
 		display: block;
 	}
+
 	.home4Content{
 		display: none;
 	}
@@ -520,6 +546,55 @@ a.home3ItemContent{
 		color: #f58320;
 		font-family: 'Oswald', sans-serif;
 		text-transform: uppercase;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.home1 .home1Content {
+	    width: 85%;
+	}
+	.home1 .home1Content .txt60 {
+	    font-weight: bold;
+	    font-size: 46px;
+	}
+	.home2Name {
+	     padding: 0; 
+	}
+	.home2Item {
+	    height: 96px;
+	}
+	a.home3ItemContent {
+	    padding: 40% 25px;
+	}
+	.home3ItemContentNum {
+	    font-size: 70px;
+	    position: relative;
+	    display: inline-block;
+	}
+	.home3ItemContentNumUnder {
+	    position: absolute;
+	    bottom: 9px;
+	    right: -25px;
+	}
+
+	.home4MainLineItemContent {
+	    height: 65px;
+	    padding: 20px 0;
+	}
+	.home4Main02ContentTitle{
+		top:  75px;
+	}
+	.home4Main02 {
+	    top: 140px;
+	}
+	.home5LeftItem .txt30 {
+	    text-transform: uppercase;
+	    margin-bottom: 0;
+	    font-size: 18px;
+	}
+	.home5LeftItem .txt16 {
+	    font-size: 12px;
 	}
 }
 

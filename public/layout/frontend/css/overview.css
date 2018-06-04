@@ -12,7 +12,7 @@
 }
 
 .history{
-	
+	margin-bottom: 60px;
 }
 .historyImg img{
 	width: 100%;
@@ -31,7 +31,7 @@
 }
 .vision{
 	min-height: 420px;
-	padding-top: 60px;
+	
 }
 .vision .txt48{
 	text-align: center;

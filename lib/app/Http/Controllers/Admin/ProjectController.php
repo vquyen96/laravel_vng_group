@@ -19,6 +19,7 @@ class ProjectController extends Controller
     public function postAdd(Request $request){
         $project = new Project;
         $project->name = $request->name;
+        $project->featured = $request->featured;
         $project->slug = str_slug($request->name);
         $project->investor = $request->investor;
         $project->overviewContent = $request->overviewContent;
@@ -28,9 +29,7 @@ class ProjectController extends Controller
 
     	$image = $request->file('img');
     	if ($request->hasFile('img')) {
-	    	$filename =  time() . '.' .$image->getClientOriginalName();
-	    	$project->img = $filename;
-	        $request->img->storeAs('project',$filename);
+	    	$project->img = saveImage([$image], 360, 'project');
 		}
         $image = $request->file('overviewImg');
         if ($request->hasFile('overviewImg')) {
@@ -76,6 +75,7 @@ class ProjectController extends Controller
 
         $project->name = $request->name;
         $project->slug = str_slug($request->name);
+        $project->featured = $request->featured;
         $project->investor = $request->investor;
         $project->overviewContent = $request->overviewContent;
         $project->locationContent = $request->locationContent;
@@ -84,9 +84,8 @@ class ProjectController extends Controller
 
         $image = $request->file('img');
         if ($request->hasFile('img')) {
-            $filename =  time() . '.' .$image->getClientOriginalName();
-            $project->img = $filename;
-            $request->img->storeAs('project',$filename);
+            // $filename =  time() . '.' .$image->getClientOriginalName();
+            $project->img = saveImage([$image], 360, 'project');
         }
         $image = $request->file('overviewImg');
         if ($request->hasFile('overviewImg')) {
@@ -131,6 +130,12 @@ class ProjectController extends Controller
     }
     public function getDelete($id){
     	Project::destroy($id);
+        $project = Project::find($id_img);
+        $id = $project->id;
+        $namefile = $project->img;
+        File::delete('libs/storage/app/project/'.$namefile);
+        File::delete('libs/storage/app/project/resized-'.$namefile);
+        $image->delete();  
     	return back();
     }
 }

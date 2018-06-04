@@ -15,7 +15,7 @@ class HomeController extends Controller
 {
     public function getHome(){
         $data['data'] = Home::all();
-        $data['project'] = Project::all();
+        $data['project'] = Project::where('featured','>',0)->orderBy('featured','desc')->get();
         $data['contact'] = Contact::all();
     	return view('frontend.home', $data);
     }

@@ -56,10 +56,16 @@
 }
 .distributionItem{
 	width: 336px;
-	margin: auto;
+	margin: 0 auto 30px;
 	position: relative;
+	box-shadow: 5px 5px 20px #0007;
+
+}
+.distributionItemImg {
+	height: 220px;
 }
 .distributionItemImg img{
+	height: 100%;
 	width: 100%;
 }
 .distributionItemContent{

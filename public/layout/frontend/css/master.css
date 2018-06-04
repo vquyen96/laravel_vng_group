@@ -90,7 +90,6 @@ header .imgLogo img{
 	height: 100%;
 	top: 0;
 	left: 0;
-	padding-top: 75px;
 
 }
 .master::-webkit-scrollbar {
@@ -107,6 +106,7 @@ header .imgLogo img{
 	font-family: 'Oswald', sans-serif;
 	font-weight: 600;
 	font-size: 16px;
+	display: none;
 }
 .lang_en{
 	padding: 28px 10px;
@@ -117,16 +117,18 @@ header .imgLogo img{
 	display: inline-block;
 
 }
-.btnMenu{
-	display: inline-block;
-	width: 36px;
-	height: 36px;
-	border: 2px solid #000;
-	border-radius: 50%;
-	float: right;
-	margin: 20px 40px 20px 20px;
-	position: relative;
-	padding: 5px 7px;
+.btnMenu {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    /* border: 2px solid #000; */
+    border-radius: 50%;
+    float: right;
+    margin: 20px 40px 20px 20px;
+    position: relative;
+    padding: 7px 9px;
+    background: #fff;
+    overflow: hidden;
 }
 .btnMenuItem{
 	width: 18px;
@@ -134,13 +136,15 @@ header .imgLogo img{
 	background: #000;
 	margin: 4px 0;
 }
-.btnMenuCỉcle{
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	-webkit-animation-name: menuCircle;
+.btnMenuCỉcle {
+    position: absolute;
+    height: 34px;
+    width: 34px;
+    top: 0px;
+    left: 0px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    -webkit-animation-name: menuCircle;
     -webkit-animation-duration: 5s;
     animation-name: menuCircle;
     animation-duration: 5s;
@@ -148,16 +152,27 @@ header .imgLogo img{
     animation-timing-function: cubic-bezier(1,1,1,1);
     cursor: pointer;
 }
-.btnMenuCỉcleHide{
-	height: 10px;
-	width: 10px;
-	border-radius: 50%;
-	background: #fff;
-	position: absolute;
-	top: 0;
-	left: -3px;
+.btnMenuLine {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    padding: 4px 6px;
+    background: #ffffff;
+    border-radius: 50%;
 }
+.btnMenuCỉcleHide {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: -2px;
 
+
+}
 @-webkit-keyframes menuCircle {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}

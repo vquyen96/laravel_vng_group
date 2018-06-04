@@ -52,10 +52,11 @@
 					<div class="btnMenuCỉcle">
 						<div class="btnMenuCỉcleHide"></div>
 					</div>
-					<div class="btnMenuItem"></div>
-					<div class="btnMenuItem"></div>
-					<div class="btnMenuItem"></div>
-					
+					<div class="btnMenuLine">
+						<div class="btnMenuItem"></div>
+						<div class="btnMenuItem"></div>
+						<div class="btnMenuItem"></div>
+					</div>
 				</div>
 			</div>
 			
