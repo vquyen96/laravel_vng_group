@@ -129,13 +129,11 @@ class ProjectController extends Controller
     	return redirect('admin/project')->with('success','Thay đổi thành công');
     }
     public function getDelete($id){
-    	Project::destroy($id);
-        $project = Project::find($id_img);
-        $id = $project->id;
+        $project = Project::find($id);
         $namefile = $project->img;
         File::delete('libs/storage/app/project/'.$namefile);
         File::delete('libs/storage/app/project/resized-'.$namefile);
-        $image->delete();  
+        $project->delete();  
     	return back();
     }
 }

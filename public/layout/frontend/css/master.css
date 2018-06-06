@@ -127,8 +127,8 @@ header .imgLogo img{
     margin: 20px 40px 20px 20px;
     position: relative;
     padding: 7px 9px;
-    background: #fff;
     overflow: hidden;
+    cursor: pointer;
 }
 .btnMenuItem{
 	width: 18px;
@@ -142,7 +142,7 @@ header .imgLogo img{
     width: 34px;
     top: 0px;
     left: 0px;
-    border: 2px solid #000;
+    
     border-radius: 50%;
     -webkit-animation-name: menuCircle;
     -webkit-animation-duration: 5s;
@@ -152,6 +152,9 @@ header .imgLogo img{
     animation-timing-function: cubic-bezier(1,1,1,1);
     cursor: pointer;
 }
+.btnMenuCỉcle img{
+	width: 100%;
+}
 .btnMenuLine {
     width: 30px;
     height: 30px;
@@ -159,14 +162,14 @@ header .imgLogo img{
     top: 2px;
     left: 2px;
     padding: 4px 6px;
-    background: #ffffff;
+    
     border-radius: 50%;
 }
 .btnMenuCỉcleHide {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background: #fff;
+    
     position: absolute;
     top: 0px;
     left: -2px;
