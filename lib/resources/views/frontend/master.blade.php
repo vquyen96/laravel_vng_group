@@ -110,9 +110,7 @@
 						<img src="img/project.png">
 					</a>
 					<ul>
-						<li>
-							<a href="{{ asset('project') }}">Tổng quan dự án </a>
-						</li>
+						
 						<li>
 							<a href="{{ asset('project?scroll=investment') }}">Dự án đầu tư</a>
 						</li>
@@ -168,6 +166,7 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.betterScroll.js"></script>
 	<script type="text/javascript" src="js/master.js"></script>
 	@yield('script')
 	{{-- <script>

@@ -1,6 +1,9 @@
 
 @extends('frontend.master')
 @section('title', 'Tổng quan')
+@section('fb_title', 'VNGroup')
+@section('fb_image', asset('public/layout/frontend/img/logo.png'))
+
 @section('main')
 <link rel="stylesheet" type="text/css" href="css/overview.css">
 <div>
@@ -66,7 +69,7 @@
 					<div class="txt24">
 						<i>{{ $item->title }}</i>
 					</div>
-					<div class="txt16">
+					<div class="txt14">
 						{!! $item->content !!}
 					</div>
 					<div class="historyContentImg">
@@ -81,7 +84,7 @@
 				<div class="txt48 orange">
 					{{ $vision->get(0)->title }}
 				</div>
-				<div class="txt16">
+				<div class="txt14">
 					{!! $vision->get(0)->content !!}
 				</div>
 			</div>
@@ -89,14 +92,14 @@
 				<div class="txt48 orange">
 					{{ $vision->get(1)->title }}
 				</div>
-				<div class="txt16">
+				<div class="txt14">
 					{!! $vision->get(1)->content !!}
 				</div>
 			</div>
 		</div>
 		<div class="row visionImg">
 			<div class="col-md-12 col-sm-12 col-xs-12">
-				<img src="img/GTCL.png">
+				<img src="{{ asset('lib/storage/app/about/'.$vision->get(1)->img) }}">
 			</div>
 			
 		</div>
@@ -109,7 +112,7 @@
 			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="maximContent">
 					
-					<div class="txt16">
+					<div class="txt14">
 						{!! $vision->get(2)->content !!}
 					</div>
 					<div class="txt48 orange">
@@ -122,7 +125,7 @@
 		<div class="row culture">
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="txt48 orange">
-					văn hóa vng group
+					văn hóa vngroup
 				</div>
 				<?php $culture_count = 1?>
 				@foreach($culture as $item)

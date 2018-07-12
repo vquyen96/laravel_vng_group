@@ -201,18 +201,18 @@
 				<div class="news_social_network">
 					<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12">
-							<a class="news_social_network_item">
+							<a href="https://www.facebook.com/bds.VNgroup/" target="blank" class="news_social_network_item">
 								<img src="img/news_facebook.png">
 							</a>
 						</div>
 						<div class="col-md-12 col-sm-12 col-xs-12">
-							<a class="news_social_network_item">
+							<a href="https://www.facebook.com/bds.VNgroup/" target="blank" class="news_social_network_item">
 								<img src="img/news_youtube.png">
 							</a>
 						</div>
 						<div class="col-md-12 col-sm-12 col-xs-12">
-							<a class="news_social_network_item">
-								<img src="img/news_youtube.png">
+							<a href="https://www.facebook.com/bds.VNgroup/" target="blank" class="news_social_network_item">
+								<img src="img/news_gmail.png">
 							</a>
 						</div>
 							

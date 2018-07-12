@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.7.5
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 04, 2018 lúc 09:21 AM
--- Phiên bản máy phục vụ: 10.1.31-MariaDB
--- Phiên bản PHP: 7.2.4
+-- Host: localhost
+-- Generation Time: Jul 12, 2018 at 01:18 AM
+-- Server version: 5.6.38
+-- PHP Version: 7.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `vng_group`
+-- Database: `demo1_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `about`
+-- Table structure for table `about`
 --
 
 CREATE TABLE `about` (
@@ -39,25 +39,25 @@ CREATE TABLE `about` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `about`
+-- Dumping data for table `about`
 --
 
 INSERT INTO `about` (`id`, `name`, `title`, `content`, `img`, `created_at`, `updated_at`) VALUES
-(1, 'Thư Ngỏ', 'Kính gửi đối tác và quý khách hàng', '<p>Bất động sản, tư vấn ph&aacute;p luật, truyền th&ocirc;ng &ndash; marketing, thẩm định gi&aacute;&hellip; VNGROUP lu&ocirc;n tự h&agrave;o l&agrave; một trong những đơn vị cung cấp c&aacute;c dịch vụ chuy&ecirc;n nghiệp g&oacute;p phần v&agrave;o sự ph&aacute;t triển ổn định của thị trường cũng như mang lại lợi &iacute;ch tối ưu cho Qu&yacute; kh&aacute;ch h&agrave;ng.&nbsp;<br />\r\nVNGROUP c&oacute; được những th&agrave;nh c&ocirc;ng như ng&agrave;y h&ocirc;m nay ngo&agrave;i những sự nỗ lực v&agrave; đo&agrave;n kết của đội ngũ c&aacute;n bộ, nh&acirc;n vi&ecirc;n c&ograve;n c&oacute; cả sự t&iacute;n nhiệm v&agrave; ủng hộ v&ocirc; c&ugrave;ng to lớn của to&agrave;n thể Qu&yacute; vị.&nbsp;<br />\r\nVới mong muốn đem đến cho Qu&yacute; kh&aacute;ch h&agrave;ng những dịch vụ tốt nhất to&agrave;n thể Ban l&atilde;nh đạo v&agrave; đội ngũ nh&acirc;n vi&ecirc;n lu&ocirc;n cố gắng hết m&igrave;nh, kh&ocirc;ng ngừng phấn đấu tạo những sản phẩm v&agrave; dịch vụ c&oacute; ưu điểm vượt trội nhằm n&acirc;ng cao chất lượng phục vụ để c&oacute; thể nhận được sự tin tưởng cũng như sự h&agrave;i l&ograve;ng từ ph&iacute;a Qu&yacute; kh&aacute;ch h&agrave;ng.</p>', '1527310401.image_thu_ngo.png', '2018-04-02 07:55:32', '2018-05-26 08:33:14'),
-(2, 'Thư Ngỏ', NULL, '<p>Bất động sản, tư vấn ph&aacute;p luật, truyền th&ocirc;ng &ndash; marketing, thẩm định gi&aacute;&hellip; VNGROUP lu&ocirc;n tự h&agrave;o l&agrave; một trong những đơn vị cung cấp c&aacute;c dịch vụ chuy&ecirc;n nghiệp g&oacute;p phần v&agrave;o sự ph&aacute;t triển ổn định của thị trường cũng như mang lại lợi &iacute;ch tối ưu cho Qu&yacute; kh&aacute;ch h&agrave;ng.&nbsp;<br />\r\nVNGROUP c&oacute; được những th&agrave;nh c&ocirc;ng như ng&agrave;y h&ocirc;m nay ngo&agrave;i những sự nỗ lực v&agrave; đo&agrave;n kết của đội ngũ c&aacute;n bộ, nh&acirc;n vi&ecirc;n c&ograve;n c&oacute; cả sự t&iacute;n nhiệm v&agrave; ủng hộ v&ocirc; c&ugrave;ng to lớn của to&agrave;n thể Qu&yacute; vị.&nbsp;<br />\r\nVới mong muốn đem đến cho Qu&yacute; kh&aacute;ch h&agrave;ng những dịch vụ tốt nhất to&agrave;n thể Ban l&atilde;nh đạo v&agrave; đội ngũ nh&acirc;n vi&ecirc;n lu&ocirc;n cố gắng hết m&igrave;nh, kh&ocirc;ng ngừng phấn đấu tạo những sản phẩm v&agrave; dịch vụ c&oacute; ưu điểm vượt trội nhằm n&acirc;ng cao chất lượng phục vụ để c&oacute; thể nhận được sự tin tưởng cũng như sự h&agrave;i l&ograve;ng từ ph&iacute;a Qu&yacute; kh&aacute;ch h&agrave;ng.</p>\r\n\r\n<p>&nbsp;</p>', NULL, '2018-04-02 07:59:29', '2018-05-26 06:20:25'),
+(1, 'Thư Ngỏ', 'Kính gửi đối tác và quý khách hàng', '<p>Lời đầu ti&ecirc;n Hội đồng Quản trị, Ban gi&aacute;m đốc c&ugrave;ng to&agrave;n thể c&aacute;n bộ nh&acirc;n vi&ecirc;n của VNGROUP xin gửi lời ch&agrave;o tr&acirc;n trọng c&ugrave;ng lời cảm ơn ch&acirc;n th&agrave;nh nhất tới đối t&aacute;c v&agrave; Q&uacute;y kh&aacute;ch h&agrave;ng đ&atilde; lu&ocirc;n tin tưởng, đồng h&agrave;nh c&ugrave;ng ch&uacute;ng t&ocirc;i trong suốt thời gian qua.</p>\r\n\r\n<p>Với l&ograve;ng nhiệt huyết, sự s&aacute;ng tạo, niềm đam m&ecirc; c&ugrave;ng kh&aacute;t vọng kh&ocirc;ng ngừng. Cho đến hiện nay, VNGROUP đ&atilde; c&oacute; hơn 15 kinh nghiệm hoạt động trong lĩnh vực bất động sản. Qua một thời gian hoạt động v&agrave; ph&aacute;t triển, VNGROUP đ&atilde; v&agrave; đang lớn mạnh, ph&aacute;t triển kh&ocirc;ng ngừng, trở th&agrave;nh đơn vị uy t&iacute;n, được đ&ocirc;ng đảo kh&aacute;ch h&agrave;ng biết đến, tin tưởng v&agrave; chọn lựa. Ch&uacute;ng t&ocirc;i lu&ocirc;n nỗ lực mang đến chất lượng tốt nhất, phong c&aacute;ch phục vụ chuy&ecirc;n nghiệp trong lĩnh vực m&ocirc;i giới, ph&acirc;n phối v&agrave; đầu tư bất động sản.</p>\r\n\r\n<p>Sự h&agrave;i l&ograve;ng của Q&uacute;y kh&aacute;ch h&agrave;ng l&agrave; th&agrave;nh c&ocirc;ng v&agrave; động lực lớn cho sự ph&aacute;t triển của doanh nghiệp.</p>', '1527310401.image_thu_ngo.png', '2018-04-02 07:55:32', '2018-07-10 17:48:44'),
+(2, 'Thư Ngỏ', NULL, '<p>C&ugrave;ng với sự ph&aacute;t triển của Việt Nam đặt trong bối cảnh nền kinh tế thế giới, VNGroup đ&atilde; mở rộng quy m&ocirc; v&agrave; hoạt động ở nhiều lĩnh vực kh&aacute;c nhau như: Bất động sản, Tư vấn ph&aacute;p luật, Truyền th&ocirc;ng &ndash; marketing, thẩm định gi&aacute;&hellip; VNGROUP lu&ocirc;n tự h&agrave;o l&agrave; một trong những đơn vị cung cấp c&aacute;c dịch vụ chất lượng, chuy&ecirc;n nghiệp, hiệu quả g&oacute;p phần v&agrave;o sự ph&aacute;t triển ổn định của thị trường cũng như mang lại lợi nhuận tối ưu cho Qu&yacute; kh&aacute;ch h&agrave;ng.</p>\r\n\r\n<p>VNGROUP c&oacute; được những th&agrave;nh c&ocirc;ng như ng&agrave;y h&ocirc;m nay ngo&agrave;i những sự nỗ lực v&agrave; đo&agrave;n kết của đội ngũ c&aacute;n bộ, nh&acirc;n vi&ecirc;n c&ograve;n c&oacute; phần kh&ocirc;ng nhỏ sự t&iacute;n nhiệm v&agrave; ủng hộ của đối t&aacute;c v&agrave; Qu&yacute; kh&aacute;ch h&agrave;ng trong suốt thời gian qua.</p>\r\n\r\n<p>Với mong muốn đem đến cho Qu&yacute; kh&aacute;ch h&agrave;ng những sản phẩm v&agrave; dịch vụ tốt nhất, Ban l&atilde;nh đạo c&ugrave;ng to&agrave;n thể đội ngũ nh&acirc;n vi&ecirc;n lu&ocirc;n nỗ lực hết m&igrave;nh, kh&ocirc;ng ngừng phấn đấu để tạo ra những sản phẩm tốt nhất v&agrave; dịch vụ chất lượng.</p>', NULL, '2018-04-02 07:59:29', '2018-07-10 17:48:37'),
 (3, 'Lịch sử', '2003', '<p><strong>C&ocirc;ng ty CP Luật Việt </strong></p>\r\n\r\n<p>C&ocirc;ng ty CP Luật Việt (Luat Viet Group) hoạt động chủ yếu trong lĩnh vực tư vấn Luật v&agrave; Bất động sản</p>', '1527310543.history_img.png', '2018-04-02 08:00:15', '2018-05-26 09:28:58'),
-(4, 'Lịch sử', '2009', '<p><strong>Th&agrave;nh lập 2 đơn vị </strong></p>\r\n\r\n<p>Văn ph&ograve;ng luật sư Luật Việt<br />\r\nC&ocirc;ng ty TNHH Thẩm đinh gi&aacute; Luật Việt</p>', NULL, '2018-04-02 08:00:49', '2018-05-26 09:37:15'),
-(5, 'Lịch sử', '2014', '<p><strong>Vặn m&igrave;nh &amp; chuyển đổi</strong></p>\r\n\r\n<p>C&ocirc;ng ty CP Luật Việt đổi t&ecirc;n th&agrave;nh C&ocirc;ng ty CP BĐS VNG VN Đơn vị th&agrave;nh vi&ecirc;n đổi th&agrave;nh: Văn ph&ograve;ng Luật sư VNG, C&ocirc;ng ty TNHH Thẩm đinh gi&aacute; VNG VN Th&agrave;nh lập văn ph&ograve;ng đại diện tại Sơn La, Hải Ph&ograve;ng, Hưng Y&ecirc;n, Thanh H&oacute;a</p>', NULL, '2018-04-02 08:01:33', '2018-05-26 09:38:07'),
-(6, 'Lịch sử', '2015', '<p><strong>Ph&aacute;t triển v&agrave; mở rộng </strong></p>\r\n\r\n<p>Ra đời C&ocirc;ng ty CP truyền th&ocirc;ng VNG Việt Nam từ việc s&aacute;p nhập c&ocirc;ng ty TNHH JOS v&agrave;o hệ thống Th&agrave;nh lập chi nh&aacute;nh Đ&agrave; Nẵng &amp; VPĐD TP. Hồ Ch&iacute; Minh</p>', NULL, '2018-04-02 08:02:17', '2018-05-26 09:38:19'),
-(7, 'Lịch sử', '2018', '<p><strong>Gắn kết &amp; bền vững </strong></p>\r\n\r\n<p>To&agrave;n hệ thống c&oacute;:<br />\r\n- 6 đơn vị th&agrave;nh vi&ecirc;n:<br />\r\n+ C&ocirc;ng ty cổ phần Bất động sản VNG Việt Nam<br />\r\n+ C&ocirc;ng ty TNHH thẩm định gi&aacute; VNG Việt Nam<br />\r\n+ C&ocirc;ng ty cổ phần truyền th&ocirc;ng VNG Việt Nam<br />\r\n+ Văn ph&ograve;ng luật sư VNG Việt Nam<br />\r\n+ Văn ph&ograve;ng c&ocirc;ng chứng L&ecirc; Vinh Hoa ( Khai trương ng&agrave;y 26/6/2017)<br />\r\n+ Tiktak Coworking Space (Khai trương th&aacute;ng 10/2017)<br />\r\n- 1 chi nh&aacute;nh Đ&agrave; Nẵng tại địa chỉ: Số 68, Đường 2 th&aacute;ng 9, P. B&igrave;nh Hi&ecirc;n, Q. Hải Ch&acirc;u, TP. Đ&agrave; Nẵng<br />\r\n- 1 VPĐD TP. Hồ Ch&iacute; Minh tại địa chỉ: Tầng 10, Số 40 Phạm Ngọc Thạch, Phường 6, Quận 3, Tp Hồ Ch&iacute;<br />\r\nMinh<br />\r\nVới hơn 200 CBNV</p>', '', NULL, '2018-05-26 09:39:07'),
+(4, 'Lịch sử', '2009 & 2010', '<p>Trải qua hơn 6 năm h&igrave;nh th&agrave;nh v&agrave; ph&aacute;t triển, tr&ecirc;n cơ sở C&ocirc;ng ty CP Luật Việt ban đầu tiếp tục th&agrave;nh lập Văn ph&ograve;ng luật sư Luật Việt v&agrave; c&ocirc;ng ty TNHH Thẩm định gi&aacute; Luật Việt.</p>', NULL, '2018-04-02 08:00:49', '2018-06-20 17:58:49'),
+(5, 'Lịch sử', '2014', '<p>Đ&aacute;nh dấu bước chuyển m&igrave;nh mạnh mẽ bằng việc quyết định đổi t&ecirc;n C&ocirc;ng ty CP Luật Việt th&agrave;nh C&ocirc;ng ty CP BĐS VNG Việt Nam.</p>\r\n\r\n<p>Theo đ&oacute;, đơn vị th&agrave;nh vi&ecirc;n đổi th&agrave;nh: Văn ph&ograve;ng Luật sư VNG, C&ocirc;ng ty TNHH Thẩm đinh gi&aacute; VNG Việt Nam. C&ugrave;ng với đ&oacute;, tại Sơn La, Hải Ph&ograve;ng, Hưng Y&ecirc;n, Thanh H&oacute;a văn ph&ograve;ng đại diện của C&ocirc;ng ty được th&agrave;nh lập.</p>\r\n\r\n<p>Với mong muốn mở rộng lĩnh vực hoạt động kinh doanh, mang đến m&ocirc; h&igrave;nh hệ sinh th&aacute;i kh&eacute;p k&iacute;n, cung ứng đầy đủ nhu cầu v&agrave; dịch vụ của kh&aacute;ch h&agrave;ng.</p>', NULL, '2018-04-02 08:01:33', '2018-07-10 17:49:05'),
+(6, 'Lịch sử', '2015', '<p><strong>Ph&aacute;t triển &amp; mở rộng </strong></p>\r\n\r\n<p>- Ra đời C&ocirc;ng ty CP truyền th&ocirc;ng VNG Việt Nam từ việc s&aacute;p nhập c&ocirc;ng ty TNHH JOS v&agrave;o hệ thống<br />\r\n- Th&agrave;nh lập chi nh&aacute;nh Đ&agrave; Nẵng &amp;amp; VPĐD TP. Hồ Ch&iacute; Minh</p>', NULL, '2018-04-02 08:02:17', '2018-06-19 13:13:58'),
+(7, 'Lịch sử', '2018', '<p><strong>Gắn kết &amp; bền vững </strong></p>\r\n\r\n<p>To&agrave;n hệ thống c&oacute; hơn 200 CBNV tại 6 đơn vị th&agrave;nh vi&ecirc;n:<br />\r\n&nbsp; &nbsp; + C&ocirc;ng ty cổ phần Bất động sản VNG Việt Nam<br />\r\n&nbsp; &nbsp; + C&ocirc;ng ty TNHH thẩm định gi&aacute; VNG Việt Nam<br />\r\n&nbsp; &nbsp; + C&ocirc;ng ty cổ phần truyền th&ocirc;ng VNG Việt Nam<br />\r\n&nbsp; &nbsp; + Văn ph&ograve;ng luật sư VNG Việt Nam<br />\r\n&nbsp; &nbsp; + Văn ph&ograve;ng c&ocirc;ng chứng L&ecirc; Vinh Hoa ( Khai trương ng&agrave;y 26/6/2017)<br />\r\n&nbsp; &nbsp; + Tiktak Coworking Space (Khai trương th&aacute;ng 10/2017)</p>\r\n\r\n<p>- 1 chi nh&aacute;nh Đ&agrave; Nẵng tại địa chỉ: Số 68, Đường 2 th&aacute;ng 9, P. B&igrave;nh Hi&ecirc;n, Q. Hải Ch&acirc;u, TP. Đ&agrave; Nẵng</p>\r\n\r\n<p>- 1 VPĐD TP. Hồ Ch&iacute; Minh tại địa chỉ: Tầng 10, Số 40 Phạm Ngọc Thạch, Phường 6, Quận 3, Tp Hồ Ch&iacute;<br />\r\nMinh</p>', '', NULL, '2018-07-11 13:06:36'),
 (8, '0', 'title', 'text', '', NULL, NULL),
 (9, 'Tầm nhìn', 'Tầm nhìn', 'Là một tập đoàn đa ngành có hệ sinh thái khởi nghiệp khép kín tạo nên giá trị phát triển bền vững. Không chỉ mang lại cuộc sống ấm no hạnh phúc cho CBNV toàn hệ thống, VNGroup còn góp phần tạo ra những giá trị thịnh vượng nhân văn cho cộng đồng . \r\nMục tiêu của VNGroup: Luôn nỗ lực ĐỔI MỚI - không ngừng SÁNG TẠO, áp dụng công nghệ, đón đầu cơ hội để trở thành một Tập đoàn vững mạnh, sẵn sàng cho tiến trình hội nhập Quốc tế.', '', NULL, NULL),
-(10, 'Tầm nhìn', 'Sứ mệnh', '<p>Mang trong m&igrave;nh sứ mệnh chung của to&agrave;n doanh nghiệp, chung tay x&acirc;y dựng đất nước Việt Nam thịnh vượng, h&ograve;a nhập c&ugrave;ng thế giới. Ch&uacute;ng t&ocirc;i - VNGroup kh&ocirc;ng ngừng nỗ lực s&aacute;ng tạo, ph&aacute;t triển nhằm mang đến những sản phẩm/ dịch vụ chất lượng, g&oacute;p phần tạo ra của cải vật chất, gi&aacute; trị gia tăng cho doanh nghiệp/ x&atilde; hội. Sự tin tưởng v&agrave; h&agrave;i l&ograve;ng của kh&aacute;ch h&agrave;ng l&agrave; kim chỉ nam cho sự nghiệp ph&aacute;t triển chung của Tập đo&agrave;n.</p>', '1527310943.GTCL.png', NULL, '2018-05-25 22:02:23'),
-(11, 'Tầm nhìn', 'Triết lý kinh doanh', '<p><strong class=\"txt24\">&quot;Gi&aacute; trị của sự bền vững&quot;</strong></p>\r\n\r\n<p>Slogan thể hiện triết l&yacute; kinh doanh, t&ocirc;n chỉ hoạt động của VNGroup trong suốt 15 năm qua. Th&ocirc;ng điệp n&agrave;y c&ograve;n thể hiện đầy đủ c&aacute;c kh&iacute;a cạnh của tập đo&agrave;n, từ lịch sử, văn h&oacute;a, gi&aacute; trị cốt l&otilde;i đến tầm nh&igrave;n sứ mệnh ph&aacute;t triển VNGroup. Nhấn mạnh đến yếu tố &ldquo;bền vững&rdquo;, VNGroup hiểu rằng, yếu tố con người, gi&aacute; trị nguồn nh&acirc;n lực đ&oacute;ng vai tr&ograve; thiết yếu trong việc ph&aacute;t triển doanh nghiệp v&agrave; lợi &iacute;ch cộng đồng. Để ho&agrave;n th&agrave;nh sứ mệnh &ldquo;Bền Vững&rdquo; tr&ecirc;n, VNGroup đ&atilde; đưa ra những chiến lược ph&aacute;t triển to&agrave;n diện, l&acirc;u d&agrave;i. Theo đ&oacute;, sự ph&aacute;t triển bền vững ở đ&acirc;y bao gồm nhiều kh&iacute;a cạnh, cụ thể: bền vững về mặt t&agrave;i ch&iacute;nh, bền vững về yếu tố con người v&agrave; bền vững về ng&agrave;nh nghề hoạt động , Danh mục sản phẩm đầu tư đảm bảo kh&ocirc;ng bị lỗi thời so với xu hướng của thời đại . Những yếu tố n&agrave;y g&oacute;p phần x&acirc;y dựng niềm tin nơi kh&aacute;ch h&agrave;ng, đẩy mạnh uy t&iacute;n cũng như gi&aacute; trị cho thương hiệu VNGROUP. Tại VNGroup, ch&uacute;ng t&ocirc;i hiểu rằng Bền Vững l&agrave; sứ mệnh duy nhất trong hoạt động định hướng của Doanh nghiệp .</p>', '1527340027.bernard-hermant-589370-unsplash.png', NULL, '2018-05-26 10:30:32'),
-(12, 'Văn hóa', 'Quy mô VN Group', '<p>Qua một thời gian hoạt động đến nay VNGroup đ&atilde; mở rộng quy m&ocirc; hoạt động ở nhiều lĩnh vực kh&aacute;c nhau như: Bất động sản, Tư vấn ph&aacute;p luật, truyền th&ocirc;ng &ndash; maketing, thẩm định gi&aacute;&hellip; VNGroup lu&ocirc;n tự h&agrave;o l&agrave; một trong những đơn vị c&oacute; vị thế vững mạnh với những dịch vụ chuy&ecirc;n nghiệp v&agrave; tạo dựng được uy t&iacute;n tr&ecirc;n thị trường.Với mục đ&iacute;ch tạo dựng n&ecirc;n mối li&ecirc;n kết chặt chẽ trong to&agrave;n bộ Tập đo&agrave;n VNGroup n&oacute;i chung, tạo nguồn động lực th&uacute;c đẩy doanh nghiệp đo&agrave;n kết v&agrave; ph&aacute;t triển bền vững. Văn h&oacute;a doanh nghiệp được VNGroup x&acirc;y dựng mong muốn th&uacute;c đẩy tinh thần l&agrave;m việc, ph&aacute;t huy t&iacute;nh d&acirc;n chủ, ph&aacute;t triển khả năng của mỗi c&aacute; nh&acirc;n.Tập thể Ban l&atilde;nh đạo VNGroup lu&ocirc;n ch&uacute; &yacute; đến đời sống văn h&oacute;a tinh thần của tập thể c&aacute;n bộ nh&acirc;n vi&ecirc;n của m&igrave;nh. L&agrave; th&agrave;nh vi&ecirc;n của VNGroup bạn sẽ cảm nhận được một m&ocirc;i trường l&agrave;m việc chuy&ecirc;n nghiệp, năng động, lao động thụ hưởng, thu nhập do ch&iacute;nh bản th&acirc;n mỗi người quyết định.</p>', '1527340238.chuttersnap-387758-unsplash.png', NULL, '2018-05-26 19:21:00'),
-(13, 'Văn hóa', 'Môi trường làm việc', '<p>Qua một thời gian hoạt động đến nay VNGroup đ&atilde; mở rộng quy m&ocirc; hoạt động ở nhiều lĩnh vực kh&aacute;c nhau như: Bất động sản, Tư vấn ph&aacute;p luật, truyền th&ocirc;ng &ndash; maketing, thẩm định gi&aacute;&hellip; VNGroup lu&ocirc;n tự h&agrave;o l&agrave; một trong những đơn vị c&oacute; vị thế vững mạnh với những dịch vụ chuy&ecirc;n nghiệp v&agrave; tạo dựng được uy t&iacute;n tr&ecirc;n thị trường</p>', '1527340247.chuttersnap-387758-unsplash.png', NULL, '2018-05-26 10:42:31'),
-(14, 'Văn hóa', 'Lao động và hưởng thụ', '<p>Qua một thời gian hoạt động đến nay VNGroup đ&atilde; mở rộng quy m&ocirc; hoạt động ở nhiều lĩnh vực kh&aacute;c nhau như: Bất động sản, Tư vấn ph&aacute;p luật, truyền th&ocirc;ng &ndash; maketing, thẩm định gi&aacute;&hellip; VNGroup lu&ocirc;n tự h&agrave;o l&agrave; một trong những đơn vị c&oacute; vị thế vững mạnh với những dịch vụ chuy&ecirc;n nghiệp v&agrave; tạo dựng được uy t&iacute;n tr&ecirc;n thị trường.Với mục đ&iacute;ch tạo dựng n&ecirc;n mối li&ecirc;n kết chặt chẽ trong to&agrave;n bộ Tập đo&agrave;n VNGroup n&oacute;i chung, tạo nguồn động lực th&uacute;c đẩy doanh nghiệp đo&agrave;n kết v&agrave; ph&aacute;t triển bền vững. Văn h&oacute;a doanh nghiệp được VNGroup x&acirc;y dựng mong muốn th&uacute;c đẩy tinh thần l&agrave;m việc, ph&aacute;t huy t&iacute;nh d&acirc;n chủ, ph&aacute;t triển khả năng của mỗi c&aacute; nh&acirc;n.Tập thể Ban l&atilde;nh đạo VNGroup lu&ocirc;n ch&uacute; &yacute; đến đời sống văn h&oacute;a tinh thần của tập thể c&aacute;n bộ nh&acirc;n vi&ecirc;n của m&igrave;nh. L&agrave; th&agrave;nh vi&ecirc;n của VNGroup bạn sẽ cảm nhận được một m&ocirc;i trường l&agrave;m việc chuy&ecirc;n nghiệp, năng động, lao động thụ hưởng, thu nhập do ch&iacute;nh bản th&acirc;n mỗi người quyết định.</p>', '1527340260.chuttersnap-387758-unsplash.png', NULL, '2018-05-26 06:11:00'),
-(15, 'ceo', 'Nguyễn Văn A', '<p>Ceo and Founder</p>', '1527340300.rawpixel-648558-unsplash.png', NULL, '2018-05-26 06:11:40'),
+(10, 'Tầm nhìn', 'Sứ mệnh', '<p>Mang trong m&igrave;nh sứ mệnh chung của to&agrave;n doanh nghiệp, chung tay x&acirc;y dựng đất nước Việt Nam thịnh vượng, h&ograve;a nhập c&ugrave;ng thế giới. Ch&uacute;ng t&ocirc;i - VNGroup kh&ocirc;ng ngừng nỗ lực s&aacute;ng tạo, ph&aacute;t triển nhằm mang đến những sản phẩm/ dịch vụ chất lượng, g&oacute;p phần tạo ra của cải vật chất, gi&aacute; trị gia tăng cho doanh nghiệp/ x&atilde; hội. Sự tin tưởng v&agrave; h&agrave;i l&ograve;ng của kh&aacute;ch h&agrave;ng l&agrave; kim chỉ nam cho sự nghiệp ph&aacute;t triển chung của Tập đo&agrave;n.</p>', '1531343889.giá trị cốt lõi.png', NULL, '2018-07-11 14:18:09'),
+(11, 'Tầm nhìn', 'Triết lý kinh doanh', '<p><big><strong>&quot;Gi&aacute; trị của sự bền vững&quot;</strong></big></p>\r\n\r\n<p>Slogan thể hiện triết l&yacute; kinh doanh, t&ocirc;n chỉ hoạt động của VNGroup trong suốt 15 năm qua. Th&ocirc;ng điệp n&agrave;y c&ograve;n thể hiện đầy đủ c&aacute;c kh&iacute;a cạnh của tập đo&agrave;n, từ lịch sử, văn h&oacute;a, gi&aacute; trị cốt l&otilde;i đến tầm nh&igrave;n sứ mệnh ph&aacute;t triển VNGroup.<br />\r\nNhấn mạnh đến yếu tố &ldquo;bền vững&rdquo;, VNGroup hiểu rằng, yếu tố con người, gi&aacute; trị nguồn nh&acirc;n lực đ&oacute;ng vai tr&ograve; thiết yếu trong việc ph&aacute;t triển doanh nghiệp v&agrave; lợi &iacute;ch cộng đồng.<br />\r\nĐể ho&agrave;n th&agrave;nh sứ mệnh &ldquo;Bền Vững&rdquo; tr&ecirc;n, VNGroup đ&atilde; đưa ra những chiến lược ph&aacute;t triển to&agrave;n diện, l&acirc;u d&agrave;i. Theo đ&oacute;, sự ph&aacute;t triển bền vững ở đ&acirc;y bao gồm nhiều kh&iacute;a cạnh, cụ thể: bền vững về mặt t&agrave;i ch&iacute;nh, bền vững về yếu tố con người v&agrave; bền vững về ng&agrave;nh nghề hoạt động , Danh mục sản phẩm đầu tư đảm bảo kh&ocirc;ng bị lỗi thời so với xu hướng của thời đại .<br />\r\nNhững yếu tố n&agrave;y g&oacute;p phần x&acirc;y dựng niềm tin nơi kh&aacute;ch h&agrave;ng, đẩy mạnh uy t&iacute;n cũng như gi&aacute; trị cho thương hiệu VNGROUP. Tại VNGroup, ch&uacute;ng t&ocirc;i hiểu rằng Bền Vững l&agrave; sứ mệnh duy nhất trong hoạt động định hướng của Doanh nghiệp .</p>\r\n\r\n<p>&nbsp;</p>', '1531338984.tRIEETS LIS KINH DOANH.png', NULL, '2018-07-11 12:56:24'),
+(12, 'Văn hóa', 'Quy mô VNGroup', '<p>Trải qua thời gian d&agrave;i hoạt động, đến nay VNGroup đ&atilde; mở rộng quy m&ocirc; hoạt động ở nhiều lĩnh vực kh&aacute;c nhau như: Bất động sản, Tư vấn ph&aacute;p luật, Truyền th&ocirc;ng &ndash; maketing, Thẩm định gi&aacute;&hellip; VNGroup lu&ocirc;n tự h&agrave;o l&agrave; một trong những đơn vị c&oacute; vị thế vững mạnh với những dịch vụ chuy&ecirc;n nghiệp v&agrave; tạo dựng được uy t&iacute;n tr&ecirc;n thị trường.</p>\r\n\r\n<p>Với mục đ&iacute;ch tạo dựng n&ecirc;n mối li&ecirc;n kết chặt chẽ trong to&agrave;n bộ Tập đo&agrave;n VNGroup n&oacute;i chung, tạo nguồn động lực th&uacute;c đẩy doanh nghiệp đo&agrave;n kết v&agrave; ph&aacute;t triển bền vững. Văn h&oacute;a doanh nghiệp được VNGroup x&acirc;y dựng v&agrave; mong muốn ph&aacute;t triển dựa tr&ecirc;n th&uacute;c đẩy tinh thần l&agrave;m việc, ph&aacute;t huy t&iacute;nh d&acirc;n chủ, năng lực của mỗi c&aacute; nh&acirc;n.</p>\r\n\r\n<p>Để l&agrave;m được điều đ&oacute;, Ban l&atilde;nh đạo v&agrave; C&ocirc;ng đo&agrave;n VNGroup lu&ocirc;n ch&uacute; trọng đến đời sống văn h&oacute;a tinh thần của từng c&aacute;n bộ nh&acirc;n vi&ecirc;n. Song song với việc ph&aacute;t triển doanh nghiệp, ch&uacute;ng t&ocirc;i hiểu rằng mỗi nh&acirc;n vi&ecirc;n ch&iacute;nh l&agrave; nguồn năng lượng t&iacute;ch cực mang đến ph&aacute;t triển to&agrave;n diện v&agrave; th&agrave;nh c&ocirc;ng vững chắc.</p>', '1531338809.quy mo.png', NULL, '2018-07-11 12:53:29'),
+(13, 'Văn hóa', 'Môi trường làm việc chuyên nghiệp, thỏa sức cho ước mơ sải cánh', '<p>Tại VNGroup ch&uacute;ng t&ocirc;i lu&ocirc;n cố gắng tạo ra m&ocirc;i trường l&agrave;m việc thoải m&aacute;i, s&aacute;ng tạo nhất. Nơi c&aacute;c th&agrave;nh vi&ecirc;n được tự do l&agrave;m việc, được c&ocirc;ng hiến hết sức với niềm đam m&ecirc; của m&igrave;nh.&nbsp;</p>', '1531338969.quy mô làm việc.png', NULL, '2018-07-11 12:56:09'),
+(14, 'Văn hóa', 'Lao động và hưởng thụ', '<p>B&ecirc;n cạnh m&ocirc;i trường l&agrave;m việc chuy&ecirc;n nghiệp mang t&iacute;nh độc lập v&agrave; s&aacute;ng tạo, VNGroup c&ograve;n tạo n&ecirc;n một m&ocirc;i trường lao động hưởng thụ cho nh&acirc;n vi&ecirc;n của m&igrave;nh. Tất cả c&aacute;c th&agrave;nh vi&ecirc;n của VNGroup đều cố gắng nỗ lực vun đắp x&acirc;y dựng để tạo n&ecirc;n một VNGroup với nền văn h&oacute;a mang bản sắc v&agrave; dấu ấn ri&ecirc;ng biệt. Trong những ng&agrave;y lễ Tết VNGroup đều tổ chức những đều tổ chức những buổi li&ecirc;n hoan, s&ocirc;i nổi, đầm ấm vui tươi cho c&aacute;n bộ nh&acirc;n vi&ecirc;n.</p>\r\n\r\n<p>B&ecirc;n cạnh đ&oacute; VNGroup c&ograve;n thường xuy&ecirc;n tổ chức c&aacute;c hoạt động văn nghệ, thể thao hay những chuyến đi du lịch xa nhằm đem lại sự thoải m&aacute;i cho nh&acirc;n vi&ecirc;n sau một thời gian d&agrave;i l&agrave;m việc căng thẳng v&agrave; vất vả. V&agrave; sau mỗi buổi tổng kết của từng qu&yacute;, từng năm, VNGroup lu&ocirc;n c&oacute; những phần thưởng xứng đ&aacute;ng động vi&ecirc;n v&agrave; trao bằng khen cho những c&aacute; nh&acirc;n xuất sắc&hellip;.</p>', '1531338818.Lao động và hưởng thụ.png', NULL, '2018-07-11 12:53:38'),
+(15, 'ceo', 'Nguyễn Văn A', '<p>Ceo and Founder</p>', '1531338947.rawpixel-648558-unsplash.png', NULL, '2018-07-11 12:55:47'),
 (16, 'ceo', 'Nguyễn Văn A', '<p>Ceo and Founder</p>', '1527340315.rawpixel-648558-unsplash.png', NULL, '2018-05-26 06:11:55'),
 (17, 'ceo', 'Nguyễn Văn A', '<p>Ceo and Founder</p>', '1527340325.rawpixel-648558-unsplash.png', NULL, '2018-05-26 06:12:05'),
 (18, 'name', 'title', 'text', 'img', NULL, NULL),
@@ -80,7 +80,7 @@ INSERT INTO `about` (`id`, `name`, `title`, `content`, `img`, `created_at`, `upd
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contact`
+-- Table structure for table `contact`
 --
 
 CREATE TABLE `contact` (
@@ -92,7 +92,7 @@ CREATE TABLE `contact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `contact`
+-- Dumping data for table `contact`
 --
 
 INSERT INTO `contact` (`id`, `name`, `content`, `created_at`, `updated_at`) VALUES
@@ -103,7 +103,7 @@ INSERT INTO `contact` (`id`, `name`, `content`, `created_at`, `updated_at`) VALU
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `home`
+-- Table structure for table `home`
 --
 
 CREATE TABLE `home` (
@@ -117,23 +117,25 @@ CREATE TABLE `home` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `home`
+-- Dumping data for table `home`
 --
 
 INSERT INTO `home` (`id`, `title`, `content`, `img`, `link`, `created_at`, `updated_at`) VALUES
-(1, 'Tổng quan về VN Group', '<p>L&agrave; một tập đo&agrave;n đa ng&agrave;nh c&oacute; hệ sinh th&aacute;i khởi nghiệp kh&eacute;p k&iacute;n tạo n&ecirc;n gi&aacute; trị ph&aacute;t triển bền vững. Kh&ocirc;ng chỉ mang lại cuộc sống ấm no hạnh ph&uacute;c cho CBNV to&agrave;n hệ thống, VNGroup c&ograve;n g&oacute;p phần tạo ra những gi&aacute; trị thịnh vượng nh&acirc;n văn cho cộng đồng .</p>', '1528082166.osman-rana-293978-unsplash (1).png', 'http://localhost/laravel_vng_group/overview', NULL, '2018-06-03 20:16:07'),
-(2, 'Sàn giao dịch BĐS VNG', '<p>S&agrave;n giao dịch&nbsp;BĐS l&agrave; sự ước t&iacute;nh về gi&aacute; trị của c&aacute;c quyền sở hữu bất động sản bao gồm: C&aacute;c loại đất đai, nh&agrave; v&agrave; c&ocirc;ng tr&igrave;nh x&acirc;y dựng gắn liền với đất đai; Hoặc t&agrave;i sản gắn liền với đất đai, t&agrave;i sản kh&aacute;c do ph&aacute;p luật quy định&hellip;</p>', '1527476941.1.png', 'http://vnggroup.com.vn/', NULL, '2018-05-27 20:21:35'),
-(3, 'Thẩm định giá VNG', '<p>Thẩm định gi&aacute; BĐS l&agrave; sự ước t&iacute;nh về gi&aacute; trị của c&aacute;c quyền sở hữu bất động sản bao gồm: C&aacute;c loại đất đai, nh&agrave; v&agrave; c&ocirc;ng tr&igrave;nh x&acirc;y dựng gắn liền với đất đai; Hoặc t&agrave;i sản gắn liền với đất đai, t&agrave;i sản kh&aacute;c do ph&aacute;p luật quy định&hellip;</p>', '1527476950.2.png', 'http://thamdinhgiavng.com/', NULL, '2018-05-27 20:20:10'),
-(4, 'Văn phong luật sư VNG', '<p>Văn ph&ograve;ng luật sư VNG Việt Nam (VNG Viet Nam Law Firm) được th&agrave;nh lập từ năm 2009 v&agrave; ng&agrave;y c&agrave;ng khẳng định vị tr&iacute; vững mạnh trong lĩnh vực ph&aacute;p l&yacute;.&nbsp;</p>', '1527476958.3.png', 'http://vnglaw.com/', NULL, '2018-05-27 20:20:36'),
-(5, 'Truyền thông VNG', '<p>Chiến lược marketing tổng thể/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Lập kế hoạch marketing/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Chiến lược quảng c&aacute;o/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Kế hoạch truyền th&ocirc;ng/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Lập kế hoạch b&aacute;n h&agrave;ng/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;XD bộ nhận diện thương hiệu</p>', '1527476964.4.png', 'http://vngmedia.vn/', NULL, '2018-05-27 20:21:23'),
-(6, 'lịch sử phát triển', '<p>To&agrave;n hệ thống c&oacute;:<br />\r\n- 6 đơn vị th&agrave;nh vi&ecirc;n:<br />\r\n+ C&ocirc;ng ty cổ phần Bất động sản VNG Việt Nam<br />\r\n+ C&ocirc;ng ty TNHH thẩm định gi&aacute; VNG Việt Nam<br />\r\n+ C&ocirc;ng ty cổ phần truyền th&ocirc;ng VNG Việt Nam<br />\r\n+ Văn ph&ograve;ng luật sư VNG Việt Nam<br />\r\n+ Văn ph&ograve;ng c&ocirc;ng chứng L&ecirc; Vinh Hoa ( Khai trương ng&agrave;y 26/6/2017)<br />\r\n+ Tiktak Coworking Space (Khai trương th&aacute;ng 10/2017)<br />\r\n- 1 chi nh&aacute;nh Đ&agrave; Nẵng tại địa chỉ: Số 68, Đường 2 th&aacute;ng 9, P. B&igrave;nh Hi&ecirc;n, Q. Hải Ch&acirc;u, TP. Đ&agrave; Nẵng<br />\r\n- 1 VPĐD TP. Hồ Ch&iacute; Minh tại địa chỉ: Tầng 10, Số 40 Phạm Ngọc Thạch, Phường 6, Quận 3, Tp Hồ Ch&iacute;<br />\r\nMinh<br />\r\nVới hơn 200 CBNV</p>', '1528082135.anthony-delanoix-64066-unsplash.png', 'overview?scroll=history', NULL, '2018-06-03 20:30:49'),
-(7, 'Tầm nhìn - sứ mệnh', '<p>L&agrave; một tập đo&agrave;n đa ng&agrave;nh c&oacute; hệ sinh th&aacute;i khởi nghiệp kh&eacute;p k&iacute;n tạo n&ecirc;n gi&aacute; trị ph&aacute;t triển bền vững.</p>\r\n\r\n<p>Kh&ocirc;ng chỉ mang lại cuộc sống ấm no hạnh ph&uacute;c cho CBNV to&agrave;n hệ thống, VNGroup c&ograve;n g&oacute;p phần tạo ra những gi&aacute; trị thịnh vượng nh&acirc;n văn cho cộng đồng .</p>\r\n\r\n<p>Mục ti&ecirc;u của VNGroup: Lu&ocirc;n nỗ lực ĐỔI MỚI - kh&ocirc;ng ngừng S&Aacute;NG TẠO, &aacute;p dụng c&ocirc;ng nghệ, đ&oacute;n đầu cơ hội để trở th&agrave;nh một Tập đo&agrave;n vững mạnh, sẵn s&agrave;ng cho tiến tr&igrave;nh hội nhập Quốc tế.</p>', '1528082377.christoph-schulz-79891-unsplash.png', 'overview?scroll=vision', NULL, '2018-06-03 20:30:37'),
-(8, 'Văn hóa', '<p>Qua một thời gian hoạt động đến nay VNGroup đ&atilde; mở rộng quy m&ocirc; hoạt động ở nhiều lĩnh vực kh&aacute;c nhau như:</p>\r\n\r\n<p>Bất động sản, Tư vấn ph&aacute;p luật, truyền th&ocirc;ng &ndash; maketing, thẩm định gi&aacute;&hellip;</p>\r\n\r\n<p>VNGroup lu&ocirc;n tự h&agrave;o l&agrave; một trong những đơn vị c&oacute; vị thế vững mạnh với những dịch vụ chuy&ecirc;n nghiệp v&agrave; tạo dựng được uy t&iacute;n tr&ecirc;n thị trường.</p>\r\n\r\n<p>Với mục đ&iacute;ch tạo dựng n&ecirc;n mối li&ecirc;n kết chặt chẽ trong to&agrave;n bộ Tập đo&agrave;n VNGroup n&oacute;i chung, tạo nguồn động lực th&uacute;c đẩy doanh nghiệp đo&agrave;n kết v&agrave; ph&aacute;t triển bền vững.&nbsp;</p>', '1528082389.anthony-delanoix-64066-unsplash.png', 'overview?scroll=culture', NULL, '2018-06-03 20:29:42');
+(1, 'Tổng quan về VNGroup', '<p>L&agrave; một tập đo&agrave;n đa ng&agrave;nh c&oacute; hệ sinh th&aacute;i khởi nghiệp kh&eacute;p k&iacute;n tạo n&ecirc;n gi&aacute; trị ph&aacute;t triển bền vững. Kh&ocirc;ng chỉ mang lại cuộc sống ấm no hạnh ph&uacute;c cho CBNV to&agrave;n hệ thống, VNGroup c&ograve;n g&oacute;p phần tạo ra những gi&aacute; trị thịnh vượng nh&acirc;n văn cho cộng đồng .</p>', '1528082166.osman-rana-293978-unsplash (1).png', NULL, NULL, '2018-06-19 02:32:59'),
+(2, 'Tầm nhìn - sứ mệnh', '<p>L&agrave; một tập đo&agrave;n đa ng&agrave;nh c&oacute; hệ sinh th&aacute;i khởi nghiệp kh&eacute;p k&iacute;n tạo n&ecirc;n gi&aacute; trị ph&aacute;t triển bền vững.</p>\r\n\r\n<p>Kh&ocirc;ng chỉ mang lại cuộc sống ấm no hạnh ph&uacute;c cho CBNV to&agrave;n hệ thống, VNGroup c&ograve;n g&oacute;p phần tạo ra những gi&aacute; trị thịnh vượng nh&acirc;n văn cho cộng đồng .</p>\r\n\r\n<p>Mục ti&ecirc;u của VNGroup: Lu&ocirc;n nỗ lực ĐỔI MỚI - kh&ocirc;ng ngừng S&Aacute;NG TẠO, &aacute;p dụng c&ocirc;ng nghệ, đ&oacute;n đầu cơ hội để trở th&agrave;nh một Tập đo&agrave;n vững mạnh, sẵn s&agrave;ng cho tiến tr&igrave;nh hội nhập Quốc tế.</p>', '1531337429.Tầm nhìn sứ mệnh.png', 'overview?scroll=vision', NULL, '2018-07-11 12:30:29'),
+(3, 'Văn hóa', '<p>Qua một thời gian hoạt động đến nay VNGroup đ&atilde; mở rộng quy m&ocirc; hoạt động ở nhiều lĩnh vực kh&aacute;c nhau như:</p>\r\n\r\n<p>Bất động sản, Tư vấn ph&aacute;p luật, truyền th&ocirc;ng &ndash; maketing, thẩm định gi&aacute;&hellip;</p>\r\n\r\n<p>VNGroup lu&ocirc;n tự h&agrave;o l&agrave; một trong những đơn vị c&oacute; vị thế vững mạnh với những dịch vụ chuy&ecirc;n nghiệp v&agrave; tạo dựng được uy t&iacute;n tr&ecirc;n thị trường.</p>\r\n\r\n<p>Với mục đ&iacute;ch tạo dựng n&ecirc;n mối li&ecirc;n kết chặt chẽ trong to&agrave;n bộ Tập đo&agrave;n VNGroup n&oacute;i chung, tạo nguồn động lực th&uacute;c đẩy doanh nghiệp đo&agrave;n kết v&agrave; ph&aacute;t triển bền vững.&nbsp;</p>', '1531337442.Van hoa.png', 'overview?scroll=culture', NULL, '2018-07-11 12:30:42'),
+(4, 'Lịch sử', '<p>To&agrave;n hệ thống c&oacute;:<br />\r\n- 6 đơn vị th&agrave;nh vi&ecirc;n:<br />\r\n+ C&ocirc;ng ty cổ phần Bất động sản VNG Việt Nam<br />\r\n+ C&ocirc;ng ty TNHH thẩm định gi&aacute; VNG Việt Nam<br />\r\n+ C&ocirc;ng ty cổ phần truyền th&ocirc;ng VNG Việt Nam<br />\r\n+ Văn ph&ograve;ng luật sư VNG Việt Nam<br />\r\n+ Văn ph&ograve;ng c&ocirc;ng chứng L&ecirc; Vinh Hoa ( Khai trương ng&agrave;y 26/6/2017)<br />\r\n+ Tiktak Coworking Space (Khai trương th&aacute;ng 10/2017)<br />\r\n- 1 chi nh&aacute;nh Đ&agrave; Nẵng tại địa chỉ: Số 68, Đường 2 th&aacute;ng 9, P. B&igrave;nh Hi&ecirc;n, Q. Hải Ch&acirc;u, TP. Đ&agrave; Nẵng<br />\r\n- 1 VPĐD TP. Hồ Ch&iacute; Minh tại địa chỉ: Tầng 10, Số 40 Phạm Ngọc Thạch, Phường 6, Quận 3, Tp Hồ Ch&iacute;<br />\r\nMinh<br />\r\nVới hơn 200 CBNV</p>', '1531337333.Lịch sử.png', 'overview?scroll=history', NULL, '2018-07-11 12:28:53'),
+(5, 'Sàn giao dịch BĐS VNG', '<p>S&agrave;n giao dịch&nbsp;BĐS l&agrave; sự ước t&iacute;nh về gi&aacute; trị của c&aacute;c quyền sở hữu bất động sản bao gồm: C&aacute;c loại đất đai, nh&agrave; v&agrave; c&ocirc;ng tr&igrave;nh x&acirc;y dựng gắn liền với đất đai; Hoặc t&agrave;i sản gắn liền với đất đai, t&agrave;i sản kh&aacute;c do ph&aacute;p luật quy định&hellip;</p>', '1531338015.Bất động sản.png', 'http://vnggroup.com.vn/', NULL, '2018-07-11 12:40:15'),
+(6, 'Thẩm định giá VNG', '<p>Thẩm định gi&aacute; BĐS l&agrave; sự ước t&iacute;nh về gi&aacute; trị của c&aacute;c quyền sở hữu bất động sản bao gồm: C&aacute;c loại đất đai, nh&agrave; v&agrave; c&ocirc;ng tr&igrave;nh x&acirc;y dựng gắn liền với đất đai; Hoặc t&agrave;i sản gắn liền với đất đai, t&agrave;i sản kh&aacute;c do ph&aacute;p luật quy định&hellip;</p>', '1531338750.Thẩm định giá.png', 'http://thamdinhgiavng.com/', NULL, '2018-07-11 12:52:30'),
+(7, 'Văn phòng luật sư VNG', '<p>Văn ph&ograve;ng luật sư VNG Việt Nam (VNG Viet Nam Law Firm) được th&agrave;nh lập từ năm 2009 v&agrave; ng&agrave;y c&agrave;ng khẳng định vị tr&iacute; vững mạnh trong lĩnh vực ph&aacute;p l&yacute;.&nbsp;</p>', '1531338031.Văn phòng luật.png', 'http://vnglaw.com/', NULL, '2018-07-11 12:40:31'),
+(8, 'Truyền thông VNG', '<p>Chiến lược marketing tổng thể/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Lập kế hoạch marketing/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Chiến lược quảng c&aacute;o/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Kế hoạch truyền th&ocirc;ng/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Lập kế hoạch b&aacute;n h&agrave;ng/<br />\r\n&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;XD bộ nhận diện thương hiệu</p>', '1531338041.Truyển thông.png', 'http://vngmedia.vn/', NULL, '2018-07-11 12:40:41'),
+(9, 'Tiktak Co Working', '<p>Tiktak Co- working Space mang đến kh&ocirc;ng gian l&agrave;m việc chung chuy&ecirc;n nghiệp, hiện đại, s&aacute;ng tạo cho cộng đồng Start up H&agrave; Nội.</p>\r\n\r\n<p>Với diện t&iacute;ch tổng thể l&ecirc;n đến gần 2.000m2, thiết kế nội thất sang trọng, tinh tế đem đến cho người sử dụng cảm gi&aacute;c thoải m&aacute;i, s&aacute;ng tạo.</p>', '1531338053.Tiktak.png', 'http://tiktak.com.vn/', NULL, '2018-07-11 12:40:53'),
+(10, 'VPCC Lê Vinh Hoa', '<p><strong>Văn ph&ograve;ng c&ocirc;ng chứng L&ecirc; Vinh Hoa</strong>&nbsp;l&agrave; một trong những văn ph&ograve;ng c&ocirc;ng chứng c&oacute; uy t&iacute;n tr&ecirc;n địa b&agrave;n Th&agrave;nh phố H&agrave; Nội.</p>\r\n\r\n<p>Phương ch&acirc;m hoạt động của ch&uacute;ng t&ocirc;i l&agrave;:&nbsp;<strong>&ldquo;An to&agrave;n &ndash; Chuy&ecirc;n nghiệp &ndash; Hiệu quả&rdquo;</strong>&nbsp;nhằm đ&aacute;p ứng nhanh ch&oacute;ng, kịp thời c&aacute;c y&ecirc;u cầu c&ocirc;ng chứng của kh&aacute;ch h&agrave;ng một c&aacute;ch an to&agrave;n ph&aacute;p l&yacute;.</p>', '1531272872.MG_1381.jpg', 'http://congchunglevinhhoa.com/', NULL, '2018-07-10 18:34:32');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `image`
+-- Table structure for table `image`
 --
 
 CREATE TABLE `image` (
@@ -145,7 +147,7 @@ CREATE TABLE `image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `image`
+-- Dumping data for table `image`
 --
 
 INSERT INTO `image` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
@@ -163,7 +165,7 @@ INSERT INTO `image` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `member`
+-- Table structure for table `member`
 --
 
 CREATE TABLE `member` (
@@ -176,7 +178,7 @@ CREATE TABLE `member` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `member`
+-- Dumping data for table `member`
 --
 
 INSERT INTO `member` (`id`, `name`, `img`, `content`, `created_at`, `updated_at`) VALUES
@@ -187,7 +189,7 @@ INSERT INTO `member` (`id`, `name`, `img`, `content`, `created_at`, `updated_at`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -197,7 +199,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -214,7 +216,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
@@ -229,7 +231,7 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `news`
+-- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`id`, `title`, `slug`, `img`, `content`, `type`, `created_at`, `updated_at`) VALUES
@@ -254,7 +256,7 @@ INSERT INTO `news` (`id`, `title`, `slug`, `img`, `content`, `type`, `created_at
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project`
+-- Table structure for table `project`
 --
 
 CREATE TABLE `project` (
@@ -284,22 +286,26 @@ CREATE TABLE `project` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project`
+-- Dumping data for table `project`
 --
 
 INSERT INTO `project` (`id`, `name`, `slug`, `img`, `investor`, `featured`, `type`, `overviewContent`, `locationContent`, `utilityContent`, `overviewImg`, `locationImg`, `utilityImg`, `albumImg1`, `albumImg2`, `albumImg3`, `albumImg4`, `albumImg5`, `albumImg6`, `albumImg7`, `albumImg8`, `created_at`, `updated_at`) VALUES
-(1, 'Dự án The Arena Cam Ranh', 'du-an-the-arena-cam-ranh', 'cam-ranh-5.jpg', '<p><strong>Dự &aacute;n The Arena Cam Ranh</strong></p>\r\n\r\n<p>The Arena Nha Trang tọa lạc tại ven biển B&atilde;i D&agrave;i, Cam Ranh &ndash; Đ&acirc;y l&agrave; dự &aacute;n đầu ti&ecirc;n v&agrave; duy nhất tại B&atilde;i D&agrave;i c&oacute; m&ocirc; h&igrave;nh khu nghỉ dưỡng kết hợp vui chơi giải tr&iacute; đẳng cấp. Dự &aacute;n hứa hẹn sẽ l&agrave; &ldquo;thi&ecirc;n đường nghỉ dưỡng&rdquo; trong mơ của du kh&aacute;ch nội địa v&agrave; quốc tế. The Arena Cam Ranh, được kỳ vọng trở th&agrave;nh &ldquo;cơn sốt&rdquo; bất động sản nghỉ dưỡng 2017, đ&oacute;n đầu xu hướng đầu tư 2018, hứa hẹn mang đến cơ hội sinh lời hấp dẫn cho c&aacute;c nh&agrave; đầu tư th&ocirc;ng th&aacute;i.</p>', 0, 0, '<p><strong>&ndash; T&ecirc;n thương mại:</strong>&nbsp;The Arena Cam Ranh.</p>\r\n\r\n<p><strong>&ndash; Chủ đầu tư:</strong>&nbsp;C&ocirc;ng ty Cổ phần Đầu Tư X&acirc;y dựng Vịnh Nha Trang.</p>\r\n\r\n<p><strong>&ndash; Vị tr&iacute;:</strong>&nbsp;L&ocirc; D14D B&atilde;i D&agrave;i, Cam Ranh, Nha Trang</p>\r\n\r\n<p><strong>&ndash; Tổng diện t&iacute;ch:</strong>&nbsp;29ha</p>\r\n\r\n<p><strong>&ndash; Loại h&igrave;nh:</strong>&nbsp;Condotel 90% view biển</p>\r\n\r\n<p><strong>&ndash; Quy m&ocirc; dự &aacute;n:</strong>&nbsp;4 t&ograve;a (cao 21-25 tầng nổi), 5.248 căn hộ kh&aacute;ch sạn.</p>\r\n\r\n<p><strong>&ndash; Đơn vị thiết kế:</strong>&nbsp;Finko</p>\r\n\r\n<p><strong>&ndash; Tư vấn gi&aacute;m s&aacute;t:</strong>&nbsp;Artelia</p>\r\n\r\n<p><strong>&ndash; Dự kiến b&agrave;n giao:</strong>&nbsp;12/2019</p>\r\n\r\n<p><strong>&ndash; H&igrave;nh thức sở hữu:</strong>&nbsp;Đất 50 năm cho Condotel v&agrave; l&acirc;u d&agrave;i (kh&ocirc;ng h&igrave;nh th&agrave;nh đơn vị ở) cho biệt thự.</p>', '<p>Vị tr&iacute; &ldquo;ĐỘC NHẤT &ndash; V&Ocirc; NHỊ&rdquo; đầy tiềm năng khi nằm ngay cạnh bờ biển B&atilde;i D&agrave;i &ndash; Cam Ranh nổi tiếng với vẻ đẹp biển xanh, c&aacute;t trắng, nắng v&agrave;ng. The Arena Cam Ranh được x&acirc;y dựng ngay mặt đường Nguyễn Tất Th&agrave;nh &ndash; Vịnh Cam Ranh &ndash; B&atilde;i D&agrave;i, gi&uacute;p dự &aacute;n kết nối dễ d&agrave;ng&nbsp;đến c&aacute;c tiện &iacute;ch, địa danh nổi tiếng tại khu vực:</p>\r\n\r\n<ul>\r\n	<li>&nbsp;Kết nối dễ d&agrave;ng với c&aacute;c địa danh du lịch nổi tiếng: đảo B&igrave;nh Ba, b&aacute;n đảo B&igrave;nh Lập, khu bảo tồn thi&ecirc;n nhi&ecirc;n H&ograve;n B&agrave;, khu vui chơi Sealife, ch&ugrave;a Ốc Từ V&acirc;n&hellip;</li>\r\n	<li>&nbsp;Gần ngay cầu Mới</li>\r\n	<li>&nbsp;C&aacute;ch Vinpearl B&atilde;i D&agrave;i chỉ 2 ph&uacute;t</li>\r\n	<li>&nbsp;Cạnh khu Anam Resort v&agrave; Spa Vinpearl B&atilde;i D&agrave;i</li>\r\n	<li>&nbsp;C&aacute;ch s&acirc;n bay Quốc tế Cam Ranh chỉ 3km</li>\r\n	<li>&nbsp;C&aacute;ch trung t&acirc;m th&agrave;nh phố Cam Ranh 20 ph&uacute;t</li>\r\n	<li>&nbsp;C&aacute;ch th&agrave;nh phố Nha Trang 35 ph&uacute;t</li>\r\n</ul>', '<p><em>Hệ thống tiện &iacute;ch 5* chuy&ecirc;n nghiệp, độc đ&aacute;o với hơn 25 hạng mục:</em><br />\r\n&ndash; Bể bơi nước mặn lớn nhất Việt Nam<br />\r\n&ndash; Hệ thống Gym &amp; Spa (Spa ngo&agrave;i trời tr&ecirc;n từng tầng của căn hộ, hồ bơi nước kho&aacute;ng n&oacute;ng&hellip;)<br />\r\n&ndash; Phố đi bộ, quảng trường, thủy cung v&agrave; nh&agrave; h&agrave;ng view hồ<br />\r\n&ndash; Zipline C&aacute;p Treo Giữa T&ograve;a Nh&agrave;, S&acirc;n Khấu Nhạc Nước V&agrave; C&ocirc;ng Vi&ecirc;n Giải Tr&iacute; Quy M&ocirc; Lớn<br />\r\n&ndash; C&ugrave;ng hệ thống ẩm thực phong ph&uacute; đa dạng với chuỗi nh&agrave; h&agrave;ng hải sản cao cấp, BBQ, Buffet, ẩm thực &Aacute; &ndash; &Acirc;u&hellip;</p>', '1527507379.cam-ranh3.jpg', '1527507379.cam-ranh4.jpg', '1527507379.cam-ranh1.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-02 09:09:14', '2018-05-28 04:36:19'),
-(2, 'Dự án Vinhome Metropolis', 'du-an-vinhome-metropolis', '3-1.jpg', '<p>Đang xậy dựng</p>', 0, 0, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-02 09:10:08', '2018-05-27 20:49:42'),
-(3, 'Dự án Panorama Nha Trang', 'du-an-panorama-nha-trang', '2-3.jpg', '<p>Nothing</p>', 0, 1, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-02 09:10:57', '2018-05-28 01:34:32'),
-(4, 'Dự án D’.Le Roi SoLeil Quảng An – Tây Hồ', 'du-an-dle-roi-soleil-quang-an-tay-ho', '1-1.jpg', '<p>OKe oke</p>', 0, 1, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-05-27 20:41:56', '2018-05-27 22:11:14'),
-(5, 'CocoBay Đà Nẵng', 'cocobay-da-nang', 'hs_2018-06-04_1528084656.jpeg', '<p><strong>Chủ đầu tư</strong></p>\r\n\r\n<p>Tập đo&agrave;n Empire Group c&oacute; tiền th&acirc;n l&agrave; CTCP Ph&aacute;t triển X&acirc;y dựng Th&agrave;nh Đ&ocirc; với 25 năm kinh nghiệm hoạt động trong lĩnh vực bất động sản, t&agrave;i ch&iacute;nh v&agrave; du lịch &ndash; giải tr&iacute;. Đ&acirc;y ch&iacute;nh l&agrave; c&ocirc;ng ty đ&atilde; th&agrave;nh c&ocirc;ng với dự &aacute;n lớn như C&ocirc;ng vi&ecirc;n nước Hồ T&acirc;y v&agrave; khu nghỉ dưỡng 5 sao Naman Retreat Đ&agrave; Nẵng. Empire Group thể hiện thực lực với tầm nh&igrave;n chiến lược đ&uacute;ng đắn v&agrave; ti&ecirc;n phong, kh&ocirc;ng những tăng chiến lược kinh doanh m&agrave; c&ograve;n gi&uacute;p thay đổi diện mạo du lịch Việt Nam</p>\r\n\r\n<p><strong>Chi tiết dự &aacute;n xem tại website: http://cocobays.vn</strong></p>', 3, 1, '<p>Cocobay l&agrave; Tổ hợp giải tr&iacute; v&agrave; du lịch tại Đ&agrave; Nẵng &ndash; Hội An phục vụ 10.000 ph&ograve;ng kh&aacute;ch sạn từ 3 &ndash; 5 sao được t&iacute;ch hợp c&aacute;c hoạt động dịch vụ giải tr&iacute; v&agrave; c&aacute;c tiện &iacute;ch h&agrave;ng đầu cho những k&igrave; nghỉ thời thượng. Cocobay tạo n&ecirc;n một kh&ocirc;ng gian hiện đại v&agrave; năng động, sang trọng v&agrave; đẳng cấp, mang đến những trải nghiệm thăng hoa nhất tại th&agrave;nh phố đ&aacute;ng sống nhất Việt Nam.</p>', '<p>Cocobay Đ&agrave; Nẵng sở hữu vị tr&iacute; đắc địa khi nằm ở trung t&acirc;m của con đường nối liền Đ&agrave; Nẵng &ndash; Hội An, phần mặt tiền l&agrave; một trong s&aacute;u b&atilde;i biển quyến rũ nhất h&agrave;nh tinh, sau lưng l&agrave; d&ograve;ng s&ocirc;ng Cổ C&ograve; thơ mộng v&agrave; hai b&ecirc;n cạnh l&agrave; hai s&acirc;n gofl h&agrave;ng đầu Việt Nam</p>', '<p>L&agrave; một điểm đến giải tr&iacute; mới của thế giới, Cocobay Đ&agrave; Nẵng được t&iacute;ch hợp v&ocirc; v&agrave;n c&aacute;c tiện &iacute;ch v&agrave; hoạt động giải tr&iacute; h&agrave;ng đầu đ&aacute;p ứng trọn vẹn c&aacute;c nhu cầu của du kh&aacute;ch. C&aacute;c nh&agrave; h&agrave;ng từ 3 &ndash; 5 sao, hệ thống c&aacute;c qu&aacute;n coffee, lounge, bar; s&acirc;n khấu ngo&agrave;i trời quy m&ocirc; cực lớn, c&aacute;c buổi tr&igrave;nh diễn đặc sắc đa sắc m&agrave;u v&agrave; c&aacute;c dịch vụ vui chơi đẳng cấp,&hellip; tất cả sẽ tạo n&ecirc;n một Cocobay s&ocirc;i động v&agrave; n&aacute;o nhiệt in đậm dấu ấn trong l&ograve;ng du kh&aacute;ch.</p>', '1527481773.tong-quan-du-an-cocobay-da-nang.png', '1527481773.vi-tri-du-an-cocobay-da-nang-viet-nam.png', '1527481773.tien-ich-du-an-cocobay-da-nang.png', '1527484152.Rectangle 11.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 6.png', '1527484208.brett-campbell-61762-unsplash - Copy.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 3.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 5.png', '1527484208.brett-campbell-61762-unsplash - Copy copy.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 2.png', '1527484208.brett-campbell-61762-unsplash - Copy copy 4.png', '2018-05-27 21:29:33', '2018-06-03 20:57:36'),
-(6, 'Dự án Golf Valley Đà Lạt', 'du-an-golf-valley-da-lat', '1527507244.toancanh3_L1.png', '<p>Tọa lạc ngay tại trung t&acirc;m th&agrave;nh phố Đ&agrave; Lạt, dự &aacute;n Golf Valley Đ&agrave; Lạt c&oacute; quy m&ocirc; gần 20 ha trải d&agrave;i l&agrave; một thể thống nhất ho&agrave;n hảo gồm phức hợp kiến tr&uacute;c cao tầng hiện đại, đa chức năng với trung t&acirc;m thương mại dịch vụ v&agrave; hội nghị, chuỗi nh&agrave; h&agrave;ng, c&agrave; ph&ecirc;, căn hộ cao cấp kết hợp với biệt thự nghỉ dưỡng thấp tầng sang trọng, ri&ecirc;ng tư nằm giữa khu c&ocirc;ng vi&ecirc;n mở trong kh&ocirc;ng gian xanh thơ mộng của những lo&agrave;i c&acirc;y v&agrave; hoa đặc trưng của xứ sở sương m&ugrave;.</p>', 0, 1, '<p>Dự &aacute;n Golf Valley Đ&agrave; Lạt c&oacute; tổng diện t&iacute;ch khoảng 20 ha. Dự &aacute;n được quy hoạch ph&aacute;t triển b&agrave;i bản , hiện đại định hướng trở th&agrave;nh khu đ&ocirc; thị kiểu mẫu, khu phức hợp thương mại giải tr&iacute; hiện đại đầu ti&ecirc;n ngay tại trung t&acirc;m th&agrave;nh phố ng&agrave;n hoa với nhiều tiện &iacute;ch hiện đại.</p>\r\n\r\n<p>Dự &aacute;n được t&iacute;ch hợp đầy đủ c&aacute;c tiện &iacute;ch như: trung t&acirc;m thương mại, mua sắm, giải tr&iacute;, kh&aacute;ch sạn 5 sao, nh&agrave; h&agrave;ng, cao ốc căn hộ, văn ph&ograve;ng, CLB thể thao, hệ thống s&acirc;n vườn, cảnh quan&hellip;</p>\r\n\r\n<p>Dự &aacute;n c&oacute; tổng diện t&iacute;ch: 3.453 m2</p>', '<p>Dự&nbsp; &aacute;n nằm ngay tại trung t&acirc;m Th&agrave;nh Phố Đ&agrave; Lạt, kế cận hồ Xu&acirc;n Hương v&agrave; gi&aacute;p với s&acirc;n Golf Dalat Palace.</p>\r\n\r\n<p>Ph&iacute;a Bắc: gi&aacute;p khu d&acirc;n cư đường Nguyễn Thị Nghi&atilde;</p>\r\n\r\n<p>Ph&iacute;a T&acirc;y: gi&aacute;p đường B&ugrave;i Thị Xu&acirc;n</p>\r\n\r\n<p>Ph&iacute;a Đ&ocirc;ng: gi&aacute;p đường Đinh Ti&ecirc;n Ho&agrave;ng &amp; s&acirc;n Golf Dalat Palace</p>\r\n\r\n<p>Ph&iacute;a Nam: gi&aacute;p đường Trần Quốc Toản &amp; hồ Xu&acirc;n Hương</p>', '<p>Chủ đầu tư x&acirc;y dựng dự &aacute;n Golf Valley Đ&agrave; Lạt l&agrave; một thể thống nhất ho&agrave;n hảo gồm c&aacute;c phức hợp kiến tr&uacute;c cao tầng hiện đại, đa chức năng với trung t&acirc;m thương mại dịch vụ v&agrave; hội nghị, chuỗi nh&agrave; h&agrave;ng, c&agrave; ph&ecirc;, kh&aacute;ch sạn, căn hộ cao cấp kết hợp với khu biệt thự nghỉ dưỡng thấp tầng sang trọng, ri&ecirc;ng tư nằm giữa khu c&ocirc;ng vi&ecirc;n mở trong kh&ocirc;ng gian xanh, thơ mộng của những lo&agrave;i c&acirc;y hoa đặc trưng&nbsp; của xứ sở sương m&ugrave;.</p>', '1527507244.khuthuongmai_L1.png', '1527507244.toancanh2_L1.png', '1527507244.cam-ranh1.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-05-27 20:59:58', '2018-05-28 04:34:04'),
-(7, 'Tiktak Coworking Space', 'tiktak-coworking-space', 'hs_2018-06-04_1528085017.jpeg', '<p>Trước xu hướng ph&aacute;t triển mạnh mẽ của giới Startup v&agrave; Freelancers, nhu cầu về một kh&ocirc;ng gian l&agrave;m việc chung ng&agrave;y c&agrave;ng lớn bởi vậy m&ocirc; h&igrave;nh n&agrave;y đ&atilde; lan rộng với tốc độ nhanh ch&oacute;ng tại Việt Nam. Khắc phục mọi yếu điểm v&agrave; hạn chế của văn ph&ograve;ng truyền thống, c&aacute;c kh&ocirc;ng gian l&agrave;m việc chung m&agrave; điển h&igrave;nh l&agrave; Tiktak Coworking Space đ&atilde; ra đời nhằm mục đ&iacute;ch tạo ra một m&ocirc;i trường l&agrave;m việc năng động, s&aacute;ng tạo, tiết kiệm chi ph&iacute; v&agrave; l&agrave; &ldquo;vườn ươm khởi nghiệp&rdquo; cho giới trẻ.</p>', 9, 1, '<p>Điểm nổi bật nhất ở m&ocirc; h&igrave;nh kh&ocirc;ng gian l&agrave;m việc chung (Coworking Space) so với h&igrave;nh thức thu&ecirc; văn ph&ograve;ng truyền thống ch&iacute;nh l&agrave; chi ph&iacute; tối ưu ph&ugrave; hợp với c&aacute;c Startup v&agrave; Freelancer. Thay v&igrave; phải đ&oacute;ng một khoản tiền thu&ecirc; lớn tối thiểu từ 06 th&aacute;ng cho đến 01 năm, c&ugrave;ng chi ph&iacute; điện, nước, internet&hellip; th&igrave; tại kh&ocirc;ng gian l&agrave;m việc chung n&agrave;y, c&aacute;c th&agrave;nh vi&ecirc;n c&oacute; thể chọn lựa g&oacute;i dịch vụ đa dạng, ph&ugrave; hợp với nhu cầu l&agrave;m việc linh hoạt của m&igrave;nh.</p>', '<p>.....</p>', '<p>....</p>', '1528085016.hs_2018-05-31_1527789257.jpeg', '1528085016.hs_2018-05-31_1527789350.jpeg', '1528085016.hs_2018-05-31_1527789164.jpeg', '1528094525.tiktak3.jpg', '1528094525.tiktak-1.jpg', '1528094525.tiktak1.jpg', '1528094525.2018-04-21_1524286200909_photo_2018-04-11_19-46-12.jpg', '1528094525.1526435736.jpg', '1528094572.resized-hs_2018-05-31_1527759654.jpeg', '1528094572.hs_2018-05-31_1527759661.jpeg', '1528094572.hs_2018-05-31_1527759698.jpeg', '2018-06-03 21:03:36', '2018-06-03 23:42:52');
+(8, 'Dự án Cẩm An – Hội An', 'du-an-cam-an-hoi-an', 'hs_2018-06-19_1529442130.jpeg', '<p><strong>Chủ đầu tư:&nbsp;</strong></p>\r\n\r\n<p>C&ocirc;ng ty CP Đầu tư x&acirc;y dựng&nbsp; PT Hội An v&agrave;&nbsp; C&ocirc;ng ty CP Đầu tư v&agrave; x&acirc;y dựng ANI Hội An<br />\r\nHợp t&aacute;c v&agrave; ph&acirc;n phối:&nbsp;C&ocirc;ng ty CP Bất động sản VNG Việt Nam</p>\r\n\r\n<p>Cẩm An &ndash; Hội An l&agrave; dự &aacute;n c&oacute; vị tr&iacute; đắc địa tr&ecirc;n đường Lạc Long Qu&acirc;n &ndash; tuyến đường ven biển 5 sao nối từ Sơn Tr&agrave; &ndash; Điện Ngọc đến b&atilde;i biển Cửa Đại. Nằm s&aacute;t ngay c&aacute;c Resort 5 sao như: The Nam Hai, Palm Garden Hoi An , Victori Hoi An Resort, Agribank Hoi An Beach Resort&hellip; v&agrave; chỉ c&aacute;ch Phố cổ Hội An 3 km.</p>', 9, 0, '<p>Khu nghỉ dưỡng Cẩm An &ndash; Hội An nằm ở ph&acirc;n khu I. Đ&acirc;y l&agrave; một ph&acirc;n khu đẹp nhất dự &aacute;n rất ph&ugrave; hợp h&igrave;nh thức đầu tư kinh doanh du lịch v&agrave; dịch vụ. <strong><em>&ldquo;Theo đ&aacute;nh gi&aacute; nghi&ecirc;n cứu Savills&rdquo; </em></strong>trong tương lai đ&acirc;y sẽ trở th&agrave;nh một khu du lịch nổi tiếng tại Hội An. Với lượng kh&aacute;ch du lịch đến Hội An tăng trưởng h&agrave;ng năm từ 15% th&igrave; dự &aacute;n n&agrave;y sẽ đ&aacute;p ứng được nhu cầu lưu tr&uacute; của kh&aacute;ch du lịch trong tương lai, giảm bớt &aacute;p lực trong phố cổ.</p>', '<p>Nằm tr&ecirc;n tuyến đường ven biển 5 sao nối từ Sơn Tr&agrave; &ndash; Điện Ngọc đến b&atilde;i biển Cửa Đại</p>\r\n\r\n<p>Khu nghỉ dưỡng Cẩm An &ndash; Hội An tổng diện t&iacute;ch: 53,4 ha được chia l&agrave;m c&aacute;c ph&acirc;n khu kh&aacute;c nhau, với những n&eacute;t truyền thống kết hợp hiện đại h&ograve;a quyện tạo n&ecirc;n n&eacute;t độc đ&aacute;o v&agrave; ấn tượng ri&ecirc;ng cho dự &aacute;n.</p>', '<p>Dự &aacute;n khu nghỉ dưỡng Cẩm An &ndash; Hội An l&agrave; một sản phẩm c&oacute; kiến tr&uacute;c đa dạng, mang đậm n&eacute;t văn h&oacute;a cổ kết hợp với kiến tr&uacute;c hiện đại, c&aacute;c căn hộ đều c&oacute; c&acirc;y xanh, tận dụng tối đa &aacute;nh s&aacute;ng tự nhi&ecirc;n, nội thất bố tr&iacute; tự nhi&ecirc;n, ưu ti&ecirc;n vật liệu th&acirc;n thiện với m&ocirc;i trường. Đặc biệt dự &aacute;n đ&atilde; x&acirc;y dựng ho&agrave;n thiện về mặt cơ sở hạ tầng như: hệ thống điện, đường đi bộ, hệ thống c&acirc;y xanh cũng như ho&agrave;n thiện nh&agrave; mẫu để kh&aacute;ch h&agrave;ng đến thăm quan.</p>', '1529442020.Cam-an-hoi-an-948x509.jpg', '1529442020.Vi-tri-706x402.jpg', '1529442020.Tien-ich-705x412.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 02:40:22', '2018-06-19 14:02:10'),
+(9, 'Dự án Khu dân cư bên bờ sông Đà – TP.Hòa Bình', 'du-an-khu-dan-cu-ben-bo-song-da-tphoa-binh', 'hs_2018-06-19_1529402701.jpeg', '<p><strong>Chủ đầu tư</strong></p>\r\n\r\n<p>C&ocirc;ng ty Cổ phần Bất động sản VNG Việt Nam</p>\r\n\r\n<p>Dự &aacute;n Khu d&acirc;n cư b&ecirc;n bờ s&ocirc;ng Đ&agrave; được đ&aacute;nh gi&aacute; l&agrave; một khu ở mới c&oacute; chất lượng cao, hiện đại, đa dạng, c&oacute; hệ thống hạ tầng kỹ thuật v&agrave; hạ tầng x&atilde; hội đồng bộ. Ngo&agrave;i chức năng l&agrave; khu để ở, ở đ&acirc;y c&ograve;n c&oacute; khu dịch vụ c&ocirc;ng cộng v&agrave; dịch vụ thương mại ho&agrave;n chỉnh.</p>\r\n\r\n<p>Kiến tr&uacute;c c&ocirc;ng tr&igrave;nh tại dự &aacute;n rất đa dạng: Dự &aacute;n bao gồm cả khu văn ph&ograve;ng cho thu&ecirc;, dịch vụ thương mại, kh&aacute;ch sạn; khu biệt thự điển h&igrave;nh; khu nh&agrave; ở liền kề điển h&igrave;nh; quỹ đất ph&acirc;n l&ocirc;.</p>', 8, 0, '<p>Dự &aacute;n Khu d&acirc;n cư b&ecirc;n bờ s&ocirc;ng Đ&agrave; được đ&aacute;nh gi&aacute; l&agrave; một khu ở mới c&oacute; chất lượng cao, hiện đại, đa dạng, c&oacute; hệ thống hạ tầng kỹ thuật v&agrave; hạ tầng x&atilde; hội đồng bộ. Ngo&agrave;i chức năng l&agrave; khu để ở, ở đ&acirc;y c&ograve;n c&oacute; khu dịch vụ c&ocirc;ng cộng v&agrave; dịch vụ thương mại ho&agrave;n chỉnh.</p>', '<p>Ph&iacute;a Bắc: Gi&aacute;p khu d&acirc;n cư v&agrave; nh&agrave; m&aacute;y V&aacute;n s&agrave;n</p>\r\n\r\n<p>Ph&iacute;a Nam: Gi&aacute;p khu ruộng trồng l&uacute;a nước v&agrave; đường Trần Q&uacute;y C&aacute;p</p>\r\n\r\n<p>Ph&iacute;a Đ&ocirc;ng: Gi&aacute;p đ&ecirc; Thịnh Minh v&agrave; S&ocirc;ng Đ&agrave;</p>\r\n\r\n<p>Ph&iacute;a T&acirc;y: gi&aacute;p đường Trần Q&uacute;y C&aacute;p</p>\r\n\r\n<p>Dự &aacute;n gần đường L&aacute;ng H&ograve;a Lạc k&eacute;o d&agrave;i nối từ Trung t&acirc;m Hội nghị Quốc gia tới Th&agrave;nh Phố H&ograve;a B&igrave;nh, nằm liền kề con s&ocirc;ng Đ&agrave; h&ugrave;ng vĩ v&agrave; thơ mộng.</p>', '<p>Kiến tr&uacute;c c&ocirc;ng tr&igrave;nh tại dự &aacute;n rất đa dạng: Dự &aacute;n bao gồm cả khu văn ph&ograve;ng cho thu&ecirc;, dịch vụ thương mại, kh&aacute;ch sạn; khu biệt thự điển h&igrave;nh; khu nh&agrave; ở liền kề điển h&igrave;nh; quỹ đất ph&acirc;n l&ocirc;.</p>\r\n\r\n<p>Đặc biệt, dự &aacute;n nằm ở khu vực c&oacute; cảnh quan thi&ecirc;n nhi&ecirc;n đẹp gần s&ocirc;ng Đ&agrave;, kh&iacute; hậu trong l&agrave;nh, đất đai x&acirc;y dựng tương đối ổn định thuận lợi, d&acirc;n cư &iacute;t, thuận lợi cho việc x&acirc;y dựng đang thu h&uacute;t rất nhiều nh&agrave; đ&acirc;u tư.</p>', '1529543075.Du-an-Hoa-Binh-826x482px.jpg', '1529402701.Vi-tri-DA-sm.jpg', '1529543075.Du-an-Hoa-Binh-948x509.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 03:05:01', '2018-06-20 18:04:35'),
+(10, 'CocoBay Đà Nẵng', 'cocobay-da-nang', 'hs_2018-06-19_1529440042.jpeg', '<p><strong>Chủ đầu tư</strong></p>\r\n\r\n<p>Tập đo&agrave;n<strong> Empire Group</strong> c&oacute; tiền th&acirc;n l&agrave; CTCP Ph&aacute;t triển X&acirc;y dựng Th&agrave;nh Đ&ocirc; với 25 năm kinh nghiệm hoạt động trong lĩnh vực bất động sản, t&agrave;i ch&iacute;nh v&agrave; du lịch &ndash; giải tr&iacute;. Đ&acirc;y ch&iacute;nh l&agrave; c&ocirc;ng ty đ&atilde; th&agrave;nh c&ocirc;ng với dự &aacute;n lớn như C&ocirc;ng vi&ecirc;n nước Hồ T&acirc;y v&agrave; khu nghỉ dưỡng 5 sao Naman Retreat Đ&agrave; Nẵng. Empire Group thể hiện thực lực với tầm nh&igrave;n chiến lược đ&uacute;ng đắn v&agrave; ti&ecirc;n phong, kh&ocirc;ng những tăng chiến lược kinh doanh m&agrave; c&ograve;n gi&uacute;p thay đổi diện mạo du lịch Việt Nam</p>\r\n\r\n<p>&nbsp;</p>', 3, 1, '<p>Cocobay l&agrave; Tổ hợp giải tr&iacute; v&agrave; du lịch tại Đ&agrave; Nẵng &ndash; Hội An phục vụ 10.000 ph&ograve;ng kh&aacute;ch sạn từ 3 &ndash; 5 sao được t&iacute;ch hợp c&aacute;c hoạt động dịch vụ giải tr&iacute; v&agrave; c&aacute;c tiện &iacute;ch h&agrave;ng đầu cho những k&igrave; nghỉ thời thượng. Cocobay tạo n&ecirc;n một kh&ocirc;ng gian hiện đại v&agrave; năng động, sang trọng v&agrave; đẳng cấp, mang đến những trải nghiệm thăng hoa nhất tại th&agrave;nh phố đ&aacute;ng sống nhất Việt Nam.</p>', '<p>Cocobay Đ&agrave; Nẵng sở hữu vị tr&iacute; đắc địa khi nằm ở trung t&acirc;m của con đường nối liền Đ&agrave; Nẵng &ndash; Hội An, phần mặt tiền l&agrave; một trong s&aacute;u b&atilde;i biển quyến rũ nhất h&agrave;nh tinh, sau lưng l&agrave; d&ograve;ng s&ocirc;ng Cổ C&ograve; thơ mộng v&agrave; hai b&ecirc;n cạnh l&agrave; hai s&acirc;n gofl h&agrave;ng đầu Việt Nam</p>', '<p>L&agrave; một điểm đến giải tr&iacute; mới của thế giới, Cocobay Đ&agrave; Nẵng được t&iacute;ch hợp v&ocirc; v&agrave;n c&aacute;c tiện &iacute;ch v&agrave; hoạt động giải tr&iacute; h&agrave;ng đầu đ&aacute;p ứng trọn vẹn c&aacute;c nhu cầu của du kh&aacute;ch. C&aacute;c nh&agrave; h&agrave;ng từ 3 &ndash; 5 sao, hệ thống c&aacute;c qu&aacute;n coffee, lounge, bar; s&acirc;n khấu ngo&agrave;i trời quy m&ocirc; cực lớn, c&aacute;c buổi tr&igrave;nh diễn đặc sắc đa sắc m&agrave;u v&agrave; c&aacute;c dịch vụ vui chơi đẳng cấp,&hellip; tất cả sẽ tạo n&ecirc;n một Cocobay s&ocirc;i động v&agrave; n&aacute;o nhiệt in đậm dấu ấn trong l&ograve;ng du kh&aacute;ch.</p>\r\n\r\n<p>Chi tiết dự &aacute;n xem tại website: <a href=\"http://cocobays.vn\">http://cocobays.vn</a></p>', '1529440042.Cocobay-826x482.jpg', '1529440042.Vi-tri-706x402.jpg', '1529440076.Tien-ich-705x412.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 13:27:22', '2018-06-19 13:29:46'),
+(11, 'khu đô thị fpt city đà nẵng', 'khu-do-thi-fpt-city-da-nang', 'hs_2018-06-19_1529440395.jpeg', '<p>FPT City Đ&agrave; Nẵng l&agrave; sự kết hợp h&agrave;i h&ograve;a giữa thi&ecirc;n nhi&ecirc;n v&agrave; c&ocirc;ng nghệ hiện đại tạo n&ecirc;n một th&agrave;nh phố xanh th&ocirc;ng minh, năng động v&agrave; tr&agrave;n đầy sức sống tọa lạc tại quận Ngũ H&agrave;nh Sơn với tổng vốn đầu tư 1 tỷ Đ&ocirc; La Mỹ từ tập đo&agrave;n FPT.</p>', 1, 1, '<p>- T&ecirc;n dự &aacute;n: FPT City Đ&agrave; Nẵng</p>\r\n\r\n<p>- Vị tr&iacute;: Phường H&ograve;a Hải, Ngũ H&agrave;nh Sơn, TP. Đ&agrave; Nẵng</p>\r\n\r\n<p>- Tổng diện t&iacute;ch đất: 181 ha</p>\r\n\r\n<p>- Mật độ x&acirc;y dựng: 40%</p>\r\n\r\n<p>- Loại h&igrave;nh ph&aacute;t triển: Khu đ&ocirc; thị c&ocirc;ng nghệ Xanh &amp; Th&ocirc;ng minh: Diện t&iacute;ch d&agrave;nh cho c&aacute;c tiện &iacute;ch c&ocirc;ng cộng, c&acirc;y xanh, mặt nước (c&ocirc;ng vi&ecirc;n, k&ecirc;nh đ&agrave;o, hồ nh&acirc;n tạo&hellip;) chiếm hơn 100 ha, b&ecirc;n cạnh hệ thống s&ocirc;ng, hồ tự nhi&ecirc;n &amp; Hệ thống hạ tầng ngầm, đồng bộ, giảm thiểu t&aacute;c động tới m&ocirc;i trường tự nhi&ecirc;n</p>', '<p>- Nằm giữa hai trung t&acirc;m du lịch lớn v&agrave; dọc theo tuyến du lịch đường s&ocirc;ng Cổ C&ograve; từ Đ&agrave; Nẵng v&agrave;o Hội An</p>\r\n\r\n<p>- Kết nối với 4 trực đường ch&iacute;nh huyết mạch &amp; nằm tr&ecirc;n tuyến giao th&ocirc;ng c&ocirc;ng cộng của th&agrave;nh phố với hệ thống xe bu&yacute;t nhanh v&agrave; t&agrave;u điện ngầm trong tương lai</p>\r\n\r\n<p>- Liền kề 2 s&acirc;n Golf đẳng cấp quốc tế &amp; h&agrave;ng loạt khu nghỉ dưỡng cao cấp ven biển</p>', '<p>- Trung t&acirc;m thương mại, d&atilde;y phố mua sắm, cửa h&agrave;ng tiện lợi, nh&agrave; h&agrave;ng, kh&aacute;ch sạn.</p>\r\n\r\n<p>- Nh&agrave; trẻ, mẫu gi&aacute;o, trường tiểu học v&agrave; trung học theo ti&ecirc;u chuẩn quốc tế.</p>\r\n\r\n<p>- C&ocirc;ng vi&ecirc;n ven s&ocirc;ng, phố đi bộ, b&atilde;i đỗ xe ngầm</p>\r\n\r\n<p>- Hồ cảnh quan nh&acirc;n tạo, b&atilde;i biển tự nhi&ecirc;n 800m.</p>\r\n\r\n<p>- Bến du thuyền &ndash; trung t&acirc;m thể dục thể thao trong nh&agrave; v&agrave; ngo&agrave;i trời.</p>', '1529440394.FPT--City-Da-Nang-948x509.jpg', '1529440394.Vi-tri-706x402.jpg', '1529542927.Tien-ich-705x412.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 13:33:14', '2018-07-01 20:12:54'),
+(12, 'chung cư manhattan tower', 'chung-cu-manhattan-tower', 'hs_2018-06-19_1529440626.jpeg', '<p><strong>Manhattan Tower</strong> l&agrave; sự kết hợp giữa H&agrave; Nội nhẹ nh&agrave;ng mềm mại, thư thả v&agrave; Manhattan s&ocirc;i động, mạnh mẽ của New York. Sự giao thoa cũng l&agrave; sự tương phản được thể hiện nhất qu&aacute;n tạo n&ecirc;n kh&aacute;c biệt. Manhattan Tower kh&ocirc;ng d&agrave;nh cho tất cả mọi người m&agrave; &ldquo;thuộc về&rdquo; những người hiện đại, năng động, mạnh mẽ nh&igrave;n thấy cơ hội nhiều hơn l&agrave; kh&oacute; khăn. Manhattan l&agrave; phong c&aacute;ch sống năng động, nhiệt huyết trong một khung cảnh nhẹ nh&agrave;ng thư thả của H&agrave; Nội. Manhattan Tower nhấn mạnh đến phong c&aacute;ch sống năng động v&agrave; kh&ocirc;ng n&ecirc;u ra những h&igrave;nh ảnh gia đ&igrave;nh v&agrave; khu vườn xanh&hellip;.</p>', 1, 1, '<p>Thiết kế chung cư <strong>Manhattan Tower</strong> gồm 327 căn hộ (2 &ndash; 6 ph&ograve;ng ngủ), c&oacute; hơn 30 loại diện t&iacute;ch kh&aacute;c nhau từ 62,1m2 đến 428,2m2. Manhattan Tower kh&ocirc;ng d&agrave;nh cho tất cả mọi người m&agrave; n&oacute; &ldquo;thuộc về&rdquo; tầng lớp đẳngcấp, những người cấp tiến, năng động v&agrave; mạnh mẽ; quyết đo&aacute;n, nh&igrave;n thấy cơ hội nhiều hơn l&agrave; kh&oacute; khăn. <strong>Manhattan Tower</strong> mang lại định nghĩa mới v&agrave; thể hiện chuẩn mực phong c&aacute;ch sống năng động, nhiệt huyết trong một khung cảnh nhẹ nh&agrave;ng thư thả của H&agrave; Nội; nhấn mạnh đến phong c&aacute;ch SỐNG h&agrave;i h&ograve;a, L&Agrave;M chủ động.</p>', '<p>Tọa lạc vị tr&iacute; đắc địa thuộc số 21 mặt đường L&ecirc; Văn Lương, Quận Cầu Giấy, H&agrave; Nội. L&agrave; dự &aacute;n với nhiều lợi thế về vị tr&iacute;. N&ecirc;n chung cư&nbsp;Manhattan Tower L&ecirc; Văn Lương&nbsp;nằm gần c&aacute;c khu vui chơi giải tr&iacute;. Mua sắm, trường học quốc tế, trường tiểu học, trung học.&nbsp;Với vị tr&iacute; chiến lược ho&agrave;n hảo về nhiều mặt chung cư Manhattan Tower L&ecirc; Văn Lương. Hứa hẹn sẽ l&agrave; sự lựa chọn thu h&uacute;t kh&aacute;ch h&agrave;ng 1 c&aacute;ch ho&agrave;n hảo.<strong> </strong></p>', '<p>Khu vực sinh hoạt chung, khu mua sắm</p>\r\n\r\n<p>Ph&ograve;ng tập gym, yoga, khu vui chơi giải tr&iacute;, c&acirc;u lạc bộ người cao tuổi&hellip;</p>\r\n\r\n<p>Trường mầm non, khu chăm s&oacute;c sức khỏe</p>\r\n\r\n<p>Hệ thống thang m&aacute;y, hầm gửi xe</p>\r\n\r\n<p>Hệ thống ph&ograve;ng ch&aacute;y chữa ch&aacute;y.</p>', '1529440625.Manhattan-948x509.jpg', '1529440625.Vi-tri-706x402.jpg', '1529440625.Tien-ich-705x412.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 13:37:05', '2018-07-01 20:12:27'),
+(13, 'Monarchy Đà Nẵng', 'monarchy-da-nang', 'hs_2018-06-19_1529440907.jpeg', '<p>Khu Phức Hợp Nghỉ dưỡng Monarchy Đ&agrave; Nẵng được thiết kế theo phong c&aacute;ch Ch&acirc;u &Acirc;u hiện đại, tiện nghi v&agrave; sang trọng chắc chắn sẽ l&agrave;m h&agrave;i l&ograve;ng những kh&aacute;ch h&agrave;ng kh&oacute; t&iacute;nh nhất. Đ&acirc;y l&agrave; dự &aacute;n được giới đầu tư đ&aacute;nh gi&aacute; l&agrave; &ldquo; Căn hộ ven S&ocirc;ng H&agrave;n&rdquo; tốt v&agrave; chất lượng nhất, với nhiều chi ph&iacute; th&iacute;ch hợp với thu nhập cũng như thỏa m&atilde;n mọi điều kiện của một khu phức hợp căn hộ cao cấp.</p>', 1, 1, '<p>Căn hộ Monarchy Đ&agrave; Nẵng gồm Block A c&oacute; 141 căn hộ với view s&ocirc;ng H&agrave;n v&ocirc; c&ugrave;ng đẹp sẽ đem đến cho cư d&acirc;n một cuộc sống m&atilde;n nguyện như &yacute; với thiết kế v&agrave; nội thất đồng bộ sang trọng chắc chắc sẽ đem đến cho bạn một cuộc sống v&ocirc; c&ugrave;ng tốt đẹp. Block B căn hộ monarchy gồm 3 t&ograve;a B1, B2, B3 803 hiện đang trong qu&aacute; tr&igrave;nh ho&agrave;n thiện v&agrave; đ&atilde; được mở b&aacute;n v&agrave; nhận đặt chỗ ch&iacute;nh thức từ th&aacute;ng 12/2017 đến đ&acirc;y.</p>', '<p>Đ&acirc;y l&agrave; dự &aacute;n được giới đầu tư đ&aacute;nh gi&aacute; l&agrave; &ldquo; Căn hộ ven S&ocirc;ng H&agrave;n&rdquo; tốt v&agrave; chất lượng nhất, với nhiều chi ph&iacute; th&iacute;ch hợp với thu nhập cũng như thỏa m&atilde;n mọi điều kiện của một khu phức hợp căn hộ cao cấp.</p>', '<p>Khu Phức Hợp Nghỉ dưỡng Monarchy Đ&agrave; Nẵng được thiết kế theo phong c&aacute;ch Ch&acirc;u &Acirc;u hiện đại, tiện nghi v&agrave; sang trọng chắc chắn sẽ l&agrave;m h&agrave;i l&ograve;ng những kh&aacute;ch h&agrave;ng kh&oacute; t&iacute;nh nhất. Đ&acirc;y l&agrave; dự &aacute;n được giới đầu tư đ&aacute;nh gi&aacute; l&agrave; &ldquo; Căn hộ ven S&ocirc;ng H&agrave;n&rdquo; tốt v&agrave; chất lượng nhất, với nhiều chi ph&iacute; th&iacute;ch hợp với thu nhập cũng như thỏa m&atilde;n mọi điều kiện của một khu phức hợp căn hộ cao cấp.</p>', '1529440907.Monarchy-Da-Nang-948x509.jpg', '1529440907.Vi-tri-706x402.jpg', '1529440907.Tien-ich-705x412.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 13:41:47', '2018-06-19 13:41:47'),
+(14, 'panorama nha trang', 'panorama-nha-trang', 'hs_2018-06-19_1529441088.jpeg', '<p><strong>Chủ đầu tư:</strong> C&ocirc;ng ty Cố Phần Đầu Tư X&acirc;y Dựng Vịnh Nha Trang</p>\r\n\r\n<p>Tọa lạc tại Vịnh Nha Trang &ndash; một trong 29 vịnh biển đẹp nhất thế giới, nơi đ&acirc;y sở hữu tiềm năng lớn trong lĩnh vực ph&aacute;t triển du lịch, được c&aacute;c nh&agrave; đầu tư bất động sản đặc biệt quan t&acirc;m. Số lượng dự &aacute;n căn hộ, kh&aacute;ch sạn nghỉ dưỡng đang ng&agrave;y một tăng mạnh, trong đ&oacute;, Panorama Nha Trang&nbsp;được đ&aacute;nh gi&aacute; l&agrave; một trong những &ldquo;đầu t&agrave;u&rdquo;&nbsp;trong ph&acirc;n kh&uacute;c bất động sản nghỉ dưỡng bởi vị tr&iacute; đắc địa v&agrave; khả năng tạo n&ecirc;n diện mạo mới cho th&agrave;nh phổ biển</p>', 1, 1, '<p>Với thiết kế Elip độc đ&aacute;o <em>Panorama Nha Tran</em>g mang tới một biểu tượng mới cho th&agrave;nh phố Nha Trang.Những đường cong mềm mại của Elip kết hợp với những khe sẻ s&acirc;u gi&uacute;p cho cả t&ograve;a Panorama Nha Trang to&aacute;t l&ecirc;n vẻ thanh tho&aacute;t đầy tinh tế.G&oacute;c view rộng tối đa gi&uacute;p cho tất cả c&aacute;c căn hộ của Panorama Nha Trang đều c&oacute; được g&oacute;c nh&igrave;n rộng mở để đ&oacute;n gi&oacute; v&agrave; &aacute;nh s&aacute;ng tự nhi&ecirc;n. Condotel Panorama Nha Trang mang đến cho kh&aacute;ch h&agrave;ng 3 loại h&igrave;nh căn hộ điển h&igrave;nh, b&agrave;o gồm:</p>', '<p>Panorama Nha Trang được x&acirc;y dựng tr&ecirc;n khu đất mặt tiền 4 đường sầm uất nhất Nha Trang l&agrave; Nguyễn Thị Minh Khai &ndash; H&ugrave;ng Vương &ndash; Phố Đi Bộ &ndash; Nh&agrave; h&aacute;t th&agrave;nh Phố v&agrave; đ&uacute;ng trục Quảng Trường Trung T&acirc;m, Th&aacute;p Trầm Hương. Đ&acirc;y l&agrave; trục đường du lịch s&ocirc;i động nhất tại Nha Trang, chỉ c&aacute;ch b&atilde;i biển Trần Ph&uacute; chưa đầy 50m, c&ocirc;ng tr&igrave;nh c&oacute; hướng nh&igrave;n trực diện ra biển.</p>', '<p>Panorama Nha Trang &ndash; Biểu tượng của cuộc sống trong mơ với hệ thống tiện &iacute;ch 5 sao xứng tầm đẳng cấp. Bạn c&oacute; thể đắm m&igrave;nh thư gi&atilde;n tại kh&ocirc;ng gian sang trọng của Spa, hay h&ograve;a m&igrave;nh trải nghiệm ph&ograve;ng GYM hiện đại nhất th&agrave;nh phố. C&ocirc;ng tr&igrave;nh sở hữu nh&agrave; h&agrave;ng phong c&aacute;ch thượng lưu với tầm nh&igrave;n ho&agrave;n hảo, vừa c&oacute; thể ngắm nh&igrave;n b&atilde;i biển trong xanh, vừa c&oacute; thể cảm nhận sự vui tươi của phố thị s&ocirc;i động ngay b&ecirc;n dưới.</p>', '1529441087.Panorama-Nha-Trang-948x509.jpg', '1529441087.Vi-tri-706x402.jpg', '1529441087.Tien-ich-705x412.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 13:44:47', '2018-07-01 20:11:59'),
+(15, 'Sapa Jade Hill', 'sapa-jade-hill', 'hs_2018-06-19_1529441482.jpeg', '<p><strong>Chủ đầu tư</strong>: C&ocirc;ng ty Cổ phần Trường Giang Sapa.</p>\r\n\r\n<p>Chỉ c&aacute;ch nơi nhộn nhịp nhất của thị trấn Sapa chưa đầy 1km, l&agrave; điểm đến l&yacute; tưởng để mua sắm, thư gi&atilde;n hay nghỉ dưỡng trong tương lai. B&ecirc;n cạnh đ&oacute; với sự ph&aacute;t triển, đầu tư cơ sở hạ tầng giao th&ocirc;ng với tuyến cao tốc Nội B&agrave;i- L&agrave;o Cai r&uacute;t ngắn qu&atilde;ng đường di chuyển từ H&agrave; Nội tới Sapa, du kh&aacute;ch nay chỉ mất 3h l&aacute;i xe để tới đ&acirc;y nghỉ dưỡng cuối tuần</p>', 1, 1, '<p>CHỈ TỪ 950 TRIỆU đ&atilde; c&oacute; thể sở hữu một căn nh&agrave; phố Jade Hill Sapa.</p>\r\n\r\n<p>Khu nh&agrave; phố Jade Hill Sapa với những căn nh&agrave; 2 tầng đơn giản nhưng tinh tế v&agrave; sang trọng, mang đường n&eacute;t cổ điển kiểu Ph&aacute;p nhưng lại rất mộc mạc trong khung cảnh n&uacute;i rừng. Thiết kế những căn nh&agrave; phố Jade Hill đa năng t&aacute;i hiện d&atilde;y phố du lịch nổi tiếng tại trung t&acirc;m thị trấn Sapa.</p>', '<p><strong>- Vị tr&iacute;</strong>: Phố Mường Hoa Thị Trấn Sapa - Th&agrave;nh Phố L&agrave;o Cai Tỉnh L&agrave;o Cai</p>\r\n\r\n<p><strong>- Tổng diện t&iacute;ch đất</strong>: 47.45ha</p>\r\n\r\n<p><strong>- Tổng số căn hộ</strong>: 125 căn biệt thự nghỉ dưỡng &amp; 151 căn nh&agrave; phố liền kề</p>', '<p>C&aacute;c căn biệt thự cao cấp Jade Hill Sapa được thiết kế một c&aacute;ch k&iacute;n đ&aacute;o sau những rặng th&ocirc;ng xanh thẫm. Trước lối v&agrave;o l&agrave; những mảnh vườn tr&agrave;n ngập hoa l&aacute; v&agrave; cỏ c&acirc;y.</p>\r\n\r\n<p>Khu nh&agrave; phố Jade Hill Sapa với những căn nh&agrave; 2 tầng đơn giản nhưng tinh tế v&agrave; sang trọng, mang đường n&eacute;t cổ điển kiểu Ph&aacute;p nhưng lại rất mộc mạc trong khung cảnh n&uacute;i rừng.</p>', '1529441482.Sapa-Jade-Hill-948x509.jpg', '1529441482.Vi-tri-706x402.jpg', '1529441482.Tien-ich-705x412.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 13:51:22', '2018-06-19 13:51:22'),
+(16, 'Dự án The Arena Cam Ranh', 'du-an-the-arena-cam-ranh', 'hs_2018-06-19_1529441748.jpeg', '<p><strong>&ndash; Chủ đầu tư:</strong> C&ocirc;ng ty Cổ phần Đầu Tư X&acirc;y dựng Vịnh Nha Trang.</p>\r\n\r\n<p>The Arena Nha Trang tọa lạc tại ven biển B&atilde;i D&agrave;i, Cam Ranh &ndash; Đ&acirc;y l&agrave; dự &aacute;n đầu ti&ecirc;n v&agrave; duy nhất tại B&atilde;i D&agrave;i c&oacute; m&ocirc; h&igrave;nh khu nghỉ dưỡng kết hợp vui chơi giải tr&iacute; đẳng cấp. Dự &aacute;n hứa hẹn sẽ l&agrave; &ldquo;thi&ecirc;n đường nghỉ dưỡng&rdquo; trong mơ của du kh&aacute;ch nội địa v&agrave; quốc tế. The Arena Cam Ranh, được kỳ vọng trở th&agrave;nh &ldquo;cơn sốt&rdquo; bất động sản nghỉ dưỡng 2017, đ&oacute;n đầu xu hướng đầu tư 2018, hứa hẹn mang đến cơ hội sinh lời hấp dẫn cho c&aacute;c nh&agrave; đầu tư th&ocirc;ng th&aacute;i.</p>', 1, 1, '<p>&ndash; Vị tr&iacute;<strong>:</strong> L&ocirc; D14D B&atilde;i D&agrave;i, Cam Ranh, Nha Trang</p>\r\n\r\n<p>&ndash; Tổng diện t&iacute;ch<strong>:</strong> 29ha</p>\r\n\r\n<p>&ndash; Loại h&igrave;nh<strong>:</strong> Condotel 90% view biển</p>\r\n\r\n<p>&ndash; Quy m&ocirc; dự &aacute;n<strong>:</strong> 4 t&ograve;a (cao 21-25 tầng nổi), 5.248 căn hộ kh&aacute;ch sạn.</p>\r\n\r\n<p>&ndash; Đơn vị thiết kế<strong>:</strong> Finko</p>\r\n\r\n<p>&ndash; Tư vấn gi&aacute;m s&aacute;t<strong>:</strong> Artelia</p>\r\n\r\n<p>&ndash; Dự kiến b&agrave;n giao: 12/2019</p>\r\n\r\n<p>&nbsp;</p>', '<p>Vị tr&iacute; &ldquo;ĐỘC NHẤT &ndash; V&Ocirc; NHỊ&rdquo; đầy tiềm năng khi nằm ngay cạnh bờ biển B&atilde;i D&agrave;i &ndash; Cam Ranh nổi tiếng với vẻ đẹp biển xanh, c&aacute;t trắng, nắng v&agrave;ng. The Arena Cam Ranh được x&acirc;y dựng ngay mặt đường Nguyễn Tất Th&agrave;nh &ndash; Vịnh Cam Ranh &ndash; B&atilde;i D&agrave;i, gi&uacute;p dự &aacute;n kết nối dễ d&agrave;ng đến c&aacute;c tiện &iacute;ch, địa danh nổi tiếng tại khu vực:</p>', '<p><em>Hệ thống tiện &iacute;ch 5* chuy&ecirc;n nghiệp, độc đ&aacute;o với hơn 25 hạng mục:</em></p>\r\n\r\n<p>&ndash; Bể bơi nước mặn lớn nhất Việt Nam</p>\r\n\r\n<p>&ndash; Hệ thống Gym &amp; Spa (Spa ngo&agrave;i trời tr&ecirc;n từng tầng của căn hộ, hồ bơi nước kho&aacute;ng n&oacute;ng&hellip;)</p>\r\n\r\n<p>&ndash; Phố đi bộ, quảng trường, thủy cung v&agrave; nh&agrave; h&agrave;ng view hồ</p>\r\n\r\n<p>&ndash; Zipline C&aacute;p Treo Giữa T&ograve;a Nh&agrave;, S&acirc;n Khấu Nhạc Nước V&agrave; C&ocirc;ng Vi&ecirc;n Giải Tr&iacute; Quy M&ocirc; Lớn</p>', '1529441747.Arena-Nha-Trang-948x509.jpg', '1529441747.Vi-tri-706x402.jpg', '1529441747.Tien-ich-705x412.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 13:55:47', '2018-06-19 14:13:47'),
+(17, 'Hội an royal residence', 'hoi-an-royal-residence', 'hs_2018-06-19_1529442542.jpeg', '<p><strong>-Chủ đầu tư:</strong> C&ocirc;ng ty Cổ phần Tập đo&agrave;n Ho&agrave;ng Gia Hội An (Royal Group Hoi An)</p>\r\n\r\n<p><strong>-Nh&agrave; ph&acirc;n phối:</strong> C&ocirc;ng ty Cổ phần Bất Động sản VNG Việt Nam(VNG Group)</p>\r\n\r\n<p><strong>-Quy hoạch dự &aacute;n: </strong>Hội An Royal Residence: 61.662m2</p>\r\n\r\n<p><strong>-Sản phẩm dự &aacute;n:</strong> Biệt thự du lịch, biệt thự nghỉ dưỡng, nh&agrave; phố thương mại, condotel</p>\r\n\r\n<p>-Thiết kế nội thất, kỹ thuật, kiến tr&uacute;c: KUME Desion Asian, Vic Consultants, Charrette Design Inc</p>\r\n\r\n<p>-Vốn đầu tư: 1 ngh&igrave;n tỷ đồng</p>', 0, 1, '<p>Sở hữu vị tr&iacute; độc t&ocirc;n nơi gi&aacute;p s&ocirc;ng hướng biển, <a href=\"http://hoianroyalsresidence.com/\"><strong>Hội An Royal Residence</strong></a> l&agrave; dự &aacute;n sở hữu trong m&igrave;nh những gi&aacute; trị kh&aacute;c biệt v&agrave; thu h&uacute;t. Được đầu tư v&agrave; x&acirc;y dựng bởi tập đo&agrave;n Ho&agrave;ng Gia Hội An &ndash; chủ sở hữu của rất nhiều c&ocirc;ng tr&igrave;nh tạo tiếng vang về vẻ đẹp kiến tr&uacute;c v&agrave; vị tr&iacute; đắc địa, <strong>dự &aacute;n Hội An Royal Residence</strong> được tr&ocirc;ng chờ sẽ thay đổi diện mạo v&ugrave;ng đất Cẩm An.</p>', '<p>Nằm tr&ecirc;n khu đất diện t&iacute;ch gần 7ha thuộc l&agrave;ng Cẩm An, Hội An Quảng Nam, C&aacute;ch b&atilde;i tăm An B&agrave;ng nổi tiếng chỉ 3 ph&uacute;t đi bộ v&agrave; nằm ngay cạnh s&ocirc;ng Cổ C&ograve;.</p>\r\n\r\n<p>Ph&iacute;a Bắc gi&aacute;p khu d&acirc;n cư đ&ocirc;ng đ&uacute;c v&agrave; đường du lịch ven biển</p>\r\n\r\n<p>Ph&iacute;a Nam gi&aacute;p s&ocirc;ng Cổ C&ograve; v&agrave; view L&agrave;ng rau Tr&agrave; Quế</p>\r\n\r\n<p>Ph&iacute;a Đ&ocirc;ng gi&aacute;p khu nghỉ dưỡng biển</p>', '<p>-Hệ thống bể bơi ngo&agrave;i trời, đặc biệt l&agrave; cụm bể bơi c&ocirc;ng nghệ lọc nước ti&ecirc;n tiến nhất được x&acirc;y dựng trước căn hộ kh&aacute;ch sạn Condotel</p>\r\n\r\n<p>-Hệ thống sinh th&aacute;i xanh với c&aacute;c tiểu cảnh thực vật đa dạng đan xen giữa c&aacute;c hạng mục c&ocirc;ng tr&igrave;nh, c&ocirc;ng vi&ecirc;n xanh với t&aacute;n c&acirc;y lớn đồng thời cũng l&agrave; khu vui chơi d&agrave;nh cho trẻ em</p>', '1529442541.lager_247-hoi-an-royal-residence-can-ho-hoang-gia-giua-long-pho-co.png', '1529442541.Hoi-An-Royal-Residences.png', '1529442541.hoi-an-1.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 14:09:01', '2018-07-01 20:11:25'),
+(18, 'Golf Valley Đà Lạt', 'golf-valley-da-lat', 'hs_2018-06-19_1529442655.jpeg', '<p>Dự &aacute;n Golf Valley Đ&agrave; Lạt c&oacute; tổng diện t&iacute;ch khoảng 20 ha. Dự &aacute;n được quy hoạch ph&aacute;t triển b&agrave;i bản , hiện đại định hướng trở th&agrave;nh khu đ&ocirc; thị kiểu mẫu, khu phức hợp thương mại giải tr&iacute; hiện đại đầu ti&ecirc;n ngay tại trung t&acirc;m th&agrave;nh phố ng&agrave;n hoa với nhiều tiện &iacute;ch hiện đại. C&aacute;c sản phẩm tại dự &aacute;n cụ thể như sau:</p>\r\n\r\n<p>&ndash; Kh&aacute;ch sạn 5 sao</p>\r\n\r\n<p>&ndash; Biệt thự biệt lập</p>\r\n\r\n<p>&ndash; Cao ốc căn hộ</p>\r\n\r\n<p>&ndash; Cao ốc văn ph&ograve;ng</p>\r\n\r\n<p>&ndash; Trung t&acirc;m thương mại</p>', 0, 1, '<p>Tọa lạc ngay tại trung t&acirc;m th&agrave;nh phố Đ&agrave; Lạt, dự &aacute;n Golf Valley Đ&agrave; Lạt c&oacute; quy m&ocirc; gần 20 ha trải d&agrave;i l&agrave; một thể thống nhất ho&agrave;n hảo gồm phức hợp kiến tr&uacute;c cao tầng hiện đại, đa chức năng với trung t&acirc;m thương mại dịch vụ v&agrave; hội nghị, chuỗi nh&agrave; h&agrave;ng, c&agrave; ph&ecirc;, căn hộ cao cấp kết hợp với biệt thự nghỉ dưỡng thấp tầng sang trọng, ri&ecirc;ng tư nằm giữa khu c&ocirc;ng vi&ecirc;n mở trong kh&ocirc;ng gian xanh thơ mộng của những lo&agrave;i c&acirc;y v&agrave; hoa đặc trưng của xứ sở sương m&ugrave;.</p>', '<p>Dự &aacute;n nằm ngay tại trung t&acirc;m Th&agrave;nh Phố Đ&agrave; Lạt, kế cận hồ Xu&acirc;n Hương v&agrave; gi&aacute;p với s&acirc;n Golf Dalat Palace.</p>\r\n\r\n<p>Ph&iacute;a Bắc: gi&aacute;p khu d&acirc;n cư đường Nguyễn Thị Nghi&atilde;</p>\r\n\r\n<p>Ph&iacute;a T&acirc;y: gi&aacute;p đường B&ugrave;i Thị Xu&acirc;n</p>\r\n\r\n<p>Ph&iacute;a Đ&ocirc;ng: gi&aacute;p đường Đinh Ti&ecirc;n Ho&agrave;ng &amp; s&acirc;n Golf Dalat Palace</p>\r\n\r\n<p>Ph&iacute;a Nam: gi&aacute;p đường Trần Quốc Toản &amp; hồ Xu&acirc;n Hương</p>', '<p>Golf Valley Đ&agrave; Lạt l&agrave; một thể thống nhất ho&agrave;n hảo gồm c&aacute;c phức hợp kiến tr&uacute;c cao tầng hiện đại, đa chức năng với trung t&acirc;m thương mại dịch vụ v&agrave; hội nghị, chuỗi nh&agrave; h&agrave;ng, c&agrave; ph&ecirc;, kh&aacute;ch sạn, căn hộ cao cấp kết hợp với khu biệt thự nghỉ dưỡng thấp tầng sang trọng, ri&ecirc;ng tư nằm giữa khu c&ocirc;ng vi&ecirc;n mở trong kh&ocirc;ng gian xanh, thơ mộng của những lo&agrave;i c&acirc;y hoa đặc trưng của xứ sở sương m&ugrave;.</p>', '1529442654.Golf-Valley-Da-Lat-948x509.jpg', '1529442654.Vi-tri-706x402.jpg', '1529442654.Tien-ich-705x412.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-06-19 14:10:54', '2018-06-19 14:10:54');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -313,18 +319,18 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
-(3, 'quyendo.site3@cphonevn.com', '$2y$10$RA0derqG7z.XbAQi.1pg2OaSFF9sW.nd8e8LtuzQp/hgm6Kq3IsfW', 2, 'SQiO7Zd7RXZZbqqPIQRvhylAQfJ6ZlvJ24wyIxIF3ug0V2nNxeQH94I8qGee', '2018-04-02 21:26:45', '2018-04-02 21:26:45'),
-(4, 'admin@cphonevn.com', '$2y$10$.P/uz3etT20J9ptalQkrgOpuC4WtN7eQJ2I0jtTb/ArRBNROcqZB6', 1, 'YOXVZynwNCHYM71u586svGu6h8XAPG3JviOkanccyRTF6BXf7BjSbhoZCWhn', '2018-04-02 23:42:43', '2018-04-02 23:42:43'),
+(3, 'quyendo.site3@cphonevn.com', '$2y$10$RA0derqG7z.XbAQi.1pg2OaSFF9sW.nd8e8LtuzQp/hgm6Kq3IsfW', 2, 'jQXkomHBSYK60vwTNbOgNaRboF3X09mvlzAkuUc4n7wXKSybALqNEo2vB4Jb', '2018-04-02 21:26:45', '2018-04-02 21:26:45'),
+(4, 'admin@cphonevn.com', '$2y$10$.P/uz3etT20J9ptalQkrgOpuC4WtN7eQJ2I0jtTb/ArRBNROcqZB6', 1, 'S1aOjL6ejPdNk4M3Oavz11AgOlrevO0bf5US3zYLGriDBgqRL0MK1oeu9Xtl', '2018-04-02 23:42:43', '2018-04-02 23:42:43'),
 (5, 'q.uyen96@gmail.com', '$2y$10$v2FSLjzvDjxA8xuSfN9V9OB8cUvvsYoxh8nojG7C22yD95pZXzwBa', 1, NULL, '2018-04-02 23:43:46', '2018-04-02 23:43:46');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `video`
+-- Table structure for table `video`
 --
 
 CREATE TABLE `video` (
@@ -339,136 +345,136 @@ CREATE TABLE `video` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `video`
+-- Dumping data for table `video`
 --
 
 INSERT INTO `video` (`id`, `name`, `slug`, `img`, `video`, `content`, `created_at`, `updated_at`) VALUES
 (2, 'Okeok', 'okeok', '1527500364.anh-khoa-hoc-mba.png', '1527500364.mp4', '<p>Okeok</p>', '2018-05-28 02:39:24', '2018-05-28 02:39:24');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `about`
+-- Indexes for table `about`
 --
 ALTER TABLE `about`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `contact`
+-- Indexes for table `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `home`
+-- Indexes for table `home`
 --
 ALTER TABLE `home`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `image`
+-- Indexes for table `image`
 --
 ALTER TABLE `image`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `member`
+-- Indexes for table `member`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `news`
+-- Indexes for table `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `project`
+-- Indexes for table `project`
 --
 ALTER TABLE `project`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `video`
+-- Indexes for table `video`
 --
 ALTER TABLE `video`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `about`
+-- AUTO_INCREMENT for table `about`
 --
 ALTER TABLE `about`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT cho bảng `contact`
+-- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `home`
+-- AUTO_INCREMENT for table `home`
 --
 ALTER TABLE `home`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT cho bảng `image`
+-- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT cho bảng `member`
+-- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT cho bảng `news`
+-- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT cho bảng `project`
+-- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `video`
+-- AUTO_INCREMENT for table `video`
 --
 ALTER TABLE `video`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

@@ -297,6 +297,9 @@
 	}
 }
 @media screen and (max-width: 768px) {
+	.imageHeader {
+	    margin-top: 75px;
+	}
 	.content01Right .txt145{
 		top: -128px;
     	left: 286px;

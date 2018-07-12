@@ -10,7 +10,10 @@
 .thu_ngo_Img img{
 	width: 100%;
 }
-
+.thu_ngo .txt14{
+	text-align: justify;
+	text-align-last: left;
+}
 .history{
 	margin-bottom: 60px;
 }
@@ -38,7 +41,8 @@
 }
 .vision .txt16{
 	padding: 20px;
-	text-align: center;
+	text-align: justify;
+	text-align-last: center;
 }
 .visionImg img{
 	width: 100%;
@@ -56,7 +60,7 @@
 	margin: 50px 0 20px;
 	
 }
-.maximContent .txt16{
+.maximContent .txt14{
 	text-align: justify;
 	text-align-last: right;
 	margin-bottom: 45px;
@@ -216,6 +220,9 @@
 
 }
 @media screen and (max-width: 767px) {
+	.thu_ngo {
+	    margin-top: 50px;
+	}
 	.historyImg{
 		display: none;
 	}

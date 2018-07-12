@@ -36,7 +36,12 @@
 			
 			<div class="col-md-8 col-sm-8 col-xs-12">
 				<div class="content01Left">
-					<img src="{{ asset('lib/storage/app/project/'.$item->overviewImg) }}">
+					@if ($item->overviewImg == null)
+						<img src="img/tong-quan-du-an-cocobay-da-nang.png">
+					@else
+						<img src="{{ asset('lib/storage/app/project/'.$item->overviewImg) }}">
+					@endif
+					
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-12">
@@ -69,14 +74,23 @@
 			</div>
 			<div class="col-md-8 col-sm-8 col-xs-12">
 				<div class="content02Right">
-					<img src="{{ asset('lib/storage/app/project/'.$item->locationImg) }}">
+					@if ($item->locationImg == null)
+						<img src="img/vi-tri-du-an-cocobay-da-nang-viet-nam.png">
+					@else
+						<img src="{{ asset('lib/storage/app/project/'.$item->locationImg) }}">
+					@endif
 				</div>
 			</div>
 		</div>
 		<div class="row content03">
 			<div class="col-md-8 col-sm-8 col-xs-12">
 				<div class="content03Left">
-					<img src="{{ asset('lib/storage/app/project/'.$item->utilityImg	) }}">
+					@if ($item->utilityImg == null)
+						<img src="img/tien-ich-du-an-cocobay-da-nang.png">
+					@else
+						<img src="{{ asset('lib/storage/app/project/'.$item->utilityImg	) }}">
+					@endif
+					
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-12">

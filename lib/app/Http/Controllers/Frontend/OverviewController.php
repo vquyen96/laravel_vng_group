@@ -9,6 +9,5 @@ class OverviewController extends Controller
 {
     public function getOverView(){
     	return view('frontend.overview');
-    	
     } 
 }

@@ -15,6 +15,8 @@
 		  	<li role="presentation" @if(Request::segment(4) == 'appraisal') class="active" @endif><a href="{{asset('admin/home/detail/appraisal')}}">Thẩm định giá</a></li>
 		  	<li role="presentation" @if(Request::segment(4) == 'law') class="active" @endif><a href="{{asset('admin/home/detail/law')}}">Văn phòng luật sư</a></li>
 		  	<li role="presentation" @if(Request::segment(4) == 'media') class="active" @endif><a href="{{asset('admin/home/detail/media')}}">Truyền thông VNG</a></li>
+		  	<li role="presentation" @if(Request::segment(4) == 'tiktak') class="active" @endif><a href="{{asset('admin/home/detail/tiktak')}}">Tiktak</a></li>
+		  	<li role="presentation" @if(Request::segment(4) == 'vpcc') class="active" @endif><a href="{{asset('admin/home/detail/vpcc')}}">VPCC</a></li>
 		</ul>
 			
 	</div>

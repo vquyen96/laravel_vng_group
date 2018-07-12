@@ -278,7 +278,7 @@ textarea {
 	/*width: 80%;*/
 }
 input[type=submit]{
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 }
 @media screen and (max-width: 1200px) {
   	.headerMenu ul li a{
