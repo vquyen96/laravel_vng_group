@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 12, 2018 at 01:18 AM
+-- Generation Time: Jul 17, 2018 at 06:58 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.1.12
 
@@ -161,6 +161,29 @@ INSERT INTO `image` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES
 (8, 'Tuyển dụng', 'gioithieuvng.jpg', '2018-04-02 18:58:29', '2018-04-02 18:58:29'),
 (9, 'Blog', 'vngvietnam-caman.jpg', '2018-04-02 18:59:11', '2018-04-02 18:59:11'),
 (10, 'Liên hệ', 'gioithieuvng.jpg', '2018-04-02 18:59:42', '2018-04-02 18:59:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `list_contact`
+--
+
+CREATE TABLE `list_contact` (
+  `list_con_id` int(10) UNSIGNED NOT NULL,
+  `list_con_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `list_con_email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `list_con_content` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `list_con_status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `list_contact`
+--
+
+INSERT INTO `list_contact` (`list_con_id`, `list_con_name`, `list_con_email`, `list_con_content`, `list_con_status`, `created_at`, `updated_at`) VALUES
+(6, 'Quyen Do', 'thongminh.depzai@gmail.com', 'Chungs toi muoon lien hej cvoiw banj', 1, '2018-07-17 05:16:08', '2018-07-17 05:16:08');
 
 -- --------------------------------------------------------
 
@@ -380,6 +403,12 @@ ALTER TABLE `image`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `list_contact`
+--
+ALTER TABLE `list_contact`
+  ADD PRIMARY KEY (`list_con_id`);
+
+--
 -- Indexes for table `member`
 --
 ALTER TABLE `member`
@@ -442,6 +471,12 @@ ALTER TABLE `home`
 --
 ALTER TABLE `image`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `list_contact`
+--
+ALTER TABLE `list_contact`
+  MODIFY `list_con_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `member`

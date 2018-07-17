@@ -36,22 +36,26 @@
 					Video liên quan
 				</div>
 			</div>
-			@foreach($video_related as $item)
-			<div class="col-md-4 col-sm-4 col-xs-4">
-				<div class="video_related_item">
-					<div class="video_related_img">
+			
+			<div class="col-md-12">
+				@foreach($video_related as $item)
+				<a href="{{ asset('video/detail/'.$item->slug) }}" class="videoItem">
+					<div class="videoItemImg">
 						<img src="{{ asset('lib/storage/app/video/'.$item->img) }}">
 					</div>
-					<div class="video_related_title">
-						{{$item->name}}
+					<div class="videoItemContent">
+						<div class="videoItemContentTitle">
+							{{cut_string($item->name, 50)}}
+						</div>
+						<div class="videoItemContentTime orange">
+							<span class="glyphicon glyphicon-time"></span>
+								Post {{ date('d/m/Y', strtotime($item->created_at)) }}
+						</div>
 					</div>
-					<div class="orange">
-						<span class="glyphicon glyphicon-time"></span>
-						Post {{ date('d/m/Y', strtotime($item->created_at)) }}
-					</div>
-				</div>
+				</a>
+				@endforeach
 			</div>
-			@endforeach
+			
 			{{-- <div class="col-md-4 col-sm-4 col-xs-4">
 				<div class="video_related_item">
 					<div class="video_related_img">

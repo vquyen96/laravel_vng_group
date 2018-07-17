@@ -10,6 +10,8 @@
 		  	<li role="presentation" @if(Request::segment(3) == 'top') class="active" @endif><a href="{{asset('admin/contact/top')}}">Miền Bắc</a></li>
 		  	<li role="presentation" @if(Request::segment(3) == 'mid') class="active" @endif><a href="{{asset('admin/contact/mid')}}">Miền Trung</a></li>
 		  	<li role="presentation" @if(Request::segment(3) == 'bot') class="active" @endif><a href="{{asset('admin/contact/bot')}}">Miền Nam</a></li>
+
+		  	<li role="presentation" @if(Request::segment(3) == 'list') class="active" @endif><a href="{{asset('admin/contact/list')}}">Danh sách</a></li>
 		  	
 		</ul>
 			

@@ -7,4 +7,10 @@ $(document).ready(function(){
     	$(this).hide();
     	$(".formAddHis").slideDown();
     });
+
+
+    $('.btnShowDetail').click(function(){
+    	var content = $(this).siblings(".fieldHidden").text();
+    	$('.modal-body').text(content);
+    });
 });

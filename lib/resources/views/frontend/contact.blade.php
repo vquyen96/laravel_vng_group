@@ -76,10 +76,10 @@
 					<div class="txt36 orange">
 						liên hệ với chúng tôi
 					</div>
-					<form method="post">
+					<form method="post" action="{{ asset('admin/contact/add') }}"> 
 						<input type="text" name="name" placeholder="Họ và tên">
 						<input type="text" name="email" placeholder="Email">
-						<textarea rows="7" placeholder="Nội dung"></textarea>
+						<textarea rows="7" placeholder="Nội dung" name="content"></textarea>
 						<input type="submit" name="btnsbm" value="GỬI">
 						{{csrf_field()}}
 					</form>

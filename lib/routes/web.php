@@ -104,7 +104,12 @@ Route::group(['namespace'=>'Admin'], function(){
 			Route::post('mid','ContactController@postMid');
 			Route::get('bot','ContactController@getBot');
 			Route::post('bot','ContactController@postBot');
+
+			Route::get('list', 'ListContact@getList');
+			Route::post('add', 'ListContact@postAdd');
+			Route::get('delete/{id}', 'ListContact@delete');
 		});
+		
 	});
 });
 
@@ -119,4 +124,5 @@ Route::group(['namespace'=>'Frontend'], function(){
 	Route::get('video/detail/{slug}', 'HomeController@getVideoDetail');
 	Route::get('recruit', 'HomeController@getRecruit');
 	Route::get('contact', 'HomeController@getContact');
+
 });

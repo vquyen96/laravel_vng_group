@@ -19,5 +19,7 @@ $(document).ready(function(){
 		$('.btnMenuVsLang').css('right', '-260px');
 	});
 	
-	
+	setTimeout(function(){
+		$('.errorAlert').fadeOut();
+	}, 3000);
 });

@@ -27,6 +27,9 @@
 	<link rel="stylesheet" type="text/css" href="css/master.css">
 </head>
 <body>
+	<div class="errorAlert">
+		@include('errors.note')
+	</div>
 	<div class="master" id="master">
 		@if(Request::segment(1) != "news" && Request::segment(1) != "video" )
 		<div class="backgroundBody">
