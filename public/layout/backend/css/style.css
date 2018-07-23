@@ -299,9 +299,9 @@ input[type=submit]{
 		top: 720px;
 		left: 0;
 	}
-	.cssInput {
+	/*.cssInput {
   		width: 80%;
-  	}
+  	}*/
 }
 @media screen and (max-width: 992px) {
 	.btnAddNew {

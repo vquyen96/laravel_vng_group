@@ -181,20 +181,75 @@ function scrollOption(){
 		$('.home5Main').css({'position':'absolute', 'top': x-windowHeight*4, 'left':'0', 'transition':'0s'});
 	}
 }
-// var z = 0;
-// function scrollFixScreen(x) {
 
-// 	if(x > z){
-// 		scrollDown();
-// 		z=x;
-// 	}
-// 	else{
-// 		scrollUp();
-// 	}
-// }
 var master = document.getElementById('master');
 var windowHeight = $(window).height();
 var scroll = 0;
+
+
+
+//btnSlide(2)
+var btnSlideMainLine = 0;
+var home3ImgItem = 0;
+var home3RightNameLine = 0;
+
+function btnSlideUp(){
+	btnSlideMainLine -= 50;
+	home3ImgItem -= $(window).height();
+	home3RightNameLine -= 300;
+
+	$('.btnSlideMainLine').css('margin-top', btnSlideMainLine);
+	$('.home3ImgLine').css('margin-top', home3ImgItem);
+	$('.home3RightNameLine').css('margin-top', home3RightNameLine);
+
+	if (btnSlideMainLine%300 == 0 && btnSlideMainLine < 0) {
+		$('.btnSlideMainLine').append($('.btnSlideMainLine').html());
+	}
+	if (home3ImgItem%($(window).height()*6) == 0 && home3ImgItem<0) {
+		$('.home3ImgLine').append($('.home3ImgLine').html());
+	}
+	if (home3RightNameLine%1800 == 0 && home3RightNameLine<0) {
+		$('.home3RightNameLine').append($('.home3RightNameLine').html());
+	}
+
+}
+function btnSlideDown(){
+
+	btnSlideMainLine += 50;
+	home3ImgItem += $(window).height();
+	home3RightNameLine += 300;
+	console.log(btnSlideMainLine);
+	//Khi vượt quá giới hạn
+	if (btnSlideMainLine > 0) {
+		//tắt hiệu ứng
+		$('.btnSlideMainLine').css('transition', '0s');
+		$('.home3ImgLine').css('transition', '0s');
+		$('.home3RightNameLine').css('transition', '0s');
+		//chuyển cảnh
+		$('.btnSlideMainLine').css('margin-top', -300);
+		$('.home3ImgLine').css('margin-top', -$(window).height()*6);
+		$('.home3RightNameLine').css('margin-top', -1800);
+		//đợi và bật hiệu ứng
+		setTimeout(function(){
+			$('.btnSlideMainLine').css('transition', '1s');
+			$('.home3ImgLine').css('transition', '1s');
+			$('.home3RightNameLine').css('transition', '1s');
+		},20)
+		//set lại gía trị	
+		btnSlideMainLine = -250;
+		home3ImgItem = -$(window).height()*5;
+		home3RightNameLine = -1500;
+	}
+	//đợi và chạy chuyển động như bình thường
+	setTimeout(function(){
+		$('.btnSlideMainLine').css('margin-top', btnSlideMainLine);
+		$('.home3ImgLine').css('margin-top', home3ImgItem);
+		$('.home3RightNameLine').css('margin-top', home3RightNameLine);
+	},50);
+}
+
+
+
 $(document).ready(function(){
 	$('.listPage ul li a').hover(function(){
 		$('.imageBig img').attr('src', $(this).find('.link').text());
@@ -205,10 +260,8 @@ $(document).ready(function(){
 	$('.home').height(windowHeight);
 	$('.home').width($(window).width());
 
-	$('.home3Item').height(windowHeight*0.6);
-	// if(master.offsetWidth < 768){
-	// 	$('.home3Item').height(windowHeight/2);
-	// }
+	$('.home3ImgItem').height($(window).height());
+
 	$('.backgroundBody').height(windowHeight);
 	$('.backgroundBody').width($(window).width());
 	var home4MainLineLeft = 0;
@@ -223,66 +276,20 @@ $(document).ready(function(){
 		$('#master').css('overflow-y','scroll');
 	}
 
-	
-	// master.onscroll = function(){
-	// 	var x = master.scrollTop;
-	// 	console.log(x);
-	// 	setBgDot();
-	// 	if (scroll == 1) {
-	// 		scrollOption();
-	// 	}
-
-	// 	if(x > windowHeight*2){
-	// 		showImgHome3();
-	// 	}
-		
-	// }
-	// setBgDot();
-	
-	$('.home').click(function(){
-		$('.js-slide-down').click();
+	$('.btnSlideItem.up').click(function(){
+		btnSlideUp();
 	});
+	$('.btnSlideItem.down').click(function(){
+		btnSlideDown();
+	});
+	
+
 	$('.home.home3').hover(function(){
 		showImgHome3();
 	});
 	$('.home.home5').hover(function(){
 		showMessHome5();
 	});
-	// $('.btnScrollDown').click(function(){
-	// 	scrollDown();
-		
-	// });
-	// $('.dotScroll_1').click(function(){
-	// 	$('.master').animate({
-	//       	scrollTop: 0
-	//     }, 800);
-	    
-	// });
-	// $('.dotScroll_2').click(function(){
-	// 	$('.master').animate({
-	//       	scrollTop: windowHeight
-	//     }, 800);
-	    
-	// });
-	// $('.dotScroll_3').click(function(){
-	// 	$('.master').animate({
-	//       	scrollTop: windowHeight*2
-	//     }, 800);
-	//     showImgHome3();
-	    
-	// });
-	// $('.dotScroll_4').click(function(){
-	// 	$('.master').animate({
-	//       	scrollTop: windowHeight*3
-	//     }, 800);
-	    
-	// });
-	// $('.dotScroll_5').click(function(){
-	// 	$('.master').animate({
-	//       	scrollTop: windowHeight*4
-	//     }, 800);
-	//     showMessHome5();
-	// });
 	
 				
 });

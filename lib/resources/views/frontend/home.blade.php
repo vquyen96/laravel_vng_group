@@ -29,7 +29,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="page-section">
+	{{-- <div class="page-section">
 		<div class="page-frame">
 			<div class="home home2">
 				<div class="home2Main">
@@ -62,11 +62,11 @@
 					
 			</div>
 		</div>
-	</div>
+	</div> --}}
 	<div class="page-section">
 		<div class="page-frame">
 			<div class="home home3">
-				<div class="home3Big">
+				{{-- <div class="home3Big">
 					<div class="home3Main">
 						@for($i=4; $i<10; $i++)
 						<div class="home3Item">
@@ -83,8 +83,87 @@
 						</div>
 						@endfor
 					</div>
+				</div> --}}
+				<div class="home3Left">
+					<div class="home3ImgLine">
+						@for ($i = 4; $i < 10; $i++)
+							<div class="home3ImgItem">
+								<img src="{{ asset('lib/storage/app/home/'.$data->get($i)->img )}}">
+							</div>
+						@endfor
+						@for ($i = 4; $i < 10; $i++)
+							<div class="home3ImgItem">
+								<img src="{{ asset('lib/storage/app/home/'.$data->get($i)->img )}}">
+							</div>
+						@endfor
+					</div>
 				</div>
-					
+				<div class="home3Right">
+					<div class="home3RightMain">
+						<div class="home3Title">
+							thành viên vngroup
+						</div>
+
+						<div class="home3RightName">
+							<div class="home3RightNameLine">
+								@for ($i = 4; $i < 10; $i++)
+									<div class="home3RightNameItem">
+										<div class="home3CreatedAt">
+											Được thành lập 02/08/2016
+										</div>
+										<div class="home3RightNameMain">
+											{{$data->get($i)->title}}
+										</div>
+										<a href="{{ asset($data->get($i)->link) }}" class="home3Link" target="blank">Đọc tiếp >></a>
+									</div>
+										
+								@endfor
+								@for ($i = 4; $i < 10; $i++)
+									<div class="home3RightNameItem">
+										<div class="home3CreatedAt">
+											Được thành lập 02/08/2016
+										</div>
+										<div class="home3RightNameMain">
+											{{$data->get($i)->title}}
+										</div>
+										<a href="{{ asset($data->get($i)->link) }}" class="home3Link" target="blank">Đọc tiếp >></a>
+									</div>
+										
+								@endfor
+									
+							</div>
+						</div>
+						
+					</div>
+						
+					<div class="btnSlide">
+						<div class="btnSlideItem up">
+							<img src="img/download-arrow.svg">
+						</div>
+						<div class="btnSlideMain">
+							<div class="btnSlideMainLine">
+
+								@for ($i = 1; $i < 7; $i++)
+									<div class="btnSlideMainItem">
+										0{{$i}}
+									</div>
+								@endfor
+								@for ($i = 1; $i < 7; $i++)
+									<div class="btnSlideMainItem">
+										0{{$i}}
+									</div>
+								@endfor
+							</div>
+							<div class="btnSlideMainCount">
+								/06
+							</div>
+						</div>
+						<div class="btnSlideItem down">
+							<img src="img/download-arrow.svg">
+						</div>
+					</div>
+
+				</div>	
 					
 			</div>
 		</div>

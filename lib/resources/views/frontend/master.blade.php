@@ -34,7 +34,7 @@
 		@if(Request::segment(1) != "news" && Request::segment(1) != "video" )
 		<div class="backgroundBody">
 			<div class="backgroundBodyImg">
-				<img src="img/BG.png">
+				<img src="img/janita-top-748422-unsplash.jpg">
 			</div>
 		</div>
 		@endif
@@ -45,28 +45,27 @@
 				</a>
 				
 			</div>
-			<div class="btnMenuVsLang">
-				<div class="lang">
-					<div class="lang_en">EN</div>
-					<span>|</span>
-					<div class="lang_vi">VI</div>
-				</div>
-				<div class="btnMenu">
-					<div class="btnMenuCỉcle">
-						<img src="img/btn_menu.png">
-					</div>
-					<div class="btnMenuLine">
-						<div class="btnMenuItem"></div>
-						<div class="btnMenuItem"></div>
-						<div class="btnMenuItem"></div>
-					</div>
+		</header>
+		<div class="btnMenuVsLang">
+			{{-- <div class="lang">
+				<div class="lang_en">EN</div>
+				<span>|</span>
+				<div class="lang_vi">VI</div>
+			</div> --}}
+			<div class="btnMenu">
+				{{-- <div class="btnMenuCỉcle">
+					<img src="img/btn_menu.png">
+				</div> --}}
+				<div class="btnMenuLine">
+					<div class="btnMenuItem"></div>
+					<div class="btnMenuItem short"></div>
+					<div class="btnMenuItem"></div>
 				</div>
 			</div>
-			
-		</header>
+		</div>
 		<div class="menuHide">
 			<ul>
-				<li class="active">
+				{{-- <li class="active">
 					<a class="btnMenuHide">
 						<div class="menuLeft">
 							<div class="lang_en">EN</div>
@@ -77,16 +76,24 @@
 							<img src="img/menu.png">
 						</div>
 					</a>
-				</li>
-				<li class="active">
+				</li> --}}
+				<li class="{{Request::segment(1) == '' ? 'active' : ' '}}">
 					<a href="{{ asset('') }}">
-						Trang chủ
+						<div class="menuHideContent">
+							<div class="menuHideNum">01___</div>
+							Trang chủ
+						</div>
+						
 						<img src="img/home.png">
 					</a>
 				</li>
-				<li>
-					<a>
-						Giới thiệu
+				<li class="{{Request::segment(1) == 'overview' ? 'active' : ' '}}">
+					<a href="{{ asset('overview') }}">
+						<div class="menuHideContent">
+							<div class="menuHideNum">02___</div>
+							Giới thiệu
+						</div>
+						
 						<img src="img/GT.png">
 					</a>
 					<ul>
@@ -107,9 +114,13 @@
 						</li>
 					</ul>
 				</li>
-				<li>
-					<a>
-						Dự án
+				<li class="{{Request::segment(1) == 'project' ? 'active' : ' '}}">
+					<a href="{{ asset('project') }}">
+						<div class="menuHideContent">
+							<div class="menuHideNum">03___</div>
+							Dự án
+						</div>
+						
 						<img src="img/project.png">
 					</a>
 					<ul>
@@ -123,28 +134,41 @@
 					</ul>
 				</li>
 
-				<li>
+				<li class="{{Request::segment(1) == 'qhdt' ? 'active' : ' '}}">
 					<a href="{{ asset('qhdt') }}">
-						Quan hệ đầu tư
+						<div class="menuHideContent">
+							<div class="menuHideNum">04___</div>
+							Đầu tư
+						</div>
+						
 						<img src="img/QH.png">
 					</a>
 				</li>
-				<li>
+				<li class="{{Request::segment(1) == 'news' ? 'active' : ' '}}">
 					<a href="{{ asset('news') }}">
-						Tin tức
+						<div class="menuHideContent">
+							<div class="menuHideNum">05___</div>
+							Tin tức
+						</div>
 						<img src="img/new.png">
 					</a>
 					
 				</li>
-				<li>
+				<li class="{{Request::segment(1) == 'recruit' ? 'active' : ' '}}">
 					<a href="{{ asset('recruit') }}">
-						Tuyển dụng
+						<div class="menuHideContent">
+							<div class="menuHideNum">06___</div>
+							Tuyển dụng
+						</div>
 						<img src="img/TD.png">
 					</a>
 				</li>
-				<li>
+				<li class="{{Request::segment(1) == 'contact' ? 'active' : ' '}}">
 					<a href="{{ asset('contact') }}">
-						Liên hệ
+						<div class="menuHideContent">
+							<div class="menuHideNum">07___</div>
+							Liên hệ
+						</div>
 						<img src="img/Contact.png">
 					</a>
 				</li>
